@@ -1,0 +1,14 @@
+{
+  "version" : "1.7.3",
+  "type" : "WORKINGDAYSCALENDAR",
+  "title" : "Cal_2nd_Day_of_Month",
+  "from" : "2025-09-01",
+  "to" : "2026-08-31",
+  "includes" : {
+    "monthdays" : [ {
+      "from" : "2025-09-14",
+      "to" : "2026-08-31",
+      "days" : [ 2 ]
+    } ]
+  }
+}

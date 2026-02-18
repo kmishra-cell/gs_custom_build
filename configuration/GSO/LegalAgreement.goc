@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations cleanUnusedFields="false" nameSpace="MHI">
+  <ruleConfigurations>
+    <rule category="SPEL" disConfig="N" disParentConfig="N" entityId="006RJeki2etZa00j" id="++AC7dxmgMr0S046" name="LegalAgreement.MHISetStartDateTime" nameSpace="MHI" partId="006RJeki2etZa00V" severity="20" type="POLICY" weightage="0"><![CDATA[var gs_entity= root;  
+ var currentDate = T(com.thegoldensource.be.rule.wrappers.FDateUtil).today() 
+ var legalAgreementDetail = #gs_entity.getSingleValue('LegalAgreementDetail') 
+ if( (#gs_entity.getSingleValue('LegalAgreementDetail.LAGRStartDateTime') == null)) 
+ {#legalAgreementDetail.setValue('LAGRStartDateTime',#currentDate), #legalAgreementDetail.setWarningMessage('date time is set.','LegalAgreement.MHISetStartDateTime') 
+ } 
+  else 
+ {} 
+]]>
+      <ruleConfig><![CDATA[{"ruleName":"LegalAgreement.MHISetStartDateTime","nodes":[{"nodeType":"METHOD_CALL","type":"ASSIGN","variable":{"name":"currentDate","elementType":"DATE","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false},"condition":{"className":"DATE_UTIL","returnClassName":"DATE","constructorCall":false,"methodIdentifier":"today","methodName":"today","negateFunction":false,"arguments":[],"type":"FUNCTION_ELEMENT","nodeType":"FUNCTION_ELEMENT"},"operator":"EQUAL","isReAssign":false},{"nodeType":"CONTEXT","type":"ASSIGN","variable":{"name":"legalAgreementDetail","businessField":"LegalAgreementDetail","elementType":"RECORD","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false},"condition":{"className":"ENTITY_OBJECT","returnClassName":"OBJECT","constructorCall":false,"methodIdentifier":"getSingleValue:java.lang.String","methodName":"getSingleValue","negateFunction":false,"arguments":[{"value":"LegalAgreementDetail","type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":"LegalAgreementDetail","LOOKUP":false}],"context":{"name":"gs_entity","elementType":"ENTITY_OBJECT","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false},"type":"FUNCTION_ELEMENT","nodeType":"FUNCTION_ELEMENT"},"operator":"EQUAL","isReAssign":false,"contextType":"SINGLE_DATAGROUP"},{"nodeType":"IF_LOOP","type":"IF_LOOP","ifCondition":{"children":[{"leftCondition":{"className":"RECORD","returnClassName":"DATE","constructorCall":false,"methodIdentifier":"getSingleValue:java.lang.String","methodName":"getSingleValue","negateFunction":false,"arguments":[{"value":"LegalAgreementDetail.LAGRStartDateTime","type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":"LegalAgreementDetail.LAGRStartDateTime","LOOKUP":false}],"context":{"name":"gs_entity","elementType":"ENTITY_OBJECT","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false},"type":"FUNCTION_ELEMENT","nodeType":"FUNCTION_ELEMENT"},"rightCondition":{"value":null,"type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":null,"LOOKUP":false},"operator":"EQUALS","includeImplicitNull":true,"type":"SIMPLE_CONDITION","nodeType":"SIMPLE_CONDITION"}],"operator":"AND","type":"COMPLEX_CONDITION","nodeType":"COMPLEX_CONDITION"},"trueBody":[{"nodeType":"METHOD_CALL","type":"ASSIGN","condition":{"className":"RECORD","returnClassName":"OBJECT","constructorCall":false,"methodIdentifier":"setValue:java.lang.String:java.lang.Object","methodName":"setValue","negateFunction":false,"arguments":[{"value":"LAGRStartDateTime","type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":"LegalAgreementDetail.LAGRStartDateTime","LOOKUP":false},{"name":"currentDate","elementType":"DATE","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false}],"context":{"name":"legalAgreementDetail","businessField":"LegalAgreementDetail","elementType":"RECORD","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false},"type":"FUNCTION_ELEMENT","nodeType":"FUNCTION_ELEMENT"},"operator":"EQUAL","isReAssign":false},{"nodeType":"METHOD_CALL","type":"ASSIGN","condition":{"className":"RECORD","returnClassName":"OBJECT","constructorCall":false,"methodIdentifier":"setWarningMessage:java.lang.String:java.lang.String","methodName":"setWarningMessage","negateFunction":false,"arguments":[{"value":"date time is set.","type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":null,"LOOKUP":false},{"value":"LegalAgreement.MHISetStartDateTime","type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":null,"LOOKUP":false}],"context":{"name":"legalAgreementDetail","businessField":"LegalAgreementDetail","elementType":"RECORD","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false},"type":"FUNCTION_ELEMENT","nodeType":"FUNCTION_ELEMENT"},"operator":"EQUAL","isReAssign":false}],"falseBody":[]}]}]]></ruleConfig>
+    </rule>
+    <rule category="SPEL" disConfig="N" disParentConfig="N" entityId="006RJeki2etZa00j" id="++AC7dxmgMr0S04h" name="LegalAgreement.MHISetLastChangeDateTime" nameSpace="MHI" partId="006RJeki2etZa00h" severity="20" type="POLICY" weightage="0"><![CDATA[var gs_entity= root;  
+ var currentDate = T(com.thegoldensource.be.rule.wrappers.FDateUtil).today() 
+ if( (#gs_entity.getSingleValue('LegalAgreementDetail.LAGRLastChangeDateTime') == null)) 
+ {#gs_entity.setValue('LegalAgreementDetail.LAGRLastChangeDateTime',#currentDate), #gs_entity.setWarningMessage('date time is set.','LegalAgreement.MHISetLastChangeDateTime') 
+ } 
+  else 
+ {} 
+]]>
+      <ruleConfig><![CDATA[{"ruleName":"LegalAgreement.MHISetLastChangeDateTime","nodes":[{"nodeType":"METHOD_CALL","type":"ASSIGN","variable":{"name":"currentDate","elementType":"DATE","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false},"condition":{"className":"DATE_UTIL","returnClassName":"DATE","constructorCall":false,"methodIdentifier":"today","methodName":"today","negateFunction":false,"arguments":[],"type":"FUNCTION_ELEMENT","nodeType":"FUNCTION_ELEMENT"},"operator":"EQUAL","isReAssign":false},{"nodeType":"IF_LOOP","type":"IF_LOOP","ifCondition":{"children":[{"leftCondition":{"className":"RECORD","returnClassName":"DATE","constructorCall":false,"methodIdentifier":"getSingleValue:java.lang.String","methodName":"getSingleValue","negateFunction":false,"arguments":[{"value":"LegalAgreementDetail.LAGRLastChangeDateTime","type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":"LegalAgreementDetail.LAGRLastChangeDateTime","LOOKUP":false}],"context":{"name":"gs_entity","elementType":"ENTITY_OBJECT","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false},"type":"FUNCTION_ELEMENT","nodeType":"FUNCTION_ELEMENT"},"rightCondition":{"value":null,"type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":null,"LOOKUP":false},"operator":"EQUALS","includeImplicitNull":true,"type":"SIMPLE_CONDITION","nodeType":"SIMPLE_CONDITION"}],"operator":"AND","type":"COMPLEX_CONDITION","nodeType":"COMPLEX_CONDITION"},"trueBody":[{"nodeType":"METHOD_CALL","type":"ASSIGN","condition":{"className":"RECORD","returnClassName":"OBJECT","constructorCall":false,"methodIdentifier":"setValue:java.lang.String:java.lang.Object","methodName":"setValue","negateFunction":false,"arguments":[{"value":"LegalAgreementDetail.LAGRLastChangeDateTime","type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":"LegalAgreementDetail.LAGRLastChangeDateTime","LOOKUP":false},{"name":"currentDate","elementType":"DATE","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false}],"context":{"name":"gs_entity","elementType":"ENTITY_OBJECT","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false},"type":"FUNCTION_ELEMENT","nodeType":"FUNCTION_ELEMENT"},"operator":"EQUAL","isReAssign":false},{"nodeType":"METHOD_CALL","type":"ASSIGN","condition":{"className":"RECORD","returnClassName":"OBJECT","constructorCall":false,"methodIdentifier":"setWarningMessage:java.lang.String:java.lang.String","methodName":"setWarningMessage","negateFunction":false,"arguments":[{"value":"date time is set.","type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":null,"LOOKUP":false},{"value":"LegalAgreement.MHISetLastChangeDateTime","type":"VALUE","nodeType":"VALUE","className":"STRING","businessField":null,"LOOKUP":false}],"context":{"name":"gs_entity","elementType":"ENTITY_OBJECT","type":"VARIABLE","nodeType":"VARIABLE","mappingVariable":false},"type":"FUNCTION_ELEMENT","nodeType":"FUNCTION_ELEMENT"},"operator":"EQUAL","isReAssign":false}],"falseBody":[]}]}]]></ruleConfig>
+    </rule>
+  </ruleConfigurations>
+  <policies>
+    <policy config="N" dgdpid="006RJeki2etZa00a" entityId="006RJeki2etZa00j" id="00AHQcwWgMr2m00J" name="MBEDisableLegalAgreementFins" nameSpace="MHI" type="ALL_FOR_RELATION">
+      <part id="00AHQcwWgMr2m00K" index="0" nameSpace="MHI" ruleid="00AHQcwWgMr2m00G" type="POLICY_RULE">
+        <part dgdpid="006RJeki2etZa00a" id="00AHQcwWgMr2m00L" index="0" nameSpace="MHI" prntID="00AHQcwWgMr2m00K" type="HIDE" value="true"/>
+        <part dgdpid="00AFd0lWgMr2m00X" id="00AHQcwWgMr2m00M" index="1" nameSpace="MHI" prntID="00AHQcwWgMr2m00K" type="HIDE" value="true"/>
+      </part>
+    </policy>
+    <policy config="N" dgdpid="006RJeki2etZa00a" entityId="006RJeki2etZa00j" id="00AHMtx0gMr2m016" name="MHIDisableLegalAgreementFins" nameSpace="MHI" type="ALL_FOR_RELATION">
+      <part id="00AHMtx0gMr2m017" index="0" nameSpace="MHI" ruleid="00AHMtx0gMr2m012" type="POLICY_RULE">
+        <part dgdpid="006RJeki2etZa00a" id="00AHMtx0gMr2m018" index="0" nameSpace="MHI" prntID="00AHMtx0gMr2m017" type="HIDE" value="true"/>
+        <part dgdpid="00AFd0lWgMr2m00X" id="00AHMtx0gMr2m019" index="1" nameSpace="MHI" prntID="00AHMtx0gMr2m017" type="HIDE" value="true"/>
+      </part>
+    </policy>
+    <policy config="N" dgdpid="006RJeki2etZa00h" entityId="006RJeki2etZa00j" id="++AC7dxmgMr0S04g" name="MHISetLastChangeDateTime" nameSpace="MHI" type="ALL">
+      <part id="++AC7dxmgMr0S04i" index="0" nameSpace="MHI" ruleid="++AC7dxmgMr0S04h" type="POLICY_RULE">
+        <part dgdpid="006RJeki2etZa00h" id="++AC7dxmgMr0S04j" index="0" nameSpace="MHI" prntID="++AC7dxmgMr0S04i" type="LOAD_VALUE" value="true"/>
+      </part>
+    </policy>
+    <policy config="N" dgdpid="006RJeki2etZa00V" entityId="006RJeki2etZa00j" id="++AC7dxmgMr0S045" name="MHISetStartDateTime" nameSpace="MHI" type="ALL">
+      <part id="++AC7dxmgMr0S047" index="0" nameSpace="MHI" ruleid="++AC7dxmgMr0S046" type="POLICY_RULE">
+        <part dgdpid="006RJeki2etZa00V" id="++AC7dxmgMr0S048" index="0" nameSpace="MHI" prntID="++AC7dxmgMr0S047" type="LOAD_VALUE" value="true"/>
+      </part>
+    </policy>
+    <policy config="N" dgdpid="006RJeki2etZa00a" entityId="006RJeki2etZa00j" id="00AHTVJWgMr2m00O" name="MHSSDisableLegalAgreementFins" nameSpace="MHI" type="ALL_FOR_RELATION">
+      <part id="00AHTVJWgMr2m00P" index="0" nameSpace="MHI" ruleid="00AHTVJWgMr2m00A" type="POLICY_RULE">
+        <part dgdpid="006RJeki2etZa00a" id="00AHTVJWgMr2m00Q" index="0" nameSpace="MHI" prntID="00AHTVJWgMr2m00P" type="HIDE" value="true"/>
+        <part dgdpid="00AFd0lWgMr2m00X" id="00AHTVJWgMr2m00R" index="1" nameSpace="MHI" prntID="00AHTVJWgMr2m00P" type="HIDE" value="true"/>
+      </part>
+    </policy>
+  </policies>
+</configurations>

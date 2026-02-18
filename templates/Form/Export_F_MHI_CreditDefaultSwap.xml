@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="CreditDefaultSwaps" entitySubType="[]" id="Lg5W61ftW2" isDefault="Y" isPublic="Y" screenType="SYSTEMFORM" title="F: MHI_CreditDefaultSwap">
+  <control caption="Credit Default Swaps" columns="3" fullQualPath="" hideDetail="N" id="(tqvr&amp;gt;*A01" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="PAGEVIEW">
+    <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Summary" columns="2" fullQualPath="" hideDetail="N" id="(tqwr&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Publishing and Update" columns="2" fullQualPath="" hideDetail="N" id="(tqxr&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqwr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <buttons>
+          <button caption="Re-Publish" id="(tq%r&gt;*A01">
+            <property name="Event Type" value="GenericEvent"/>
+            <property name="Event Name" value="MizuhoPublishing"/>
+            <property name="EntityId" value="CreditDefaultSwaps.InstrumentDetails.ISSUInstrId"/>
+            <property name="Type" value="event"/>
+            <property name="AlwaysVisible" value="true"/>
+          </button>
+        </buttons>
+        <control caption="Last Updated" columns="2" fullQualPath="CreditDefaultSwaps.Publishing.UPD1ISSULastUpdated" hideDetail="N" id="(tqyr&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqxr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Version" columns="2" fullQualPath="CreditDefaultSwaps.Publishing.UPD1ISSUVersion" hideDetail="N" id="(tqzr&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqxr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Published" columns="2" fullQualPath="CreditDefaultSwaps.Publishing.PBATISSULastchangeDate" hideDetail="N" id="(tq$r&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqxr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description" columns="2" fullQualPath="" hideDetail="N" id="(tq/r&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqwr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instrument Name" columns="0" fullQualPath="CreditDefaultSwaps.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="(tq(r&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq/r&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Instrument Description" columns="0" fullQualPath="CreditDefaultSwaps.InstrumentDetails.PreferredInstrumentDescription" hideDetail="N" id="(tq)r&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq/r&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Issue Date" columns="0" fullQualPath="CreditDefaultSwaps.InstrumentDetails.IssueDate" hideDetail="N" id="(tq~r&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq/r&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Preferred Instrument Identifier Type" columns="0" fullQualPath="CreditDefaultSwaps.InstrumentDetails.PreferredIdentifierType" hideDetail="N" id="(tq?r&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tq/r&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Last Change User" columns="0" fullQualPath="CreditDefaultSwaps.InstrumentDetails.InstrumentLastChangeUser" hideDetail="N" id="(tq&amp;lt;r&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tq/r&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      </control>
+      <control caption="Instrument Sector Information" columns="2" fullQualPath="" hideDetail="N" id="(tq&amp;gt;r&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqwr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instrument Type" columns="0" fullQualPath="CreditDefaultSwaps.InstrumentDetails.InstrumentType" hideDetail="N" id="(tq0s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq&amp;gt;r&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+        <control caption="Denominated Currency" columns="0" fullQualPath="CreditDefaultSwaps.InstrumentDetails.PrincipalCurrency" hideDetail="N" id="(tq1s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq&amp;gt;r&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      </control>
+      <control caption="Exceptions" columns="2" fullQualPath="CreditDefaultSwaps.Exceptions" hideDetail="N" id="(tq2s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqwr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Exceptions For Issue"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Issuance" columns="3" fullQualPath="" hideDetail="N" id="(tq3s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Issuance Information" columns="3" fullQualPath="" hideDetail="N" id="(tq4s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq3s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instrument System Status" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDetails.InstrumentSystemStatus" hideDetail="N" id="(tq5s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq4s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Settlement Currency" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDetails.DistributionCurrency" hideDetail="N" id="(tq6s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq4s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Swap Start Date" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapStartDate" hideDetail="N" id="(tq7s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq4s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Date" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDetails.MaturityDate" hideDetail="N" id="(tq8s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tq4s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Issuance" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentGeographicalInformation.CountryOfIssuance" hideDetail="N" id="(tq9s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tq4s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Swap Direction" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapDirection" hideDetail="N" id="(tqAs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tq4s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Swap Notional Value" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapNotionalValue" hideDetail="N" id="(tqBs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tq4s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Swap Spread" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapSpread" hideDetail="N" id="(tqCs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tq4s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifiers" columns="3" fullQualPath="" hideDetail="N" id="(tqDs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq3s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Unique Swap ID" columns="2" fullQualPath="CreditDefaultSwaps.Identifiers.InstrumentLevelIdentifiers.UniqueSwapID" hideDetail="N" id="(tqEs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqDs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Unique Swap ID Issuer" columns="2" fullQualPath="CreditDefaultSwaps.Identifiers.InstrumentLevelIdentifiers.UniqueSwapIDIssuer" hideDetail="N" id="(tqFs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqDs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Client Swap ID" columns="2" fullQualPath="CreditDefaultSwaps.Identifiers.InstrumentLevelIdentifiers.ClientSwapID" hideDetail="N" id="(tqGs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqDs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Inhouse Identifier" columns="2" fullQualPath="CreditDefaultSwaps.Identifiers.InstrumentLevelIdentifiers.InhouseIdentifier" hideDetail="N" id="(tqHs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqDs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="RED Code" columns="2" fullQualPath="CreditDefaultSwaps.Identifiers.InstrumentLevelIdentifiers.PairRed" hideDetail="N" id="(tqIs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqDs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Pricing Source ID" columns="2" fullQualPath="CreditDefaultSwaps.Identifiers.InstrumentLevelIdentifiers.PriceSourceID" hideDetail="N" id="(tqJs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqDs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Clear Deal ID" columns="2" fullQualPath="CreditDefaultSwaps.Identifiers.InstrumentLevelIdentifiers.ClearDealID" hideDetail="N" id="(tqKs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqDs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification" columns="3" fullQualPath="" hideDetail="N" id="(tqLs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq3s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Internal Asset Class Definition" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentClassification.IntAssetClsDef" hideDetail="N" id="(tqMs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqLs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Internal Security Type" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentClassification.IntSecTyp" hideDetail="N" id="(tqNs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqLs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Internal Sub Security Type" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentClassification.IntSubSecTyp" hideDetail="N" id="(tqOs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqLs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Counterparty Details" columns="3" fullQualPath="" hideDetail="N" id="(tqPs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tq3s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Protection Buyer" columns="2" fullQualPath="CreditDefaultSwaps.CounterpartyDetails.ProtectionBuyer.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="(tqQs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqPs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Protection Buyer Type" columns="2" fullQualPath="CreditDefaultSwaps.CounterpartyDetails.ProtectionBuyer.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="(tqRs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqPs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Protection Buyer LEI" columns="2" fullQualPath="CreditDefaultSwaps.CounterpartyDetails.ProtectionBuyer.FinancialInstitution.FinancialInstitutionIdentifiers.FinancialLegalEntityIdentifier" hideDetail="N" id="(tqSs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqPs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Protection Seller" columns="2" fullQualPath="CreditDefaultSwaps.CounterpartyDetails.ProtectionSeller.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="(tqTs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqPs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Protection Seller Type" columns="2" fullQualPath="CreditDefaultSwaps.CounterpartyDetails.ProtectionSeller.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="(tqUs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqPs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Protection Seller LEI" columns="2" fullQualPath="CreditDefaultSwaps.CounterpartyDetails.ProtectionSeller.FinancialInstitution.FinancialInstitutionIdentifiers.FinancialLegalEntityIdentifier" hideDetail="N" id="(tqVs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqPs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Description" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription" hideDetail="N" id="(tqWs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Exchange Name" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.DescriptionIssuedByMarket.FinancialMarket.MarketDetails.MarketName" hideDetail="N" id="(tqXs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Name" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentName" hideDetail="N" id="(tqYs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentDescription" hideDetail="N" id="(tqZs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Source Of Instrument Description" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.SourceOfInstrumentDescription" hideDetail="N" id="(tqas&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description Usage" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentDescriptionUsage" hideDetail="N" id="(tqbs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Short Name" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentShortName" hideDetail="N" id="(tqcs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description Language" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentDescriptionLanguage" hideDetail="N" id="(tqds&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description Data Source" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentDescriptionDataSource" hideDetail="N" id="(tqes&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description Data Status" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentDescriptionDataStatus" hideDetail="N" id="(tqfs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description Effective Date" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentDescriptionEffectiveDate" hideDetail="N" id="(tqgs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description Active Until" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentDescriptionActiveUntil" hideDetail="N" id="(tqhs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description Last Change Date" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentDescriptionLastChangeDate" hideDetail="N" id="(tqis&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Description Last Change User" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDescription.InstrumentDescriptionLastChangeUser" hideDetail="N" id="(tqjs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="(tqWs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Reference Details" columns="3" fullQualPath="" hideDetail="N" id="(tqks&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Reference Entity Details" columns="3" fullQualPath="CreditDefaultSwaps.CDSRefEntityDetails" hideDetail="N" id="(tqls&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqks&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Institution Name" columns="2" fullQualPath="CreditDefaultSwaps.CDSRefEntityDetails.ReferenceEntity.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="(tqms&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqls&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":true}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Institution Type" columns="2" fullQualPath="CreditDefaultSwaps.CDSRefEntityDetails.ReferenceEntity.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="(tqns&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqls&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Legal Entity Identifier" columns="2" fullQualPath="CreditDefaultSwaps.CDSRefEntityDetails.ReferenceEntity.FinancialInstitution.FinancialInstitutionIdentifiers.FinancialLegalEntityIdentifier" hideDetail="N" id="(tqos&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqls&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Inhouse Identifier" columns="2" fullQualPath="CreditDefaultSwaps.CDSRefEntityDetails.ReferenceEntity.FinancialInstitution.FinancialInstitutionIdentifiers.InhouseIdentifier" hideDetail="N" id="(tqps&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqls&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Reference Obligation Details" columns="3" fullQualPath="CreditDefaultSwaps.CDSRefObligationDetails" hideDetail="N" id="(tqqs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqks&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Instrument Name" columns="2" fullQualPath="CreditDefaultSwaps.CDSRefObligationDetails.ReferenceObligation.FullInstrument.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="(tqrs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqqs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":true}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Type" columns="2" fullQualPath="CreditDefaultSwaps.CDSRefObligationDetails.ReferenceObligation.FullInstrument.InstrumentDetails.InstrumentType" hideDetail="N" id="(tqss&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqqs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Date" columns="2" fullQualPath="CreditDefaultSwaps.CDSRefObligationDetails.ReferenceObligation.FullInstrument.InstrumentDetails.MaturityDate" hideDetail="N" id="(tqts&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqqs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="ISIN" columns="2" fullQualPath="CreditDefaultSwaps.CDSRefObligationDetails.ReferenceObligation.FullInstrument.Identifiers.InstrumentLevelIdentifiers.ISIN" hideDetail="N" id="(tqus&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqqs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="CUSIP" columns="2" fullQualPath="CreditDefaultSwaps.CDSRefObligationDetails.ReferenceObligation.FullInstrument.Identifiers.InstrumentLevelIdentifiers.CUSIP" hideDetail="N" id="(tqvs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqqs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Inhouse Identifier" columns="2" fullQualPath="CreditDefaultSwaps.CDSRefObligationDetails.ReferenceObligation.FullInstrument.Identifiers.InstrumentLevelIdentifiers.InhouseIdentifier" hideDetail="N" id="(tqws&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqqs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Index Details" columns="3" fullQualPath="CreditDefaultSwaps.IndexDetails" hideDetail="N" id="(tqxs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqks&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Index Name" columns="2" fullQualPath="CreditDefaultSwaps.IndexDetails.IndexDetails.Benchmark.BenchmarkDetails.BenchmarkName" hideDetail="N" id="(tqys&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqxs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":true}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Index Type" columns="2" fullQualPath="CreditDefaultSwaps.IndexDetails.IndexDetails.Benchmark.BenchmarkDetails.BenchmarkType" hideDetail="N" id="(tqzs&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqxs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Index Tenor" columns="2" fullQualPath="CreditDefaultSwaps.IndexDetails.IndexDetails.Benchmark.BenchmarkDetails.BenchmarkTenor" hideDetail="N" id="(tq$s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqxs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Series" columns="2" fullQualPath="CreditDefaultSwaps.IndexDetails.IndexDetails.Benchmark.BenchmarkDetails.Series" hideDetail="N" id="(tq%s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqxs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Index Annexure Version" columns="2" fullQualPath="CreditDefaultSwaps.IndexDetails.IndexDetails.Benchmark.BenchmarkDetails.MarkItVersionNumber" hideDetail="N" id="(tq@s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqxs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Index Annexure Date" columns="2" fullQualPath="CreditDefaultSwaps.IndexDetails.IndexDetails.Benchmark.BenchmarkDetails.BenchmarkAnnexDate" hideDetail="N" id="(tq&amp;amp;s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqxs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Index Annexure Source" columns="2" fullQualPath="CreditDefaultSwaps.IndexDetails.IndexDetails.Benchmark.BenchmarkDetails.BenchmarkProviderName" hideDetail="N" id="(tq*s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqxs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Inhouse Identifier" columns="2" fullQualPath="CreditDefaultSwaps.IndexDetails.IndexDetails.Benchmark.BenchmarkIdentifiers.InhouseIdentifier" hideDetail="N" id="(tq-s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqxs&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Index Excluded Entities" columns="3" fullQualPath="CreditDefaultSwaps.IndexExclEntities" hideDetail="N" id="(tq.s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="5" parentId="(tqks&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Excluded Entity Name" columns="2" fullQualPath="CreditDefaultSwaps.IndexExclEntities.ExcludedEntity.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="(tq/s&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq.s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":true}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Excluded Entity Type" columns="2" fullQualPath="CreditDefaultSwaps.IndexExclEntities.ExcludedEntity.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="(tq(s&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq.s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Excluded Entity LEI" columns="2" fullQualPath="CreditDefaultSwaps.IndexExclEntities.ExcludedEntity.FinancialInstitution.FinancialInstitutionIdentifiers.FinancialLegalEntityIdentifier" hideDetail="N" id="(tq)s&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq.s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Fee Leg Details" columns="2" fullQualPath="" hideDetail="N" id="(tq~s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Leg Details" columns="3" fullQualPath="" hideDetail="N" id="(tq?s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq~s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Leg Description" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegDescription" hideDetail="N" id="(tq&amp;lt;s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq?s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Inhouse Identifier" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegInhouseID" hideDetail="N" id="(tq&amp;gt;s&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq?s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Effective Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegPeriodStartDate" hideDetail="N" id="(tq0t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq?s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegPeriodEndDate" hideDetail="N" id="(tq1t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tq?s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Payment Details" columns="3" fullQualPath="" hideDetail="N" id="(tq2t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq~s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Payment Tenor" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegPaymentTenor" hideDetail="N" id="(tq3t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq2t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Payment Tenor Period" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegPaymentTenorPeriod" hideDetail="N" id="(tq4t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq2t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Business Day Convention" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegBusinessDayConv" hideDetail="N" id="(tq5t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq2t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Roll Convention" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegCalculationPeriodRoll" hideDetail="N" id="(tq6t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tq2t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Day Count Method" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegDayCountUsed" hideDetail="N" id="(tq7t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tq2t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Business Calendar" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegBusinessCalendar.CalendarDefinition.Calendar.CalendarName" hideDetail="N" id="(tq8t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tq2t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Business Center" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegBusinessCalendar.CalendarDefinition.BusinessCenter.BusinessCenterGeoUnit" hideDetail="N" id="(tq9t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tq2t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Premium Amount" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapPremiumAmount" hideDetail="N" id="(tqAt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tq2t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Premium Currency" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapPremiumCurrCde" hideDetail="N" id="(tqBt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tq2t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rate Details" columns="3" fullQualPath="" hideDetail="N" id="(tqCt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq~s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Dated Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegDatedDate" hideDetail="N" id="(tqDt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="First Payment Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegFirstPaymentDate" hideDetail="N" id="(tqEt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Coupon Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegLastCouponDate" hideDetail="N" id="(tqFt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Coupon Rate Type" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegCouponRateType" hideDetail="N" id="(tqGt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Coupon Rate" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegCouponRate" hideDetail="N" id="(tqHt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Coupon Rate Effective Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegCouponRateEffDate" hideDetail="N" id="(tqIt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Next Coupon Reset Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegNxtCpnResetDate" hideDetail="N" id="(tqJt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Float Rate Spread" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegFloatRateSpread" hideDetail="N" id="(tqKt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Reference Index Name" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegRefIndexName" hideDetail="N" id="(tqLt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Fixing Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegInitialFixingDate" hideDetail="N" id="(tqMt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fixing Date Offset" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegFixingDateOffset" hideDetail="N" id="(tqNt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rate Reset Tenor" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegResetTenor" hideDetail="N" id="(tqOt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rate Reset Tenor Period" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegResetTenorPeriod" hideDetail="N" id="(tqPt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="(tqCt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fee Leg Description" columns="3" fullQualPath="CreditDefaultSwaps.FeeLegDescription" hideDetail="N" id="(tqQt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="5" parentId="(tq~s&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Leg Name" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionName" hideDetail="N" id="(tqRt&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionText" hideDetail="N" id="(tqSt&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Source Of Leg Description" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionSource" hideDetail="N" id="(tqTt&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Usage" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionUsage" hideDetail="N" id="(tqUt&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Language" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionLanguage" hideDetail="N" id="(tqVt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Effective Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionEffectiveDate" hideDetail="N" id="(tqWt&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Active Until" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionActiveUntil" hideDetail="N" id="(tqXt&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Data Source" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionDataSource" hideDetail="N" id="(tqYt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Data Status" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionDataStatus" hideDetail="N" id="(tqZt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Last Change Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionLastChangeDate" hideDetail="N" id="(tqat&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Last Change User" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDescription.FeeLegDescriptionLastChangeUser" hideDetail="N" id="(tqbt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="(tqQt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Protection Leg Details" columns="2" fullQualPath="" hideDetail="N" id="(tqct&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Leg Details" columns="3" fullQualPath="" hideDetail="N" id="(tqdt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqct&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Leg Description" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegDescription" hideDetail="N" id="(tqet&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqdt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Inhouse Identifier" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegInhouseID" hideDetail="N" id="(tqft&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqdt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Effective Date" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegPeriodStartDate" hideDetail="N" id="(tqgt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqdt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Date" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegPeriodEndDate" hideDetail="N" id="(tqht&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqdt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Payment Details" columns="3" fullQualPath="" hideDetail="N" id="(tqit&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqct&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Payment Tenor" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegPaymentTenor" hideDetail="N" id="(tqjt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqit&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Payment Tenor Period" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegPaymentTenorPeriod" hideDetail="N" id="(tqkt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqit&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Business Day Convention" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegBusinessDayConv" hideDetail="N" id="(tqlt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqit&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Day Count Method" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegDayCountUsed" hideDetail="N" id="(tqmt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqit&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rate Details" columns="3" fullQualPath="" hideDetail="N" id="(tqnt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqct&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Dated Date" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegDatedDate" hideDetail="N" id="(tqot&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqnt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="First Payment Date" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegFirstPaymentDate" hideDetail="N" id="(tqpt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqnt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Coupon Date" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegLastCouponDate" hideDetail="N" id="(tqqt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqnt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Coupon Rate Type" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegCouponRateType" hideDetail="N" id="(tqrt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqnt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Coupon Rate" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegCouponRate" hideDetail="N" id="(tqst&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqnt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Coupon Rate Effective Date" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegCouponRateEffDate" hideDetail="N" id="(tqtt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqnt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Next Coupon Reset Date" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegNxtCpnResetDate" hideDetail="N" id="(tqut&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqnt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Reference Index Name" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegRefIndexName" hideDetail="N" id="(tqvt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqnt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fixing Date Offset" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegFixingDateOffset" hideDetail="N" id="(tqwt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqnt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Credit Events Applicable" columns="3" fullQualPath="" hideDetail="N" id="(tqxt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqct&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Bankruptcy Applicable" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegBankruptcyInd" hideDetail="N" id="(tqyt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Failure To Pay Applicable" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegFailureToPayInd" hideDetail="N" id="(tqzt&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Failure To Pay Threshold Amount" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegFailureToPayThresholdAmt" hideDetail="N" id="(tq$t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Failure To Pay Grace Period" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegFailureToPayGracePeriod" hideDetail="N" id="(tq%t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Failure To Pay Grace Period Unit" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegFailureToPayGracePeriodUnit" hideDetail="N" id="(tq@t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Restructuring Event Applicable" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegRestructuringInd" hideDetail="N" id="(tq&amp;amp;t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Restructuring Type" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegRestructuringType" hideDetail="N" id="(tq*t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Obligation Acceleration Applicable" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegObligAccelerationInd" hideDetail="N" id="(tq-t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Repudiation/Moratorium Applicable" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.ProtectionLegRepudMoratoriumInd" hideDetail="N" id="(tq.t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Nth To Default" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.NthToDefault" hideDetail="N" id="(tq/t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Mth To Default" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.MthToDefault" hideDetail="N" id="(tq(t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Attachment Point Percentage" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.AttachmentPointPercentage" hideDetail="N" id="(tq)t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Detachment Point Percentage" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDetails.DetachmentPointPercentage" hideDetail="N" id="(tq~t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="(tqxt&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Protection Leg Description" columns="3" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription" hideDetail="N" id="(tq?t&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="5" parentId="(tqct&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Leg Name" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionName" hideDetail="N" id="(tq&amp;lt;t&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionText" hideDetail="N" id="(tq&amp;gt;t&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Source Of Leg Description" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionSource" hideDetail="N" id="(tq0u&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Usage" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionUsage" hideDetail="N" id="(tq1u&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Language" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionLanguage" hideDetail="N" id="(tq2u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Effective Date" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionEffectiveDate" hideDetail="N" id="(tq3u&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Active Until" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionActiveUntil" hideDetail="N" id="(tq4u&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Data Source" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionDataSource" hideDetail="N" id="(tq5u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Data Status" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionDataStatus" hideDetail="N" id="(tq6u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Last Change Date" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionLastChangeDate" hideDetail="N" id="(tq7u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Last Change User" columns="2" fullQualPath="CreditDefaultSwaps.ProtectionLegDescription.ProtectionLegDescriptionLastChangeUser" hideDetail="N" id="(tq8u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="(tq?t&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="T&amp;amp;Cs" columns="2" fullQualPath="" hideDetail="N" id="(tq9u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Terms" columns="3" fullQualPath="" hideDetail="N" id="(tqAu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq9u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Credit Analyst" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.CreditAnalyst.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="(tqBu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqAu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Primary Credit Analyst" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.PrimaryCreditAnalyst.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="(tqCu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqAu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Clean/Dirty Price" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.CleanOrDirtyPrice" hideDetail="N" id="(tqDu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqAu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Upfront Points" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapUpfrontPoints" hideDetail="N" id="(tqEu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqAu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Illiquidity Indicator" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDetails.IlliquidityIndicator" hideDetail="N" id="(tqFu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqAu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Liquidity Score" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.LiquidityScore" hideDetail="N" id="(tqGu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqAu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Default Indicator" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.DefaultedIndicator" hideDetail="N" id="(tqHu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqAu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Swap Price Type" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapPriceType" hideDetail="N" id="(tqIu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqAu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Trading Strategy Type" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapTradingStrategyTyp" hideDetail="N" id="(tqJu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqAu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Settlement Details" columns="3" fullQualPath="" hideDetail="N" id="(tqKu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq9u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Settlement Method Type" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SettlementMethodType" hideDetail="N" id="(tqLu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Cleared Indicator" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapClearedInd" hideDetail="N" id="(tqMu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="CCP MIC" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.CCPMICCode" hideDetail="N" id="(tqNu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Swap Payment Type" columns="2" fullQualPath="CreditDefaultSwaps.SwapCharacteristics.SwapPaymentType" hideDetail="N" id="(tqOu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Calculation Agent" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.CalculationAgent.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="(tqPu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Calculation Agent Type" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.CalculationAgent.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="(tqQu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Calculation Agent ID" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.CalculationAgent.FinancialInstitution.FinancialInstitutionIdentifiers.InhouseIdentifier" hideDetail="N" id="(tqRu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Calculation Agent Business Calendar" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.CalculationAgent.FinancialInstitution.CalcAgentBusinessCalendar.CalcAgentBusCalId" hideDetail="N" id="(tqSu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Calculation Agent Business Center" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.CalculationAgent.FinancialInstitution.CalcAgentBusinessCalendar.CalcAgentBusCenter" hideDetail="N" id="(tqTu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Clearing House" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.ClearingHouse.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="(tqUu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Clearing House Type" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.ClearingHouse.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="(tqVu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Clearing House ID" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.ClearingHouse.FinancialInstitution.FinancialInstitutionIdentifiers.InhouseIdentifier" hideDetail="N" id="(tqWu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Clearing Broker" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.ClearingBroker.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="(tqXu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Clearing Broker Type" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.ClearingBroker.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="(tqYu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Clearing Broker ID" columns="2" fullQualPath="CreditDefaultSwaps.SwapSettlementDetails.ClearingBroker.FinancialInstitution.FinancialInstitutionIdentifiers.InhouseIdentifier" hideDetail="N" id="(tqZu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="(tqKu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Deliverable Obligations" columns="3" fullQualPath="" hideDetail="N" id="(tqau&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq9u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Obligation Category" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObligationCategory" hideDetail="N" id="(tqbu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Accrued Interest Included" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObAccruedInterest" hideDetail="N" id="(tqcu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Not Subordinated" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObNotSubordinated" hideDetail="N" id="(tqdu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Not Sovereign Lender" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObNotSovereignLender" hideDetail="N" id="(tqeu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Not Domestic Issuance" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObNotDomesticIssuance" hideDetail="N" id="(tqfu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Not Domestic Law" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObNotDomesticLaw" hideDetail="N" id="(tqgu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Listed" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObListed" hideDetail="N" id="(tqhu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Not Contingent" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObNotContingent" hideDetail="N" id="(tqiu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Assignable Loan" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObAssignableLoan" hideDetail="N" id="(tqju&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Consent Required Loan" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObConReqLoan" hideDetail="N" id="(tqku&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Transferable" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObTransferable" hideDetail="N" id="(tqlu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Not Bearer" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObNotBearer" hideDetail="N" id="(tqmu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Partial Cash Settlement Of Assignable Loan" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObPrtCshStAsLoan" hideDetail="N" id="(tqnu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Partial Cash Settlement Of Consent Required Loan" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelObPrtCshStCRLoan" hideDetail="N" id="(tqou&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Excluded Obligations" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelExcludedObligations" hideDetail="N" id="(tqpu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Other Obligations" columns="2" fullQualPath="CreditDefaultSwaps.CDSDelObligations.CDSDelOtherObligations" hideDetail="N" id="(tqqu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="(tqau&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Stub Details" columns="3" fullQualPath="" hideDetail="N" id="(tqru&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Initial Stub Details" columns="3" fullQualPath="CreditDefaultSwaps.InitialStubDetails" hideDetail="N" id="(tqsu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqru&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Initial Stub Start Date" columns="2" fullQualPath="CreditDefaultSwaps.InitialStubDetails.InitialStubStartDate" hideDetail="N" id="(tqtu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqsu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub End Date" columns="2" fullQualPath="CreditDefaultSwaps.InitialStubDetails.InitialStubEndDate" hideDetail="N" id="(tquu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqsu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Fixed Rate" columns="2" fullQualPath="CreditDefaultSwaps.InitialStubDetails.InitialStubFixedRate" hideDetail="N" id="(tqvu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqsu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Index Name" columns="2" fullQualPath="CreditDefaultSwaps.InitialStubDetails.InitialStubIndexName" hideDetail="N" id="(tqwu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqsu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Index Tenor Period" columns="2" fullQualPath="CreditDefaultSwaps.InitialStubDetails.InitialStubIndexTenorPeriod" hideDetail="N" id="(tqxu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqsu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Final Stub Details" columns="3" fullQualPath="CreditDefaultSwaps.FinalStubDetails" hideDetail="N" id="(tqyu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqru&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Final Stub Start Date" columns="2" fullQualPath="CreditDefaultSwaps.FinalStubDetails.FinalStubStartDate" hideDetail="N" id="(tqzu&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqyu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub End Date" columns="2" fullQualPath="CreditDefaultSwaps.FinalStubDetails.FinalStubEndDate" hideDetail="N" id="(tq$u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqyu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Fixed Rate" columns="2" fullQualPath="CreditDefaultSwaps.FinalStubDetails.FinalStubFixedRate" hideDetail="N" id="(tq%u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqyu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Index Name" columns="2" fullQualPath="CreditDefaultSwaps.FinalStubDetails.FinalStubIndexName" hideDetail="N" id="(tq@u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqyu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Index Tenor Period" columns="2" fullQualPath="CreditDefaultSwaps.FinalStubDetails.FinalStubIndexTenorPeriod" hideDetail="N" id="(tq&amp;amp;u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqyu&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Payment Details" columns="3" fullQualPath="" hideDetail="N" id="(tq*u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Initial Payment Details" columns="3" fullQualPath="CreditDefaultSwaps.InitialPaymentDetails" hideDetail="N" id="(tq-u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq*u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Initial Payment Payer" columns="2" fullQualPath="CreditDefaultSwaps.InitialPaymentDetails.InitialPaymentPayer" hideDetail="N" id="(tq.u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq-u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Payment Date" columns="2" fullQualPath="CreditDefaultSwaps.InitialPaymentDetails.InitialPaymentDate" hideDetail="N" id="(tq/u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq-u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Payment Currency" columns="2" fullQualPath="CreditDefaultSwaps.InitialPaymentDetails.InitialPaymentCurrency" hideDetail="N" id="(tq(u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq-u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Payment Amount" columns="2" fullQualPath="CreditDefaultSwaps.InitialPaymentDetails.InitialPaymentAmount" hideDetail="N" id="(tq)u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tq-u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fee Payment Details" columns="3" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegPaymentDetails" hideDetail="Y" id="(tq~u&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="5" parentId="(tq*u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Start Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegPaymentDetails.FeeLegPaymentStartDate" hideDetail="N" id="(tq?u&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq~u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="End Date" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegPaymentDetails.FeeLegPaymentEndDate" hideDetail="N" id="(tq&amp;lt;u&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq~u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Currency" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegPaymentDetails.FeeLegPaymentCurrency" hideDetail="N" id="(tq&amp;gt;u&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq~u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rate" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegPaymentDetails.FeeLegPaymentRate" hideDetail="N" id="(tq0v&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tq~u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Payment Amount" columns="2" fullQualPath="CreditDefaultSwaps.FeeLegDetails.FeeLegPaymentDetails.FeeLegPaymentAmount" hideDetail="N" id="(tq1v&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tq~u&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument Documents" columns="3" fullQualPath="CreditDefaultSwaps.InstrumentDocuments" hideDetail="N" id="(tq2v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="10" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Issue Document Description" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDocuments.IssueDocumentDescription" hideDetail="N" id="(tq3v&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq2v&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Document Purpose" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDocuments.IssueDocumentPurpose" hideDetail="N" id="(tq4v&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq2v&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Document History" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDocuments.DocumentHistory" hideDetail="N" id="(tq5v&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq2v&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Document Image ID" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDocuments.DocumentHistory.DocumentImageID" hideDetail="N" id="(tq6v&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tq5v&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Internal ID" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDocuments.DocumentHistory.DocumentInternalID" hideDetail="N" id="(tq7v&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tq5v&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document NLS Code" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDocuments.DocumentHistory.DocumentNLSCode" hideDetail="N" id="(tq8v&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tq5v&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Comment" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDocuments.DocumentHistory.DocumentComment" hideDetail="N" id="(tq9v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tq5v&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Status" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDocuments.DocumentHistory.DocumentStatus" hideDetail="N" id="(tqAv&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tq5v&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Status Date/Time" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentDocuments.DocumentHistory.DocumentStatusDateTime" hideDetail="N" id="(tqBv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tq5v&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Classifications" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications" hideDetail="N" id="(tqCv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="5" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Classification Value" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.ClassificationValue" hideDetail="N" id="(tqDv&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Class Name" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.ClassName" hideDetail="N" id="(tqEv&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Set" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.IndustryClassificationSetID" hideDetail="N" id="(tqFv&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Value" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllInstrClsfIdentifier.InstrumentIdentifiers.IdentifiersDetails.IdentifierValue" hideDetail="N" id="(tqGv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Type" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllInstrClsfIdentifier.InstrumentIdentifiers.IdentifiersDetails.IdentifierType" hideDetail="N" id="(tqHv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit ID" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllInstrClsfGeoUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitID" hideDetail="N" id="(tqIv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit Type" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllInstrClsfGeoUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitType" hideDetail="N" id="(tqJv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Purpose" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllClassificationPurpose" hideDetail="N" id="(tqKv&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllClassificationStartDateTime" hideDetail="N" id="(tqLv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllClassificationEndDateTime" hideDetail="N" id="(tqMv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllClassificationLastChangeDateTime" hideDetail="N" id="(tqNv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllClassificationLastChangeUserID" hideDetail="N" id="(tqOv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllClassificationDataSourceID" hideDetail="N" id="(tqPv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllClassificationDataStatus" hideDetail="N" id="(tqQv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllClassificationOriginalDataProvider" hideDetail="N" id="(tqRv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Description" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllClassificationIssueClassificationDescription" hideDetail="N" id="(tqSv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Value For Classification Amount" columns="2" fullQualPath="CreditDefaultSwaps.AllInstrumentClassifications.AllClassificationValueForClassificationAmount" hideDetail="N" id="(tqTv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="(tqCv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Classifications"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Prices" columns="2" fullQualPath="CreditDefaultSwaps.Prices" hideDetail="N" id="(tqUv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="Y" orderNum="11" pageSize="25" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="SOI" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant" hideDetail="N" id="(tqVv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="5" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Instrument Group Name" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentGroup" hideDetail="N" id="(tqWv&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Purpose" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantPurpType" hideDetail="N" id="(tqXv&amp;gt;*A01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Effective Date" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantEffectiveDate" hideDetail="N" id="(tqYv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Description" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantDescription" hideDetail="N" id="(tqZv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Effective Until" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantEffectiveUntil" hideDetail="N" id="(tqav&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Type" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantParticipationType" hideDetail="N" id="(tqbv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Percent" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantParticipationPercent" hideDetail="N" id="(tqcv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Amount" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantParticipationAmount" hideDetail="N" id="(tqdv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Currency" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantParticipationCurrency" hideDetail="N" id="(tqev&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantDataStatus" hideDetail="N" id="(tqfv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source ID" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantDataSourceId" hideDetail="N" id="(tqgv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User ID" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantLastChangeUserId" hideDetail="N" id="(tqhv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="CreditDefaultSwaps.InstrumentAsAParticipant.InstrumentParticipantLastChangeDateTime" hideDetail="N" id="(tqiv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="(tqVv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Issue Group Participants"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="MHI Underlying Related Instruments" columns="2" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments" hideDetail="N" id="(tqjv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="(tqvr&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Instrument Name" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.MHIUnderlyingInstrument.Base.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="(tqkv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Preferred Instrument Identifier Type" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.MHIUnderlyingInstrument.Base.InstrumentDetails.PreferredIdentifierType" hideDetail="N" id="(tqlv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Preferred Instrument Identifier" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.MHIUnderlyingInstrument.Base.InstrumentDetails.PreferredIdentifierValue" hideDetail="N" id="(tqmv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Role" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFRelatedRole" hideDetail="N" id="(tqnv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Issue Participation Sub Role" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFRelatedSubRole" hideDetail="N" id="(tqov&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Type of Units" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFTypeofUnits" hideDetail="N" id="(tqpv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Event Participant Amount" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFEventParticiapntAmount" hideDetail="N" id="(tqqv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Exercise Rate" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFExerciseRate" hideDetail="N" id="(tqrv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Exercise Rate Type" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFExerciseRateType" hideDetail="N" id="(tqsv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Number Of Component Instruments" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFNumberOfComponentInstruments" hideDetail="N" id="(tqtv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Participation Number" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFParticipationNumber" hideDetail="N" id="(tquv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Assimilation Assumed Date Indicator" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFAssimilationAssumedDateIndicator" hideDetail="N" id="(tqvv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Assimilation Date" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFAssimilationDate" hideDetail="N" id="(tqwv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Basket Weight Type" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFBasketWeightType" hideDetail="N" id="(tqxv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Basket Weight Value" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFBasketWeightValue" hideDetail="N" id="(tqyv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Component Separation Indicator" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFComponentSeparationIndicator" hideDetail="N" id="(tqzv&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Compulsory Separation Date" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFCompulsorySeparationDate" hideDetail="N" id="(tq$v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Event Amount Basis" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFEventAmountBasis" hideDetail="N" id="(tq%v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Event Amount Type" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFEventAmountType" hideDetail="N" id="(tq@v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Event Basis Part Amount" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFEventBasisPartAmount" hideDetail="N" id="(tq&amp;amp;v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Participation Ratio" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFParticipationRatio" hideDetail="N" id="(tq*v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Principal/Income" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFPrincipalIncome" hideDetail="N" id="(tq-v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Separation Start Date" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFSeparationStartDate" hideDetail="N" id="(tq.v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="22" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Underlying Asset ID Context Type" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFUnderlyingAssetIDContextType" hideDetail="N" id="(tq/v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="23" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Underlying Asset Issue ID" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFUnderlyingAssetIssueID" hideDetail="N" id="(tq(v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="24" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Underlying Asset Name" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFUnderlyingAssetName" hideDetail="N" id="(tq)v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="25" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Underlying Asset Type" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFUnderlyingAssetType" hideDetail="N" id="(tq~v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="26" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Underlying Currency" columns="0" fullQualPath="CreditDefaultSwaps.MHIUnderlyingRelatedInstruments.RISSRIDFUnderlyingCurrency" hideDetail="N" id="(tq?v&amp;gt;*A01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="27" pageSize="0" parentId="(tqjv&amp;gt;*A01" relatedPath="" screenId="Lg5W61ftW2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Related Issue Details"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

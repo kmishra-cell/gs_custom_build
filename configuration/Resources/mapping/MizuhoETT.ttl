@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="TRT" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="LastChangedTms">2020-05-11 at 10:27:10 BST</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="MappingDesignerVersion">8.4.1.32REL</Option>
+  </Options>
+  <Translation>
+    <table name="COLLAT_TYP">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>AB-Ref 0</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>AUTO   0</col>
+          <col>Auto Loans &amp; Leases</col>
+        </row>
+        <row>
+          <col>CARD   0</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>CF-CLO-SME</col>
+          <col>SME</col>
+        </row>
+        <row>
+          <col>CF-CDO-ABS</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>CNSMER 0</col>
+          <col>Consumer Loans</col>
+        </row>
+        <row>
+          <col>HOMEE3.1</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE4.5</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE5.0</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE5.1</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE5.3</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE5.4</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE5.5</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE5.7</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE5.8</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE6.0</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE6.2</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE6.3</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE6.6</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE6.7</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>HOMEE7.1</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/5.0</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/5.2</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/5.3</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/5.4</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/5.5</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/5.7</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/5.9</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/6.0</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/6.1</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/6.2</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/6.4</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/6.5</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/6.7</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/6.8</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/7.0</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/C 6</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>RESB/C 8</col>
+          <col>Prime RMBS</col>
+        </row>
+        <row>
+          <col>SYN-CDO-ABS</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>SYN-CLO-SME</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>TRADE</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>STUDNT</col>
+          <col>Unapproved</col>
+        </row>
+      </data>
+    </table>
+    <table name="SECURITY_TYP2">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>ABS Other</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>ABS/HG</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>ABS/MEZZ</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>CDO2</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>CDS</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>CMO</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>CRE</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>IG</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>LL</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>MML</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>Pool</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>RMBS</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>TRP/REIT</col>
+          <col>Unapproved</col>
+        </row>
+        <row>
+          <col>Whole Loan</col>
+          <col>Prime RMBS</col>
+        </row>
+      </data>
+    </table>
+    <table name="SECURITY_TYP">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>Agncy ABS Home</col>
+          <col>Asset Backed</col>
+        </row>
+        <row>
+          <col>Agncy ABS Other</col>
+          <col>Asset Backed</col>
+        </row>
+        <row>
+          <col>Agncy CMO FLT</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>Agncy CMO IO</col>
+          <col>Asset Backed</col>
+        </row>
+        <row>
+          <col>Agncy CMO Other</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>Agncy CMO Z</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>CF</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>CMBS</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>DELAY-DRAW TERM</col>
+          <col>Loan</col>
+        </row>
+        <row>
+          <col>HB</col>
+          <col>Asset Backed</col>
+        </row>
+        <row>
+          <col>MBS 10yr</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>MBS 15yr</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>MBS 20yr</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>MBS 30yr</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>MBS ARM</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>MBS Other</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>Prvt CMO FLT</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>Prvt CMO Other</col>
+          <col>Asset Backed</col>
+        </row>
+        <row>
+          <col>Prvt CMO Z</col>
+          <col>Mortgage Backed</col>
+        </row>
+        <row>
+          <col>REV</col>
+          <col>Loan</col>
+        </row>
+        <row>
+          <col>SBA Pool</col>
+          <col>Asset Backed</col>
+        </row>
+        <row>
+          <col>SN</col>
+          <col>Asset Backed</col>
+        </row>
+        <row>
+          <col>TERM</col>
+          <col>Loan</col>
+        </row>
+      </data>
+    </table>
+    <table name="CalendarLookup">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>AED</col>
+          <col>AeB</col>
+        </row>
+        <row>
+          <col>ARS</col>
+          <col>BAB</col>
+        </row>
+        <row>
+          <col>ATS</col>
+          <col>ViB</col>
+        </row>
+        <row>
+          <col>AUD</col>
+          <col>SyB</col>
+        </row>
+        <row>
+          <col>BEF</col>
+          <col>BrB</col>
+        </row>
+        <row>
+          <col>BGN</col>
+          <col>SoB</col>
+        </row>
+        <row>
+          <col>BMD</col>
+          <col>HmB</col>
+        </row>
+        <row>
+          <col>BRL</col>
+          <col>SPB</col>
+        </row>
+        <row>
+          <col>CAD</col>
+          <col>TrB</col>
+        </row>
+        <row>
+          <col>CHF</col>
+          <col>ZuB</col>
+        </row>
+        <row>
+          <col>CLP</col>
+          <col>SaB</col>
+        </row>
+        <row>
+          <col>CNY</col>
+          <col>BeB</col>
+        </row>
+        <row>
+          <col>COP</col>
+          <col>BoB</col>
+        </row>
+        <row>
+          <col>CZK</col>
+          <col>PrB</col>
+        </row>
+        <row>
+          <col>ESP</col>
+          <col>MdB</col>
+        </row>
+        <row>
+          <col>EUR</col>
+          <col>Tgt</col>
+        </row>
+        <row>
+          <col>FIM</col>
+          <col>HeB</col>
+        </row>
+        <row>
+          <col>FRF</col>
+          <col>PaB</col>
+        </row>
+        <row>
+          <col>GBP</col>
+          <col>LnB</col>
+        </row>
+        <row>
+          <col>GBp</col>
+          <col>LnB</col>
+        </row>
+        <row>
+          <col>GRD</col>
+          <col>AtB</col>
+        </row>
+        <row>
+          <col>HKD</col>
+          <col>HKB</col>
+        </row>
+        <row>
+          <col>HRK</col>
+          <col>ZaB</col>
+        </row>
+        <row>
+          <col>HUF</col>
+          <col>BdB</col>
+        </row>
+        <row>
+          <col>IDR</col>
+          <col>JaB</col>
+        </row>
+        <row>
+          <col>IEP</col>
+          <col>DuB</col>
+        </row>
+        <row>
+          <col>INR</col>
+          <col>BmB</col>
+        </row>
+        <row>
+          <col>ISK</col>
+          <col>RkB</col>
+        </row>
+        <row>
+          <col>ITL</col>
+          <col>MiB</col>
+        </row>
+        <row>
+          <col>JPY</col>
+          <col>TkB</col>
+        </row>
+        <row>
+          <col>KRW</col>
+          <col>SeB</col>
+        </row>
+        <row>
+          <col>LUF</col>
+          <col>LxB</col>
+        </row>
+        <row>
+          <col>MXN</col>
+          <col>MxB</col>
+        </row>
+        <row>
+          <col>MYR</col>
+          <col>KLB</col>
+        </row>
+        <row>
+          <col>NLG</col>
+          <col>AmB</col>
+        </row>
+        <row>
+          <col>NOK</col>
+          <col>OsB</col>
+        </row>
+        <row>
+          <col>NZD</col>
+          <col>WeB</col>
+        </row>
+        <row>
+          <col>PEN</col>
+          <col>LmB</col>
+        </row>
+        <row>
+          <col>PHP</col>
+          <col>MnB</col>
+        </row>
+        <row>
+          <col>PLN</col>
+          <col>WaB</col>
+        </row>
+        <row>
+          <col>PTE</col>
+          <col>LsB</col>
+        </row>
+        <row>
+          <col>ROL</col>
+          <col>BcB</col>
+        </row>
+        <row>
+          <col>RUR</col>
+          <col>MwB</col>
+        </row>
+        <row>
+          <col>SAR</col>
+          <col>RiB</col>
+        </row>
+        <row>
+          <col>SEK</col>
+          <col>StB</col>
+        </row>
+        <row>
+          <col>SGD</col>
+          <col>SiB</col>
+        </row>
+        <row>
+          <col>SIT</col>
+          <col>LbB</col>
+        </row>
+        <row>
+          <col>SKK</col>
+          <col>BtB</col>
+        </row>
+        <row>
+          <col>THB</col>
+          <col>BkB</col>
+        </row>
+        <row>
+          <col>TRY</col>
+          <col>IsB</col>
+        </row>
+        <row>
+          <col>TWD</col>
+          <col>TpB</col>
+        </row>
+        <row>
+          <col>USD</col>
+          <col>NYB</col>
+        </row>
+        <row>
+          <col>ZAR</col>
+          <col>JoB</col>
+        </row>
+      </data>
+    </table>
+  </Translation>
+</MappingDef>

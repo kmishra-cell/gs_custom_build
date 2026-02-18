@@ -1,0 +1,2779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="OMDX" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="LastChangedTms">2025-01-08 at 06:47:05 IST</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="MappingDesignerVersion">8.4.1.32REL</Option>
+    <Option key="OMDX.Base">MoodysRDS_Instrument.mdx</Option>
+  </Options>
+  <Input vendorType="XML">
+    <Options/>
+    <Layout>
+      <Override/>
+    </Layout>
+  </Input>
+  <Output>
+    <MappingFragments/>
+    <OutputDef>
+      <ForEach displayName="With ISIN" recordType="Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier">
+        <comment><![CDATA[RTG_COMM: The data element layout provided by the vendor has been modified. On using the layout as is, it was not possible to associate and loop through the rating details of each identifer as the <Instr_Rating> element is on the same level as the <Identifier>.
+For each Instrument, all the details are placed within each incoming identifier data element.]]></comment>
+        <where><![CDATA[return OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value, Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Organizations.Instrument_Organization.Organization_ID) && StrContainsOneOf(GetStringByKey("ID-ALL"), "ISI", "IS2", "IS3", "IS4", "IS5", "IS6");]]></where>
+        <Do>
+          <If>
+            <expr><![CDATA[return ((Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "ISI") || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS2")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS3")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS4");]]></expr>
+            <Then>
+              <Block>
+                <Execute>
+                  <comment><![CDATA[RTG_COMM: If incoming data has identifiers of type ISIN or CUSIP, only then all the data is processed.]]></comment>
+                  <expr><![CDATA[if ((((((Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "CUS") || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "ISI")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS2")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS3")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS4")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS5")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS6"))
+	return StoreString("ISIDValue", Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value);
+else
+	return "";]]></expr>
+                </Execute>
+                <Node displayName="ISSU-ISIN" messageformat="GSREF" name="STREET_REF" type="message">
+                  <Options>
+                    <Option key="DocType">STREET_REF</Option>
+                    <Option key="SystemId">fti://repository/dtd/STREET_REF</Option>
+                    <Option key="OutputEncoding"/>
+                  </Options>
+                  <comment><![CDATA[RTG_COMM: Street-Ref for setting up instrument identifiers like Moodys Debt Id, Deal No. and ISIN. Ratings for each ISIN and CUSIP will be setup up too. Bond details will be processed if present and setup in DebtChar and DebtStat segments.]]></comment>
+                  <condition>
+                    <comment><![CDATA[RTG_COMM: If the identifiers have a ISIN & CUSIP present, CUSIP will not be processed and will be derived from the ISIN values. This is done to avoid creation of split instruments for the same security.]]></comment><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID) && StrContainsOneOf(GetStringByKey("ID-ALL"), "ISI", "IS2", "IS3", "IS4", "IS5", "IS6"))
+	return "STREET_REF-ISSU";
+else
+	return "";]]>
+                  </condition>
+                  <Node name="USERID" type="attribute">
+                    <expr><![CDATA[return "GUEST";]]></expr>
+                  </Node>
+                  <Node name="TRACE" type="attribute">
+                    <expr><![CDATA[return "false";]]></expr>
+                  </Node>
+                  <Node name="TRANSACTIONCODE" type="attribute"/>
+                  <Node name="EVENT" type="attribute"/>
+                  <Node name="MSGSET" type="attribute"/>
+                  <Node name="MESSAGECONDITION" type="attribute">
+                    <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID) && StrContainsOneOf(GetStringByKey("ID-ALL"), "ISI", "IS2", "IS3", "IS4", "IS5", "IS6"))
+	return "STREET_REF-ISSU";
+else
+	return "";]]></expr>
+                  </Node>
+                  <Node name="HEADER" type="element">
+                    <Node name="ASOFDATE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ATTRLOCK" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CALID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                      <Node name="INSERT_ONLY" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+                      <Node name="DEFAULT" type="attribute"/>
+                      <Node name="ERR_LVL" type="attribute"/>
+                    </Node>
+                    <Node name="CHECKLASTDBUPDATE" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "N";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="CHGAPPRTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "N";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="CNTRYCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                      <Node name="INSERT_ONLY" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+                      <Node name="DEFAULT" type="attribute"/>
+                      <Node name="ERR_LVL" type="attribute"/>
+                    </Node>
+                    <Node name="CURRENTTIMESTAMP" type="element">
+                      <expr><![CDATA[return TimeStamp();]]></expr>
+                    </Node>
+                    <Node name="DATAID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATAIDCTXT" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATASOURCE" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MOODYS_RDS";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="DONOTPOST" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="EMPLOYEE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                      <Node name="INSERT_ONLY" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+                      <Node name="DEFAULT" type="attribute"/>
+                      <Node name="ERR_LVL" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUEACTIONREPLACE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUELOCK" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUERDERIVATIONMODE" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "N";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="LOCALE" type="element">
+                      <Node name="NLS" type="element">
+                        <Node name="VALUE" type="attribute">
+                          <expr><![CDATA[return "ENU";]]></expr>
+                        </Node>
+                      </Node>
+                      <Node name="TIMEZONE" type="element">
+                        <Node name="VALUE" type="attribute">
+                          <expr><![CDATA[return "GMT Standard Time";]]></expr>
+                        </Node>
+                      </Node>
+                    </Node>
+                    <Node name="MAIN_ENTITY_ID" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID;]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MAIN_ENTITY_ID_CTXT_TYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MDYDBTNO";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MAIN_ENTITY_TYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MISC";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MAIN_ENTITY_NME" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Security_Description;]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MAIN_ENTITY_TBL_TYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "ISSU";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MERGEMESSAGE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MSGCLASSIFICATION" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MDYSINSTR";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MSGSET" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MSGTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                      <Node name="INSERT_ONLY" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+                      <Node name="DEFAULT" type="attribute"/>
+                      <Node name="ERR_LVL" type="attribute"/>
+                    </Node>
+                    <Node name="ORGID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                      <Node name="INSERT_ONLY" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+                      <Node name="DEFAULT" type="attribute"/>
+                      <Node name="ERR_LVL" type="attribute"/>
+                    </Node>
+                    <Node name="PUBLISH" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="REALMSG" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="REFDATA" type="element"/>
+                    <Node name="REFERRINGPAGE" type="element"/>
+                    <Node name="ROLLBACKONSEGMENTERROR" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SECURITYLABEL" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRANSLATE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRILLIUM" type="element">
+                      <Node name="FORCENEWENTITY" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="TRILLIUMTABLEID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="TRILLIUMTABLETYPE" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                    </Node>
+                    <Node name="USERID" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MDYSINSTRCSTM";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="VENDORRECORDID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="VENDORTYPE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="VTTRMSGSET" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                  </Node>
+                  <Node name="Issue" type="segment">
+                    <Node name="ACTION" type="attribute">
+                      <expr><![CDATA[return "REFERENCE";]]></expr>
+                    </Node>
+                    <Node name="TYPE" type="attribute">
+                      <expr><![CDATA[return "Issue";]]></expr>
+                    </Node>
+                    <Node name="COPY_FROM" type="attribute"/>
+                    <Node name="COPY_TO" type="attribute"/>
+                    <Node name="DUP_CHECK" type="attribute"/>
+                    <Node name="ENDDATEIND" type="attribute"/>
+                    <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                    <Node name="ERROR" type="attribute">
+                      <expr><![CDATA[if (Strcmp(Translate(Config_Options, true, "CreateNewSecurity", "Moodys_RDS_Instrument"), "NO_SILENT"))
+	return "N";
+else
+	return "";]]></expr>
+                    </Node>
+                    <Node name="LOOKUP" type="attribute"/>
+                    <Node name="NESTED_ERR_LVL" type="attribute"/>
+                    <Node name="NESTED_ERR_TXT" type="attribute"/>
+                    <Node name="ONLY" type="attribute"/>
+                    <Node name="PARENT_LINK" type="attribute"/>
+                    <Node name="PUBLISH" type="attribute"/>
+                    <Node name="SEGPROCESSEDIND" type="attribute"/>
+                    <Node name="START_TMS_MATCH" type="attribute"/>
+                    <Node name="TRANSLATE" type="attribute"/>
+                    <Node name="TSATTRIBUTE" type="attribute"/>
+                    <Node name="TSOPTION" type="attribute"/>
+                    <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                    <Node name="TSTOLERANCE" type="attribute"/>
+                    <ForEach recordType="Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Organizations.Instrument_Organization">
+                      <Do>
+                        <Execute>
+                          <expr><![CDATA[return StoreString("VAL-ROLE", Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Organizations.Instrument_Organization.Organization_Role_Code);]]></expr>
+                        </Execute>
+                        <Execute>
+                          <expr><![CDATA[return StoreString("VAL-RLCD", Strcat(GetStringByKey("VAL-ROLE"), Strcat(";", GetStringByKey("VAL-RLCD"))));]]></expr>
+                        </Execute>
+                      </Do>
+                    </ForEach>
+                    <Node name="IssuerIdentifier" type="segment">
+                      <condition><![CDATA[if (StrContainsOneOf(GetStringByKey("VAL-RLCD"), Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Organizations.Instrument_Organization.Organization_Role_Code))
+	return "IssuerIdentifier";
+else
+	return "";]]></condition>
+                      <Node name="ACTION" type="attribute">
+                        <expr><![CDATA[return "REFERENCE";]]></expr>
+                      </Node>
+                      <Node name="TYPE" type="attribute">
+                        <expr><![CDATA[return "IssuerIdentifier";]]></expr>
+                      </Node>
+                      <Node name="COPY_FROM" type="attribute">
+                        <expr><![CDATA[return "INSTR_ISSR_ID";]]></expr>
+                      </Node>
+                      <Node name="COPY_TO" type="attribute">
+                        <expr><![CDATA[return "INSTR_ISSR_ID";]]></expr>
+                      </Node>
+                      <Node name="DUP_CHECK" type="attribute"/>
+                      <Node name="ENDDATEIND" type="attribute"/>
+                      <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                      <Node name="ERROR" type="attribute"/>
+                      <Node name="LOOKUP" type="attribute"/>
+                      <Node name="MATCH" type="attribute">
+                        <expr><![CDATA[return "IRID1_IDCTXT_ISSR_ID";]]></expr>
+                      </Node>
+                      <Node name="NESTED_ERR_LVL" type="attribute"/>
+                      <Node name="NESTED_ERR_TXT" type="attribute"/>
+                      <Node name="ONLY" type="attribute"/>
+                      <Node name="PARENT_LINK" type="attribute"/>
+                      <Node name="PUBLISH" type="attribute"/>
+                      <Node name="SEGPROCESSEDIND" type="attribute"/>
+                      <Node name="START_TMS_MATCH" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="TSATTRIBUTE" type="attribute"/>
+                      <Node name="TSOPTION" type="attribute"/>
+                      <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                      <Node name="TSTOLERANCE" type="attribute"/>
+                      <Node name="DATASRCID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="DATASTATTYP" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ENDTMS" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="GUCNT" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="GUID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="GUTYP" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="INSTRISSRID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="IRIDOID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ISSRID" type="element">
+                        <Node name="VALUE" type="attribute">
+                          <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Organizations.Instrument_Organization.Organization_ID;]]></expr>
+                        </Node>
+                      </Node>
+                      <Node name="ISSRIDCTXTTYP" type="element">
+                        <Node name="VALUE" type="attribute">
+                          <expr><![CDATA[return "MDY";]]></expr>
+                        </Node>
+                      </Node>
+                      <Node name="ISSRUSAGETYP" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="LASTCHGTMS" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="LASTCHGUSRID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="MERGEUNIQOID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="STARTTMS" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                    </Node>
+                    <Node name="ACCESSAUTHTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "PUBLIC";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="AVREXEMPTIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="BNCHOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CLTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CNVRTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CREATEDDATAPROVID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CREATEDREDISTRIBUTORID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CREATEDTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATAREDISTRIBUTORID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATASRCID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATASTATTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "ACTIVE";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="DECPRECNUM" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DENOMCURRCDE" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ISO_Currency_Code) && !Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ISO_Currency_Code, "Unk"))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ISO_Currency_Code;
+else
+	return "";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="DFLTSTATTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DFLTTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DISTRIBUTIONCURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DLVIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DLVREASCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="EISTOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ENDTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="EUROCNVRTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="GOVTSUPPIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ILLIQUIDITYIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INCBASTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INDIVCERTIFIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INSTRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INSTRISSRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INVSCLOSEDTE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISCDOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSACTVYSTATREASTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSACTVYSTATTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "ACTIVE";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ISSALPHSRCHTXT" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSOBJTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSRATETXT" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSTENORTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSTMS" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Dated_Date))
+	return DateFromString(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Dated_Date, 1, 10), "%Y-%M-%D");
+else
+	return "";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ISSTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MISC";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ISSUTCQTY" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUTMEASTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LASTCHGTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LASTCHGUSRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LIQUIDRIGHTRANKTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MANDCNVRIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MATEXPDTEEXTNTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MATEXPTMS" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Maturity_Date))
+	return DateFromString(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Maturity_Date, 1, 10), "%Y-%M-%D");
+else
+	return "";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MINNETWORTHBALIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MONITORRESTRICTIONCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MOSTFAVOREDLENDERIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="NOMVALUNITCAMT" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Face_Amount))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Face_Amount;
+else
+	return "";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="NOTTRADABLEIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ORIGDATAPROVID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ORIGMATEXPTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PARTFULLPDTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PARVALUETYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PRCMLTPLRCRTE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PRCQTMETHTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PREFIDCTXTTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PREFISSDESC" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PREFISSID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PREFISSNME" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Security_Description))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Security_Description;
+else
+	return "";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="PRINBASTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PRINNOTLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="REPACKAGEDSECIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="RTNGMAINTPROVSIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SECFORMTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SECLENDINGELIGIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SERIESTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="STARTTMS" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return DateFromString(SubString(TimeStamp(), 1, 10), "%M-%D-%Y");]]></expr>
+                      </Node>
+                      <Node name="INSERT_ONLY" type="attribute">
+                        <expr><![CDATA[return "Y";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="STRUCTUREDSECIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SUBSTITUTIONCLAUSEIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TBAELIGTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRDGRSTTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TSFRRSTIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TYPEARNFORLIFECDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="WHENISSUEDIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="WTHHLDTAXIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="WTHHLDTAXLEVIEDSRCIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                  </Node>
+                  <Node displayName="ISIN" name="IssueIdentifier" type="segment">
+                    <condition><![CDATA[if (((((Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "ISI") || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS2")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS3")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS4")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS5")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS6"))
+	return "IssueIdentifier";
+else
+	return "";]]></condition>
+                    <Node name="ACTION" type="attribute">
+                      <expr><![CDATA[return "REFERENCE";]]></expr>
+                    </Node>
+                    <Node name="TYPE" type="attribute">
+                      <expr><![CDATA[return "IssueIdentifier";]]></expr>
+                    </Node>
+                    <Node name="COPY_FROM" type="attribute"/>
+                    <Node name="COPY_TO" type="attribute"/>
+                    <Node name="DUP_CHECK" type="attribute"/>
+                    <Node name="ENDDATEIND" type="attribute"/>
+                    <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                    <Node name="ERROR" type="attribute"/>
+                    <Node name="LOOKUP" type="attribute"/>
+                    <Node name="MATCH" type="attribute">
+                      <expr><![CDATA[return "ISID7_INSTR_CTX_MKT_USG";]]></expr>
+                    </Node>
+                    <Node name="NESTED_ERR_LVL" type="attribute"/>
+                    <Node name="NESTED_ERR_TXT" type="attribute"/>
+                    <Node name="ONLY" type="attribute"/>
+                    <Node name="PARENT_LINK" type="attribute"/>
+                    <Node name="PUBLISH" type="attribute"/>
+                    <Node name="SEGPROCESSEDIND" type="attribute"/>
+                    <Node name="START_TMS_MATCH" type="attribute"/>
+                    <Node name="TRANSLATE" type="attribute"/>
+                    <Node name="TSATTRIBUTE" type="attribute"/>
+                    <Node name="TSOPTION" type="attribute"/>
+                    <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                    <Node name="TSTOLERANCE" type="attribute"/>
+                    <Node name="DATASRCID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATASTATTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "ACTIVE";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ENDTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ERGONOMICSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="GLOBALUNIQIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="IDCTXTTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "ISIN";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="INSTRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INSTRSYMBOLSTATTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISIDOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSID" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return GetStringByKey("ISIDValue");]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ISSTENORTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUSAGETYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LASTCHGTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LASTCHGUSRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LISTINGSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MERGEUNIQOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MKTOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MULTISEDOLSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="NOTTRADABLEIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ORIGDATAPROVID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ROOTSYMBOLMNEM" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SRCECURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="STARTTMS" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return DateFromString(SubString(TimeStamp(), 1, 10), "%M-%D-%Y");]]></expr>
+                      </Node>
+                      <Node name="INSERT_ONLY" type="attribute">
+                        <expr><![CDATA[return "Y";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="TRADERSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRDNGCURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRGTCURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="WHENISSUEDIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                  </Node>
+                  <Node displayName="CUSIP" name="IssueIdentifier" type="segment">
+                    <condition><![CDATA[if (((Strcmp(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value, 1, 2), "US") || Strcmp(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value, 1, 2), "CA")) || Strcmp(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value, 1, 2), "PR")) && !IsAlpha(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value, 3, 3))
+	return "IssueIdentifier";
+else
+	return "";]]></condition>
+                    <Node name="ACTION" type="attribute">
+                      <expr><![CDATA[return "REFERENCE";]]></expr>
+                    </Node>
+                    <Node name="TYPE" type="attribute">
+                      <expr><![CDATA[return "IssueIdentifier";]]></expr>
+                    </Node>
+                    <Node name="COPY_FROM" type="attribute"/>
+                    <Node name="COPY_TO" type="attribute"/>
+                    <Node name="DUP_CHECK" type="attribute"/>
+                    <Node name="ENDDATEIND" type="attribute"/>
+                    <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                    <Node name="ERROR" type="attribute">
+                      <expr><![CDATA[return "N";]]></expr>
+                    </Node>
+                    <Node name="LOOKUP" type="attribute"/>
+                    <Node name="MATCH" type="attribute">
+                      <expr><![CDATA[return "ISID7_INSTR_CTX_MKT_USG";]]></expr>
+                    </Node>
+                    <Node name="NESTED_ERR_LVL" type="attribute"/>
+                    <Node name="NESTED_ERR_TXT" type="attribute"/>
+                    <Node name="ONLY" type="attribute"/>
+                    <Node name="PARENT_LINK" type="attribute"/>
+                    <Node name="PUBLISH" type="attribute"/>
+                    <Node name="SEGPROCESSEDIND" type="attribute"/>
+                    <Node name="START_TMS_MATCH" type="attribute"/>
+                    <Node name="TRANSLATE" type="attribute"/>
+                    <Node name="TSATTRIBUTE" type="attribute"/>
+                    <Node name="TSOPTION" type="attribute"/>
+                    <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                    <Node name="TSTOLERANCE" type="attribute"/>
+                    <Node name="IssueIdentifier" type="segment">
+                      <Node name="ACTION" type="attribute">
+                        <expr><![CDATA[return "REFERENCE";]]></expr>
+                      </Node>
+                      <Node name="TYPE" type="attribute">
+                        <expr><![CDATA[return "IssueIdentifier";]]></expr>
+                      </Node>
+                      <Node name="COPY_FROM" type="attribute">
+                        <expr><![CDATA[return "INSTR_ID";]]></expr>
+                      </Node>
+                      <Node name="COPY_TO" type="attribute">
+                        <expr><![CDATA[return "INSTR_ID";]]></expr>
+                      </Node>
+                      <Node name="DUP_CHECK" type="attribute"/>
+                      <Node name="ENDDATEIND" type="attribute"/>
+                      <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                      <Node name="ERROR" type="attribute"/>
+                      <Node name="LOOKUP" type="attribute"/>
+                      <Node name="MATCH" type="attribute">
+                        <expr><![CDATA[return "ISID_CTXT_ID_USG";]]></expr>
+                      </Node>
+                      <Node name="NESTED_ERR_LVL" type="attribute"/>
+                      <Node name="NESTED_ERR_TXT" type="attribute"/>
+                      <Node name="ONLY" type="attribute"/>
+                      <Node name="PARENT_LINK" type="attribute"/>
+                      <Node name="PUBLISH" type="attribute"/>
+                      <Node name="SEGPROCESSEDIND" type="attribute"/>
+                      <Node name="START_TMS_MATCH" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="TSATTRIBUTE" type="attribute"/>
+                      <Node name="TSOPTION" type="attribute"/>
+                      <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                      <Node name="TSTOLERANCE" type="attribute"/>
+                      <Node name="DATASRCID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="DATASTATTYP" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ENDTMS" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ERGONOMICSYMBOLIND" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="GLOBALUNIQIND" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="IDCTXTTYP" type="element">
+                        <Node name="VALUE" type="attribute">
+                          <expr><![CDATA[return "ISIN";]]></expr>
+                        </Node>
+                      </Node>
+                      <Node name="INSTRID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="INSTRSYMBOLSTATTYP" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ISIDOID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ISSID" type="element">
+                        <Node name="VALUE" type="attribute">
+                          <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value;]]></expr>
+                        </Node>
+                      </Node>
+                      <Node name="ISSTENORTYP" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ISSUSAGETYP" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="LASTCHGTMS" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="LASTCHGUSRID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="LISTINGSYMBOLIND" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="MERGEUNIQOID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="MKTOID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="MULTISEDOLSYMBOLIND" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="NOTTRADABLEIND" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ORIGDATAPROVID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ROOTSYMBOLMNEM" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="SRCECURRCDE" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="STARTTMS" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="TRADERSYMBOLIND" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="TRDNGCURRCDE" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="TRGTCURRCDE" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="WHENISSUEDIND" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                    </Node>
+                    <Node name="DATASRCID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATASTATTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "ACTIVE";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ENDTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ERGONOMICSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="GLOBALUNIQIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="IDCTXTTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "CUSIP";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="INSTRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INSTRSYMBOLSTATTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISIDOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSID" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value, 3, 9);]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ISSTENORTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUSAGETYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LASTCHGTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LASTCHGUSRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LISTINGSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MERGEUNIQOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MKTOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MULTISEDOLSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="NOTTRADABLEIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ORIGDATAPROVID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ROOTSYMBOLMNEM" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SRCECURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="STARTTMS" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return DateFromString(SubString(TimeStamp(), 1, 10), "%M-%D-%Y");]]></expr>
+                      </Node>
+                      <Node name="INSERT_ONLY" type="attribute">
+                        <expr><![CDATA[return "Y";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="TRADERSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRDNGCURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRGTCURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="WHENISSUEDIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                  </Node>
+                  <ForEach recordType="Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating">
+                    <comment><![CDATA[RTG_COMM: As per the data format, ratings for each identifier will be processed.]]></comment>
+                    <sort order="ASC">
+                      <comment><![CDATA[RTG_COMM: Added sort order to ascending so the latest rating gets processed last in case when timeseries is disables. For enabled, the functionality will be as usual.]]></comment><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Date;]]>
+                    </sort>
+                    <Do>
+                      <If>
+                        <comment><![CDATA[RTG_COMM: For each issue, ratings, attached qualifiers, statistics, outlook and watch data is captured through each segement.]]></comment>
+                        <expr><![CDATA[return OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_ID);]]></expr>
+                        <Then>
+                          <Node name="IssueRating" type="segment">
+                            <condition><![CDATA[if (AllHaveValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text, Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code) && !Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code, "117052"))
+	return "IssueRating";
+else
+	return "";]]></condition>
+                            <Node name="ACTION" type="attribute">
+                              <expr><![CDATA[return "REFERENCE";]]></expr>
+                            </Node>
+                            <Node name="TYPE" type="attribute">
+                              <expr><![CDATA[return "IssueRating";]]></expr>
+                            </Node>
+                            <Node name="COPY_FROM" type="attribute"/>
+                            <Node name="COPY_TO" type="attribute"/>
+                            <Node name="DUP_CHECK" type="attribute"/>
+                            <Node name="ENDDATEIND" type="attribute"/>
+                            <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                            <Node name="ERROR" type="attribute"/>
+                            <Node name="LOOKUP" type="attribute"/>
+                            <Node name="MATCH" type="attribute">
+                              <expr><![CDATA[return "ISRT_MATCH_5";]]></expr>
+                            </Node>
+                            <Node name="NESTED_ERR_LVL" type="attribute"/>
+                            <Node name="NESTED_ERR_TXT" type="attribute"/>
+                            <Node name="ONLY" type="attribute"/>
+                            <Node name="PARENT_LINK" type="attribute"/>
+                            <Node name="PUBLISH" type="attribute"/>
+                            <Node name="SEGPROCESSEDIND" type="attribute"/>
+                            <Node name="START_TMS_MATCH" type="attribute"/>
+                            <Node name="TRANSLATE" type="attribute"/>
+                            <Node name="TSATTRIBUTE" type="attribute"/>
+                            <Node name="TSOPTION" type="attribute"/>
+                            <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                            <Node name="TSTOLERANCE" type="attribute"/>
+                            <Node name="RatingValue" type="segment">
+                              <Node name="ACTION" type="attribute">
+                                <expr><![CDATA[return "REFERENCE";]]></expr>
+                              </Node>
+                              <Node name="TYPE" type="attribute">
+                                <expr><![CDATA[return "RatingValue";]]></expr>
+                              </Node>
+                              <Node name="COPY_FROM" type="attribute">
+                                <expr><![CDATA[return "RTNG_CDE,RTNG_SET_OID,RTNG_VALUE_OID";]]></expr>
+                              </Node>
+                              <Node name="COPY_TO" type="attribute">
+                                <expr><![CDATA[return "RTNG_CDE,RTNG_SET_OID,RTNG_VALUE_OID";]]></expr>
+                              </Node>
+                              <Node name="DUP_CHECK" type="attribute"/>
+                              <Node name="ENDDATEIND" type="attribute"/>
+                              <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                              <Node name="ERROR" type="attribute"/>
+                              <Node name="LOOKUP" type="attribute"/>
+                              <Node name="MATCH" type="attribute">
+                                <expr><![CDATA[return "RTVL_MATCH_1";]]></expr>
+                              </Node>
+                              <Node name="NESTED_ERR_LVL" type="attribute">
+                                <comment><![CDATA[RTG_COMM17082015:Nested Error Text added for informative reasons.]]></comment>
+                                <expr><![CDATA[return "ERROR";]]></expr>
+                              </Node>
+                              <Node name="NESTED_ERR_TXT" type="attribute">
+                                <comment><![CDATA[RTG_COMM17082015:Nested Error Text added for informative reasons.
+GT-121453
+Changing notification id to the appropriate one as per the nested segments]]></comment>
+                                <expr><![CDATA[return Strcat("12|CONCTNS|NESTED|RTNGSETMNEM|", Strcat(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code, Strcat("|RTNGVAL|", Strcat(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text, "|DATASRCID|MOODYS_RDS"))));]]></expr>
+                              </Node>
+                              <Node name="ONLY" type="attribute"/>
+                              <Node name="PARENT_LINK" type="attribute"/>
+                              <Node name="PUBLISH" type="attribute"/>
+                              <Node name="SEGPROCESSEDIND" type="attribute"/>
+                              <Node name="START_TMS_MATCH" type="attribute"/>
+                              <Node name="TRANSLATE" type="attribute"/>
+                              <Node name="TSATTRIBUTE" type="attribute"/>
+                              <Node name="TSOPTION" type="attribute"/>
+                              <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                              <Node name="TSTOLERANCE" type="attribute"/>
+                              <Node name="RatingSetDefinition" type="segment">
+                                <Node name="ACTION" type="attribute">
+                                  <expr><![CDATA[return "REFERENCE";]]></expr>
+                                </Node>
+                                <Node name="TYPE" type="attribute">
+                                  <expr><![CDATA[return "RatingSetDefinition";]]></expr>
+                                </Node>
+                                <Node name="COPY_FROM" type="attribute">
+                                  <expr><![CDATA[return "RTNG_SET_OID";]]></expr>
+                                </Node>
+                                <Node name="COPY_TO" type="attribute">
+                                  <expr><![CDATA[return "RTNG_SET_OID";]]></expr>
+                                </Node>
+                                <Node name="DUP_CHECK" type="attribute"/>
+                                <Node name="ENDDATEIND" type="attribute"/>
+                                <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                                <Node name="ERROR" type="attribute"/>
+                                <Node name="LOOKUP" type="attribute"/>
+                                <Node name="MATCH" type="attribute">
+                                  <expr><![CDATA[return "RTNG_MATCH_1";]]></expr>
+                                </Node>
+                                <Node name="NESTED_ERR_LVL" type="attribute">
+                                  <expr><![CDATA[return "ERROR";]]></expr>
+                                </Node>
+                                <Node name="NESTED_ERR_TXT" type="attribute">
+                                  <comment><![CDATA[GT-121453
+Changing notification id to the appropriate one as per the nested segments]]></comment>
+                                  <expr><![CDATA[return Strcat("12|CONCTNS|NESTED|RTNGSETID|MDYSRTNG|RTNGVAL|", Strcat(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code, "|DATASRCID|MOODYS_RDS"));]]></expr>
+                                </Node>
+                                <Node name="ONLY" type="attribute"/>
+                                <Node name="PARENT_LINK" type="attribute"/>
+                                <Node name="PUBLISH" type="attribute"/>
+                                <Node name="SEGPROCESSEDIND" type="attribute"/>
+                                <Node name="START_TMS_MATCH" type="attribute"/>
+                                <Node name="TRANSLATE" type="attribute"/>
+                                <Node name="TSATTRIBUTE" type="attribute"/>
+                                <Node name="TSOPTION" type="attribute"/>
+                                <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                                <Node name="TSTOLERANCE" type="attribute"/>
+                                <Node name="DATASRCID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="DATASTATTYP" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="ENDTMS" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="INSTMNEM" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="LASTCHGTMS" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="LASTCHGUSRID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETCURRCDE" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETDESC" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETMNEM" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code;]]></expr>
+                                  </Node>
+                                </Node>
+                                <Node name="RTNGSETNME" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETTBLTYP" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETTYP" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGTENORMNEM" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="STARTTMS" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                              </Node>
+                              <Node name="DATASRCID" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="DATASTATTYP" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="ENDTMS" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="LASTCHGTMS" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="LASTCHGUSRID" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RANKNUM" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGCDE" type="element">
+                                <Node name="VALUE" type="attribute">
+                                  <expr><![CDATA[if (OneHasValue(Translate(MoodysRDSETT, true, "MDY_RTVL_TO_RTVL", Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text)))
+	return Translate(MoodysRDSETT, true, "MDY_RTVL_TO_RTVL", Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text);
+else
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text;]]></expr>
+                                </Node>
+                              </Node>
+                              <Node name="RTNGCDENUM" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGDESC" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGID" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGNME" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGSETOID" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGVALUEOID" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="STARTTMS" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                            </Node>
+                            <Node name="DATAREDISTRIBUTORID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="DATASRCID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="DATASTATTYP" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[return "ACTIVE";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="ENDTMS" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="ERVLOID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="INSTRID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="ISSRTNGOID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="LASTCHGTMS" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="LASTCHGUSRID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="LASTRTNGREVWDTE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="LASTRTNGREVWUSRID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="MULTRTNGSALETYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="NEXTRTNGREVWDTE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="ORIGDATAPROVID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGCDE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGCURRCDE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGCURRTYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGDEBTCLTYP" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Security_Class_Short_Description))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Security_Class_Short_Description;
+else
+	return "";]]></expr>
+                              </Node>
+                              <Node name="TRANSLATE" type="attribute">
+                                <expr><![CDATA[return "YES";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGDIRECTIONDTE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGDIRECTIONTXT" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Direction_Text))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Direction_Text;
+else
+	return "";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGDIRECTIONTYP" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Direction_Short_Description))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Direction_Short_Description;
+else
+	return "";]]></expr>
+                              </Node>
+                              <Node name="TRANSLATE" type="attribute">
+                                <expr><![CDATA[return "YES";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGID" type="element">
+                              <comment><![CDATA[RTG_COMM:05122015 changed the field to rating ID as per Moodys confirmation received that is it unique per rating and the legacy sytem Moodys Unique Number is migrated to this value.]]></comment>
+                              <Node name="VALUE" type="attribute">
+                                <comment><![CDATA[RTG_COMM:05122015 changed the field to rating ID as per Moodys confirmation received that is it unique per rating and the legacy sytem Moodys Unique Number is migrated to this value.]]></comment>
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Moodys_Rating_ID))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Moodys_Rating_ID;
+else
+	return "";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGPURPTYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGSETOID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGSNRTYTYP" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Seniority_Short_Description))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Seniority_Short_Description;
+else
+	return "";]]></expr>
+                              </Node>
+                              <Node name="TRANSLATE" type="attribute">
+                                <expr><![CDATA[return "YES";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGSTATREASTXT" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Reason_Text))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Reason_Text;
+else
+	return "";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGSTATTMS" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGSYMBOLTXT" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text;]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGSTATTYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGVALUEOID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGEFFTMS" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Date))
+	return DateFromString(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Date, 1, 10), "%Y-%M-%D");
+else if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Local_Date))
+	return DateFromString(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Local_Date, 1, 10), "%Y-%M-%D");
+else
+	return DateFromString(SubString(TimeStamp(), 1, 10), "%M-%D-%Y");]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="SECNDMRKTIND" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Secondary_Market_Indicator;]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="STARTTMS" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[return TimeStamp();]]></expr>
+                              </Node>
+                              <Node name="INSERT_ONLY" type="attribute">
+                                <expr><![CDATA[return "Y";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="UNDERLYENHCSALETYP" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Shadow_Short_Description))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Shadow_Short_Description;
+else
+	return "";]]></expr>
+                              </Node>
+                              <Node name="TRANSLATE" type="attribute">
+                                <expr><![CDATA[return "YES";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="WATCHDTE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="WATCHEXPDTE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="WATCHREASTYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="WATCHSTATTYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                          </Node>
+                          <ForEach recordType="Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute">
+                            <comment><![CDATA[RTG_COMM:As per the data format provided by the vendor, looping through each qualifier-endorsement,unsolicited etc are captured.]]></comment>
+                            <Do>
+                              <Node displayName="SOLICITATION STATUS" name="ISRTRatingQualifier" type="segment">
+                                <condition><![CDATA[if (!Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code, "117052") && (AllHaveValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text, Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Rating_Attribute_Type_Text, Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Rating_Attribute_Text) && (OneOf(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Rating_Attribute_Type_Text, "Global Rating Solicitation", "Japan Rating Solicitation") && !(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Rating_Attribute_Text == "Unknown"))))
+	return "ISRTRatingQualifier";
+else
+	return "";]]></condition>
+                                <Node name="ACTION" type="attribute">
+                                  <expr><![CDATA[return "UNKNOWN";]]></expr>
+                                </Node>
+                                <Node name="TYPE" type="attribute">
+                                  <expr><![CDATA[return "ISRTRatingQualifier";]]></expr>
+                                </Node>
+                                <Node name="MATCH" type="attribute">
+                                  <expr><![CDATA[return "RTQL_MATCH_1";]]></expr>
+                                </Node>
+                                <Node name="ACRTOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="BNRTOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="CSTRTNGOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="DATASRCID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="DATASTATTYP" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[return "ACTIVE";]]></expr>
+                                  </Node>
+                                </Node>
+                                <Node name="ENDTMS" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Termination_Date))
+	return Transform2FTIDate(Strcat(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Termination_Date, 1, 10), Strcat(" ", SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Termination_Date, 12, 8))), "YYYY-MM-DD hh:mm:ss");
+else
+return SetSendNullFlag("");]]></expr>
+                                  </Node>
+                                </Node>
+                                <Node name="FINRRTNGOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="FINSRTNGOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="GURTOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="ISSRRTNGOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="ISSRTNGOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="LASTCHGTMS" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="LASTCHGUSRID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="PPRTOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGQUALTXT" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Rating_Attribute_Text;]]></expr>
+                                  </Node>
+                                </Node>
+                                <Node name="RTNGQUALTYP" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[return "SOLICITATION STATUS";]]></expr>
+                                  </Node>
+                                </Node>
+                                <Node name="RTQLOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="STARTTMS" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Effective_Date))
+	return DateFromString(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Effective_Date, 1, 10), "%Y-%M-%D");
+else
+	return DateFromString(SubString(TimeStamp(), 1, 10), "%M-%D-%Y");]]></expr>
+                                  </Node>
+                                  <Node name="INSERT_ONLY" type="attribute">
+                                    <expr><![CDATA[return "Y";]]></expr>
+                                  </Node>
+                                </Node>
+                              </Node>
+                            </Do>
+                          </ForEach>
+                        </Then>
+                        <Else/>
+                      </If>
+                    </Do>
+                  </ForEach>
+                </Node>
+              </Block>
+            </Then>
+            <Else/>
+          </If>
+        </Do>
+      </ForEach>
+      <ForEach displayName="Without ISIN" recordType="Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier">
+        <comment><![CDATA[RTG_COMM: The data element layout provided by the vendor has been modified. On using the layout as is, it was not possible to associate and loop through the rating details of each identifer as the <Instr_Rating> element is on the same level as the <Identifier>.
+For each Instrument, all the details are placed within each incoming identifier data element.]]></comment>
+        <where><![CDATA[return (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value, Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Organizations.Instrument_Organization.Organization_ID) && !StrContainsOneOf(GetStringByKey("ID-ALL"), "ISI", "IS2", "IS3", "IS4", "IS5", "IS6")) && StrContainsOneOf(GetStringByKey("ID-ALL"), "CUS");]]></where>
+        <Do>
+          <If>
+            <expr><![CDATA[return Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "CUS") && !IsAlpha(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value, 1, 1);]]></expr>
+            <Then>
+              <Block>
+                <Execute>
+                  <comment><![CDATA[RTG_COMM: If incoming data has identifiers of type ISIN or CUSIP, only then all the data is processed.]]></comment>
+                  <expr><![CDATA[if ((((((Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "CUS") || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "ISI")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS2")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS3")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS4")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS5")) || Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "IS6"))
+	return StoreString("ISIDValue", Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value);
+else
+	return "";]]></expr>
+                </Execute>
+                <Node displayName="ISSU-CUSIP" messageformat="GSREF" name="STREET_REF" type="message">
+                  <Options>
+                    <Option key="DocType">STREET_REF</Option>
+                    <Option key="SystemId">fti://repository/dtd/STREET_REF</Option>
+                    <Option key="OutputEncoding"/>
+                  </Options>
+                  <comment><![CDATA[RTG_COMM: Street-Ref for setting up instrument identifiers like Moodys Debt Id, Deal No. and ISIN/CUSIP. Ratings for each ISIN and CUSIP will be setup up too. Bond details will be processed if present and setup in DebtChar and DebtStat segments.]]></comment>
+                  <condition>
+                    <comment><![CDATA[RTG_COMM: In cases if the data contains only a CUSIP and no ISIN identifiers, we will setup the CUSIP value for the instrument from the data file.]]></comment><![CDATA[if ((OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID) && !StrContainsOneOf(GetStringByKey("ID-ALL"), "ISI", "IS2", "IS3", "IS4", "IS5", "IS6")) && StrContainsOneOf(GetStringByKey("ID-ALL"), "CUS"))
+	return "STREET_REF-ISSUC";
+else
+	return "";]]>
+                  </condition>
+                  <Node name="USERID" type="attribute">
+                    <expr><![CDATA[return "GUEST";]]></expr>
+                  </Node>
+                  <Node name="TRACE" type="attribute">
+                    <expr><![CDATA[return "false";]]></expr>
+                  </Node>
+                  <Node name="TRANSACTIONCODE" type="attribute"/>
+                  <Node name="EVENT" type="attribute"/>
+                  <Node name="MSGSET" type="attribute"/>
+                  <Node name="MESSAGECONDITION" type="attribute">
+                    <expr><![CDATA[if ((OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID) && !StrContainsOneOf(GetStringByKey("ID-ALL"), "ISI", "IS2", "IS3", "IS4", "IS5", "IS6")) && StrContainsOneOf(GetStringByKey("ID-ALL"), "CUS"))
+	return "STREET_REF-ISSUC";
+else
+	return "";]]></expr>
+                  </Node>
+                  <Node name="HEADER" type="element">
+                    <Node name="ASOFDATE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ATTRLOCK" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CALID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                      <Node name="INSERT_ONLY" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+                      <Node name="DEFAULT" type="attribute"/>
+                      <Node name="ERR_LVL" type="attribute"/>
+                    </Node>
+                    <Node name="CHECKLASTDBUPDATE" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "N";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="CHGAPPRTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "N";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="CNTRYCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                      <Node name="INSERT_ONLY" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+                      <Node name="DEFAULT" type="attribute"/>
+                      <Node name="ERR_LVL" type="attribute"/>
+                    </Node>
+                    <Node name="CURRENTTIMESTAMP" type="element">
+                      <expr><![CDATA[return TimeStamp();]]></expr>
+                    </Node>
+                    <Node name="DATAID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATAIDCTXT" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATASOURCE" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MOODYS_RDS";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="DONOTPOST" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="EMPLOYEE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                      <Node name="INSERT_ONLY" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+                      <Node name="DEFAULT" type="attribute"/>
+                      <Node name="ERR_LVL" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUEACTIONREPLACE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUELOCK" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUERDERIVATIONMODE" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "N";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="LOCALE" type="element">
+                      <Node name="NLS" type="element">
+                        <Node name="VALUE" type="attribute">
+                          <expr><![CDATA[return "ENU";]]></expr>
+                        </Node>
+                      </Node>
+                      <Node name="TIMEZONE" type="element">
+                        <Node name="VALUE" type="attribute">
+                          <expr><![CDATA[return "GMT Standard Time";]]></expr>
+                        </Node>
+                      </Node>
+                    </Node>
+                    <Node name="MAIN_ENTITY_ID" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID;]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MAIN_ENTITY_ID_CTXT_TYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MDYDBTNO";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MAIN_ENTITY_TYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MISC";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MAIN_ENTITY_NME" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Security_Description;]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MAIN_ENTITY_TBL_TYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "ISSU";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MERGEMESSAGE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MSGCLASSIFICATION" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MDYSINSTR";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MSGSET" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MSGTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                      <Node name="INSERT_ONLY" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+                      <Node name="DEFAULT" type="attribute"/>
+                      <Node name="ERR_LVL" type="attribute"/>
+                    </Node>
+                    <Node name="ORGID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                      <Node name="INSERT_ONLY" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+                      <Node name="DEFAULT" type="attribute"/>
+                      <Node name="ERR_LVL" type="attribute"/>
+                    </Node>
+                    <Node name="PUBLISH" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="REALMSG" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="REFDATA" type="element"/>
+                    <Node name="REFERRINGPAGE" type="element"/>
+                    <Node name="ROLLBACKONSEGMENTERROR" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SECURITYLABEL" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRANSLATE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRILLIUM" type="element">
+                      <Node name="FORCENEWENTITY" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="TRILLIUMTABLEID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="TRILLIUMTABLETYPE" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                    </Node>
+                    <Node name="USERID" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MDYSINSTRCSTM";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="VENDORRECORDID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="VENDORTYPE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="VTTRMSGSET" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                  </Node>
+                  <Node name="Issue" type="segment">
+                    <Node name="ACTION" type="attribute">
+                      <expr><![CDATA[return "REFERENCE";]]></expr>
+                    </Node>
+                    <Node name="TYPE" type="attribute">
+                      <expr><![CDATA[return "Issue";]]></expr>
+                    </Node>
+                    <Node name="COPY_FROM" type="attribute"/>
+                    <Node name="COPY_TO" type="attribute"/>
+                    <Node name="DUP_CHECK" type="attribute"/>
+                    <Node name="ENDDATEIND" type="attribute"/>
+                    <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                    <Node name="ERROR" type="attribute">
+                      <expr><![CDATA[if (Strcmp(Translate(Config_Options, true, "CreateNewSecurity", "Moodys_RDS_Instrument"), "NO_SILENT"))
+	return "N";
+else
+	return "";]]></expr>
+                    </Node>
+                    <Node name="LOOKUP" type="attribute"/>
+                    <Node name="NESTED_ERR_LVL" type="attribute"/>
+                    <Node name="NESTED_ERR_TXT" type="attribute"/>
+                    <Node name="ONLY" type="attribute"/>
+                    <Node name="PARENT_LINK" type="attribute"/>
+                    <Node name="PUBLISH" type="attribute"/>
+                    <Node name="SEGPROCESSEDIND" type="attribute"/>
+                    <Node name="START_TMS_MATCH" type="attribute"/>
+                    <Node name="TRANSLATE" type="attribute"/>
+                    <Node name="TSATTRIBUTE" type="attribute"/>
+                    <Node name="TSOPTION" type="attribute"/>
+                    <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                    <Node name="TSTOLERANCE" type="attribute"/>
+                    <ForEach recordType="Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Organizations.Instrument_Organization">
+                      <Do>
+                        <Execute>
+                          <expr><![CDATA[return StoreString("VAL-ROLE", Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Organizations.Instrument_Organization.Organization_Role_Code);]]></expr>
+                        </Execute>
+                        <Execute>
+                          <expr><![CDATA[return StoreString("VAL-RLCD", Strcat(GetStringByKey("VAL-ROLE"), Strcat(";", GetStringByKey("VAL-RLCD"))));]]></expr>
+                        </Execute>
+                      </Do>
+                    </ForEach>
+                    <Node name="IssuerIdentifier" type="segment">
+                      <condition><![CDATA[if (StrContainsOneOf(GetStringByKey("VAL-RLCD"), Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Organizations.Instrument_Organization.Organization_Role_Code))
+	return "IssuerIdentifier";
+else
+	return "";]]></condition>
+                      <Node name="ACTION" type="attribute">
+                        <expr><![CDATA[return "REFERENCE";]]></expr>
+                      </Node>
+                      <Node name="TYPE" type="attribute">
+                        <expr><![CDATA[return "IssuerIdentifier";]]></expr>
+                      </Node>
+                      <Node name="COPY_FROM" type="attribute">
+                        <expr><![CDATA[return "INSTR_ISSR_ID";]]></expr>
+                      </Node>
+                      <Node name="COPY_TO" type="attribute">
+                        <expr><![CDATA[return "INSTR_ISSR_ID";]]></expr>
+                      </Node>
+                      <Node name="DUP_CHECK" type="attribute"/>
+                      <Node name="ENDDATEIND" type="attribute"/>
+                      <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                      <Node name="ERROR" type="attribute"/>
+                      <Node name="LOOKUP" type="attribute"/>
+                      <Node name="MATCH" type="attribute">
+                        <expr><![CDATA[return "IRID1_IDCTXT_ISSR_ID";]]></expr>
+                      </Node>
+                      <Node name="NESTED_ERR_LVL" type="attribute"/>
+                      <Node name="NESTED_ERR_TXT" type="attribute"/>
+                      <Node name="ONLY" type="attribute"/>
+                      <Node name="PARENT_LINK" type="attribute"/>
+                      <Node name="PUBLISH" type="attribute"/>
+                      <Node name="SEGPROCESSEDIND" type="attribute"/>
+                      <Node name="START_TMS_MATCH" type="attribute"/>
+                      <Node name="TRANSLATE" type="attribute"/>
+                      <Node name="TSATTRIBUTE" type="attribute"/>
+                      <Node name="TSOPTION" type="attribute"/>
+                      <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                      <Node name="TSTOLERANCE" type="attribute"/>
+                      <Node name="DATASRCID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="DATASTATTYP" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ENDTMS" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="GUCNT" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="GUID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="GUTYP" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="INSTRISSRID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="IRIDOID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="ISSRID" type="element">
+                        <Node name="VALUE" type="attribute">
+                          <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Organizations.Instrument_Organization.Organization_ID;]]></expr>
+                        </Node>
+                      </Node>
+                      <Node name="ISSRIDCTXTTYP" type="element">
+                        <Node name="VALUE" type="attribute">
+                          <expr><![CDATA[return "MDY";]]></expr>
+                        </Node>
+                      </Node>
+                      <Node name="ISSRUSAGETYP" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="LASTCHGTMS" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="LASTCHGUSRID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="MERGEUNIQOID" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                      <Node name="STARTTMS" type="element">
+                        <Node name="VALUE" type="attribute"/>
+                      </Node>
+                    </Node>
+                    <Node name="ACCESSAUTHTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "PUBLIC";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="AVREXEMPTIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="BNCHOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CLTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CNVRTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CREATEDDATAPROVID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CREATEDREDISTRIBUTORID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="CREATEDTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATAREDISTRIBUTORID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATASRCID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATASTATTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "ACTIVE";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="DECPRECNUM" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DENOMCURRCDE" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ISO_Currency_Code) && !Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ISO_Currency_Code, "Unk"))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ISO_Currency_Code;
+else
+	return "";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="DFLTSTATTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DFLTTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DISTRIBUTIONCURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DLVIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DLVREASCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="EISTOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ENDTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="EUROCNVRTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="GOVTSUPPIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ILLIQUIDITYIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INCBASTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INDIVCERTIFIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INSTRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INSTRISSRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INVSCLOSEDTE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISCDOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSACTVYSTATREASTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSACTVYSTATTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "ACTIVE";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ISSALPHSRCHTXT" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSOBJTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSRATETXT" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSTENORTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSTMS" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Dated_Date))
+	return DateFromString(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Dated_Date, 1, 10), "%Y-%M-%D");
+else
+	return "";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ISSTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "MISC";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ISSUTCQTY" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUTMEASTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LASTCHGTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LASTCHGUSRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LIQUIDRIGHTRANKTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MANDCNVRIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MATEXPDTEEXTNTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MATEXPTMS" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Maturity_Date))
+	return DateFromString(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Maturity_Date, 1, 10), "%Y-%M-%D");
+else
+	return "";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="MINNETWORTHBALIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MONITORRESTRICTIONCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MOSTFAVOREDLENDERIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="NOMVALUNITCAMT" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Face_Amount))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Face_Amount;
+else
+	return "";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="NOTTRADABLEIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ORIGDATAPROVID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ORIGMATEXPTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PARTFULLPDTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PARVALUETYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PRCMLTPLRCRTE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PRCQTMETHTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PREFIDCTXTTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PREFISSDESC" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PREFISSID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PREFISSNME" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Security_Description))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Security_Description;
+else
+	return "";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="PRINBASTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="PRINNOTLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="REPACKAGEDSECIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="RTNGMAINTPROVSIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SECFORMTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SECLENDINGELIGIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SERIESTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="STARTTMS" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return DateFromString(SubString(TimeStamp(), 1, 10), "%M-%D-%Y");]]></expr>
+                      </Node>
+                      <Node name="INSERT_ONLY" type="attribute">
+                        <expr><![CDATA[return "Y";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="STRUCTUREDSECIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SUBSTITUTIONCLAUSEIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TBAELIGTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRDGRSTTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TSFRRSTIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TYPEARNFORLIFECDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="WHENISSUEDIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="WTHHLDTAXIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="WTHHLDTAXLEVIEDSRCIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                  </Node>
+                  <Node displayName="CUSIP" name="IssueIdentifier" type="segment">
+                    <condition><![CDATA[if (Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.ID_Type_Short_Description, "CUS") && !IsAlpha(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_ID_Value, 1, 1))
+	return "IssueIdentifier";
+else
+	return "";]]></condition>
+                    <Node name="ACTION" type="attribute">
+                      <expr><![CDATA[return "REFERENCE";]]></expr>
+                    </Node>
+                    <Node name="TYPE" type="attribute">
+                      <expr><![CDATA[return "IssueIdentifier";]]></expr>
+                    </Node>
+                    <Node name="COPY_FROM" type="attribute"/>
+                    <Node name="COPY_TO" type="attribute"/>
+                    <Node name="DUP_CHECK" type="attribute"/>
+                    <Node name="ENDDATEIND" type="attribute"/>
+                    <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                    <Node name="ERROR" type="attribute"/>
+                    <Node name="LOOKUP" type="attribute"/>
+                    <Node name="MATCH" type="attribute">
+                      <expr><![CDATA[return "ISID7_INSTR_CTX_MKT_USG";]]></expr>
+                    </Node>
+                    <Node name="NESTED_ERR_LVL" type="attribute"/>
+                    <Node name="NESTED_ERR_TXT" type="attribute"/>
+                    <Node name="ONLY" type="attribute"/>
+                    <Node name="PARENT_LINK" type="attribute"/>
+                    <Node name="PUBLISH" type="attribute"/>
+                    <Node name="SEGPROCESSEDIND" type="attribute"/>
+                    <Node name="START_TMS_MATCH" type="attribute"/>
+                    <Node name="TRANSLATE" type="attribute"/>
+                    <Node name="TSATTRIBUTE" type="attribute"/>
+                    <Node name="TSOPTION" type="attribute"/>
+                    <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                    <Node name="TSTOLERANCE" type="attribute"/>
+                    <Node name="DATASRCID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="DATASTATTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "ACTIVE";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ENDTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ERGONOMICSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="GLOBALUNIQIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="IDCTXTTYP" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return "CUSIP";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="INSTRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="INSTRSYMBOLSTATTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISIDOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSID" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return GetStringByKey("ISIDValue");]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="ISSTENORTYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ISSUSAGETYP" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LASTCHGTMS" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LASTCHGUSRID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="LISTINGSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MERGEUNIQOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MKTOID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="MULTISEDOLSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="NOTTRADABLEIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ORIGDATAPROVID" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="ROOTSYMBOLMNEM" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="SRCECURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="STARTTMS" type="element">
+                      <Node name="VALUE" type="attribute">
+                        <expr><![CDATA[return DateFromString(SubString(TimeStamp(), 1, 10), "%M-%D-%Y");]]></expr>
+                      </Node>
+                      <Node name="INSERT_ONLY" type="attribute">
+                        <expr><![CDATA[return "Y";]]></expr>
+                      </Node>
+                    </Node>
+                    <Node name="TRADERSYMBOLIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRDNGCURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="TRGTCURRCDE" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                    <Node name="WHENISSUEDIND" type="element">
+                      <Node name="VALUE" type="attribute"/>
+                    </Node>
+                  </Node>
+                  <ForEach recordType="Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating">
+                    <comment><![CDATA[RTG_COMM: As per the data format, ratings for each identifier will be processed.]]></comment>
+                    <sort order="ASC">
+                      <comment><![CDATA[RTG_COMM: Added sort order to ascending so the latest rating gets processed last in case when timeseries is disables. For enabled, the functionality will be as usual.]]></comment><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Date;]]>
+                    </sort>
+                    <Do>
+                      <If>
+                        <comment><![CDATA[RTG_COMM: For each issue, ratings, attached qualifiers, statistics, outlook and watch data is captured through each segement.]]></comment>
+                        <expr><![CDATA[return OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_ID);]]></expr>
+                        <Then>
+                          <Node name="IssueRating" type="segment">
+                            <condition><![CDATA[if (AllHaveValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text, Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code) && !Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code, "117052"))
+	return "IssueRating";
+else
+	return "";]]></condition>
+                            <Node name="ACTION" type="attribute">
+                              <expr><![CDATA[return "REFERENCE";]]></expr>
+                            </Node>
+                            <Node name="TYPE" type="attribute">
+                              <expr><![CDATA[return "IssueRating";]]></expr>
+                            </Node>
+                            <Node name="COPY_FROM" type="attribute"/>
+                            <Node name="COPY_TO" type="attribute"/>
+                            <Node name="DUP_CHECK" type="attribute"/>
+                            <Node name="ENDDATEIND" type="attribute"/>
+                            <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                            <Node name="ERROR" type="attribute"/>
+                            <Node name="LOOKUP" type="attribute"/>
+                            <Node name="MATCH" type="attribute">
+                              <expr><![CDATA[return "ISRT_MATCH_5";]]></expr>
+                            </Node>
+                            <Node name="NESTED_ERR_LVL" type="attribute"/>
+                            <Node name="NESTED_ERR_TXT" type="attribute"/>
+                            <Node name="ONLY" type="attribute"/>
+                            <Node name="PARENT_LINK" type="attribute"/>
+                            <Node name="PUBLISH" type="attribute"/>
+                            <Node name="SEGPROCESSEDIND" type="attribute"/>
+                            <Node name="START_TMS_MATCH" type="attribute"/>
+                            <Node name="TRANSLATE" type="attribute"/>
+                            <Node name="TSATTRIBUTE" type="attribute"/>
+                            <Node name="TSOPTION" type="attribute"/>
+                            <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                            <Node name="TSTOLERANCE" type="attribute"/>
+                            <Node name="RatingValue" type="segment">
+                              <Node name="ACTION" type="attribute">
+                                <expr><![CDATA[return "REFERENCE";]]></expr>
+                              </Node>
+                              <Node name="TYPE" type="attribute">
+                                <expr><![CDATA[return "RatingValue";]]></expr>
+                              </Node>
+                              <Node name="COPY_FROM" type="attribute">
+                                <expr><![CDATA[return "RTNG_CDE,RTNG_SET_OID,RTNG_VALUE_OID";]]></expr>
+                              </Node>
+                              <Node name="COPY_TO" type="attribute">
+                                <expr><![CDATA[return "RTNG_CDE,RTNG_SET_OID,RTNG_VALUE_OID";]]></expr>
+                              </Node>
+                              <Node name="DUP_CHECK" type="attribute"/>
+                              <Node name="ENDDATEIND" type="attribute"/>
+                              <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                              <Node name="ERROR" type="attribute"/>
+                              <Node name="LOOKUP" type="attribute"/>
+                              <Node name="MATCH" type="attribute">
+                                <expr><![CDATA[return "RTVL_MATCH_1";]]></expr>
+                              </Node>
+                              <Node name="NESTED_ERR_LVL" type="attribute">
+                                <comment><![CDATA[RTG_COMM17082015:Nested Error Text added for informative reasons.]]></comment>
+                                <expr><![CDATA[return "ERROR";]]></expr>
+                              </Node>
+                              <Node name="NESTED_ERR_TXT" type="attribute">
+                                <comment><![CDATA[RTG_COMM17082015:Nested Error Text added for informative reasons.
+GT-121453
+Changing notification id to the appropriate one as per the nested segments]]></comment>
+                                <expr><![CDATA[return Strcat("12|CONCTNS|NESTED|RTNGSETMNEM|", Strcat(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code, Strcat("|RTNGVAL|", Strcat(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text, "|DATASRCID|MOODYS_RDS"))));]]></expr>
+                              </Node>
+                              <Node name="ONLY" type="attribute"/>
+                              <Node name="PARENT_LINK" type="attribute"/>
+                              <Node name="PUBLISH" type="attribute"/>
+                              <Node name="SEGPROCESSEDIND" type="attribute"/>
+                              <Node name="START_TMS_MATCH" type="attribute"/>
+                              <Node name="TRANSLATE" type="attribute"/>
+                              <Node name="TSATTRIBUTE" type="attribute"/>
+                              <Node name="TSOPTION" type="attribute"/>
+                              <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                              <Node name="TSTOLERANCE" type="attribute"/>
+                              <Node name="RatingSetDefinition" type="segment">
+                                <Node name="ACTION" type="attribute">
+                                  <expr><![CDATA[return "REFERENCE";]]></expr>
+                                </Node>
+                                <Node name="TYPE" type="attribute">
+                                  <expr><![CDATA[return "RatingSetDefinition";]]></expr>
+                                </Node>
+                                <Node name="COPY_FROM" type="attribute">
+                                  <expr><![CDATA[return "RTNG_SET_OID";]]></expr>
+                                </Node>
+                                <Node name="COPY_TO" type="attribute">
+                                  <expr><![CDATA[return "RTNG_SET_OID";]]></expr>
+                                </Node>
+                                <Node name="DUP_CHECK" type="attribute"/>
+                                <Node name="ENDDATEIND" type="attribute"/>
+                                <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                                <Node name="ERROR" type="attribute"/>
+                                <Node name="LOOKUP" type="attribute"/>
+                                <Node name="MATCH" type="attribute">
+                                  <expr><![CDATA[return "RTNG_MATCH_1";]]></expr>
+                                </Node>
+                                <Node name="NESTED_ERR_LVL" type="attribute">
+                                  <expr><![CDATA[return "ERROR";]]></expr>
+                                </Node>
+                                <Node name="NESTED_ERR_TXT" type="attribute">
+                                  <comment><![CDATA[GT-121453
+Changing notification id to the appropriate one as per the nested segments]]></comment>
+                                  <expr><![CDATA[return Strcat("12|CONCTNS|NESTED|RTNGSETID|MDYSRTNG|RTNGVAL|", Strcat(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code, "|DATASRCID|MOODYS_RDS"));]]></expr>
+                                </Node>
+                                <Node name="ONLY" type="attribute"/>
+                                <Node name="PARENT_LINK" type="attribute"/>
+                                <Node name="PUBLISH" type="attribute"/>
+                                <Node name="SEGPROCESSEDIND" type="attribute"/>
+                                <Node name="START_TMS_MATCH" type="attribute"/>
+                                <Node name="TRANSLATE" type="attribute"/>
+                                <Node name="TSATTRIBUTE" type="attribute"/>
+                                <Node name="TSOPTION" type="attribute"/>
+                                <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+                                <Node name="TSTOLERANCE" type="attribute"/>
+                                <Node name="DATASRCID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="DATASTATTYP" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="ENDTMS" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="INSTMNEM" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="LASTCHGTMS" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="LASTCHGUSRID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETCURRCDE" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETDESC" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETMNEM" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code;]]></expr>
+                                  </Node>
+                                </Node>
+                                <Node name="RTNGSETNME" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETTBLTYP" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGSETTYP" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGTENORMNEM" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="STARTTMS" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                              </Node>
+                              <Node name="DATASRCID" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="DATASTATTYP" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="ENDTMS" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="LASTCHGTMS" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="LASTCHGUSRID" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RANKNUM" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGCDE" type="element">
+                                <Node name="VALUE" type="attribute">
+                                  <expr><![CDATA[if (OneHasValue(Translate(MoodysRDSETT, true, "MDY_RTVL_TO_RTVL", Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text)))
+	return Translate(MoodysRDSETT, true, "MDY_RTVL_TO_RTVL", Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text);
+else
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text;]]></expr>
+                                </Node>
+                              </Node>
+                              <Node name="RTNGCDENUM" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGDESC" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGID" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGNME" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGSETOID" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="RTNGVALUEOID" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                              <Node name="STARTTMS" type="element">
+                                <Node name="VALUE" type="attribute"/>
+                              </Node>
+                            </Node>
+                            <Node name="DATAREDISTRIBUTORID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="DATASRCID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="DATASTATTYP" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[return "ACTIVE";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="ENDTMS" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="ERVLOID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="INSTRID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="ISSRTNGOID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="LASTCHGTMS" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="LASTCHGUSRID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="LASTRTNGREVWDTE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="LASTRTNGREVWUSRID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="MULTRTNGSALETYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="NEXTRTNGREVWDTE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="ORIGDATAPROVID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGCDE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGCURRCDE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGCURRTYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGDEBTCLTYP" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Security_Class_Short_Description))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Security_Class_Short_Description;
+else
+	return "";]]></expr>
+                              </Node>
+                              <Node name="TRANSLATE" type="attribute">
+                                <expr><![CDATA[return "YES";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGDIRECTIONDTE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGDIRECTIONTXT" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Direction_Text))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Direction_Text;
+else
+	return "";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGDIRECTIONTYP" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Direction_Short_Description))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Direction_Short_Description;
+else
+	return "";]]></expr>
+                              </Node>
+                              <Node name="TRANSLATE" type="attribute">
+                                <expr><![CDATA[return "YES";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGID" type="element">
+                              <comment><![CDATA[RTG_COMM:05122015 changed the field to rating ID as per Moodys confirmation received that is it unique per rating and the legacy sytem Moodys Unique Number is migrated to this value.]]></comment>
+                              <Node name="VALUE" type="attribute">
+                                <comment><![CDATA[RTG_COMM:05122015 changed the field to rating ID as per Moodys confirmation received that is it unique per rating and the legacy sytem Moodys Unique Number is migrated to this value.]]></comment>
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Moodys_Rating_ID))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Moodys_Rating_ID;
+else
+	return "";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGPURPTYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGSETOID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGSNRTYTYP" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Seniority_Short_Description))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Seniority_Short_Description;
+else
+	return "";]]></expr>
+                              </Node>
+                              <Node name="TRANSLATE" type="attribute">
+                                <expr><![CDATA[return "YES";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGSTATREASTXT" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Reason_Text))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Reason_Text;
+else
+	return "";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGSTATTMS" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGSYMBOLTXT" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text;]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="RTNGSTATTYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGVALUEOID" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="RTNGEFFTMS" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Date))
+	return DateFromString(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Date, 1, 10), "%Y-%M-%D");
+else if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Local_Date))
+	return DateFromString(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Local_Date, 1, 10), "%Y-%M-%D");
+else
+	return DateFromString(SubString(TimeStamp(), 1, 10), "%M-%D-%Y");]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="SECNDMRKTIND" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Secondary_Market_Indicator;]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="STARTTMS" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[return TimeStamp();]]></expr>
+                              </Node>
+                              <Node name="INSERT_ONLY" type="attribute">
+                                <expr><![CDATA[return "Y";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="UNDERLYENHCSALETYP" type="element">
+                              <Node name="VALUE" type="attribute">
+                                <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Shadow_Short_Description))
+	return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Shadow_Short_Description;
+else
+	return "";]]></expr>
+                              </Node>
+                              <Node name="TRANSLATE" type="attribute">
+                                <expr><![CDATA[return "YES";]]></expr>
+                              </Node>
+                            </Node>
+                            <Node name="WATCHDTE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="WATCHEXPDTE" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="WATCHREASTYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                            <Node name="WATCHSTATTYP" type="element">
+                              <Node name="VALUE" type="attribute"/>
+                            </Node>
+                          </Node>
+                          <ForEach recordType="Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute">
+                            <comment><![CDATA[RTG_COMM:As per the data format provided by the vendor, looping through each qualifier-endorsement,unsolicited etc are captured.]]></comment>
+                            <Do>
+                              <Node displayName="SOLICITATION STATUS" name="ISRTRatingQualifier" type="segment">
+                                <condition><![CDATA[if (!Strcmp(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Type_Code, "117052") && (AllHaveValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Rating_Text, Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Rating_Attribute_Type_Text, Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Rating_Attribute_Text) && (OneOf(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Rating_Attribute_Type_Text, "Global Rating Solicitation", "Japan Rating Solicitation") && !(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Rating_Attribute_Text == "Unknown"))))
+	return "ISRTRatingQualifier";
+else
+	return "";]]></condition>
+                                <Node name="ACTION" type="attribute">
+                                  <expr><![CDATA[return "UNKNOWN";]]></expr>
+                                </Node>
+                                <Node name="TYPE" type="attribute">
+                                  <expr><![CDATA[return "ISRTRatingQualifier";]]></expr>
+                                </Node>
+                                <Node name="MATCH" type="attribute">
+                                  <expr><![CDATA[return "RTQL_MATCH_1";]]></expr>
+                                </Node>
+                                <Node name="ACRTOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="BNRTOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="CSTRTNGOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="DATASRCID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="DATASTATTYP" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[return "ACTIVE";]]></expr>
+                                  </Node>
+                                </Node>
+                                <Node name="ENDTMS" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Termination_Date))
+	return Transform2FTIDate(Strcat(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Termination_Date, 1, 10), Strcat(" ", SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Termination_Date, 12, 8))), "YYYY-MM-DD hh:mm:ss");
+else
+return SetSendNullFlag("");]]></expr>
+                                  </Node>
+                                </Node>
+                                <Node name="FINRRTNGOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="FINSRTNGOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="GURTOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="ISSRRTNGOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="ISSRTNGOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="LASTCHGTMS" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="LASTCHGUSRID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="PPRTOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="RTNGQUALTXT" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[return Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Rating_Attribute_Text;]]></expr>
+                                  </Node>
+                                </Node>
+                                <Node name="RTNGQUALTYP" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[return "SOLICITATION STATUS";]]></expr>
+                                  </Node>
+                                </Node>
+                                <Node name="RTQLOID" type="element">
+                                  <Node name="VALUE" type="attribute"/>
+                                </Node>
+                                <Node name="STARTTMS" type="element">
+                                  <Node name="VALUE" type="attribute">
+                                    <expr><![CDATA[if (OneHasValue(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Effective_Date))
+	return DateFromString(SubString(Instrument_Roots.Instrument_Root.Instrument_Identifiers.Instrument_Identifier.Instrument_Ratings.Instrument_Rating.Instrument_Rating_Attributes.Instrument_Rating_Attribute.Effective_Date, 1, 10), "%Y-%M-%D");
+else
+	return DateFromString(SubString(TimeStamp(), 1, 10), "%M-%D-%Y");]]></expr>
+                                  </Node>
+                                  <Node name="INSERT_ONLY" type="attribute">
+                                    <expr><![CDATA[return "Y";]]></expr>
+                                  </Node>
+                                </Node>
+                              </Node>
+                            </Do>
+                          </ForEach>
+                        </Then>
+                        <Else/>
+                      </If>
+                    </Do>
+                  </ForEach>
+                </Node>
+              </Block>
+            </Then>
+            <Else/>
+          </If>
+        </Do>
+      </ForEach>
+    </OutputDef>
+  </Output>
+  <Translation/>
+  <Expressions/>
+</MappingDef>

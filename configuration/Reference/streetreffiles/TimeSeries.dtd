@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT TimeSeriesConfiguration (Table+)>
+<!ELEMENT Table (Attribute*)>
+<!ELEMENT Attribute (#PCDATA)>
+<!ATTLIST Table
+	Type (ISRT | BDST | IPDF | PPDF | ISID | EQST | ISPC | BNRT | BNMW) #REQUIRED
+	MatchingTolerance CDATA "0"
+	TS_OVERLAP_OVERRIDE (y | Y | n | N) "N">

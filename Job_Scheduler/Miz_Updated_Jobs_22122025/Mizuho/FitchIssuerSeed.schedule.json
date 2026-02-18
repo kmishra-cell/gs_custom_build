@@ -1,0 +1,21 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "FitchIssuerSeed" ],
+  "title" : "Fitch Issuer Seed",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_2nd_Day_of_Month",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "04:30:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

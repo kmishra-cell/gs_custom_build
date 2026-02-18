@@ -1,0 +1,21 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "BBBOAsia2Price" ],
+  "title" : "BBBO Asia2 Price",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Sun-Fri",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "13:30:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

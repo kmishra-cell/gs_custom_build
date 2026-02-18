@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<ENV_VARS_CONFIG>
+<!-- GC Properties  -->
+	<EnvironmentVariables_GC>
+			<EnvironmentVariable id="meta_owner" name="META_OWNER" description="Userid that owns the Metamodel Schema"/>
+			<EnvironmentVariable id="gsdm_owner" name="GSDM_OWNER" description="Userid that owns the GSDM Schema"/>	
+			<EnvironmentVariable id="gsdm_appuser" name="GSDM_APPUSER" description="Application User that uses the database"/>									
+			<EnvironmentVariable id="gsdm_sm_dataspace" name="GSDM_SMALL_DATA_TS" description="Name of the GSDM small data space"/>
+			<EnvironmentVariable id="gsdm_sm_idxspace" name="GSDM_SMALL_INDEX_TS" description="Name of the GSDM small index space"/>
+			<EnvironmentVariable id="gsdm_med_dataspace" name="GSDM_MEDIUM_DATA_TS" description="Name of the GSDM medium data space"/>
+			<EnvironmentVariable id="gsdm_med_idxspace" name="GSDM_MEDIUM_INDEX_TS" description="Name of the GSDM medium index space"/>
+			<EnvironmentVariable id="gsdm_lrg_dataspace" name="GSDM_LARGE_DATA_TS" description="Name of the GSDM large data space"/>
+			<EnvironmentVariable id="gsdm_lrg_idxspace" name="GSDM_LARGE_INDEX_TS" description="Name of the GSDM large index space"/>			
+	</EnvironmentVariables_GC>
+	<Prerequisites_GC>
+					<Prerequisite id="gsdm_appuser" required="true"/>
+					<Prerequisite id="gsdm_owner" required="true"/>        
+					<Prerequisite id="gsdm_sm_dataspace" required="true"/>        
+					<Prerequisite id="gsdm_sm_idxspace" required="true"/>        
+					<Prerequisite id="gsdm_med_dataspace" required="true"/>  
+					<Prerequisite id="gsdm_med_idxspace" required="true"/>  
+					<Prerequisite id="gsdm_lrg_dataspace" required="true"/>  
+					<Prerequisite id="gsdm_lrg_idxspace" required="true"/> 	
+	</Prerequisites_GC>
+	<ReplaceTags_GC>
+			<replace id="replace_pkg" name="Replace Environment Variables" description="Replaces the Environment Variables with your specified value" src="tmp_out_gsdm/" evalLoc="GSDMDataModel" dest="tmp_out_gsdm_replaced/" includes="**/*.sql">
+				<token name="#DBOWNER#" path="$GSDM_OWNER"/>
+				<token name="#APPUSER#" path="$GSDM_APPUSER"/>      
+				<token name="small_data_ts" path="$GSDM_SMALL_DATA_TS"/>
+				<token name="medium_data_ts" path="$GSDM_MEDIUM_DATA_TS"/>
+				<token name="large_data_ts" path="$GSDM_LARGE_DATA_TS"/>	 		        
+				<token name="small_index_ts" path="$GSDM_SMALL_INDEX_TS"/>
+				<token name="medium_index_ts" path="$GSDM_MEDIUM_INDEX_TS"/>
+				<token name="large_index_ts" path="$GSDM_LARGE_INDEX_TS"/>				
+			</replace>				
+	</ReplaceTags_GC>	
+
+<!-- VDDB Properties  -->	
+	<EnvironmentVariables_VD>
+			<EnvironmentVariable id="meta_owner" name="META_OWNER" description="Userid that owns the Metamodel Schema"/>
+			<EnvironmentVariable id="vddb_owner" name="VDDB_OWNER" description="Userid that owns the Exception Management Schema"/>	
+			<EnvironmentVariable id="vddb_appuser" name="VDDB_APPUSER" description="Application User that uses the database"/>									
+			<EnvironmentVariable id="vddb_sm_dataspace" name="VDDB_SM_DATASPACE" description="Name of the VDDB small data space"/>
+			<EnvironmentVariable id="vddb_sm_idxspace" name="VDDB_SM_IDXSPACE" description="Name of the VDDB small index space"/>
+			<EnvironmentVariable id="vddb_med_dataspace" name="VDDB_MED_DATASPACE" description="Name of the VDDB medium data space"/>
+			<EnvironmentVariable id="vddb_med_idxspace" name="VDDB_MED_IDXSPACE" description="Name of the VDDB medium index space"/>
+			<EnvironmentVariable id="vddb_lrg_dataspace" name="VDDB_LRG_DATASPACE" description="Name of the VDDB large data space"/>
+			<EnvironmentVariable id="vddb_lrg_idxspace" name="VDDB_LRG_IDXSPACE" description="Name of the VDDB large index space"/>
+	</EnvironmentVariables_VD>	
+	<Prerequisites_VD>
+						<Prerequisite id="vddb_appuser" required="true"/>
+						<Prerequisite id="vddb_owner" required="true"/>        
+						<Prerequisite id="vddb_sm_dataspace" required="true"/>        
+						<Prerequisite id="vddb_sm_idxspace" required="true"/>        
+						<Prerequisite id="vddb_med_dataspace" required="true"/>  
+						<Prerequisite id="vddb_med_idxspace" required="true"/>  
+						<Prerequisite id="vddb_lrg_dataspace" required="true"/>  
+						<Prerequisite id="vddb_lrg_idxspace" required="true"/>   
+	</Prerequisites_VD>	
+	<ReplaceTags_VD>
+			<replace name="Replace DBOWNER" description="Replaces the DBOwner with your specified DBOwner"  src="tmp_out_vddb/" evalLoc="VDDBDataModel" dest="tmp_out_vddb_replaced/" includes="**/*.sql">
+	                        <token name="#DBOWNER#" path="$VDDB_OWNER"/>
+                    		<token name="#APPUSER#" path="$VDDB_APPUSER"/>      
+							<token name="small_data_ts" path="$VDDB_SM_DATASPACE"/>
+	 		        		<token name="medium_data_ts" path="$VDDB_MED_DATASPACE"/>
+	 		        		<token name="large_data_ts" path="$VDDB_LRG_DATASPACE"/>	 		        
+	 		        		<token name="small_index_ts" path="$VDDB_SM_IDXSPACE"/>
+						    <token name="medium_index_ts" path="$VDDB_MED_IDXSPACE"/>
+						    <token name="large_index_ts" path="$VDDB_LRG_IDXSPACE"/>			        
+ 			</replace>	
+	</ReplaceTags_VD>	
+
+
+<!-- DWH Properties  -->	
+	<EnvironmentVariables_DW>
+			<EnvironmentVariable id="meta_owner" name="METAOWNER" description="Userid that owns the Metamodel Schema"/>
+			<EnvironmentVariable id="gsdm_owner" name="GSDMOWNER" description="Userid that owns the Exception Management Schema"/>	
+			<EnvironmentVariable id="dwh_owner" name="DWHOWNER" description="Userid that owns the Exception Management Schema"/>	
+			<EnvironmentVariable id="dwh_appuser" name="APPUSER" description="Application User that uses the database"/>									
+			<EnvironmentVariable id="dwh_sm_dataspace" name="DWH_SMALL_DATA_TS" description="Name of the DWH small data space"/>
+			<EnvironmentVariable id="dwh_sm_idxspace" name="DWH_SMALL_INDEX_TS" description="Name of the DWH small index space"/>
+			<EnvironmentVariable id="dwh_med_dataspace" name="DWH_MEDIUM_DATA_TS" description="Name of the DWH medium data space"/>
+			<EnvironmentVariable id="dwh_med_idxspace" name="DWH_MEDIUM_INDEX_TS" description="Name of the DWH medium index space"/>
+			<EnvironmentVariable id="dwh_lrg_dataspace" name="DWH_LARGE_DATA_TS" description="Name of the DWH large data space"/>
+			<EnvironmentVariable id="dwh_lrg_idxspace" name="DWH_LARGE_INDEX_TS" description="Name of the DWH large index space"/>				
+	</EnvironmentVariables_DW>	
+	<Prerequisites_DW>
+					<Prerequisite id="dwh_appuser" required="true"/>
+					<Prerequisite id="dwh_owner" required="true"/>        
+					<Prerequisite id="META"        required="true"/>
+					<Prerequisite id="dwh_sm_dataspace" required="true"/>        
+					<Prerequisite id="dwh_sm_idxspace" required="true"/>        
+					<Prerequisite id="dwh_med_dataspace" required="true"/>  
+					<Prerequisite id="dwh_med_idxspace" required="true"/>  
+					<Prerequisite id="dwh_lrg_dataspace" required="true"/>  
+					<Prerequisite id="dwh_lrg_idxspace" required="true"/>	
+	</Prerequisites_DW>	
+	<ReplaceTags_DW>
+			<replace id="replace_pkg" name="Replace Environment Variables" description="Replaces the DBOwner with your specified values" src="tmp_out_warehouse/" evalLoc="DWHDataModel" dest="tmp_out_warehouse_replaced/" includes="**/*.sql">
+      			<token name="#DWOWNER#" path="$DWHOWNER"/>
+				<token name="#DBOWNER#" path="$DWHOWNER"/>
+				<token name="#APPUSER#" path="$APPUSER"/>      
+				<token name="small_data_ts" path="$DWH_SMALL_DATA_TS"/>
+				<token name="medium_data_ts" path="$DWH_MEDIUM_DATA_TS"/>
+				<token name="large_data_ts" path="$DWH_LARGE_DATA_TS"/>	 		        
+				<token name="small_index_ts" path="$DWH_SMALL_INDEX_TS"/>
+				<token name="medium_index_ts" path="$DWH_MEDIUM_INDEX_TS"/>
+				<token name="large_index_ts" path="$DWH_LARGE_INDEX_TS"/>						
+			</replace>	
+	</ReplaceTags_DW>	
+</ENV_VARS_CONFIG>

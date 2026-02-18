@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><Scenario dataWarehouse="false" database="Oracle" desc="This scenario will set up a GoldenCopy and VDDB schema and installs all components needed for standard reference data processing." id="SecuritiesAndProductsLinuxVDDB" name="Securities and Products VDDB" operatingsystem="Linux" vddbRequired="false">
+  <Installation downloadSiteFilter="8.7.2" haltOnError="true"> 
+        <Package category="Datamodel" destination="GoldenCopy" optional="true" type="patch" version="8.7.2.06" name="Datamodel Meta Model Oracle"/>
+        <Package category="Datamodel" destination="GoldenCopy" optional="true" type="patch" version="8.7.2.06" name="Datamodel Configuration Oracle"/>
+        <Package category="Datamodel" destination="GoldenCopy" optional="true" type="patch" version="8.7.2.06" name="Datamodel Logging Oracle"/>
+        <Package category="Datamodel" destination="GoldenCopy" optional="true" type="patch" version="8.7.2.06" name="Datamodel Workflow Oracle"/>
+        <Package category="Datamodel" destination="GoldenCopy" optional="true" type="patch" version="8.7.2.06" name="Datamodel Exception Management Oracle"/>
+        <Package category="Datamodel" destination="GoldenCopy" optional="true" type="patch" version="8.7.2.08" name="Datamodel GSDM Oracle"/>		
+        <Package category="Datamodel" destination="GoldenCopy" optional="true" type="full" version="8.7.2.01" name="Datamodel GoldenSource Objects"/>
+        <Package category="Datamodel" destination="GoldenCopy" optional="true" type="patch" version="8.7.2.06" name="Datamodel GoldenSource Objects"/>
+
+  </Installation>  
+ 
+</Scenario>

@@ -1,0 +1,3218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="OMDX" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="RCode"/>
+    <Option key="LastChangedTms">2025-07-22 at 09:42:14 BST</Option>
+    <Option key="MappingDesignerVersion">8.4.1.32REL</Option>
+    <Option key="OMDX.Base">BBGlobalCommodityFutures.mdx</Option>
+  </Options>
+  <Input vendorType="BB_BULK">
+    <Options/>
+    <Layout>
+      <Override/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="PRE_EURO_CRNCY" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PRE_EURO_CRNCY" path="" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="SECURITY_NAME" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SECURITY_NAME" path="" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="FUT_EXCH_NAME_SHRT" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="FUT_EXCH_NAME_SHRT" path="" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="FUT_GEN_MONTH" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="FUT_GEN_MONTH" path="" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="FUT_LONG_NAME" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="FUT_LONG_NAME" path="" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="FUT_OPT_AVAIL" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="FUT_OPT_AVAIL" path="" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Days from today to notional maturity" excludedNullIdentifiers="" ident="DAYS_TDY_TO_NOTNL_MTY" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="DAYS_TDY_TO_NOTNL_MTY" path="" pattern="" pos="0" readonly="false" type="String"/>
+      <record desc="The ISIN numbers of the deliverable bonds for a future and their conversion factors. " ident="FUT_DLVRBLE_BNDS_ISINS" mandatory="false" mapable="true" multiple="true" name="FUT_DLVRBLE_BNDS_ISINS" path="">
+        <field decimals="0" desc="" excludedNullIdentifiers="" ident="DLVRBLE_ISIN" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="DLVRBLE_ISIN" path="Layout.FUT_DLVRBLE_BNDS_ISINS" pattern="" pos="0" readonly="false" type="String"/>
+        <field decimals="0" desc="" excludedNullIdentifiers="" ident="CONVERT_FACTOR" length="10" mandatory="false" mapable="true" match="false" multiple="false" name="CONVERT_FACTOR" path="Layout.FUT_DLVRBLE_BNDS_ISINS" pattern="" pos="0" readonly="false" type="String"/>
+      </record>
+      <field decimals="0" desc="Generated CFI_CODE when official one is not available" excludedNullIdentifiers="" ident="BLOOMBERG_CFI_CODE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="BLOOMBERG_CFI_CODE" path="" pattern="" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="CFI_CODE" excludedNullIdentifiers="" ident="CFI_CODE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="CFI_CODE" path="" pattern="" pos="0" readonly="false" type="String"/>
+    </Layout>
+  </Input>
+  <Output>
+    <MappingFragments/>
+    <OutputDef>
+      <Node messageformat="GSREF" name="STREET_REF" type="message">
+        <Options>
+          <Option key="xsd">./../STREET_REF.gsref.xsd</Option>
+          <Option key="OutputEncoding"/>
+          <Option key="AddTZIndicators">true</Option>
+          <Option key="SystemId">fti://repository/dtd/STREET_REF</Option>
+          <Option key="DocType">STREET_REF</Option>
+        </Options>
+        <condition><![CDATA[if (Strcmp(ERRORCODE, "0") && OneHasValue(ID_BB_GLOBAL, ID_ISIN, ID_BB_UNIQUE))
+	return "ISSU";
+else
+	return "";]]></condition>
+        <Node name="MESSAGECONDITION" type="attribute">
+          <expr><![CDATA[if (Strcmp(ERRORCODE, "0") && OneHasValue(ID_BB_GLOBAL, ID_ISIN, ID_BB_UNIQUE))
+	return "ISSU";
+else
+	return "";]]></expr>
+        </Node>
+        <Node name="MSGSET" type="attribute"/>
+        <Node name="TRACE" type="attribute">
+          <expr><![CDATA[return "false";]]></expr>
+        </Node>
+        <Node name="TRANSACTIONCODE" type="attribute"/>
+        <Node name="USERID" type="attribute">
+          <expr><![CDATA[return "GUEST";]]></expr>
+        </Node>
+        <Node name="HEADER" type="element">
+          <Node name="CURRENTTIMESTAMP" type="element">
+            <expr><![CDATA[return TimeStamp();]]></expr>
+          </Node>
+          <Node name="DATASOURCE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "BB";]]></expr>
+            </Node>
+          </Node>
+          <Node name="LOCALE" type="element">
+            <Node name="NLS" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "ENU";]]></expr>
+              </Node>
+            </Node>
+            <Node name="TIMEZONE" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "GMT Standard Time";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_ID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return ID_BB_UNIQUE;]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_ID_CTXT_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "BBUNIQUE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(SECURITY_TYP))
+	return TranslateEIST2ISTY("BB", "", "", SECURITY_TYP);
+else
+	return "MISC";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_NME" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return NAME;]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_TBL_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ISSU";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MSGCLASSIFICATION" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "BBCMDTPX";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MSGTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="USERID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "BBCMDTPXCSTM";]]></expr>
+            </Node>
+          </Node>
+          <Node name="VENDORRECORDID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return GetRecordIdentifier();]]></expr>
+            </Node>
+          </Node>
+        </Node>
+        <Node name="Issue" type="segment">
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "REFERENCE";]]></expr>
+          </Node>
+          <Node name="ERROR" type="attribute">
+            <expr><![CDATA[return "N";]]></expr>
+          </Node>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "Issue";]]></expr>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSACTVYSTATTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node displayName="BBUNIQUE" name="IssueIdentifier" type="segment">
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "REFERENCE";]]></expr>
+          </Node>
+          <Node name="ERROR" type="attribute">
+            <expr><![CDATA[return "N";]]></expr>
+          </Node>
+          <Node name="MATCH" type="attribute">
+            <expr><![CDATA[return "ISID3_ID_CTXT_ISS_ID";]]></expr>
+          </Node>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueIdentifier";]]></expr>
+          </Node>
+          <Node name="IDCTXTTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "BBUNIQUE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ISSID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return ID_BB_UNIQUE;]]></expr>
+            </Node>
+          </Node>
+        </Node>
+        <Node name="IssueStatistic" type="segment">
+          <condition><![CDATA[if (OneHasValue(PRE_EURO_CRNCY))
+	return "IssueStatistic";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute"/>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute"/>
+          <Node name="NESTED_ERR_LVL" type="attribute"/>
+          <Node name="ONLY" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueStatistic";]]></expr>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DENOMCURRCDE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORIGDATAPROVID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATCHARVALTXT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return PRE_EURO_CRNCY;]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATDEFID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "PREEURCR";]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATINTVALNUM" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALCAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALDTE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node name="IssueStatistic" type="segment">
+          <condition><![CDATA[if (OneHasValue(SECURITY_NAME))
+	return "IssueStatistic";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute"/>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute"/>
+          <Node name="NESTED_ERR_LVL" type="attribute"/>
+          <Node name="ONLY" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueStatistic";]]></expr>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DENOMCURRCDE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORIGDATAPROVID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATCHARVALTXT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return SECURITY_NAME;]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATDEFID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "SECNAME";]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATINTVALNUM" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALCAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALDTE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node name="IssueStatistic" type="segment">
+          <condition><![CDATA[if (OneHasValue(FUT_EXCH_NAME_SHRT))
+	return "IssueStatistic";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute"/>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute"/>
+          <Node name="NESTED_ERR_LVL" type="attribute"/>
+          <Node name="ONLY" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueStatistic";]]></expr>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DENOMCURRCDE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORIGDATAPROVID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATCHARVALTXT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return FUT_EXCH_NAME_SHRT;]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATDEFID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "FUTNMLNG";]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATINTVALNUM" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALCAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALDTE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node name="IssueStatistic" type="segment">
+          <condition><![CDATA[if (OneHasValue(FUT_GEN_MONTH))
+	return "IssueStatistic";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute"/>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute"/>
+          <Node name="NESTED_ERR_LVL" type="attribute"/>
+          <Node name="ONLY" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueStatistic";]]></expr>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DENOMCURRCDE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORIGDATAPROVID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATCHARVALTXT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return FUT_GEN_MONTH;]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATDEFID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "FUTMNTH";]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATINTVALNUM" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALCAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALDTE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node name="IssueStatistic" type="segment">
+          <condition><![CDATA[if (OneHasValue(FUT_LONG_NAME))
+	return "IssueStatistic";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute"/>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute"/>
+          <Node name="NESTED_ERR_LVL" type="attribute"/>
+          <Node name="ONLY" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueStatistic";]]></expr>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DENOMCURRCDE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORIGDATAPROVID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATCHARVALTXT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return FUT_LONG_NAME;]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATDEFID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "FUTLNME";]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATINTVALNUM" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALCAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALDTE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node name="IssueStatistic" type="segment">
+          <condition><![CDATA[if (OneHasValue(FUT_OPT_AVAIL))
+	return "IssueStatistic";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute"/>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute"/>
+          <Node name="NESTED_ERR_LVL" type="attribute"/>
+          <Node name="ONLY" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueStatistic";]]></expr>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DENOMCURRCDE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORIGDATAPROVID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATCHARVALTXT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return FUT_OPT_AVAIL;]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATDEFID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "FTOPAVL";]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATINTVALNUM" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALCAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALDTE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node name="IssueStatistic" type="segment">
+          <condition><![CDATA[if (OneHasValue(DAYS_TDY_TO_NOTNL_MTY))
+	return "IssueStatistic";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute"/>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute"/>
+          <Node name="NESTED_ERR_LVL" type="attribute"/>
+          <Node name="ONLY" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueStatistic";]]></expr>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DENOMCURRCDE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORIGDATAPROVID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATCHARVALTXT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATDEFID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "DAYS2MTY";]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATINTVALNUM" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return DAYS_TDY_TO_NOTNL_MTY;]]></expr>
+            </Node>
+          </Node>
+          <Node name="STATVALCAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALDTE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STATVALTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node displayName="CTD" name="RelatedIssueDefinition" type="segment">
+          <condition><![CDATA[if(OneHasValue(FUT_DLVRBLE_BNDS_ISINS))
+ return "RelatedIssueDefinition";
+else
+ return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute"/>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "RelatedIssueDefinition";]]></expr>
+          </Node>
+          <Node name="ADVANCENOTICEQTY" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="CNVREXERCPRC" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "BB";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="EXERFEECAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="EXERPAYMETHTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSRELFQDYTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSRELFQQTY" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSRELFQSPTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MNEXERCAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MNEXERCPRC" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MNEXERCQTY" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RELDESC" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "Delivarable bonds of the Future Contract";]]></expr>
+            </Node>
+          </Node>
+          <Node name="RELTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "CTD_BASKET";]]></expr>
+            </Node>
+          </Node>
+          <Node name="RLDISSFEATID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RLDRIDFPURPTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RLDRIDFSQNUM" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RLDRLDISSFEATID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="TICK1PTVALCAMT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="TICK1PTVALTXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="TICKSZCAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="TICKVALCAMT" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="XPDENDAJBASTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="XPDENDDYAJQTY" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="XPDENDMTHAJQTY" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="XPDENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="XPDFQDYTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="XPDFQQTY" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="XPDFQSPTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="XPDSTARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <ForEach recordType="FUT_DLVRBLE_BNDS_ISINS">
+          <Do>
+            <Node name="RelatedIssue" type="segment">
+              <condition><![CDATA[if(OneHasValue(FUT_DLVRBLE_BNDS_ISINS.DLVRBLE_ISIN))
+ return "RelatedIssue";
+else
+ return "";]]></condition>
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "UNKNOWN";]]></expr>
+              </Node>
+              <Node name="COPY_FROM" type="attribute"/>
+              <Node name="COPY_TO" type="attribute"/>
+              <Node name="DUP_CHECK" type="attribute"/>
+              <Node name="ENDDATEIND" type="attribute"/>
+              <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+              <Node name="ERROR" type="attribute"/>
+              <Node name="LOOKUP" type="attribute"/>
+              <Node name="MATCH" type="attribute"/>
+              <Node name="PARENT_LINK" type="attribute"/>
+              <Node name="PUBLISH" type="attribute"/>
+              <Node name="SEGPROCESSEDIND" type="attribute"/>
+              <Node name="START_TMS_MATCH" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="TSATTRIBUTE" type="attribute"/>
+              <Node name="TSOPTION" type="attribute"/>
+              <Node name="TSTOLERANCE" type="attribute"/>
+              <Node name="TYPE" type="attribute">
+                <expr><![CDATA[return "RelatedIssue";]]></expr>
+              </Node>
+              <Node name="IssueIdentifier" type="segment">
+                <condition><![CDATA[if (OneHasValue(FUT_DLVRBLE_BNDS_ISINS.DLVRBLE_ISIN))
+	return "IssueIdentifier";
+else
+	return "";]]></condition>
+                <Node name="ACTION" type="attribute">
+                  <expr><![CDATA[return "REFERENCE";]]></expr>
+                </Node>
+                <Node name="COPY_FROM" type="attribute"/>
+                <Node name="COPY_TO" type="attribute">
+                  <expr><![CDATA[return "INSTR_ID";]]></expr>
+                </Node>
+                <Node name="DUP_CHECK" type="attribute"/>
+                <Node name="ENDDATEIND" type="attribute"/>
+                <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                <Node name="ERROR" type="attribute"/>
+                <Node name="LOOKUP" type="attribute"/>
+                <Node name="MATCH" type="attribute">
+                  <expr><![CDATA[return "ISID6_CTX_ID_MKT_USG";]]></expr>
+                </Node>
+                <Node name="NESTED_ERR_LVL" type="attribute">
+                  <expr><![CDATA[return "WARNING";]]></expr>
+                </Node>
+                <Node name="NESTED_ERR_TXT" type="attribute">
+                  <expr><![CDATA[return Strcat("5|CONCTNS|NESTED|ISSPRTRLTYP|UNDLYING|IDCTXTTYP|TICKER|ISSID|",
+		Strcat(FUT_DLVRBLE_BNDS_ISINS.DLVRBLE_ISIN, "|DATASRCID|BLOOMBERG "));]]></expr>
+                </Node>
+                <Node name="PARENT_LINK" type="attribute"/>
+                <Node name="PUBLISH" type="attribute"/>
+                <Node name="SEGPROCESSEDIND" type="attribute"/>
+                <Node name="START_TMS_MATCH" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="TSATTRIBUTE" type="attribute"/>
+                <Node name="TSOPTION" type="attribute"/>
+                <Node name="TSTOLERANCE" type="attribute"/>
+                <Node name="TYPE" type="attribute">
+                  <expr><![CDATA[return "IssueIdentifier";]]></expr>
+                </Node>
+                <Node name="IDCTXTTYP" type="element">
+                  <Node name="INSERT_ONLY" type="attribute"/>
+                  <Node name="TRANSLATE" type="attribute"/>
+                  <Node name="VALUE" type="attribute">
+                    <expr><![CDATA[return "ISIN";]]></expr>
+                  </Node>
+                </Node>
+                <Node name="ISSID" type="element">
+                  <Node name="INSERT_ONLY" type="attribute"/>
+                  <Node name="TRANSLATE" type="attribute"/>
+                  <Node name="VALUE" type="attribute">
+                    <expr><![CDATA[if (OneHasValue(FUT_DLVRBLE_BNDS_ISINS.DLVRBLE_ISIN))
+	return SubString(FUT_DLVRBLE_BNDS_ISINS.DLVRBLE_ISIN, 1, 12);
+else
+	return "";]]></expr>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="CNVRFACTORCRTE" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return FUT_DLVRBLE_BNDS_ISINS.CONVERT_FACTOR;]]></expr>
+                </Node>
+              </Node>
+              <Node name="DATASRCID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "BB";]]></expr>
+                </Node>
+              </Node>
+              <Node name="DATASTATTYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "ACTIVE";]]></expr>
+                </Node>
+              </Node>
+              <Node name="ENDTMS" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="EVAMTBASTYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="EVAMTTYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "UNIT";]]></expr>
+                </Node>
+              </Node>
+              <Node name="EVBASPRTCAMT" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "1";]]></expr>
+                </Node>
+              </Node>
+              <Node name="EVPARTCAMT" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return FUT_CONT_SIZE;]]></expr>
+                </Node>
+              </Node>
+              <Node name="EXERCRTE" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return FUT_DLVRBLE_BNDS_ISINS.CONVERT_FACTOR;]]></expr>
+                </Node>
+              </Node>
+              <Node name="EXERRTETYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="IDCTXTTYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="INSTRID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="ISSID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="ISSPARTRLTYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "DELIVER";]]></expr>
+                </Node>
+              </Node>
+              <Node name="LASTCHGTMS" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="LASTCHGUSRID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="PARTUNITSTYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "ALL";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PRININCIND" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="RISSOID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="RLDISSFEATID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="SEPARATIONSTARTTMS" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="STARTTMS" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+            </Node>
+          </Do>
+        </ForEach>
+        <Node displayName="CFI_CODE" name="IssueClassification" type="segment">
+          <condition><![CDATA[if (OneHasValue(CFI_CODE) && !Strcmp(CFI_CODE, " "))
+	return "IssueClassification";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="MATCH" type="attribute">
+            <expr><![CDATA[return "ISCL_MATCH_SET_PURP";]]></expr>
+          </Node>
+          <Node name="TSATTRIBUTE" type="attribute">
+            <expr><![CDATA[return "CLSF_OID:CL_VALUE";]]></expr>
+          </Node>
+          <Node name="TSOPTION" type="attribute">
+            <expr><![CDATA[return "Y";]]></expr>
+          </Node>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueClassification";]]></expr>
+          </Node>
+          <Node name="CLSFOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="CLSFPURPTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "INSTRCAT";]]></expr>
+            </Node>
+          </Node>
+          <Node name="CLVALUE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(CFI_CODE))
+	return CFI_CODE;
+else
+	return "";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DATAREDISTRIBUTORID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="EINCOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="GUCNT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="GUID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="GUTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INDUSCLSETID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "CFI";]]></expr>
+            </Node>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISIDOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSCLSFDESC" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSCLSFOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="NLSCDE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORIGDATAPROVID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return Transform2FTIDate(SubString(TimeStamp(), 1, 10), "MM-DD-YYYY");]]></expr>
+            </Node>
+          </Node>
+          <Node name="IndustryClassification" type="segment">
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "CLSF_OID";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "INCL_VALUE";]]></expr>
+            </Node>
+            <Node name="NESTED_ERR_LVL" type="attribute">
+              <expr><![CDATA[return "ERROR";]]></expr>
+            </Node>
+            <Node name="NESTED_ERR_TXT" type="attribute">
+              <expr><![CDATA[return Strcat("4|CONCTNS|NESTED|CLSFSETMNEM|CFI|CLVALUE|", Strcat(CFI_CODE, "|DATASRCID|BLOOMBERG"));]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "IndustryClassification";]]></expr>
+            </Node>
+            <Node name="CLDESC" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="CLNME" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="CLSFOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="CLVALUE" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[if (OneHasValue(CFI_CODE))
+	return CFI_CODE;
+else
+	return "";]]></expr>
+              </Node>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INDUSCLSETID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "CFI";]]></expr>
+              </Node>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LEVELNUM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="PRNTCLSFOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="PRNTCLVALUE" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+        </Node>
+      </Node>
+    </OutputDef>
+  </Output>
+  <Translation>
+    <table name="PRICING_SOURCE">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>SR</col>
+          <col>Berne</col>
+        </row>
+        <row>
+          <col>CX</col>
+          <col>Bogota</col>
+        </row>
+        <row>
+          <col>JB</col>
+          <col>Brokers Brkr</col>
+        </row>
+        <row>
+          <col>AF</col>
+          <col>Buenos Floor</col>
+        </row>
+        <row>
+          <col>CN</col>
+          <col>Canada</col>
+        </row>
+        <row>
+          <col>IH</col>
+          <col>Delhi</col>
+        </row>
+        <row>
+          <col>FP</col>
+          <col>France</col>
+        </row>
+        <row>
+          <col>TL</col>
+          <col>Gibraltar</col>
+        </row>
+        <row>
+          <col>IR</col>
+          <col>Iceland</col>
+        </row>
+        <row>
+          <col>KZ</col>
+          <col>Kazakhstan</col>
+        </row>
+        <row>
+          <col>KP</col>
+          <col>Korea SE</col>
+        </row>
+        <row>
+          <col>MD</col>
+          <col>Madeira</col>
+        </row>
+        <row>
+          <col>MN</col>
+          <col>Monaco</col>
+        </row>
+        <row>
+          <col>UP</col>
+          <col>Pacific</col>
+        </row>
+        <row>
+          <col>PP</col>
+          <col>Panama</col>
+        </row>
+        <row>
+          <col>CD</col>
+          <col>Prague-SPAD</col>
+        </row>
+        <row>
+          <col>TB</col>
+          <col>Thailand</col>
+        </row>
+        <row>
+          <col>LT</col>
+          <col>Tradepoint</col>
+        </row>
+        <row>
+          <col>UZ</col>
+          <col>Ukraine</col>
+        </row>
+        <row>
+          <col>BA</col>
+          <col>Barbados</col>
+        </row>
+        <row>
+          <col>BU</col>
+          <col>Bulgaria</col>
+        </row>
+        <row>
+          <col>EC</col>
+          <col>Cairo</col>
+        </row>
+        <row>
+          <col>CY</col>
+          <col>Cyprus</col>
+        </row>
+        <row>
+          <col>ZG</col>
+          <col>Gabon</col>
+        </row>
+        <row>
+          <col>GA</col>
+          <col>Greece</col>
+        </row>
+        <row>
+          <col>GU</col>
+          <col>Guernsey</col>
+        </row>
+        <row>
+          <col>KQ</col>
+          <col>KOSDAQ</col>
+        </row>
+        <row>
+          <col>NI</col>
+          <col>Milan NM</col>
+        </row>
+        <row>
+          <col>UQ</col>
+          <col>NASDAQ N-Mkt</col>
+        </row>
+        <row>
+          <col>IS</col>
+          <col>Natl India</col>
+        </row>
+        <row>
+          <col>CO</col>
+          <col>Occidente</col>
+        </row>
+        <row>
+          <col>OM</col>
+          <col>Oman</col>
+        </row>
+        <row>
+          <col>JM</col>
+          <col>Optimark Jpn</col>
+        </row>
+        <row>
+          <col>PQ</col>
+          <col>Pink Sheets</col>
+        </row>
+        <row>
+          <col>RO</col>
+          <col>Romania</col>
+        </row>
+        <row>
+          <col>CE</col>
+          <col>Sant. Elec</col>
+        </row>
+        <row>
+          <col>SS</col>
+          <col>Sweden</col>
+        </row>
+        <row>
+          <col>TC</col>
+          <col>Turks &amp; Caico</col>
+        </row>
+        <row>
+          <col>UG</col>
+          <col>Uganda</col>
+        </row>
+        <row>
+          <col>AR</col>
+          <col>Argentina</col>
+        </row>
+        <row>
+          <col>BB</col>
+          <col>Belgium</col>
+        </row>
+        <row>
+          <col>GB</col>
+          <col>Berlin</col>
+        </row>
+        <row>
+          <col>VB</col>
+          <col>Bolivia</col>
+        </row>
+        <row>
+          <col>BV</col>
+          <col>Bovespa Out</col>
+        </row>
+        <row>
+          <col>ST</col>
+          <col>ContinuousNM</col>
+        </row>
+        <row>
+          <col>CZ</col>
+          <col>Croatia</col>
+        </row>
+        <row>
+          <col>CP</col>
+          <col>Czech Republic</col>
+        </row>
+        <row>
+          <col>ED</col>
+          <col>Ecuador</col>
+        </row>
+        <row>
+          <col>EN</col>
+          <col>Euronext</col>
+        </row>
+        <row>
+          <col>FH</col>
+          <col>Finland</col>
+        </row>
+        <row>
+          <col>JX</col>
+          <col>Hercules</col>
+        </row>
+        <row>
+          <col>IJ</col>
+          <col>Indonesia</col>
+        </row>
+        <row>
+          <col>IT</col>
+          <col>Israel</col>
+        </row>
+        <row>
+          <col>LB</col>
+          <col>Lebanon</col>
+        </row>
+        <row>
+          <col>MP</col>
+          <col>Mauritius</col>
+        </row>
+        <row>
+          <col>MZ</col>
+          <col>Mozambique</col>
+        </row>
+        <row>
+          <col>UR</col>
+          <col>NASDAQ Sm-Cp</col>
+        </row>
+        <row>
+          <col>EX</col>
+          <col>NEWEX</col>
+        </row>
+        <row>
+          <col>JN</col>
+          <col>Nagoya</col>
+        </row>
+        <row>
+          <col>NT</col>
+          <col>Neth Antilles</col>
+        </row>
+        <row>
+          <col>LV</col>
+          <col>Riga Variab</col>
+        </row>
+        <row>
+          <col>SJ</col>
+          <col>South Africa</col>
+        </row>
+        <row>
+          <col>UH</col>
+          <col>UAE</col>
+        </row>
+        <row>
+          <col>ZH</col>
+          <col>Zimbabwe</col>
+        </row>
+        <row>
+          <col>AI</col>
+          <col>Anguilla</col>
+        </row>
+        <row>
+          <col>BC</col>
+          <col>BRVM Regional</col>
+        </row>
+        <row>
+          <col>BM</col>
+          <col>Bahamas</col>
+        </row>
+        <row>
+          <col>GC</col>
+          <col>Bremen</col>
+        </row>
+        <row>
+          <col>AS</col>
+          <col>Buenos Sinac</col>
+        </row>
+        <row>
+          <col>LC</col>
+          <col>Composite</col>
+        </row>
+        <row>
+          <col>CQ</col>
+          <col>Dealing Net</col>
+        </row>
+        <row>
+          <col>EY</col>
+          <col>Egypt</col>
+        </row>
+        <row>
+          <col>FS</col>
+          <col>Fiji</col>
+        </row>
+        <row>
+          <col>IA</col>
+          <col>Ivory Coast</col>
+        </row>
+        <row>
+          <col>JY</col>
+          <col>Jersey</col>
+        </row>
+        <row>
+          <col>KS</col>
+          <col>Korea</col>
+        </row>
+        <row>
+          <col>MQ</col>
+          <col>MESDAQ</col>
+        </row>
+        <row>
+          <col>GM</col>
+          <col>Munich</col>
+        </row>
+        <row>
+          <col>NK</col>
+          <col>Nepal</col>
+        </row>
+        <row>
+          <col>NA</col>
+          <col>Netherlands</col>
+        </row>
+        <row>
+          <col>JO</col>
+          <col>Osaka</col>
+        </row>
+        <row>
+          <col>PS</col>
+          <col>Palestine</col>
+        </row>
+        <row>
+          <col>RQ</col>
+          <col>RASDAQ</col>
+        </row>
+        <row>
+          <col>ZS</col>
+          <col>Senegal</col>
+        </row>
+        <row>
+          <col>CG</col>
+          <col>Shanghai</col>
+        </row>
+        <row>
+          <col>SK</col>
+          <col>Slovakia</col>
+        </row>
+        <row>
+          <col>GW</col>
+          <col>Stutgt Wrnts</col>
+        </row>
+        <row>
+          <col>US</col>
+          <col>United States</col>
+        </row>
+        <row>
+          <col>SA</col>
+          <col>Valencia</col>
+        </row>
+        <row>
+          <col>VC</col>
+          <col>Venezuela</col>
+        </row>
+        <row>
+          <col>BD</col>
+          <col>Bangladesh</col>
+        </row>
+        <row>
+          <col>SB</col>
+          <col>Barcelona</col>
+        </row>
+        <row>
+          <col>IB</col>
+          <col>Bombay</col>
+        </row>
+        <row>
+          <col>BX</col>
+          <col>Brunei</col>
+        </row>
+        <row>
+          <col>CH</col>
+          <col>China</col>
+        </row>
+        <row>
+          <col>CR</col>
+          <col>Costa Rica</col>
+        </row>
+        <row>
+          <col>GD</col>
+          <col>Dusseldorf</col>
+        </row>
+        <row>
+          <col>JF</col>
+          <col>Fukuoka</col>
+        </row>
+        <row>
+          <col>GN</col>
+          <col>Ghana</col>
+        </row>
+        <row>
+          <col>JP</col>
+          <col>Japan</col>
+        </row>
+        <row>
+          <col>LX</col>
+          <col>Luxembourg</col>
+        </row>
+        <row>
+          <col>UT</col>
+          <col>NASDAQ iM</col>
+        </row>
+        <row>
+          <col>NL</col>
+          <col>Nigeria</col>
+        </row>
+        <row>
+          <col>OF</col>
+          <col>OFEX London</col>
+        </row>
+        <row>
+          <col>NV</col>
+          <col>OTC  New Zld</col>
+        </row>
+        <row>
+          <col>QD</col>
+          <col>Qatar</col>
+        </row>
+        <row>
+          <col>RR</col>
+          <col>RTS</col>
+        </row>
+        <row>
+          <col>BN</col>
+          <col>Sao PaoloA-M</col>
+        </row>
+        <row>
+          <col>SV</col>
+          <col>Slovenia</col>
+        </row>
+        <row>
+          <col>SL</col>
+          <col>Sri Lanka</col>
+        </row>
+        <row>
+          <col>TZ</col>
+          <col>Tanzania</col>
+        </row>
+        <row>
+          <col>TP</col>
+          <col>Trinidad</col>
+        </row>
+        <row>
+          <col>LN</col>
+          <col>United Kingdom</col>
+        </row>
+        <row>
+          <col>VN</col>
+          <col>Vietnam</col>
+        </row>
+        <row>
+          <col>VX</col>
+          <col>Virt-x</col>
+        </row>
+        <row>
+          <col>UA</col>
+          <col>American</col>
+        </row>
+        <row>
+          <col>AU</col>
+          <col>Australia</col>
+        </row>
+        <row>
+          <col>CI</col>
+          <col>Chile</col>
+        </row>
+        <row>
+          <col>DC</col>
+          <col>Denmark</col>
+        </row>
+        <row>
+          <col>NM</col>
+          <col>Germ NM</col>
+        </row>
+        <row>
+          <col>EG</col>
+          <col>Guayaquil</col>
+        </row>
+        <row>
+          <col>IM</col>
+          <col>Italy</col>
+        </row>
+        <row>
+          <col>JQ</col>
+          <col>JASDAQ</col>
+        </row>
+        <row>
+          <col>PK</col>
+          <col>Karachi</col>
+        </row>
+        <row>
+          <col>KK</col>
+          <col>Kuwait</col>
+        </row>
+        <row>
+          <col>LE</col>
+          <col>Liechtenstein</col>
+        </row>
+        <row>
+          <col>MI</col>
+          <col>Marshall Islds</col>
+        </row>
+        <row>
+          <col>IC</col>
+          <col>Mil Comp Day</col>
+        </row>
+        <row>
+          <col>NW</col>
+          <col>Namibia</col>
+        </row>
+        <row>
+          <col>NC</col>
+          <col>Nicaragua</col>
+        </row>
+        <row>
+          <col>UU</col>
+          <col>OTC BB</col>
+        </row>
+        <row>
+          <col>PA</col>
+          <col>Pakistan</col>
+        </row>
+        <row>
+          <col>EQ</col>
+          <col>Quito</col>
+        </row>
+        <row>
+          <col>CS</col>
+          <col>Shenzhen</col>
+        </row>
+        <row>
+          <col>BO</col>
+          <col>Soma</col>
+        </row>
+        <row>
+          <col>SM</col>
+          <col>Spain</col>
+        </row>
+        <row>
+          <col>SC</col>
+          <col>Swiss Contrb</col>
+        </row>
+        <row>
+          <col>SW</col>
+          <col>Switzerland</col>
+        </row>
+        <row>
+          <col>GY</col>
+          <col>Xetra</col>
+        </row>
+        <row>
+          <col>AL</col>
+          <col>Albania</col>
+        </row>
+        <row>
+          <col>AV</col>
+          <col>Austria</col>
+        </row>
+        <row>
+          <col>ZB</col>
+          <col>Belize</col>
+        </row>
+        <row>
+          <col>BP</col>
+          <col>Bosnia</col>
+        </row>
+        <row>
+          <col>UB</col>
+          <col>Boston</col>
+        </row>
+        <row>
+          <col>BZ</col>
+          <col>Brazil</col>
+        </row>
+        <row>
+          <col>GF</col>
+          <col>Frankfurt</col>
+        </row>
+        <row>
+          <col>IN</col>
+          <col>India</col>
+        </row>
+        <row>
+          <col>ID</col>
+          <col>Ireland</col>
+        </row>
+        <row>
+          <col>JR</col>
+          <col>Jordan</col>
+        </row>
+        <row>
+          <col>SN</col>
+          <col>Madrid</col>
+        </row>
+        <row>
+          <col>ND</col>
+          <col>NDQ Deutschlnd</col>
+        </row>
+        <row>
+          <col>NX</col>
+          <col>Nevis</col>
+        </row>
+        <row>
+          <col>UV</col>
+          <col>OTC  US</col>
+        </row>
+        <row>
+          <col>PL</col>
+          <col>Portugal</col>
+        </row>
+        <row>
+          <col>LF</col>
+          <col>Riga Fixed</col>
+        </row>
+        <row>
+          <col>AB</col>
+          <col>Saudi Arabia</col>
+        </row>
+        <row>
+          <col>SD</col>
+          <col>Swaziland</col>
+        </row>
+        <row>
+          <col>CT</col>
+          <col>Toronto</col>
+        </row>
+        <row>
+          <col>ZL</col>
+          <col>Zambia</col>
+        </row>
+        <row>
+          <col>SO</col>
+          <col>Bilbao</col>
+        </row>
+        <row>
+          <col>BG</col>
+          <col>Botswana</col>
+        </row>
+        <row>
+          <col>AC</col>
+          <col>Buenos Cont</col>
+        </row>
+        <row>
+          <col>ZC</col>
+          <col>Central Afr Rp</col>
+        </row>
+        <row>
+          <col>UM</col>
+          <col>Chicago</col>
+        </row>
+        <row>
+          <col>UC</col>
+          <col>Cincinnati</col>
+        </row>
+        <row>
+          <col>CU</col>
+          <col>Cook Islands</col>
+        </row>
+        <row>
+          <col>NE</col>
+          <col>EOE Warrant</col>
+        </row>
+        <row>
+          <col>HK</col>
+          <col>Hong Kong</col>
+        </row>
+        <row>
+          <col>IE</col>
+          <col>Iran</col>
+        </row>
+        <row>
+          <col>IO</col>
+          <col>Isle of Man</col>
+        </row>
+        <row>
+          <col>LQ</col>
+          <col>Liqdty Qt Ex</col>
+        </row>
+        <row>
+          <col>MA</col>
+          <col>Macau</col>
+        </row>
+        <row>
+          <col>MK</col>
+          <col>Malaysia</col>
+        </row>
+        <row>
+          <col>ES</col>
+          <col>NASDAQ Europe</col>
+        </row>
+        <row>
+          <col>NO</col>
+          <col>Norway</col>
+        </row>
+        <row>
+          <col>OS</col>
+          <col>Off Shore</col>
+        </row>
+        <row>
+          <col>PM</col>
+          <col>Philippines</col>
+        </row>
+        <row>
+          <col>PW</col>
+          <col>Poland</col>
+        </row>
+        <row>
+          <col>CK</col>
+          <col>Prague-KOBOS</col>
+        </row>
+        <row>
+          <col>RU</col>
+          <col>Russia</col>
+        </row>
+        <row>
+          <col>SE</col>
+          <col>SWX  Elec</col>
+        </row>
+        <row>
+          <col>JS</col>
+          <col>Sapporo</col>
+        </row>
+        <row>
+          <col>IY</col>
+          <col>Surabaya</col>
+        </row>
+        <row>
+          <col>TI</col>
+          <col>Turkey</col>
+        </row>
+        <row>
+          <col>NY</col>
+          <col>XETRA NM</col>
+        </row>
+        <row>
+          <col>GQ</col>
+          <col>Xetra Stars</col>
+        </row>
+        <row>
+          <col>AD</col>
+          <col>Andorra</col>
+        </row>
+        <row>
+          <col>RB</col>
+          <col>Belarus</col>
+        </row>
+        <row>
+          <col>BH</col>
+          <col>Bermuda</col>
+        </row>
+        <row>
+          <col>CB</col>
+          <col>Colombia</col>
+        </row>
+        <row>
+          <col>ET</col>
+          <col>Estonia</col>
+        </row>
+        <row>
+          <col>NF</col>
+          <col>Frankfurt NM</col>
+        </row>
+        <row>
+          <col>GR</col>
+          <col>Germany</col>
+        </row>
+        <row>
+          <col>GH</col>
+          <col>Hamburg</col>
+        </row>
+        <row>
+          <col>HB</col>
+          <col>Hungary</col>
+        </row>
+        <row>
+          <col>KN</col>
+          <col>Kenya</col>
+        </row>
+        <row>
+          <col>LR</col>
+          <col>Latvia</col>
+        </row>
+        <row>
+          <col>LH</col>
+          <col>Lithuania</col>
+        </row>
+        <row>
+          <col>MV</col>
+          <col>Malta</col>
+        </row>
+        <row>
+          <col>CL</col>
+          <col>Medellin</col>
+        </row>
+        <row>
+          <col>IF</col>
+          <col>Mil Aftr Hrs</col>
+        </row>
+        <row>
+          <col>UD</col>
+          <col>NASD   ADF</col>
+        </row>
+        <row>
+          <col>UN</col>
+          <col>New York</col>
+        </row>
+        <row>
+          <col>NZ</col>
+          <col>New Zealand</col>
+        </row>
+        <row>
+          <col>PN</col>
+          <col>Paraguay</col>
+        </row>
+        <row>
+          <col>NP</col>
+          <col>Paris NM</col>
+        </row>
+        <row>
+          <col>UX</col>
+          <col>Philidelphia</col>
+        </row>
+        <row>
+          <col>SP</col>
+          <col>Singapore</col>
+        </row>
+        <row>
+          <col>TT</col>
+          <col>Taiwan</col>
+        </row>
+        <row>
+          <col>JT</col>
+          <col>Tokyo</col>
+        </row>
+        <row>
+          <col>CV</col>
+          <col>Venture</col>
+        </row>
+        <row>
+          <col>EA</col>
+          <col>Alexandria</col>
+        </row>
+        <row>
+          <col>BI</col>
+          <col>Bahrain</col>
+        </row>
+        <row>
+          <col>VI</col>
+          <col>Brit Virgin Is</col>
+        </row>
+        <row>
+          <col>UO</col>
+          <col>CBOE</col>
+        </row>
+        <row>
+          <col>VS</col>
+          <col>Caracas</col>
+        </row>
+        <row>
+          <col>KY</col>
+          <col>Cayman Islands</col>
+        </row>
+        <row>
+          <col>SQ</col>
+          <col>Continuous</col>
+        </row>
+        <row>
+          <col>EK</col>
+          <col>Eastern Carrib</col>
+        </row>
+        <row>
+          <col>GI</col>
+          <col>Hannover</col>
+        </row>
+        <row>
+          <col>IQ</col>
+          <col>Iraq</col>
+        </row>
+        <row>
+          <col>JA</col>
+          <col>Jamaica</col>
+        </row>
+        <row>
+          <col>RM</col>
+          <col>MICEX</col>
+        </row>
+        <row>
+          <col>MW</col>
+          <col>Malawi</col>
+        </row>
+        <row>
+          <col>MM</col>
+          <col>Mexico</col>
+        </row>
+        <row>
+          <col>CM</col>
+          <col>Montreal</col>
+        </row>
+        <row>
+          <col>MC</col>
+          <col>Morocco</col>
+        </row>
+        <row>
+          <col>PE</col>
+          <col>Peru</col>
+        </row>
+        <row>
+          <col>CC</col>
+          <col>Sant. Comerc</col>
+        </row>
+        <row>
+          <col>BS</col>
+          <col>Sao Paulo</col>
+        </row>
+        <row>
+          <col>SG</col>
+          <col>Serbia</col>
+        </row>
+        <row>
+          <col>GS</col>
+          <col>Stuttgart</col>
+        </row>
+        <row>
+          <col>TU</col>
+          <col>Tunisia</col>
+        </row>
+        <row>
+          <col>LI</col>
+          <col>U.K. ISEAQ</col>
+        </row>
+        <row>
+          <col>UY</col>
+          <col>Uruguay</col>
+        </row>
+        <row>
+          <col>CW</col>
+          <col>Winnipeg</col>
+        </row>
+      </data>
+    </table>
+    <table name="CASH_SETTLED">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>N</col>
+          <col>DELIVERY</col>
+        </row>
+        <row>
+          <col>Y</col>
+          <col>CASH</col>
+        </row>
+      </data>
+    </table>
+    <table name="BB_EQY_REGION">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>CN</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>IR</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KZ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>LT</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MX</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>U2</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>BA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CO</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>CY</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>EC</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>GA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IS</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>JM</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>LK</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>LU</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MO</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>MY</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>NI</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>OM</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>QA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>RO</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>SI</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>TC</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>TW</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>UG</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>AR</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>BB</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>CF</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CZ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>FR</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>GB</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IT</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KR</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>LB</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>LV</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MZ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PH</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>TN</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>EN</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BM</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>BW</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>DK</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>EE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>FI</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>JE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>JO</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>NA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PS</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>SA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>SK</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>US</col>
+          <col>NAMR</col>
+        </row>
+        <row>
+          <col>AT</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BD</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>BN</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>CH</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CR</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>FJ</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>HR</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IL</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>JP</col>
+          <col>ASIA1</col>
+        </row>
+        <row>
+          <col>MH</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>NL</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PT</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>TZ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>AU</col>
+          <col>ASIA1</col>
+        </row>
+        <row>
+          <col>BE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BO</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>BY</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CI</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CS</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>EG</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IM</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PA</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>PK</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>UA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>VE</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>ZA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>AL</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BZ</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>ID</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>IN</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>MT</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PL</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>SN</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>TH</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>TR</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BG</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CA</col>
+          <col>NAMR</col>
+        </row>
+        <row>
+          <col>CK</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>DE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>ES</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>GG</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>HK</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>HU</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KW</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MU</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>NO</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>RU</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>SE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>VG</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>ZM</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>ZW</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>AN</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>BH</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BR</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>CL</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>GH</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>GR</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KN</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>NP</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>NZ</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>SZ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>TT</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>AE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BS</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>EU</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>GI</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IQ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KY</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>LI</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MW</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>NG</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PE</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>PY</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>SG</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>UY</col>
+          <col>LAMR</col>
+        </row>
+      </data>
+    </table>
+    <table name="MAJOR_CURRENCY">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>AUd</col>
+          <col>AUD</col>
+        </row>
+        <row>
+          <col>BWp</col>
+          <col>BWP</col>
+        </row>
+        <row>
+          <col>MYr</col>
+          <col>MYR</col>
+        </row>
+        <row>
+          <col>MWk</col>
+          <col>MWK</col>
+        </row>
+        <row>
+          <col>CAd</col>
+          <col>CAD</col>
+        </row>
+        <row>
+          <col>KWd</col>
+          <col>KWD</col>
+        </row>
+        <row>
+          <col>ZWd</col>
+          <col>ZWD</col>
+        </row>
+        <row>
+          <col>GBp</col>
+          <col>GBP</col>
+        </row>
+        <row>
+          <col>IEp</col>
+          <col>IEP</col>
+        </row>
+        <row>
+          <col>SGd</col>
+          <col>SGD</col>
+        </row>
+        <row>
+          <col>ZAr</col>
+          <col>ZAR</col>
+        </row>
+        <row>
+          <col>MISC</col>
+          <col>XXX</col>
+        </row>
+        <row>
+          <col>MULTI</col>
+          <col>MN1</col>
+        </row>
+        <row>
+          <col>SZl</col>
+          <col>SZL</col>
+        </row>
+        <row>
+          <col>EUr</col>
+          <col>EUR</col>
+        </row>
+        <row>
+          <col>NAd</col>
+          <col>NAD</col>
+        </row>
+        <row>
+          <col>USd</col>
+          <col>USD</col>
+        </row>
+        <row>
+          <col>ILs</col>
+          <col>ILS</col>
+        </row>
+        <row>
+          <col>ZMk</col>
+          <col>ZMK</col>
+        </row>
+      </data>
+    </table>
+    <table name="PRICING_SESSION">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>P</col>
+          <col>Pit/day</col>
+        </row>
+        <row>
+          <col>S</col>
+          <col>Single</col>
+        </row>
+        <row>
+          <col>C</col>
+          <col>Combined</col>
+        </row>
+        <row>
+          <col>E</col>
+          <col>Electronic</col>
+        </row>
+      </data>
+    </table>
+    <table name="BBCOUNTRY">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>BL</col>
+          <col>BO</col>
+        </row>
+        <row>
+          <col>BI</col>
+          <col>BZ</col>
+        </row>
+      </data>
+    </table>
+  </Translation>
+  <Expressions/>
+</MappingDef>

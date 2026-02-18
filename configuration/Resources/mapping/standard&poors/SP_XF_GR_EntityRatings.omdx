@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="OMDX" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="LastChangedTms">2024-07-05 at 04:46:49 BST</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="MappingDesignerVersion">8.4.1.32REL</Option>
+    <Option key="OMDX.Base">SP_XF_GR_EntityRatings.mdx</Option>
+  </Options>
+  <Input vendorType="BB">
+    <Options/>
+    <Layout>
+      <Override/>
+    </Layout>
+  </Input>
+  <Output>
+    <MappingFragments/>
+    <OutputDef>
+      <Node displayName="FINS mapping SOLICITATION STATUS to RTQL" messageformat="GSREF" name="STREET_REF" type="message">
+        <Options>
+          <Option key="DocType">STREET_REF</Option>
+          <Option key="SystemId">fti://repository/dtd/STREET_REF</Option>
+          <Option key="AddTZIndicators">true</Option>
+          <Option key="OutputEncoding"/>
+        </Options>
+        <comment><![CDATA[EG-9956]]></comment>
+        <condition><![CDATA[if (Strcmp("N", GetRuntimeParameter("IsStaging")))
+	if ((OneHasValue(spEntityLevelDatachangebit) && !Strcmp(spEntityLevelDatachangebit, "D")) || ((OneHasValue(spEntitySectorchangebit) && !Strcmp(spEntitySectorchangebit, "D")) || ((OneHasValue(spInstrumentToEntitychangebit) && !Strcmp(spInstrumentToEntitychangebit, "D")) || ((OneHasValue(spRatingDatachangebit) && !Strcmp(spRatingDatachangebit, "D")) || ((OneHasValue(spAssessmentDatachangebit) && !Strcmp(spAssessmentDatachangebit, "D")) || ((OneHasValue(spIndustryCharchangebit) && !Strcmp(spIndustryCharchangebit, "D")) || ((OneHasValue(spRatingIdentifierchangebit) && !Strcmp(spRatingIdentifierchangebit, "D")) || (OneHasValue(spAssessmentLevelDatachangebit) && !Strcmp(spAssessmentLevelDatachangebit, "D")))))))))
+		if (OneHasValue(spEntityLevelDataentitySymbolValue, spEntitySectorentitySymbolValue, spInstrumentToEntityroleTypeCode, spRatingDataratingDetailId, spAssessmentDataassessmentDetailId, spAssessmentLevelDataassessmentDetailId, spRatingIdentifiersymbolId, spIndustryCharcharID))
+			return "FINS";
+		else
+			return "";
+	else
+		return "";
+else
+	return "";]]></condition>
+        <Node name="USERID" type="attribute">
+          <expr><![CDATA[return "guest";]]></expr>
+        </Node>
+        <Node name="TRACE" type="attribute">
+          <expr><![CDATA[return "false";]]></expr>
+        </Node>
+        <Node name="TRANSACTIONCODE" type="attribute"/>
+        <Node name="EVENT" type="attribute"/>
+        <Node name="MESSAGECONDITION" type="attribute">
+          <expr><![CDATA[if (Strcmp("N", GetRuntimeParameter("IsStaging")))
+	if ((OneHasValue(spEntityLevelDatachangebit) && !Strcmp(spEntityLevelDatachangebit, "D")) || ((OneHasValue(spEntitySectorchangebit) && !Strcmp(spEntitySectorchangebit, "D")) || ((OneHasValue(spInstrumentToEntitychangebit) && !Strcmp(spInstrumentToEntitychangebit, "D")) || ((OneHasValue(spRatingDatachangebit) && !Strcmp(spRatingDatachangebit, "D")) || ((OneHasValue(spAssessmentDatachangebit) && !Strcmp(spAssessmentDatachangebit, "D")) || ((OneHasValue(spIndustryCharchangebit) && !Strcmp(spIndustryCharchangebit, "D")) || ((OneHasValue(spRatingIdentifierchangebit) && !Strcmp(spRatingIdentifierchangebit, "D")) || (OneHasValue(spAssessmentLevelDatachangebit) && !Strcmp(spAssessmentLevelDatachangebit, "D")))))))))
+		if (OneHasValue(spEntityLevelDataentitySymbolValue, spEntitySectorentitySymbolValue, spInstrumentToEntityroleTypeCode, spRatingDataratingDetailId, spAssessmentDataassessmentDetailId, spAssessmentLevelDataassessmentDetailId, spRatingIdentifiersymbolId, spIndustryCharcharID))
+			return "FINS";
+		else
+			return "";
+	else
+		return "";
+else
+	return "";]]></expr>
+        </Node>
+        <Node name="HEADER" type="element">
+          <Node name="ASOFDATE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ATTRLOCK" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="CALID" type="element">
+            <Node name="VALUE" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+          </Node>
+          <Node name="CHECKLASTDBUPDATE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+          </Node>
+          <Node name="CHGAPPRTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+          </Node>
+          <Node name="CNTRYCDE" type="element">
+            <Node name="VALUE" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+          </Node>
+          <Node name="CURRENTTIMESTAMP" type="element">
+            <expr><![CDATA[return TimeStamp();]]></expr>
+          </Node>
+          <Node name="DATAID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATAIDCTXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASOURCE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "SNPXF_RT";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DONOTPOST" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="EMPLOYEE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+          </Node>
+          <Node name="ISSUEACTIONREPLACE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSUELOCK" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSUERDERIVATIONMODE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+          </Node>
+          <Node name="LOCALE" type="element">
+            <Node name="NLS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="TIMEZONE" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_ID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(spRatingIdentifiersymbolId) && Strcmp(spRatingIdentifiersymbolTypeId, "73"))
+	return spRatingIdentifierObjectId;
+else if (OneHasValue(spRatingIdentifiersymbolValue) && Strcmp(spRatingIdentifiersymbolTypeId, "73"))
+	return spRatingIdentifiersymbolValue;
+else if (AllHaveValue(spIndustryCharcharID, spIndustryCharobjectId))
+	return spIndustryCharobjectId;
+else if (OneHasValue(spEntityLevelDataentitySymbolValue))
+	return spEntityLevelDataentitySymbolValue;
+else if (OneHasValue(spEntitySectorentitySymbolValue))
+	return spEntitySectorentitySymbolValue;
+else if (OneHasValue(spRatingDataentitySymbolValue))
+	return spRatingDataentitySymbolValue;
+else if (OneHasValue(spAssessmentDataentitySymbolValue))
+	return spAssessmentDataentitySymbolValue;
+else if (OneHasValue(spAssessmentLevelDataentitySymbolValue))
+	return spAssessmentLevelDataentitySymbolValue;
+else if (AllHaveValue(spInstrumentToEntityentitySymbolValue, spInstrumentToEntityroleTypeCode))
+	return spInstrumentToEntityentitySymbolValue;
+else
+	return "";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_ID_CTXT_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(spRatingIdentifiersymbolId) && Strcmp(spRatingIdentifiersymbolTypeId, "73"))
+	return "SNPCIQENTID";
+else if (OneHasValue(spRatingIdentifiersymbolValue) && Strcmp(spRatingIdentifiersymbolTypeId, "73"))
+	return "S&P";
+else if (AllHaveValue(spIndustryCharcharID, spIndustryCharobjectId))
+	return "SNPCIQENTID";
+else if (OneHasValue(spEntityLevelDataentitySymbolValue))
+	return "S&P";
+else if (OneHasValue(spEntitySectorentitySymbolValue))
+	return "S&P";
+else if (OneHasValue(spRatingDataentitySymbolValue))
+	return "S&P";
+else if (OneHasValue(spAssessmentDataentitySymbolValue))
+	return "S&P";
+else if (OneHasValue(spAssessmentLevelDataentitySymbolValue))
+	return "S&P";
+else if (AllHaveValue(spInstrumentToEntityentitySymbolValue, spInstrumentToEntityroleTypeCode))
+	return "S&P";
+else
+	return "";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_TYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MAIN_ENTITY_NME" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(spRatingIdentifiersymbolId) && Strcmp(spRatingIdentifiersymbolTypeId, "73"))
+	return spRatingIdentifierObjectId;
+else if (OneHasValue(spRatingIdentifiersymbolValue) && Strcmp(spRatingIdentifiersymbolTypeId, "73"))
+	return spRatingIdentifiersymbolValue;
+else if (AllHaveValue(spIndustryCharcharID, spIndustryCharobjectId))
+	return spIndustryCharobjectId;
+else if (OneHasValue(spEntityLevelDataentitySymbolValue))
+	return spEntityLevelDataentitySymbolValue;
+else if (OneHasValue(spEntitySectorentitySymbolValue))
+	return spEntitySectorentitySymbolValue;
+else if (OneHasValue(spRatingDataentitySymbolValue))
+	return spRatingDataentitySymbolValue;
+else if (OneHasValue(spAssessmentDataentitySymbolValue))
+	return spAssessmentDataentitySymbolValue;
+else if (OneHasValue(spAssessmentLevelDataentitySymbolValue))
+	return spAssessmentLevelDataentitySymbolValue;
+else if (AllHaveValue(spInstrumentToEntityentitySymbolValue, spInstrumentToEntityroleTypeCode))
+	return spInstrumentToEntityentitySymbolValue;
+else
+	return "";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_TBL_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "FINS";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MERGEMESSAGE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MSGCLASSIFICATION" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "SNPXFGRENTRT";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MSGSET" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MSGTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+          </Node>
+          <Node name="ORGID" type="element">
+            <Node name="VALUE" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+          </Node>
+          <Node name="PUBLISH" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="REALMSG" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="REFDATA" type="element"/>
+          <Node name="REFERRINGPAGE" type="element"/>
+          <Node name="ROLLBACKONSEGMENTERROR" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="SECURITYLABEL" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="TRANSLATE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="TRILLIUM" type="element">
+            <Node name="FORCENEWENTITY" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="TRILLIUMTABLEID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="TRILLIUMTABLETYPE" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node name="USERID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "SNPXFGRENTRTCSTM";]]></expr>
+            </Node>
+          </Node>
+          <Node name="VENDORRECORDID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="VENDORTYPE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="VTTRMSGSET" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node name="FinancialInstitution" type="segment">
+          <condition><![CDATA[if (OneHasValue(spEntityLevelDataentitySymbolValue, spIndustryCharcharID) || ((OneHasValue(spEntitySectorentitySymbolValue) && Strcmp(spEntitySectorprimaryFlag, "1")) || (AllHaveValue(spInstrumentToEntityentitySymbolValue, spInstrumentToEntityroleTypeCode) || ((OneHasValue(spRatingDataentitySymbolValue) && Strcmp(spRatingDataobjectTypeId, "2")) || ((OneHasValue(spAssessmentDataentitySymbolValue) && Strcmp(spAssessmentDataobjectTypeId, "2")) || (((OneHasValue(spRatingIdentifiersymbolValue, spRatingIdentifierObjectId) && Strcmp(spRatingIdentifiersymbolTypeId, "73")) && (Strcmp(spRatingIdentifieractiveFlag, "1") && Strcmp(spRatingIdentifierprimaryFlag, "1"))) || AllHaveValue(spAssessmentLevelDataassessmentDetailId, spAssessmentLevelDataentitySymbolValue)))))))
+	return "FinancialInstitution";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "REFERENCE";]]></expr>
+          </Node>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "FinancialInstitution";]]></expr>
+          </Node>
+          <Node name="ERROR" type="attribute">
+            <expr><![CDATA[if (Strcmp(Translate(Config_Options, false, "CreateNewIssuer", "S&P_XF_GR_Entity_Ratings"), "NO_SILENT"))
+	return "N";
+else
+	return "";]]></expr>
+          </Node>
+          <Node name="ACQBYPRNTIND" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ASSOCINSTMNEM" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="BALSHEETCURRCDE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="BUSINESSSTARTYRTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="BUSINESSSTRUCTURETYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="CMRCLREGISTDELETEDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="CMRCLREGISTENTRYDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="COMPANYMATCHID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="CROSSREFID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node displayName="S&amp;P" name="FinancialInstitutionIdentifier" type="segment">
+            <condition><![CDATA[if (OneHasValue(spEntityLevelDataentitySymbolValue))
+	return "FinancialInstitutionIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "FinancialInstitutionIdentifier";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "FIID1_ID_CTXT_FINSID";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FIIDOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FINSID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return spEntityLevelDataentitySymbolValue;]]></expr>
+              </Node>
+            </Node>
+            <Node name="FINSIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "S&P";]]></expr>
+              </Node>
+            </Node>
+            <Node name="GUCNT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTUSAGETYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="MERGEUNIQOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="SRCEINSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node displayName="S&amp;P" name="FinancialInstitutionIdentifier" type="segment">
+            <condition><![CDATA[if (OneHasValue(spEntitySectorentitySymbolValue))
+	return "FinancialInstitutionIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "FinancialInstitutionIdentifier";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "FIID1_ID_CTXT_FINSID";]]></expr>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FIIDOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FINSID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return spEntitySectorentitySymbolValue;]]></expr>
+              </Node>
+            </Node>
+            <Node name="FINSIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "S&P";]]></expr>
+              </Node>
+            </Node>
+            <Node name="GUCNT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTUSAGETYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="MERGEUNIQOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="SRCEINSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node displayName="S&amp;P" name="FinancialInstitutionIdentifier" type="segment">
+            <condition><![CDATA[if (AllHaveValue(spInstrumentToEntityentitySymbolValue, spInstrumentToEntityroleTypeCode))
+	return "FinancialInstitutionIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "FinancialInstitutionIdentifier";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "FIID1_ID_CTXT_FINSID";]]></expr>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FIIDOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FINSID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return spInstrumentToEntityentitySymbolValue;]]></expr>
+              </Node>
+            </Node>
+            <Node name="FINSIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "S&P";]]></expr>
+              </Node>
+            </Node>
+            <Node name="GUCNT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTUSAGETYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="MERGEUNIQOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="SRCEINSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node displayName="S&amp;P" name="FinancialInstitutionIdentifier" type="segment">
+            <condition><![CDATA[if (OneHasValue(spRatingDataentitySymbolValue) && Strcmp(spRatingDataobjectTypeId, "2"))
+	return "FinancialInstitutionIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "FinancialInstitutionIdentifier";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "FIID1_ID_CTXT_FINSID";]]></expr>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FIIDOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FINSID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return spRatingDataentitySymbolValue;]]></expr>
+              </Node>
+            </Node>
+            <Node name="FINSIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "S&P";]]></expr>
+              </Node>
+            </Node>
+            <Node name="GUCNT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTUSAGETYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="MERGEUNIQOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="SRCEINSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node displayName="S&amp;P" name="FinancialInstitutionIdentifier" type="segment">
+            <condition><![CDATA[if (OneHasValue(spAssessmentDataentitySymbolValue) && Strcmp(spAssessmentDataobjectTypeId, "2"))
+	return "FinancialInstitutionIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "FinancialInstitutionIdentifier";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "FIID1_ID_CTXT_FINSID";]]></expr>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FIIDOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FINSID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return spAssessmentDataentitySymbolValue;]]></expr>
+              </Node>
+            </Node>
+            <Node name="FINSIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "S&P";]]></expr>
+              </Node>
+            </Node>
+            <Node name="GUCNT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTUSAGETYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="MERGEUNIQOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="SRCEINSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node displayName="S&amp;P" name="FinancialInstitutionIdentifier" type="segment">
+            <condition><![CDATA[if (AllHaveValue(spAssessmentLevelDataassessmentDetailId, spAssessmentLevelDataentitySymbolValue))
+	return "FinancialInstitutionIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "FinancialInstitutionIdentifier";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "FIID1_ID_CTXT_FINSID";]]></expr>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FIIDOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FINSID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return spAssessmentLevelDataentitySymbolValue;]]></expr>
+              </Node>
+            </Node>
+            <Node name="FINSIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "S&P";]]></expr>
+              </Node>
+            </Node>
+            <Node name="GUCNT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTUSAGETYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="MERGEUNIQOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="SRCEINSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node displayName="SNPCIQENTID" name="FinancialInstitutionIdentifier" type="segment">
+            <condition><![CDATA[if (OneHasValue(spIndustryCharobjectId))
+	return "FinancialInstitutionIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "FinancialInstitutionIdentifier";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "FIID1_ID_CTXT_FINSID";]]></expr>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FIIDOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FINSID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return spIndustryCharobjectId;]]></expr>
+              </Node>
+            </Node>
+            <Node name="FINSIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "SNPCIQENTID";]]></expr>
+              </Node>
+            </Node>
+            <Node name="GUCNT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTUSAGETYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="MERGEUNIQOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="SRCEINSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+              <Node name="INSERT_ONLY" type="attribute"/>
+            </Node>
+          </Node>
+          <Node displayName="S&amp;P" name="FinancialInstitutionIdentifier" type="segment">
+            <condition><![CDATA[if (AllHaveValue(spRatingIdentifiersymbolValue, spRatingIdentifiersymbolTypeId) && Strcmp(spRatingIdentifiersymbolTypeId, "73"))
+	return "FinancialInstitutionIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "FinancialInstitutionIdentifier";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "FIID1_ID_CTXT_FINSID";]]></expr>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FIIDOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FINSID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return spRatingIdentifiersymbolValue;]]></expr>
+              </Node>
+            </Node>
+            <Node name="FINSIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "S&P";]]></expr>
+              </Node>
+            </Node>
+            <Node name="GUCNT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTUSAGETYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="MERGEUNIQOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="SRCEINSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+              <Node name="INSERT_ONLY" type="attribute"/>
+            </Node>
+          </Node>
+          <Node displayName="SNPCIQENTID" name="FinancialInstitutionIdentifier" type="segment">
+            <condition><![CDATA[if (OneHasValue(spRatingIdentifierObjectId) && Strcmp(spRatingIdentifiersymbolTypeId, "73"))
+	return "FinancialInstitutionIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "FinancialInstitutionIdentifier";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "INST_MNEM";]]></expr>
+            </Node>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "FIID1_ID_CTXT_FINSID";]]></expr>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FIIDOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FINSID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return spRatingIdentifierObjectId;]]></expr>
+              </Node>
+            </Node>
+            <Node name="FINSIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "SNPCIQENTID";]]></expr>
+              </Node>
+            </Node>
+            <Node name="GUCNT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTSYMBOLSTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTUSAGETYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="MERGEUNIQOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="SRCEINSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+              <Node name="INSERT_ONLY" type="attribute"/>
+            </Node>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DELETEREASTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DISSOLUTIONDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DUNSDIASCDE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DUNSGLBLULTIND" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DUNSHIERCDE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ELECADDRID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="FISCALYRENDTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="FUNDSRCETYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="GOVTAGENCYFILINGIND" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="HOLDINGCOMPANYIND" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="IMPORTEXPORTAGENTTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INCORPORATIONDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INCORPORATIONPLACETXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTCATTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTDESC" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneOf(spEntityLevelDataratingDataItemId, "3", "2", "1"))
+	return spEntityLevelDatadataValue;
+else if (OneHasValue(spEntityLevelDataentitySymbolValue))
+	return spEntityLevelDataentitySymbolValue;
+else if (OneHasValue(spEntitySectorentitySymbolValue))
+	return spEntitySectorentitySymbolValue;
+else if (OneHasValue(spInstrumentToEntityentitySymbolValue))
+	return spInstrumentToEntityentitySymbolValue;
+else if (OneHasValue(spRatingDataentitySymbolValue))
+	return spRatingDataentitySymbolValue;
+else if (OneHasValue(spAssessmentDataentitySymbolValue))
+	return spAssessmentDataentitySymbolValue;
+else if (OneHasValue(spAssessmentLevelDataentitySymbolValue))
+	return spAssessmentLevelDataentitySymbolValue;
+else if (OneHasValue(spIndustryCharobjectId))
+	return spIndustryCharobjectId;
+else if (OneHasValue(spRatingIdentifiersymbolValue))
+	return spRatingIdentifiersymbolValue;
+else
+	return "";]]></expr>
+            </Node>
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[if (OneOf(spEntityLevelDataratingDataItemId, "3", "2", "1"))
+	return "";
+else
+	return "Y";]]></expr>
+            </Node>
+          </Node>
+          <Node name="INSTFOUNDINGDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTLEGALFORMTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTLEGALNME" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTMNEM" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTNME" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneOf(spEntityLevelDataratingDataItemId, "3", "2", "1"))
+	return spEntityLevelDatadataValue;
+else if (OneHasValue(spEntityLevelDataentitySymbolValue))
+	return spEntityLevelDataentitySymbolValue;
+else if (OneHasValue(spEntitySectorentitySymbolValue))
+	return spEntitySectorentitySymbolValue;
+else if (OneHasValue(spInstrumentToEntityentitySymbolValue))
+	return spInstrumentToEntityentitySymbolValue;
+else if (OneHasValue(spRatingDataentitySymbolValue))
+	return spRatingDataentitySymbolValue;
+else if (OneHasValue(spAssessmentDataentitySymbolValue))
+	return spAssessmentDataentitySymbolValue;
+else if (OneHasValue(spAssessmentLevelDataentitySymbolValue))
+	return spAssessmentLevelDataentitySymbolValue;
+else if (OneHasValue(spIndustryCharobjectId))
+	return spIndustryCharobjectId;
+else if (OneHasValue(spRatingIdentifiersymbolValue))
+	return spRatingIdentifiersymbolValue;
+else
+	return "";]]></expr>
+            </Node>
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[if (OneOf(spEntityLevelDataratingDataItemId, "3", "2", "1"))
+	return "";
+else
+	return "Y";]]></expr>
+            </Node>
+          </Node>
+          <Node name="INSTSTATTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTSTATTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LEILEGALFORMTXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LEINME" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LEIRECORDSTATTXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MAILADDRID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MAILDLVBLTYTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="NLSCDE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ENGLISH";]]></expr>
+            </Node>
+          </Node>
+          <Node name="OBLIGORCLVALUE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="OBLIGORSUBGRPCLSFOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORGID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PREFCURRCDE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PREFFINSID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PREFFINSIDCTXTTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PREFISSCTXTTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PUBLICCORPIND" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="SECFORM15IND" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return Transform2FTIDate(SubString(TimeStamp(), 1, 10), "MM-DD-YYYY");]]></expr>
+            </Node>
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+          </Node>
+          <Node name="SUBSIDIARYIND" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node displayName="RATING" name="FinancialInstitutionRating" type="segment">
+          <condition><![CDATA[if (AllHaveValue(spRatingDataratingSymbol, spRatingDataentitySymbolValue, spRatingDataratingDate) && Strcmp(spRatingDataobjectTypeId, "2"))
+	return "FinancialInstitutionRating";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "REFERENCE";]]></expr>
+          </Node>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "FinancialInstitutionRating";]]></expr>
+          </Node>
+          <Node name="MATCH" type="attribute">
+            <expr><![CDATA[return "FIRT_MATCH_5";]]></expr>
+          </Node>
+          <Node name="DATAREDISTRIBUTORID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RatingValue" type="segment">
+            <condition><![CDATA[if (((((((Strcmp(spRatingDataratingTypeCode, "ARGLONG") && OneOf(spRatingDataratingSymbol, "NR", "raNR", "raD", "D", "raR", "R")) || (Strcmp(spRatingDataratingTypeCode, "ARGSHORT") && OneOf(spRatingDataratingSymbol, "raD", "D"))) || (Strcmp(spRatingDataratingTypeCode, "CAVALLONG") && OneOf(spRatingDataratingSymbol, "NR", "mxNR", "mxR", "R", "mxD", "D"))) || (Strcmp(spRatingDataratingTypeCode, "CAVALSHORT") && OneOf(spRatingDataratingSymbol, "mxD", "D"))) || (Strcmp(spRatingDataratingTypeCode, "BRAZLONG") && OneOf(spRatingDataratingSymbol, "NR", "brNR", "brR", "R", "brD", "D"))) || (Strcmp(spRatingDataratingTypeCode, "TAIWALONG") && OneOf(spRatingDataratingSymbol, "twD", "D", "twR", "R"))) || (Strcmp(spRatingDataratingTypeCode, "CAVALSHORT") && OneOf(spRatingDataratingSymbol, "ruD", "D", "ruSD", "SD")))
+	return "RatingValue";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "RatingValue";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "RTNG_CDE,RTNG_VALUE_OID";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "RTNG_CDE,RTNG_VALUE_OID";]]></expr>
+            </Node>
+            <Node name="ERROR" type="attribute"/>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "RTNG_CDE_NUM_MATCH_1";]]></expr>
+            </Node>
+            <Node name="NESTED_ERR_LVL" type="attribute">
+              <expr><![CDATA[return "ERROR";]]></expr>
+            </Node>
+            <Node name="NESTED_ERR_TXT" type="attribute">
+              <expr><![CDATA[return Strcat("12|CONCTNS|NESTED|RTNGSETID|", Strcat(Translate(SNPXpressFeedETT, false, "RTNG_SET_MNEM", spRatingDataratingTypeCode), Strcat("|RTNGVAL|", Strcat(spRatingDataratingSymbol, "|DATASRCID|SNPXF_RT"))));]]></expr>
+            </Node>
+            <Node name="RTNGCDENUM" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[if (Strcmp(spRatingDataratingTypeCode, "ARGLONG"))
+	return Translate(SNPXpressFeedETT, false, "ARGLONG", spRatingDataratingSymbol);
+else if (Strcmp(spRatingDataratingTypeCode, "ARGSHORT"))
+	return Translate(SNPXpressFeedETT, false, "ARGSHORT", spRatingDataratingSymbol);
+else if (Strcmp(spRatingDataratingTypeCode, "CAVALLONG"))
+	return Translate(SNPXpressFeedETT, false, "CAVALLONG", spRatingDataratingSymbol);
+else if (Strcmp(spRatingDataratingTypeCode, "CAVALSHORT"))
+	return Translate(SNPXpressFeedETT, false, "CAVALSHORT", spRatingDataratingSymbol);
+else if (Strcmp(spRatingDataratingTypeCode, "BRAZLONG"))
+	return Translate(SNPXpressFeedETT, false, "BRAZLONG", spRatingDataratingSymbol);
+else if (Strcmp(spRatingDataratingTypeCode, "TAIWALONG"))
+	return Translate(SNPXpressFeedETT, false, "TAIWALONG", spRatingDataratingSymbol);
+else if (Strcmp(spRatingDataratingTypeCode, "RUSSIALONG"))
+	return Translate(SNPXpressFeedETT, false, "RUSSIALONG", spRatingDataratingSymbol);
+else
+	return "";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="RatingSetDefinition" type="segment">
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "RatingSetDefinition";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "RTNG_SET_OID";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "RTNG_MATCH_1";]]></expr>
+            </Node>
+            <Node name="NESTED_ERR_LVL" type="attribute">
+              <expr><![CDATA[return "ERROR";]]></expr>
+            </Node>
+            <Node name="NESTED_ERR_TXT" type="attribute">
+              <expr><![CDATA[return Strcat("12|CONCTNS|NESTED|RTNGSETID|", Strcat(Translate(SNPXpressFeedETT, false, "RTNG_SET_MNEM", spRatingDataratingTypeCode), Strcat("|RTNGVAL|", Strcat(If(OneHasValue(Translate(SNPXpressFeedETT, false, "RTNG_CDE", spRatingDataratingSymbol)), Translate(SNPXpressFeedETT, false, "RTNG_CDE", spRatingDataratingSymbol), spRatingDataratingSymbol), "|DATASRCID|SNPXF_RT"))));]]></expr>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="FINSRLTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUCNT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="GUTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGSETCURRCDE" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGSETDESC" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGSETMNEM" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return Translate(SNPXpressFeedETT, false, "RTNG_SET_MNEM", spRatingDataratingTypeCode);]]></expr>
+              </Node>
+            </Node>
+            <Node name="RTNGSETNME" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGSETOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGSETSCALETYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGSETTBLTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGSETTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGTENORMNEM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ERVLOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="FINSRTNGOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTMNEM" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTRTNGREVWDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTRTNGREVWUSRID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LONGTERMRTNGTXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="NEXTRTNGREVWDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORIGDATAPROVID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGCDE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (((((((Strcmp(spRatingDataratingTypeCode, "ARGLONG") && OneOf(spRatingDataratingSymbol, "NR", "raNR", "raD", "D", "raR", "R")) || (Strcmp(spRatingDataratingTypeCode, "ARGSHORT") && OneOf(spRatingDataratingSymbol, "raD", "D"))) || (Strcmp(spRatingDataratingTypeCode, "CAVALLONG") && OneOf(spRatingDataratingSymbol, "NR", "mxNR", "mxR", "R", "mxD", "D"))) || (Strcmp(spRatingDataratingTypeCode, "CAVALSHORT") && OneOf(spRatingDataratingSymbol, "mxD", "D"))) || (Strcmp(spRatingDataratingTypeCode, "BRAZLONG") && OneOf(spRatingDataratingSymbol, "NR", "brNR", "brR", "R", "brD", "D"))) || (Strcmp(spRatingDataratingTypeCode, "TAIWALONG") && OneOf(spRatingDataratingSymbol, "twD", "D", "twR", "R"))) || (Strcmp(spRatingDataratingTypeCode, "CAVALSHORT") && OneOf(spRatingDataratingSymbol, "ruD", "D", "ruSD", "SD")))
+	return "";
+else if (OneHasValue(Translate(SNPXpressFeedETT, false, "RTNG_CDE", spRatingDataratingSymbol)))
+	return Translate(SNPXpressFeedETT, false, "RTNG_CDE", spRatingDataratingSymbol);
+else
+	return spRatingDataratingSymbol;]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGCLASSID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGCLASSTXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGCURRCDE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGCURRTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGDEBTCLTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(spRatingDataorgDebtTypeCode))
+	return spRatingDataorgDebtTypeCode;
+else
+	return "";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute">
+              <expr><![CDATA[return "YES";]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGDIRECTIONDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGDIRECTIONTXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGDIRECTIONTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGDISCREPANCYCAMT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGEFFTMS" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return DateFromString(spRatingDataratingDate, "%Y-%M-%D");]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGMODLVERSIONID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGOUTLOOKAGENCYNME" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGOUTLOOKEFFDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGOUTLOOKENDDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGOUTLOOKTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGPURPTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGSETOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGSIGNIFICANCECAMT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGSNRTYTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGSTATREASTXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGSTATTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGSTATTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return spRatingDataratingActionWord;]]></expr>
+            </Node>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute">
+              <expr><![CDATA[return "YES";]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGSYMBOLTXT" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return spRatingDatacurrentRatingSymbol;]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGTERMINTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGVALUEOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGWATCHAGENCYNME" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="SHORTTERMRTNGTXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return TimeStamp();]]></expr>
+            </Node>
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+          </Node>
+          <Node name="SYSEFFENDTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="UNDERLYENHCSALETYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="WATCHDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="WATCHEXPDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="WATCHREASTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="WATCHSTATTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <If>
+          <expr><![CDATA[return OneHasValue(spRatingDataregulatoryIndicator);]]></expr>
+          <Then>
+            <ForEach displayName="spRatingDataregulatoryIndicator" recordType="spRatingDataregulatoryIndicator">
+              <Do>
+                <Execute>
+                  <expr><![CDATA[return StoreString(spRatingDataregulatoryIndicator.spRatingDataregulatoryIndicator, spRatingDataregulatoryIndicator.spRatingDataregulatoryIndicator);]]></expr>
+                </Execute>
+              </Do>
+            </ForEach>
+          </Then>
+          <Else/>
+        </If>
+        <Node displayName="SOLICITATION STATUS" name="FIRTRatingQualifier" type="segment">
+          <condition>
+            <comment><![CDATA[EG-9956]]></comment><![CDATA[if (AllHaveValue(spRatingDataratingSymbol, spRatingDataentitySymbolValue, spRatingDataratingDate) && Strcmp(spRatingDataobjectTypeId, "2"))
+	return "FIRTRatingQualifier";
+else
+	return "";]]>
+          </condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "FIRTRatingQualifier";]]></expr>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGQUALREGIDIND" type="element">
+            <Node name="VALUE" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute">
+              <expr><![CDATA[return "YES";]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGQUALTXT" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(GetStringByKey("U")))
+	return "Unsolicited";
+else
+	return "Solicited";]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGQUALTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "SOLICITATION STATUS";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return DateFromString(SubString(TimeStamp(), 1, 10), "%M-%D-%Y");]]></expr>
+            </Node>
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+          </Node>
+        </Node>
+      </Node>
+    </OutputDef>
+  </Output>
+  <Translation/>
+  <Expressions>
+    <Expression enabled="true" ident="GSDMFiltering">
+      <expr><![CDATA[if (OneHasValue(spRatingDataratingTypeCode) && StrContainsOneOf(spRatingDataratingTypeCode, "126", "130", "FCLONG", "STDLONG"))
+ return "false";
+ else
+ return "true";]]></expr>
+    </Expression>
+  </Expressions>
+</MappingDef>

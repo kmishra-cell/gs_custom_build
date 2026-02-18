@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="Statistics" entitySubType="[]" id="kzsqo&gt;P)W1" isDefault="Y" isPublic="N" screenType="SYSTEMFORM" title="F: MHI_StatisticsForm">
+  <control caption="Page View" columns="2" fullQualPath="" hideDetail="N" id="CDuYq&amp;gt;H3e1" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="PAGEVIEW">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Statistics Information" columns="3" fullQualPath="Statistics.StatisticsInformation" hideDetail="N" id="CDuZq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="5" parentId="CDuYq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <control caption="Domain Value" columns="2" fullQualPath="Statistics.StatisticsInformation.DomainValue" hideDetail="N" id="CDuaq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuZq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Organization ID" columns="2" fullQualPath="Statistics.StatisticsInformation.DomainValue.DomainValueForENTR.Enterprise.EnterpriseInformation.OrganizationID" hideDetail="N" id="CDubq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuaq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Domain Value" columns="2" fullQualPath="Statistics.StatisticsInformation.DomainValue.DomainValue" hideDetail="N" id="CDucq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuaq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Domain Value Name" columns="2" fullQualPath="Statistics.StatisticsInformation.DomainValue.DomainValueName" hideDetail="N" id="CDudq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuaq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Domain Value Description" columns="2" fullQualPath="Statistics.StatisticsInformation.DomainValue.DomainValueDescription" hideDetail="N" id="CDueq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuaq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Domain Value Effective On" columns="2" fullQualPath="Statistics.StatisticsInformation.DomainValue.DomainValueEffectiveOn" hideDetail="N" id="CDufq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuaq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Domain Value Effective Until" columns="2" fullQualPath="Statistics.StatisticsInformation.DomainValue.DomainValueEffectiveUntil" hideDetail="N" id="CDugq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuaq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Modification Restriction Ind" columns="2" fullQualPath="Statistics.StatisticsInformation.DomainValue.ModificationRestrictionInd" hideDetail="N" id="CDuhq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuaq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Definition ID" columns="2" fullQualPath="Statistics.StatisticsInformation.StatisticDefinitionID" hideDetail="N" id="CDuiq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuZq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Name" columns="2" fullQualPath="Statistics.StatisticsInformation.StatisticName" hideDetail="N" id="CDujq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuZq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Value Type" columns="2" fullQualPath="Statistics.StatisticsInformation.StatisticValueType" hideDetail="N" id="CDukq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuZq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Description" columns="2" fullQualPath="Statistics.StatisticsInformation.StatisticDescription" hideDetail="N" id="CDulq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuZq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistics Created On" columns="2" fullQualPath="Statistics.StatisticsInformation.StatisticsCreatedOn" hideDetail="N" id="CDumq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuZq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistics Effective Until" columns="2" fullQualPath="Statistics.StatisticsInformation.StatisticsEffectiveUntil" hideDetail="N" id="CDunq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuZq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistics Subdivision ID" columns="2" fullQualPath="Statistics.StatisticsInformation.StatisticsSubdivisionID" hideDetail="N" id="CDuoq&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDuZq&amp;gt;H3e1" relatedPath="" screenId="kzsqo&amp;gt;P)W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

@@ -1,0 +1,18 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "monitoringJobs" ],
+  "title" : "monitoringJobs",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Everyday",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "begin" : "00:00:00",
+      "end" : "23:59:59",
+      "repeat" : "00:05:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ ]
+}

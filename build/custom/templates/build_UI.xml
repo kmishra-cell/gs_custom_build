@@ -1,0 +1,115 @@
+<project name="Template custom package" default="build" basedir=".">
+	<!-- Specify all paths here, also only specify relative paths -->
+	<property file="build.properties"/>
+	<tstamp>
+		<format property="today" pattern="yyyyMMdd" locale="en,UK"/>
+	</tstamp>
+	
+	<!-- Build Template package only if product version is less than 8.9.0
+		 No separate Template package required for version 8.9.0 and above.
+	-->
+	<script language="javascript">					
+		var minVersion = project.getProperty("min.version");
+		var parts = minVersion.split(".");
+		
+		var buildTemplatePkg = true;
+		
+		<!-- For version 9.x and above -->
+		if (parseInt(parts[0]) >= 9) {
+		 	buildTemplatePkg = false;
+		}
+		
+		<!-- for version 8.9 and above only 8.x.x. -->
+		if ((parseInt(parts[0]) == 8) && (parseInt(parts[1]) >= 9)) {
+		 	buildTemplatePkg = false;
+		}
+		project.setProperty("buildTemplatePkg", buildTemplatePkg);
+	</script>
+	
+	<taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask">
+		<classpath>
+			<fileset dir="${current}">
+				<include name="xmltask.jar"/>
+			</fileset>
+		</classpath>
+	</taskdef>
+	
+	 <!-- Define a common condition -->
+    <condition property="build.package.condition">
+        <equals arg1="${buildTemplatePkg}" arg2="true"/>
+    </condition>
+	
+	<!-- Build template package if condition build.package.condition is true  -->
+    <target name="build" if="build.package.condition">
+		<echo>build.package.condition is ${buildTemplatePkg}</echo>
+        <antcall target="buildTemplatePkg"/>
+    </target>
+	
+	<target name="buildTemplatePkg" depends="init,clean,updatePackageDescription,package,del">  
+		<echo>Completed Build of Templates Package</echo>
+    </target>
+	
+	<target name="updatePackageDescription">	 
+		<xmltask source="PackageDescription.xml" dest="PackageDescription.xml" todir="${current}/bin/" >
+				<!--<attr path="//PackageDescription/Package/" attr="name" value="ravi" />-->
+			 <replace path="//PackageDescription/Package/@name" withText="${packageName}_Templates"/>
+			 <replace path="//PackageDescription/Package/@version" withText="${packageVersion}"/>
+			 <replace path="//PackageDescription/Package/Component/text()" withText="${packageName}_Templates"/>
+			 <replace path="//PackageDescription/Package/Description/text()" withText="${packageName}_Templates"/>
+		</xmltask>
+		<echo>Updating Package Description with Package version ${packageVersion}</echo>
+	</target>
+	<!--<property name="dist" location="${current}/dist"/>
+	<property name="base.dir" value="${current}"/>-->
+	
+	<!--<target name="build" depends="init,clean,del">
+         <echo>Apache Ant version is ${templates_root} - You are at ${current} </echo>
+      </target>-->
+	  
+	<target name="jar" depends="init,clean">
+		<zip destfile="${current}/bin/Custom_UI_Templates.zip" basedir="${templates_root}"/>
+	</target>
+	
+	<target name="package" depends="init,clean">
+		<echo>Copying files to custom bin/custom folder</echo>
+		<echo>File names will be added here</echo> 	 <!--Dont change this line -->
+		
+		<echo>Creating Jar file</echo>
+		<zip destfile="${current}/bin/Custom_UI_Templates.zip">
+			<fileset dir="${current}/bin">
+				<exclude name="PackageDescription.xml"/>
+			</fileset>
+		</zip>
+		<echo>Creating package</echo>
+		<zip destfile="${current}/../../packages/${today}/${packageName}_Templates_${packageVersion}.zip">
+			<fileset dir="${current}/bin">
+				<include name="Custom_UI_Templates.zip"/>
+			</fileset>
+			<fileset dir="${current}/bin">
+				<include name="PackageDescription.xml"/>
+			</fileset>
+		</zip>
+	</target>
+	<target name="init" depends="">
+		<mkdir dir="${current}/bin"/>
+		<mkdir dir="${current}/bin/templates"/>
+		<mkdir dir="${current}/bin/templates/custom"/>
+		<mkdir dir="${current}/bin/templates/system"/>
+		<echo>Creating Temporary folder for build</echo>
+	</target>
+	
+	<target name="clean">
+		<delete>
+			<fileset dir="${current}/bin">
+				<include name="*.*"/>
+			</fileset>
+		</delete>
+		<echo>Cleaning up temporary files and folders before starting execution</echo>
+	</target>
+	 <target name="del">  
+        <delete includeEmptyDirs="true">  
+            <fileset dir="bin"/>  
+        </delete>  
+		<echo>Cleaning up temporary files and folders after execution</echo>
+    </target>
+</project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="FinancialInstitution" createdUser="user1" freezeColumns="" id="H%3m01ftW1" isDefault="Y" isPublic="Y" lookupId="FinancialInstitution" pageSize="50" screenType="SYSTEMSRCH" title="MHIFinancialInstitution">
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Institution Name" fieldName="FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tFo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="BEGINS_WITH" orderNum="0" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Institution Description" fieldName="FinancialInstitution.FinancialInstitutionDetails.InstitutionDescription" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tHo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="BEGINS_WITH" orderNum="1" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="Institution Identifier" columnName="Institution Identifier Value" fieldName="FinancialInstitution.AllInstitutionIdentifiers.AllFinsIdentifier" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tJo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="Institution ID Context" columnName="Institution Identifier Type" fieldName="FinancialInstitution.AllInstitutionIdentifiers.AllFinsIDContext" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tKo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="AsOf" columnName="Institution Start Date/Time" fieldName="FinancialInstitution.FinancialInstitutionDescription.FinancialInstitutionStartDateTime" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tLo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width=""/>
+  </columns>
+</root>

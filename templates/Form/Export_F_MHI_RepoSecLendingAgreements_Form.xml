@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="RepoAndSecLendingAgreements" entitySubType="[]" id="@Aq(p&gt;veO1" isDefault="N" isPublic="N" screenType="SYSTEMFORM" title="F: MHI_RepoSecLendingAgreements_Form">
+  <users>
+    <user id="ygxOz&gt;rge1" user="" userGroup="" userRole="creditdepartment"/>
+    <user id="ygxVz&gt;rge1" user="" userGroup="" userRole="support"/>
+    <user id="ygxPz&gt;rge1" user="" userGroup="" userRole="data_office"/>
+    <user id="ygxSz&gt;rge1" user="" userGroup="" userRole="tradesupport"/>
+    <user id="ygxQz&gt;rge1" user="" userGroup="" userRole="readonly"/>
+    <user id="ygxRz&gt;rge1" user="" userGroup="" userRole="task_supervisor"/>
+    <user id="ygxTz&gt;rge1" user="" userGroup="" userRole="legaldepartment"/>
+    <user id="ygxUz&gt;rge1" user="" userGroup="" userRole="creditmanagement"/>
+  </users>
+  <control caption="Repo And SecLending Agreements" columns="2" fullQualPath="" hideDetail="N" id="ygxXz&amp;gt;rge1" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="PAGEVIEW">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Legal Agreement" columns="2" fullQualPath="" hideDetail="N" id="ygxYz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxXz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Publishing" columns="2" fullQualPath="" hideDetail="N" id="ygxZz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <buttons>
+          <button caption="Re-Publish" id="ygxdz&gt;rge1">
+            <property name="LegalAgrCrossRefId" value="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRCrossReferenceID"/>
+            <property name="AlwaysVisible" value="true"/>
+            <property name="Event Name" value="MZ_WF_PublishingLegalAgreement"/>
+            <property name="Event Type" value="GenericEvent"/>
+            <property name="Type" value="event"/>
+          </button>
+        </buttons>
+        <control caption="Last Published" columns="2" fullQualPath="RepoAndSecLendingAgreements.PublishIngRSL.PBATLAGRLastPublished" hideDetail="N" id="ygxaz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxZz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Version" columns="2" fullQualPath="RepoAndSecLendingAgreements.PublishIngRSL.UPD1LAGRVersion" hideDetail="N" id="ygxbz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxZz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Updated" columns="2" fullQualPath="RepoAndSecLendingAgreements.PublishIngRSL.UPD1LAGRLastUpdated" hideDetail="N" id="ygxcz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygxZz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Summary" columns="2" fullQualPath="" hideDetail="N" id="ygxjz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Agreement Description" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementDescription" hideDetail="N" id="ygxkz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxjz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"CAPTION_OVERRIDE":[{"LABEL":"Agreement Label"}]}</config>
+        </control>
+        <control caption="Agreement Type" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementType" hideDetail="N" id="ygxlz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxjz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Repo and SecLending Agreements Agreement Type"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+        </control>
+        <control caption="Agreement Purpose" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementPurpose" hideDetail="N" id="ygxmz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygxjz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Organization ID" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.MHIOrganization.Enterprise.EnterpriseInformation.OrganizationID" hideDetail="N" id="ygxnz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ygxjz&amp;gt;rge1" relatedPath="RepoAndSecLendingAgreements.LegalAgreementDetail.MHIOrganization" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Organization"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Effective Date" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRDocumentEffectiveDate" hideDetail="N" id="ygxoz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ygxjz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="GS Agreement Reference" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIGSRefRSL.LAIDLAGRLeglAgrmntID" hideDetail="N" id="ygxpz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ygxjz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Agreement Comment" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.AgreementComment" hideDetail="N" id="ygxqz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ygxjz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Notes (Legal use only)"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+        </control>
+        <control caption="Mizuho Acts as Agent" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHISummaryRSL.FLARLAGRMizuhoActsasAgent" hideDetail="N" id="ygxrz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="ygxjz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Mizuho Acts as Principal" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHISummaryRSL.FLARLAGRMizuhoActsasPrincipal" hideDetail="N" id="ygxsz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="ygxjz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Mizuho Institution Name" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHIFLARLAGRInstMnemonic" hideDetail="N" id="ygxtz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="ygxjz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Legal Entity" columns="2" fullQualPath="" hideDetail="N" id="ygxuz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="BB Company ID" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL.FinancialInstitution.FinancialInstitutionIdentifiers.BBCompanyID" hideDetail="N" id="ygxvz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxuz&amp;gt;rge1" relatedPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Institution Name" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="ygxwz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxuz&amp;gt;rge1" relatedPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="GICS Sector" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL.FinancialInstitution.FinancialInstitutionClassification.FICLFINSGicsSector" hideDetail="N" id="ygxxz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygxuz&amp;gt;rge1" relatedPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Incorporation" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL.FinancialInstitution.MHIGeographicalInformation.FIGUFINSCountryofIncorporation" hideDetail="N" id="ygxyz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ygxuz&amp;gt;rge1" relatedPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="S&amp;amp;P Rating" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL.FinancialInstitution.MHIFMSPRating.FIRTFINSSPRTNG" hideDetail="N" id="ygxzz&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ygxuz&amp;gt;rge1" relatedPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Moody&amp;apos;s Rating" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL.FinancialInstitution.MHIFMSPRating.FIRTFINSMoodysRTNG" hideDetail="N" id="ygx$z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ygxuz&amp;gt;rge1" relatedPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fitch Rating" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL.FinancialInstitution.MHIFMSPRating.FIRTFINSFitchRTNG" hideDetail="N" id="ygx%z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ygxuz&amp;gt;rge1" relatedPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="ClientRef ID" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL.FinancialInstitution.FinancialInstitutionDetails.IRIDISSRClientRefID" hideDetail="N" id="ygx@z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="ygxuz&amp;gt;rge1" relatedPath="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Status" columns="2" fullQualPath="" hideDetail="N" id="ygx&amp;amp;z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Agreement Status" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementStatus" hideDetail="N" id="ygx*z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygx&amp;amp;z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="AgreementSignatureDate" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementSignatureDate" hideDetail="N" id="ygx-z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygx&amp;amp;z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Date of Agreement"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="AgreemenApprovaDate" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementApprovalDate" hideDetail="N" id="ygx.z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygx&amp;amp;z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Date of Mizuho Credit Approval"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instruction" columns="2" fullQualPath="" hideDetail="N" id="ygx/z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Legal Dept Person" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLInstructAndTerm.CCRFLAGRLegalDeptPerson" hideDetail="N" id="ygx(z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygx/z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Department" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLComments.GNCMLAGRDepartment" hideDetail="N" id="ygx)z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygx/z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Agreement Negotiation Instruction Date" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.AgreementNegotiationInstructionDate" hideDetail="N" id="ygx~z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygx/z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Date of Instruction"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instructed By" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLInstructAndTerm.CCRFLAGRInstructedBy" hideDetail="N" id="ygx?z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ygx/z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Termination" columns="2" fullQualPath="" hideDetail="N" id="ygx&amp;lt;z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instructed By" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLInstructAndTerm.CCRFLAGRTermInstructedBy" hideDetail="N" id="ygx&amp;gt;z&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygx&amp;lt;z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Department" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLComments.GNCMLAGRTermDepartment" hideDetail="N" id="ygx0$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygx&amp;lt;z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Legal Dept Person" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLInstructAndTerm.CCRFLAGRTermLegalDeptPerson" hideDetail="N" id="ygx1$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygx&amp;lt;z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Agreement Termination Date" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.AgreementTerminationDate" hideDetail="N" id="ygx2$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ygx&amp;lt;z&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Date of Termination"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Enforcement" columns="2" fullQualPath="" hideDetail="N" id="ygx3$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Legal Opinion Indicator" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LegalOpinionIndicator" hideDetail="N" id="ygx4$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygx3$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Enforceability in Jurisdiction (legal opinion)"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MHIRSLCoverage" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLCoverage" hideDetail="N" id="ygx5$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="5" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Branch Name" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLCoverage.LACVFLARBranchName" hideDetail="N" id="ygx6$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygx5$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Location"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Mizuho Branches"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MHIRSLCounterpartyCoverage" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLCounterpartyCoverage" hideDetail="N" id="ygx7$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="5" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Counterparty Branch Name" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLCounterpartyCoverage.LACVFLARCounterpartyBranchName" hideDetail="N" id="ygx8$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygx7$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Location"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Counterparty Branches"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MHIAnnexesAndInclusions" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIAnnexesAndInclusions" hideDetail="N" id="ygx9$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="5" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Annex Type" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIAnnexesAndInclusions.LAANLAGRMHIAnnexType" hideDetail="N" id="ygxA$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygx9$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Annex Support Type"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Annexes and Other Inclusions"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Currency" columns="2" fullQualPath="" hideDetail="N" id="ygxB$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Agreement Currency" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.AgreementCurrency" hideDetail="N" id="ygxC$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxB$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Base Currency"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Threshold" columns="2" fullQualPath="" hideDetail="N" id="ygxD$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Currency" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLThreshold.FLARLAGRThresholdCurrCde" hideDetail="N" id="ygxE$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxD$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Amount" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLThreshold.FLARLAGRThresholdAccelAmount" hideDetail="N" id="ygxF$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxD$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Threshold Description/Comment" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIRSLThreshold.FLARLAGRSpecificComment" hideDetail="N" id="ygxG$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygxD$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Termination Clauses" columns="2" fullQualPath="" hideDetail="N" id="ygxH$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Cross Product Default" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITerminationClauses.GNCMLAGRCrossProductDefault" hideDetail="N" id="ygxI$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxH$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Set Off Provision" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITerminationClauses.GNCMLAGRSetOffProvision" hideDetail="N" id="ygxJ$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxH$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MHITParty" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITParty" hideDetail="N" id="ygxK$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="5" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Triparty Provider ID" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITParty.FLARLAGRTripartyProviderID" hideDetail="N" id="ygxL$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxK$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="MHITripartyDocInfo" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITParty.MHITripartyDocInfo" hideDetail="N" id="ygxM$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxK$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+          <control caption="Description/Comments" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITParty.MHITripartyDocInfo.LAV1FLARDescriptionComments" hideDetail="N" id="ygxN$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxM$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Document Name" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITParty.MHITripartyDocInfo.LAV1FLARDocumentName" hideDetail="N" id="ygxO$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxM$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Instruction Date" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITParty.MHITripartyDocInfo.LAV1FLARInstructionDate" hideDetail="N" id="ygxP$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygxM$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change Date/Time" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITParty.MHITripartyDocInfo.LAV1FLARLastChangeDateTime" hideDetail="N" id="ygxQ$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ygxM$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Sign Date" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITParty.MHITripartyDocInfo.LAV1FLARSignDate" hideDetail="N" id="ygxR$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ygxM$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Start Date/Time" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHITParty.MHITripartyDocInfo.LAV1FLARStartDateTime" hideDetail="N" id="ygxS$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ygxM$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Triparty Document Information"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Triparty Provider ID"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MHISupportingDocumentation" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHISupportingDocumentation" hideDetail="N" id="ygxT$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="5" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Amendment Date" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHISupportingDocumentation.LAV1LAGRSDAmendmentDate" hideDetail="N" id="ygxU$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxT$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Link" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHISupportingDocumentation.LAV1LAGRSDDocumentLink" hideDetail="N" id="ygxV$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxT$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Status" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHISupportingDocumentation.LAV1LAGRSDDocumentStatus" hideDetail="N" id="ygxW$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygxT$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instruction Date" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHISupportingDocumentation.LAV1LAGRSDInstructionDate" hideDetail="N" id="ygxX$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ygxT$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Description/Comments" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHISupportingDocumentation.LAV1LAGRSDDescriptionComments" hideDetail="N" id="ygxY$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ygxT$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Supporting Documentation"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Validity" columns="2" fullQualPath="" hideDetail="N" id="ygxZ$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="ygxYz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Start Date/Time" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRStartDateTime" hideDetail="N" id="ygxa$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxZ$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"SEPARATOR_AT_TOP":[{"LABEL":"Validity"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="End Date/Time" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGREndDateTime" hideDetail="N" id="ygxb$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="Data Source" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxZ$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Source ID" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRDataSourceID" hideDetail="N" id="ygxc$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygxZ$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Status" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRDataStatus" hideDetail="N" id="ygxd$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="Last Changed" lazyInd="N" orderNum="3" pageSize="0" parentId="ygxZ$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change Date/Time" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRLastChangeDateTime" hideDetail="N" id="ygxe$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ygxZ$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change User ID" columns="2" fullQualPath="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRLastChangeUserID" hideDetail="N" id="ygxf$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ygxZ$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Addendums" columns="2" fullQualPath="" hideDetail="N" id="ygxg$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxXz&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="MHIPrincipalsCovered" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered" hideDetail="N" id="ygxh$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="5" parentId="ygxg$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="BB Company ID" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered.MHIPrincipalsCovered.FinancialInstitution.FinancialInstitutionIdentifiers.BBCompanyID" hideDetail="N" id="ygxi$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ygxh$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Principal Id (Bloomberg)"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Institution Name" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered.MHIPrincipalsCovered.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="ygxj$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ygxh$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Principal Name"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="ClientRef ID" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered.MHIPrincipalsCovered.FinancialInstitution.FinancialInstitutionDetails.IRIDISSRClientRefID" hideDetail="N" id="ygxk$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ygxh$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Principal Id (Clientref)"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Threshold Override Amount" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered.FLARLAGRThresholdOverrideAmount" hideDetail="N" id="ygxl$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="Validity" lazyInd="N" orderNum="3" pageSize="0" parentId="ygxh$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Start Date/Time" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered.FLARLAGRTHSHStartDateTime" hideDetail="N" id="ygxm$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ygxh$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="End Date/Time" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered.FLARLAGRTHSHEndDateTime" hideDetail="N" id="ygxn$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="Data Source" lazyInd="N" orderNum="5" pageSize="0" parentId="ygxh$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Source" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered.FLARLAGRTHSHDataSourceID" hideDetail="N" id="ygxo$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ygxh$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Status" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered.FLARLAGRTHSHDataStatus" hideDetail="N" id="ygxp$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="Last Changed" lazyInd="N" orderNum="7" pageSize="0" parentId="ygxh$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change Date/Time" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered.FLARLAGRTHSHLastChangeDateTime" hideDetail="N" id="ygxq$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="ygxh$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change User ID" columns="2" fullQualPath="RepoAndSecLendingAgreements.MHIPrincipalsCovered.FLARLAGRTHSHLastChangeUserID" hideDetail="N" id="ygxr$&amp;gt;rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="ygxh$&amp;gt;rge1" relatedPath="" screenId="@Aq(p&amp;gt;veO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Principals Covered"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

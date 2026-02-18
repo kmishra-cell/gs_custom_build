@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="Preferred" entitySubType="[]" id="q~s1s&gt;ftW1" isDefault="Y" isPublic="Y" screenType="SYSTEMFORM" title="F: MHI_PreferredForm">
+  <control caption="Preferred Data" columns="2" fullQualPath="" hideDetail="N" id="NE7uD1Pje1" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="PAGEVIEW">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Summary" columns="2" fullQualPath="" hideDetail="N" id="NE7vD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Publishing and Update" columns="2" fullQualPath="" hideDetail="N" id="NE7wD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7vD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <buttons>
+          <button caption="Re-Publish" id="NE7$D1Pje1">
+            <property name="Type" value="event"/>
+            <property name="Event Type" value="GenericEvent"/>
+            <property name="Event Name" value="MizuhoPublishing"/>
+            <property name="AlwaysVisible" value="true"/>
+            <property name="EntityId" value="Preferred.InstrumentDetails.ISSUInstrId"/>
+          </button>
+        </buttons>
+        <control caption="Last Updated" columns="2" fullQualPath="Preferred.Publishing.UPD1ISSULastUpdated" hideDetail="N" id="NE7xD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7wD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Version" columns="2" fullQualPath="Preferred.Publishing.UPD1ISSUVersion" hideDetail="N" id="NE7yD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7wD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Published" columns="2" fullQualPath="Preferred.Publishing.PBATISSULastchangeDate" hideDetail="N" id="NE7zD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7wD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description" columns="2" fullQualPath="" hideDetail="N" id="NE7.D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7vD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instrument Name" columns="2" fullQualPath="Preferred.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="NE7/D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7.D1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Type" columns="2" fullQualPath="Preferred.InstrumentDetails.InstrumentType" hideDetail="N" id="NE7(D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7.D1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Description" columns="2" fullQualPath="Preferred.InstrumentDetails.PreferredInstrumentDescription" hideDetail="N" id="NE7)D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7.D1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Issuer Long Name" columns="2" fullQualPath="Preferred.InstrumentDetails.Issuer.Issuer.IssuerInformation.IssuerName" hideDetail="N" id="NE7~D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE7.D1Pje1" relatedPath="Preferred.InstrumentDetails.Issuer" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issuer Name"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Domicile" columns="2" fullQualPath="Preferred.InstrumentDetails.Issuer.Issuer.ISOGeographicDetails.CountryOfDomicile" hideDetail="N" id="NE7?D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7.D1Pje1" relatedPath="Preferred.InstrumentDetails.Issuer" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Incorporation" columns="2" fullQualPath="Preferred.InstrumentDetails.Issuer.Issuer.ISOGeographicDetails.CountryOfIncorporation" hideDetail="N" id="NE7&amp;lt;D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE7.D1Pje1" relatedPath="Preferred.InstrumentDetails.Issuer" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Denominated Currency" columns="2" fullQualPath="Preferred.InstrumentDetails.PrincipalCurrency" hideDetail="N" id="NE7&amp;gt;D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE7.D1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Currency"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Details" columns="3" fullQualPath="Preferred.InstrumentDetails" hideDetail="N" id="NE70E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7vD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Instrument Type" columns="2" fullQualPath="Preferred.InstrumentDetails.InstrumentType" hideDetail="N" id="NE71E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Denominated Currency" columns="2" fullQualPath="Preferred.InstrumentDetails.PrincipalCurrency" hideDetail="N" id="NE72E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Par Value" columns="2" fullQualPath="Preferred.InstrumentDetails.ParValue" hideDetail="N" id="NE73E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Par Value Type" columns="2" fullQualPath="Preferred.InstrumentDetails.ParValueType" hideDetail="N" id="NE74E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Unit Of Measure" columns="2" fullQualPath="Preferred.InstrumentDetails.UnitOfMeasure" hideDetail="N" id="NE75E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Unit Size" columns="2" fullQualPath="Preferred.InstrumentDetails.UnitSize" hideDetail="N" id="NE76E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Date" columns="2" fullQualPath="Preferred.InstrumentDetails.MaturityDate" hideDetail="N" id="NE77E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument System Status" columns="2" fullQualPath="Preferred.InstrumentDetails.InstrumentSystemStatus" hideDetail="N" id="NE78E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="When Issued Indicator" columns="2" fullQualPath="Preferred.InstrumentDetails.WhenIssuedIndicator" hideDetail="N" id="NE79E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Active Until" columns="2" fullQualPath="Preferred.InstrumentDetails.ActiveUntil" hideDetail="N" id="NE7AE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Maturity Date" columns="2" fullQualPath="Preferred.InstrumentDetails.FinalMaturity" hideDetail="N" id="NE7BE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Series" columns="2" fullQualPath="Preferred.InstrumentDetails.Series" hideDetail="N" id="NE7CE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Illiquidity Indicator" columns="2" fullQualPath="Preferred.InstrumentDetails.IlliquidityIndicator" hideDetail="N" id="NE7DE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Security Form" columns="2" fullQualPath="Preferred.InstrumentDetails.SecurityForm" hideDetail="N" id="NE7EE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Days To Settlement" columns="2" fullQualPath="Preferred.InstrumentDetails.ISSUDaysToSettlement" hideDetail="N" id="NE7FE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity/Expiration Extension Date" columns="2" fullQualPath="Preferred.InstrumentDetails.MaturityExpirationExtensionDate" hideDetail="N" id="NE7GE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Activity Status Date/Time" columns="2" fullQualPath="Preferred.InstrumentDetails.InstrumentActivityStatusDateTime" hideDetail="N" id="NE7HE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Type" columns="2" fullQualPath="Preferred.InstrumentDetails.InstrumentMaturityType" hideDetail="N" id="NE7IE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Distribution Currency" columns="0" fullQualPath="Preferred.InstrumentDetails.DistributionCurrency" hideDetail="N" id="NE7JE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="NE70E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Distribution Currency Code"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="All Market Listing" columns="2" fullQualPath="Preferred.AllMarketListing" hideDetail="N" id="NE7KE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="5" parentId="NE7vD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Exchange Name" columns="2" fullQualPath="Preferred.AllMarketListing.AllMktListExchange.FinancialMarket.MarketDetails.MarketName" hideDetail="N" id="NE7LE1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7KE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="MIC Code" columns="2" fullQualPath="Preferred.AllMarketListing.AllMktListExchange.FinancialMarket.MarketDetails.MICCode" hideDetail="N" id="NE7ME1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7KE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Primary Trading Market" columns="2" fullQualPath="Preferred.AllMarketListing.AllMktListPrimaryTradingMarket" hideDetail="N" id="NE7NE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7KE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Trading Status" columns="2" fullQualPath="Preferred.AllMarketListing.AllMktListTradingStatus" hideDetail="N" id="NE7OE1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE7KE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Actively Traded Indicator" columns="2" fullQualPath="Preferred.AllMarketListing.AllMktListActivelyTradedIndicator" hideDetail="N" id="NE7PE1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7KE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Trading Currency" columns="2" fullQualPath="Preferred.AllMarketListing.AllMktListTradingCurrency" hideDetail="N" id="NE7QE1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE7KE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Composite Ticker" columns="2" fullQualPath="Preferred.AllMarketListing.AllMktListBBCompositeTicker" hideDetail="N" id="NE7RE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE7KE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="RIC" columns="2" fullQualPath="Preferred.AllMarketListing.AllMktListRIC" hideDetail="N" id="NE7SE1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NE7KE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="SEDOL" columns="2" fullQualPath="Preferred.AllMarketListing.AllMktListSEDOL" hideDetail="N" id="NE7TE1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NE7KE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Round Lot Size" columns="2" fullQualPath="Preferred.AllMarketListing.AllMktListRoundLotSize" hideDetail="N" id="NE7UE1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NE7KE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Exchange Level Summary"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":true}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exceptions" columns="2" fullQualPath="Preferred.Exceptions" hideDetail="N" id="NE7VE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7vD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Exceptions for Issue"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Description" columns="3" fullQualPath="Preferred.InstrumentDescription" hideDetail="N" id="NE7WE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="5" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Identifiers" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers" hideDetail="N" id="NE7XE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="25" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Exchange Name" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.IdentifierMarketLookup.FinancialMarket.MarketDetails.MarketName" hideDetail="N" id="NE7YE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Value" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierValue" hideDetail="N" id="NE7ZE1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Context" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierIDContext" hideDetail="N" id="NE7aE1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Usage" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierInstrumentUsage" hideDetail="N" id="NE7bE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Symbol Status" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierInstrumentSymbolStatus" hideDetail="N" id="NE7cE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Not Tradable Indicator" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierNotTradableIndicator" hideDetail="N" id="NE7dE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierOriginalDataProvider" hideDetail="N" id="NE7eE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierStartDateTime" hideDetail="N" id="NE7fE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Target Currency Code" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierTargetCurrencyCode" hideDetail="N" id="NE7gE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="When Issued Indicator" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierWhenIssuedIndicator" hideDetail="N" id="NE7hE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierDataSourceID" hideDetail="N" id="NE7iE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierDataStatus" hideDetail="N" id="NE7jE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierEndDateTime" hideDetail="N" id="NE7kE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierLastChangeDateTime" hideDetail="N" id="NE7lE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Preferred.AllInstrumentIdentifiers.AllIdentifierLastChangeUserID" hideDetail="N" id="NE7mE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NE7XE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Identifiers"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Income Details" columns="2" fullQualPath="Preferred.IncomeDetails" hideDetail="N" id="NE7nE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <control caption="Dividend" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules" hideDetail="N" id="NE7oE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7nE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Dividend Details" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails" hideDetail="N" id="NE7pE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7oE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+          <control caption="Float Bench Multiplier" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.FloatBenchMultiplier" hideDetail="N" id="NE7qE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Basic Spread (Percent)" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.BasicSpreadPercent" hideDetail="N" id="NE7rE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Preferred Dividend Frequency" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.PreferredDividendFrequency" hideDetail="N" id="NE7sE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Reset Frequency" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.ResetFrequency" hideDetail="N" id="NE7tE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Reset Index (Dividend)" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.ResetIndexDividend" hideDetail="N" id="NE7uE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Day Count" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DayCount" hideDetail="N" id="NE7vE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Fixing Basis Text" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendRateFixingBasisText" hideDetail="N" id="NE7wE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Dividend Frequency Unit Quantity" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendFrequencyUnitQty" hideDetail="N" id="NE7xE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Dividend Description" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendDescription" hideDetail="N" id="NE7yE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Dividend Days Per Year Basis" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendDaysPerYearBasis" hideDetail="N" id="NE7zE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Dividend Days Per Month Basis" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendDaysPerMonthBasis" hideDetail="N" id="NE7$E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Dividend Payment Day Code" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendPaymentDayCode" hideDetail="N" id="NE7%E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Fixing Frequency" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendRateFixingFreq" hideDetail="N" id="NE7@E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Fixing Frequency Day" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendRateFixingFreqDay" hideDetail="N" id="NE7&amp;amp;E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Start Date/Time" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendStartDateTime" hideDetail="N" id="NE7*E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendLastChangeDateTime" hideDetail="N" id="NE7-E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change User Id" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendLastChangeUserId" hideDetail="N" id="NE7.E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Data Source" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendDataSourceId" hideDetail="N" id="NE7/E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Next Payable Date Frequency" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendNextPayableDateFreq" hideDetail="N" id="NE7(E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Next Payable Date Frequency Span" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendNextPayableDateFreqSpan" hideDetail="N" id="NE7)E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Maximum Rate Change" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendDetails.DividendMaximumRateChange" hideDetail="N" id="NE7~E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="NE7pE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Dividend Schedules" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules" hideDetail="N" id="NE7?E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7oE1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+          <control caption="Dividend Start Date" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules.DividendStartDate" hideDetail="N" id="NE7&amp;lt;E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7?E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Dividend Type" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules.DividendRateType" hideDetail="N" id="NE7&amp;gt;E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7?E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Dividend Basis" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules.DividendBasis" hideDetail="N" id="NE70F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7?E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Dividend Currency" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules.IPDFDividendCurrency" hideDetail="N" id="NE71F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE7?E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Dividend Rate" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules.DividendRate" hideDetail="N" id="NE72F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7?E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Dividend End Date" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules.DividendEndDate" hideDetail="N" id="NE73F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE7?E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules.DividendSchdLastChangeDateTime" hideDetail="N" id="NE74F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE7?E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change User Id" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules.DividendSchdLastChangeUserId" hideDetail="N" id="NE75F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NE7?E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Data Source" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules.DividendSchdDataSourceId" hideDetail="N" id="NE76F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NE7?E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Data Status" columns="2" fullQualPath="Preferred.IncomeDetails.DividendForSchedules.DividendSchedules.DividendSchdDataStatus" hideDetail="N" id="NE77F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NE7?E1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Redenomination Details" columns="2" fullQualPath="Preferred.RedenominationDetails" hideDetail="N" id="NE78F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <control caption="Pre-Euro Redenom Par Amount" columns="2" fullQualPath="Preferred.RedenominationDetails.PreEuroRedenomParAmount" hideDetail="N" id="NE79F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE78F1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Pre-Redenom Currency" columns="2" fullQualPath="Preferred.RedenominationDetails.PreRedenomCurrency" hideDetail="N" id="NE7AF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE78F1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Redenomination Date" columns="2" fullQualPath="Preferred.RedenominationDetails.RedenominationDate" hideDetail="N" id="NE7BF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE78F1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Redenomination Method" columns="2" fullQualPath="Preferred.RedenominationDetails.RedenominationMethod" hideDetail="N" id="NE7CF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE78F1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Redenomination Rounding Method" columns="2" fullQualPath="Preferred.RedenominationDetails.RedenominationRoundingMethod" hideDetail="N" id="NE7DF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE78F1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Post-Euro Redenomination Par Amount" columns="2" fullQualPath="Preferred.RedenominationDetails.PostEuroRedenominationParAmount" hideDetail="N" id="NE7EF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE78F1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Post-Redenomination Currency" columns="2" fullQualPath="Preferred.RedenominationDetails.PostRedenominationCurrency" hideDetail="N" id="NE7FF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE78F1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument Comments" columns="2" fullQualPath="Preferred.InstrumentComments" hideDetail="N" id="NE7GF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="5" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Comment Text" columns="2" fullQualPath="Preferred.InstrumentComments.InstrumentCommentText" hideDetail="N" id="NE7HF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Status" columns="2" fullQualPath="Preferred.InstrumentComments.InstrumentCommentStatus" hideDetail="N" id="NE7IF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Reason" columns="2" fullQualPath="Preferred.InstrumentComments.InstrumentCommentReason" hideDetail="N" id="NE7JF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Line No." columns="2" fullQualPath="Preferred.InstrumentComments.InstrumentCommentLineNo" hideDetail="N" id="NE7KF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Language" columns="2" fullQualPath="Preferred.InstrumentComments.InstrumentCommentLanguage" hideDetail="N" id="NE7LF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Effective Date" columns="2" fullQualPath="Preferred.InstrumentComments.InstrumentCommentEffectiveDate" hideDetail="N" id="NE7MF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Active Until" columns="2" fullQualPath="Preferred.InstrumentComments.InstrumentCommentActiveUntil" hideDetail="N" id="NE7NF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Data Source" columns="2" fullQualPath="Preferred.InstrumentComments.InstrumentCommentDataSource" hideDetail="N" id="NE7OF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Last Change Date" columns="2" fullQualPath="Preferred.InstrumentComments.InstrumentCommentLastChangeDate" hideDetail="N" id="NE7PF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Large Instrument Comment" columns="2" fullQualPath="Preferred.InstrumentComments.LargeInstrumentComments" hideDetail="N" id="NE7QF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Last Change User" columns="2" fullQualPath="Preferred.InstrumentComments.InstrumentCommentLastChangeUser" hideDetail="N" id="NE7RF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NE7GF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issue Comments"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Classifications" columns="2" fullQualPath="Preferred.AllInstrumentClassifications" hideDetail="N" id="NE7SF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="5" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Classification Value" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.ClassificationValue" hideDetail="N" id="NE7TF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Class Name" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.ClassName" hideDetail="N" id="NE7UF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Set" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.IndustryClassificationSetID" hideDetail="N" id="NE7VF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Value" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllInstrClsfIdentifier.InstrumentIdentifiers.IdentifiersDetails.IdentifierValue" hideDetail="N" id="NE7WF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Type" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllInstrClsfIdentifier.InstrumentIdentifiers.IdentifiersDetails.IdentifierType" hideDetail="N" id="NE7XF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit ID" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllInstrClsfGeoUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitID" hideDetail="N" id="NE7YF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit Type" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllInstrClsfGeoUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitType" hideDetail="N" id="NE7ZF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Purpose" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllClassificationPurpose" hideDetail="N" id="NE7aF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllClassificationStartDateTime" hideDetail="N" id="NE7bF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllClassificationEndDateTime" hideDetail="N" id="NE7cF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllClassificationLastChangeDateTime" hideDetail="N" id="NE7dF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllClassificationLastChangeUserID" hideDetail="N" id="NE7eF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllClassificationDataSourceID" hideDetail="N" id="NE7fF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllClassificationDataStatus" hideDetail="N" id="NE7gF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllClassificationOriginalDataProvider" hideDetail="N" id="NE7hF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Description" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllClassificationIssueClassificationDescription" hideDetail="N" id="NE7iF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Value For Classification Amount" columns="2" fullQualPath="Preferred.AllInstrumentClassifications.AllClassificationValueForClassificationAmount" hideDetail="N" id="NE7jF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="NE7SF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Classifications"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument Calendar Details" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails" hideDetail="N" id="NE7kF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="5" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Calendar ID" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails.InstrumentCalendar.CalendarDefinition.Calendar.CalendarID" hideDetail="N" id="NE7lF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7kF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Name" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails.InstrumentCalendar.CalendarDefinition.Calendar.CalendarName" hideDetail="N" id="NE7mF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7kF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Purpose" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails.CalendarPurpose" hideDetail="N" id="NE7nF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7kF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Participant Description" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails.CalendarParticipantDescription" hideDetail="N" id="NE7oF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE7kF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails.InstrumentCalendarStartDateTime" hideDetail="N" id="NE7pF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7kF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails.InstrumentCalendarEndDateTime" hideDetail="N" id="NE7qF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE7kF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source ID" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails.InstrumentCalendarDataSourceId" hideDetail="N" id="NE7rF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE7kF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails.InstrumentCalendarDataStatus" hideDetail="N" id="NE7sF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NE7kF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User ID" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails.IssueCalendarLastChangeUserID" hideDetail="N" id="NE7tF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NE7kF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.InstrumentCalendarDetails.IssueCalendarLastChangeDateTime" hideDetail="N" id="NE7uF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NE7kF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issue Calendar"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Underlying Related Instruments" columns="2" fullQualPath="Preferred.UnderlyingRelatedInstruments" hideDetail="N" id="NE7vF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Related Instruments"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Instrument Statistics" columns="2" fullQualPath="Preferred.AllInstrumentStatistics" hideDetail="N" id="NE7wF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="5" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Statistic Definition ID" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatistics.Statistics.StatisticsInformation.StatisticDefinitionID" hideDetail="N" id="NE7xF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Name" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatistics.Statistics.StatisticsInformation.StatisticName" hideDetail="N" id="NE7yF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Value Type" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatistics.Statistics.StatisticsInformation.StatisticValueType" hideDetail="N" id="NE7zF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Character Value" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticCharacterValue" hideDetail="N" id="NE7$F1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Amount Value" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticAmountValue" hideDetail="N" id="NE7%F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Denominated Currency" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticDenominatedCurrency" hideDetail="N" id="NE7@F1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Date Value" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticDateValue" hideDetail="N" id="NE7&amp;amp;F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic DateTime Value" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticDateTimeValue" hideDetail="N" id="NE7*F1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Integer Value" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticIntegerValue" hideDetail="N" id="NE7-F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticOriginalDataProvider" hideDetail="N" id="NE7.F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Redistributor ID" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticDataRedistributorID" hideDetail="N" id="NE7/F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticDataSourceID" hideDetail="N" id="NE7(F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticDataStatus" hideDetail="N" id="NE7)F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticStartDateTime" hideDetail="N" id="NE7~F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticEndDateTime" hideDetail="N" id="NE7?F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticLastChangeDateTime" hideDetail="N" id="NE7&amp;lt;F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Preferred.AllInstrumentStatistics.AllStatisticLastChangeUserID" hideDetail="N" id="NE7&amp;gt;F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="NE7wF1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Statistics"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="SOI" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant" hideDetail="N" id="Kbt0m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="5" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Instrument Group Name" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentGroup" hideDetail="N" id="Kbt1m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Purpose" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantPurpType" hideDetail="N" id="Kbt2m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Effective Date" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantEffectiveDate" hideDetail="N" id="Kbt3m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Description" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantDescription" hideDetail="N" id="Kbt4m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Effective Until" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantEffectiveUntil" hideDetail="N" id="Kbt5m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Type" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantParticipationType" hideDetail="N" id="Kbt6m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Percent" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantParticipationPercent" hideDetail="N" id="Kbt7m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Amount" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantParticipationAmount" hideDetail="N" id="Kbt8m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Currency" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantParticipationCurrency" hideDetail="N" id="Kbt9m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantDataStatus" hideDetail="N" id="KbtAm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source ID" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantDataSourceId" hideDetail="N" id="KbtBm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User ID" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantLastChangeUserId" hideDetail="N" id="KbtCm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.InstrumentAsAParticipant.InstrumentParticipantLastChangeDateTime" hideDetail="N" id="KbtDm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="Kbt0m&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Issue Group Participants"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Ratings" columns="2" fullQualPath="Preferred.AllInstrumentRatings" hideDetail="N" id="KbtEm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="25" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Instrument Ratings History" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory" hideDetail="N" id="KbtFm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Rating Name" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngName" hideDetail="N" id="KbtGm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[],"SEPARATOR_AT_TOP":[{"LABEL":"Rating Details"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":true}]}</config>
+        </control>
+        <control caption="Rating Value" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngValue" hideDetail="N" id="KbtHm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Debt Class" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngDebtClass" hideDetail="N" id="KbtIm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Effective DateTime" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngEffectiveDateTime" hideDetail="N" id="KbtJm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Direction" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngDirection" hideDetail="N" id="KbtKm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Sys Effective End DateTime" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngSysEffectiveEndDateTime" hideDetail="N" id="KbtLm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Purpose" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngPurpose" hideDetail="N" id="KbtMm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Currency Type" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngCurrencyType" hideDetail="N" id="KbtNm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Class" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngClass" hideDetail="N" id="KbtOm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Soliticitation Staus" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.MHISoliticitationStausHist" hideDetail="N" id="KbtPm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Direction Type" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngDirectionType" hideDetail="N" id="KbtQm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Class Identifier" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngClassIdentifier" hideDetail="N" id="KbtRm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Seniority" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngSeniority" hideDetail="N" id="KbtSm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="Validity &amp;amp; source" lazyInd="N" orderNum="12" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":true}]}</config>
+        </control>
+        <control caption="Start Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRatingStartDateTime" hideDetail="N" id="KbtTm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="End Date" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngEndDate" hideDetail="N" id="KbtUm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Source ID" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngDataSourceID" hideDetail="N" id="KbtVm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Status" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngDataStatus" hideDetail="N" id="KbtWm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngLastChangeDateTime" hideDetail="N" id="KbtXm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change User ID" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstrumentRatingsHistory.AllHistInstRtngLastChangeUserID" hideDetail="N" id="KbtYm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="KbtFm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}]}</config>
+      </control>
+      <control caption="Rating Qualifiers" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllRatingQualifiers" hideDetail="N" id="KbtZm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="Rating Details" lazyInd="N" orderNum="1" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Rating Qualifier Text" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllRatingQualifiers.AllInstRtngQualText" hideDetail="N" id="Kbtam&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="KbtZm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"SEPARATOR_AT_TOP":[{"LABEL":"Rating Qualifier Details"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":true}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Qualifier Type" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllRatingQualifiers.AllInstRtngQualType" hideDetail="N" id="Kbtbm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="KbtZm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rating Qual Is Regulatory Identifier" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllRatingQualifiers.AllInstRtngQualIsRegulatoryIdentifier" hideDetail="N" id="Kbtcm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="KbtZm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="EU Rating Qualifier Type" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllRatingQualifiers.AllInstRtngQualEURatingQualifierType" hideDetail="N" id="Kbtdm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="Validity &amp;amp; source" lazyInd="N" orderNum="3" pageSize="0" parentId="KbtZm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":true}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Effective DateTime" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllRatingQualifiers.AllInstRtngQualEffectiveDateTime" hideDetail="N" id="Kbtem&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="KbtZm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Source ID" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllRatingQualifiers.AllInstRtngQualDataSourceID" hideDetail="N" id="Kbtfm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="KbtZm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Status" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllRatingQualifiers.AllInstRtngQualDataStatus" hideDetail="N" id="Kbtgm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="KbtZm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change User Id" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllRatingQualifiers.AllInstRtngQualLastChangeUserId" hideDetail="N" id="Kbthm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="KbtZm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":true}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Name" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngName" hideDetail="N" id="Kbtim&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Value" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngValue" hideDetail="N" id="Kbtjm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Debt Class" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngDebtClass" hideDetail="N" id="Kbtkm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Effective DateTime" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngEffectiveDateTime" hideDetail="N" id="Kbtlm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Direction" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngDirection" hideDetail="N" id="Kbtmm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Sys Effective End DateTime" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngSysEffectiveEndDateTime" hideDetail="N" id="Kbtnm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Purpose" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngPurpose" hideDetail="N" id="Kbtom&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Currency Type" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngCurrencyType" hideDetail="N" id="Kbtpm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Class" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngClass" hideDetail="N" id="Kbtqm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Solicitation Status" columns="2" fullQualPath="Preferred.AllInstrumentRatings.MHISolicitationStatus" hideDetail="N" id="Kbtrm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Direction Type" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngDirectionType" hideDetail="N" id="Kbtsm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Class Identifier" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngClassIdentifier" hideDetail="N" id="Kbttm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Seniority" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngSeniority" hideDetail="N" id="Kbtum&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+      </control>
+      <control caption="Rating Identifier" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngRatingIdentifier" hideDetail="N" id="Kbtvm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Long Term Rating Class" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngLongTermRatingClass" hideDetail="N" id="Kbtwm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Multiple Rating Sale Type" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngMultipleRatingSaleType" hideDetail="N" id="Kbtxm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Next Rating Review Date" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngNextRatingReviewDate" hideDetail="N" id="Kbtym&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngOriginalDataProvider" hideDetail="N" id="Kbtzm&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Currency" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngCurrency" hideDetail="N" id="Kbt$m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Direction Date" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngDirectionDate" hideDetail="N" id="Kbt%m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Discrepancy Amount" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngDiscrepancyAmount" hideDetail="N" id="Kbt@m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="22" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Model Version" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngRatingModelVersion" hideDetail="N" id="Kbt&amp;amp;m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="23" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Security Instrument Indicator" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngSecurityInstrumentIndicator" hideDetail="N" id="Kbt*m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="24" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Significance Amount" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngSignificanceAmount" hideDetail="N" id="Kbt-m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="25" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Status" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngStatus" hideDetail="N" id="Kbt.m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="26" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Status DateTime" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngStatusDateTime" hideDetail="N" id="Kbt/m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="27" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Status Reason" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngStatusReason" hideDetail="N" id="Kbt(m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="28" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Symbol Text" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngSymbolText" hideDetail="N" id="Kbt)m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="29" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="UnderlyingEnhanced Sale Type" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngUnderlyingEnhancedSaleType" hideDetail="N" id="Kbt~m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="30" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Termination DateTime" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngTerminationDateTime" hideDetail="N" id="Kbt?m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="31" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Secondary Market Indicator" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngSecondaryMarketIndicator" hideDetail="N" id="Kbt&amp;lt;m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="32" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Short Term Rating Class" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngShortTermRatingClass" hideDetail="N" id="Kbt&amp;gt;m&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="33" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Redistributor ID" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngDataRedistributorID" hideDetail="N" id="Kbt0n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="34" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Rating Review Date" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngLastRatingReviewDate" hideDetail="N" id="Kbt1n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="35" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Rating Review User ID" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngLastRatingReviewUserID" hideDetail="N" id="Kbt2n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="36" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Calculation Type" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngCalcType" hideDetail="N" id="Kbt3n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="Validity &amp;amp; source" lazyInd="N" orderNum="37" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":true}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Preferred.AllInstrumentRatings.MHIInstrumentRatingStartDate" hideDetail="N" id="Kbt4n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="38" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngEndDate" hideDetail="N" id="Kbt5n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="39" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source ID" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngDataSourceID" hideDetail="N" id="Kbt6n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="40" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngDataStatus" hideDetail="N" id="Kbt7n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="41" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date Time" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngLastChangeDateTime" hideDetail="N" id="Kbt8n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="42" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Preferred.AllInstrumentRatings.AllInstRtngLastChangeUserId" hideDetail="N" id="Kbt9n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="43" pageSize="0" parentId="KbtEm&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Underwriting Characteristics" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics" hideDetail="N" id="KbtAn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="5" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Offer Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferType" hideDetail="N" id="KbtBn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Price At Issuance" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OriginalPriceAtIssuance" hideDetail="N" id="KbtCn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Amount/Qty at Issuance" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OriginalAmountQtyAtIssuance" hideDetail="N" id="KbtDn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offer Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferDate" hideDetail="N" id="KbtEn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offer Currency Code" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferCurrencyCode" hideDetail="N" id="KbtFn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Delivery Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.DeliveryType" hideDetail="N" id="KbtGn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Announcement Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.AnnouncementDate" hideDetail="N" id="KbtHn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="First Settlement Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.FirstSettlementDate" hideDetail="N" id="KbtIn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Minimum Trade Qty" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.MinimumTradeQty" hideDetail="N" id="KbtJn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Minimum Trade Increment" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.MinimumTradeIncrement" hideDetail="N" id="KbtKn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Placement Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.PlacementType" hideDetail="N" id="KbtLn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Private Placement Indicator" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.PrivatePlacementIndicator" hideDetail="N" id="KbtMn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Broker Discount" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.BrokerDiscount" hideDetail="N" id="KbtNn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Manager Fee" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.ManagerFee" hideDetail="N" id="KbtOn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Underwriter Fee" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.UnderwriterFee" hideDetail="N" id="KbtPn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Total Gross Fees" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.TotalGrossFees" hideDetail="N" id="KbtQn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Unit Traded Indicator" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.UnitTradedIndicator" hideDetail="N" id="KbtRn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Reallowance Amount" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.ReallowanceAmount" hideDetail="N" id="KbtSn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Lead Manager Name" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.LeadManagerName" hideDetail="N" id="KbtTn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="DTC Regulatory Indicator" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.DTCRegulatoryIndicator" hideDetail="N" id="KbtUn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Name of the Financial Advisor" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.FinancialAdvisorName" hideDetail="N" id="KbtVn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Remarketing Agent Name" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.RemarketingAgentName" hideDetail="N" id="KbtWn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Sale Date/Time" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.SaleDateTime" hideDetail="N" id="KbtXn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="22" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.UnderwritingChLastChangeUserId" hideDetail="N" id="KbtYn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="23" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.UnderwritingChLastChangeDateTime" hideDetail="N" id="KbtZn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="24" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.UnderwritingChDataSourceId" hideDetail="N" id="Kbtan&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="25" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Orig Amortization WAM Period" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OrigAmortizationWAMPeriod" hideDetail="N" id="Kbtbn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="26" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Orig Weighted Avg Orig Loan Size" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OrigWAOLS" hideDetail="N" id="Kbtcn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="27" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original WAOCS" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OriginalWAOCS" hideDetail="N" id="Kbtdn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="28" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Price Par Percent" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingPriceParPercent" hideDetail="N" id="Kbten&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="29" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offer Number" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferNumber" hideDetail="N" id="Kbtfn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="30" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Date Count Description" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OriginalDateCountDescription" hideDetail="N" id="Kbtgn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="31" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Payable Date Frequency" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OriginalPayableDateFrequency" hideDetail="N" id="Kbthn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="32" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Payable Date Frequency Day" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OriginalPayableDateFrequencyDay" hideDetail="N" id="Kbtin&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="33" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Payable Date Freq Span" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OriginalPayableDateFreqSpan" hideDetail="N" id="Kbtjn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="34" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Document Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingDocumentType" hideDetail="N" id="Kbtkn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="35" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offer Status" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferStatus" hideDetail="N" id="Kbtln&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="36" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Bond Issue Amount Code" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.BondIssueAmountCode" hideDetail="N" id="Kbtmn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="37" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="FX Rate Fixing DateTime" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.FXRateFixingDateTime" hideDetail="N" id="Kbtnn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="38" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="First Trading Time Zone" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.FirstTradingTimeZone" hideDetail="N" id="Kbton&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="39" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Payment Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.IssuePaymentDate" hideDetail="N" id="Kbtpn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="40" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Payment Period End Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.IssuePaymentPeriodEndDate" hideDetail="N" id="Kbtqn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="41" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Price Quantity" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.IssuePriceQuantity" hideDetail="N" id="Kbtrn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="42" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Payment Period Start Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.IssuePaymentPeriodStartDate" hideDetail="N" id="Kbtsn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="43" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Maturity Size Amount Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.MaturitySizeAmountType" hideDetail="N" id="Kbttn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="44" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Maximum Offering Currency Code" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.MaximumOfferingCurrencyCode" hideDetail="N" id="Kbtun&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="45" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Maximum Offering Quote Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.MaximumOfferingQuoteType" hideDetail="N" id="Kbtvn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="46" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Maximum Offering Unit Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.MaximumOfferingUnitType" hideDetail="N" id="Kbtwn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="47" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Minimum Offering Currency Code" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.MinimumOfferingCurrencyCode" hideDetail="N" id="Kbtxn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="48" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Minimum Offering Quote Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.MinimumOfferingQuoteType" hideDetail="N" id="Kbtyn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="49" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offer Status DateTime" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferStatusDateTime" hideDetail="N" id="Kbtzn&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="50" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Accrued Interest Amount" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingAccruedInterestAmount" hideDetail="N" id="Kbt$n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="51" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Accrued Interest Currency Code" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingAccruedInterestCurrencyCode" hideDetail="N" id="Kbt%n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="52" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Accrued Interest Days" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingAccruedInterestDays" hideDetail="N" id="Kbt@n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="53" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Accrued Interest Quote Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingAccruedInterestQuoteType" hideDetail="N" id="Kbt&amp;amp;n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="54" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Amount Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingAmountType" hideDetail="N" id="Kbt*n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="55" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Location" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingLocation" hideDetail="N" id="Kbt-n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="56" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Par Value Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingParValueType" hideDetail="N" id="Kbt.n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="57" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering PartFull Paid Indicator" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingPartFullPaidIndicator" hideDetail="N" id="Kbt/n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="58" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Price Range Quote Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingPriceRangeQuoteType" hideDetail="N" id="Kbt(n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="59" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Timing Type" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingTimingType" hideDetail="N" id="Kbt)n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="60" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Tracking Code" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingTrackingCode" hideDetail="N" id="Kbt~n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="61" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Tracking End Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingTrackingEndDate" hideDetail="N" id="Kbt?n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="62" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Official Statement Repository Indicator" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfficialStatementRepositoryIndicator" hideDetail="N" id="Kbt&amp;lt;n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="63" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Re Offering Yield Percentage" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.ReOfferingYieldPercentage" hideDetail="N" id="Kbt&amp;gt;n&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="64" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Sale Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.SaleDate" hideDetail="N" id="Kbt0o&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="65" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Sale Date Status" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.SaleDateStatus" hideDetail="N" id="Kbt1o&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="66" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Sale Date Time Zone" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.SaleDateTimeZone" hideDetail="N" id="Kbt2o&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="67" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Seasoning Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.SeasoningDate" hideDetail="N" id="Kbt3o&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="68" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Shareholders Have Subscription Priority" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.ShareholdersHaveSubscriptionPriority" hideDetail="N" id="Kbt4o&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="69" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Underwriter Discount" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.UnderwriterDiscount" hideDetail="N" id="Kbt5o&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="70" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Prospectus Maturity Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.ProspectusMaturityDate" hideDetail="N" id="Kbt6o&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="71" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Conversion Ratio" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingConversionRatio" hideDetail="N" id="Kbt7o&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="72" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Offering Price Index Short Description" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.OfferingPriceIndexShortDescription" hideDetail="N" id="Kbt8o&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="73" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Remarketing Date" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.RemarketingDate" hideDetail="N" id="Kbt9o&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="74" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Remarketing Indicator" columns="2" fullQualPath="Preferred.UnderwritingCharacteristics.RemarketingIndicator" hideDetail="N" id="KbtAo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="75" pageSize="0" parentId="KbtAn&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Capitalization" columns="2" fullQualPath="Preferred.InstrumentCapitalization" hideDetail="N" id="KbtBo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="5" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Capital Type" columns="2" fullQualPath="Preferred.InstrumentCapitalization.CapitalType" hideDetail="N" id="KbtCo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Currency" columns="2" fullQualPath="Preferred.InstrumentCapitalization.CapitalizationCurrency" hideDetail="N" id="KbtDo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Effective Date" columns="2" fullQualPath="Preferred.InstrumentCapitalization.CapitalEffectiveDate" hideDetail="N" id="KbtEo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Actual Shares Outstanding" columns="2" fullQualPath="Preferred.InstrumentCapitalization.ActualSharesOutstanding" hideDetail="N" id="KbtFo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Market Capitalization" columns="2" fullQualPath="Preferred.InstrumentCapitalization.MarketCapitalization" hideDetail="N" id="KbtGo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Nominal Amount" columns="2" fullQualPath="Preferred.InstrumentCapitalization.CapitalNominalAmount" hideDetail="N" id="KbtHo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Free Float Percentage" columns="2" fullQualPath="Preferred.InstrumentCapitalization.FreeFloatPercentage" hideDetail="N" id="KbtIo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Preferred.InstrumentCapitalization.InstrCapLastChangeUserId" hideDetail="N" id="KbtJo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.InstrumentCapitalization.InstrCapLastChangeDateTime" hideDetail="N" id="KbtKo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Preferred.InstrumentCapitalization.InstrCapStartDateTime" hideDetail="N" id="KbtLo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Preferred.InstrumentCapitalization.InstrCapDataSourceId" hideDetail="N" id="KbtMo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Capital Data Input Grade" columns="2" fullQualPath="Preferred.InstrumentCapitalization.CapitalDataInputGrade" hideDetail="N" id="KbtNo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Lower Tier 2 Capital Indicator" columns="2" fullQualPath="Preferred.InstrumentCapitalization.LowerTier2CapitalIndicator" hideDetail="N" id="KbtOo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Upper Tier 2 Capital Indicator" columns="2" fullQualPath="Preferred.InstrumentCapitalization.UpperTier2CapitalIndicator" hideDetail="N" id="KbtPo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Tier 1 Capital Indicator" columns="2" fullQualPath="Preferred.InstrumentCapitalization.Tier1CapitalIndicator" hideDetail="N" id="KbtQo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Tier 2 Capital Non Specific Indicator" columns="2" fullQualPath="Preferred.InstrumentCapitalization.Tier2CapitalNonSpecificIndicator" hideDetail="N" id="KbtRo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Capitalization Data Status" columns="2" fullQualPath="Preferred.InstrumentCapitalization.InstrCapDataStatus" hideDetail="N" id="KbtSo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Capitalization End Date" columns="2" fullQualPath="Preferred.InstrumentCapitalization.InstrCapEndDate" hideDetail="N" id="KbtTo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Capitalization Change Reason" columns="2" fullQualPath="Preferred.InstrumentCapitalization.CapitalizationChangeReason" hideDetail="N" id="KbtUo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="KbtBo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issue Market Capitalization"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Geographical Information" columns="2" fullQualPath="Preferred.AllGeographicalInformation" hideDetail="N" id="KbtVo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="5" parentId="NE7uD1Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Geographic Unit Name" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicalUnit.GeographicalUnit.GeographicUnitInformation.GeographicUnitName" hideDetail="N" id="KbtWo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit ID" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicalUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitID" hideDetail="N" id="KbtXo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit Type" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicalUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitType" hideDetail="N" id="KbtYo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic Unit Purpose" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicUnitPurpose" hideDetail="N" id="KbtZo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic Unit Description" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicUnitDescription" hideDetail="N" id="Kbtao&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicOriginalDataProvider" hideDetail="N" id="Kbtbo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Amount" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicParticipationAmount" hideDetail="N" id="Kbtco&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Currency" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicParticipationCurrency" hideDetail="N" id="Kbtdo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Percent" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicParticipationPercent" hideDetail="N" id="Kbteo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Land Area Unit of Measure" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicLandAreaUnitofMeasure" hideDetail="N" id="Kbtfo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Land Area Amount" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicLandAreaAmount" hideDetail="N" id="Kbtgo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Currency Type" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicCurrencyType" hideDetail="N" id="Kbtho&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Redistributor ID" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicDataRedistributorID" hideDetail="N" id="Kbtio&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicDataSourceID" hideDetail="N" id="Kbtjo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicDataStatus" hideDetail="N" id="Kbtko&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicStartDateTime" hideDetail="N" id="Kbtlo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicEndDateTime" hideDetail="N" id="Kbtmo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicLastChangeDateTime" hideDetail="N" id="Kbtno&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Preferred.AllGeographicalInformation.AllGeographicLastChangeUserID" hideDetail="N" id="Kbtoo&amp;gt;Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="KbtVo&amp;gt;Pje1" relatedPath="" screenId="q~s1s&amp;gt;ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Issue Geographic Unit"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+  </control>
+</root>

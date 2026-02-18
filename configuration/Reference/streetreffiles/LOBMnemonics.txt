@@ -1,0 +1,4 @@
+ScheduleMaintenance=SCHMAINT
+IDUniquenessCheckMatchKeySet=ID_UNIQ
+VSH=VSH
+Timeseries=TIMESERS

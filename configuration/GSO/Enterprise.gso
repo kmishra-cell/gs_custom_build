@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="select intrnl_dmn_val_nme as DISPLAY_NAME,intrnl_dmn_val_txt AS CODE from ft_T_idmv where fld_id = '00004040' &#10; order by 1 asc" customSQL="" desc="The Organization ID field uniquely identifies each occurrence of the Enterprise table and distinguishes each enterprise's related table occurrences from those of all other enterprises." displayCaption="Organization ID" entityTypeId="++3qwBhS2etxm021" id="++4iXZUy2etu002v" mandatory="0" multiplicity="SINGLE" name="OrganizationID" nameSpace="GSC"/>
+  </beFields>
+  <mappings>
+    <mapping beFieldId="++4iXZUy2etu002v" groupMapping="0" id="++4iXZUy2etu0037" nameSpace="GSC" occFieldId="++4iXZUy2etu0032"/>
+  </mappings>
+</entities>

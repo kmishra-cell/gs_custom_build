@@ -1,0 +1,21 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "ScheduleBulkMerge" ],
+  "title" : "ScheduleBulkMerge",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Everyday",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "17:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

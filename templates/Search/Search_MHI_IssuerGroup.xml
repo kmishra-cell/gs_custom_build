@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="IssuerGroup" createdUser="user1" freezeColumns="" id="yQq1m&gt;P(e1" isDefault="Y" isPublic="N" lookupId="IssuerGroup" pageSize="50" screenType="SYSTEMSRCH" title="MHI_IssuerGroup">
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Group Name" fieldName="IssuerGroup.Group.IssuerGroupName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="yQq3m&amp;gt;P(e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Group Purpose" fieldName="IssuerGroup.Group.IssuerGroupPurpose" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="yQq5m&amp;gt;P(e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="Issuer Group ID" columnName="Group ID" fieldName="IssuerGroup.Group.IssuerGroupID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="yQq6m&amp;gt;P(e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Organization ID" fieldName="IssuerGroup.Group.IssuerGroupToENTR.Enterprise.EnterpriseInformation.OrganizationID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="yQq7m&amp;gt;P(e1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width=""/>
+  </columns>
+</root>

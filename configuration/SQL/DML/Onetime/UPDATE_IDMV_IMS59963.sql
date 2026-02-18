@@ -1,0 +1,1 @@
+update ft_t_idmv set intrnl_dmn_val_nme='Settlement',last_chg_tms=now() where intrnl_dmn_val_txt='SETLMNT';

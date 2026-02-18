@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="select intrnl_dmn_val_nme as DISPLAY_NAME, intrnl_dmn_val_txt as CODE from FT_T_IDMV where fld_id = '00002875' and intrnl_dmn_val_txt in &#10;('AUSTRIA','BBUNIQUE','BELGIUM','BBCPTICK','BBGLOBAL',&#10;'BB8CHR','CATS','CINS','CUSIP','CEDEL','COMMON',&#10;'CZECH','DUTCH','EUROCLR','FRENCH','ISIN',&#10;'IRESEDOL','ISRAELI','ITALY',&#10;'JAPAN','LUX','NORWAY',&#10;'SEDOL','SPAIN',&#10;'VALOREN','TICKER','WPK')" customSQL="" desc="" displayCaption="ID Context" entityTypeId="++3qwBhS2vrct013" id="++7kiiCy2etZa00+" mandatory="0" multiplicity="MULTIPLE" name="VRCDIDContext" nameSpace="GSC"/>
+  </beFields>
+  <mappings>
+    <mapping beFieldId="++7kiiCy2etZa00+" groupMapping="0" id="++7kiiCy2etZa010" nameSpace="GSC" occFieldId="++7kiiCy2etZa00m"/>
+  </mappings>
+</entities>

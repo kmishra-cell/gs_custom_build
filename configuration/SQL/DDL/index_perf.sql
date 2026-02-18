@@ -1,0 +1,10 @@
+CREATE INDEX ft_x_adtp_p003 ON ft_t_adtp USING btree (mail_addr_id);
+CREATE INDEX ft_x_adtp_p005 ON ft_t_adtp USING btree (elec_addr_id);
+CREATE INDEX ft_x_adtp_p006 ON ft_t_adtp USING btree (cntl_cross_ref_oid);
+CREATE INDEX ft_x_ffrl_inst_mnem ON ft_t_ffrl USING btree (inst_mnem);
+CREATE INDEX ft_x_ficl_frtb ON ft_t_ficl USING btree (indus_cl_set_id, clsf_oid, clsf_purp_typ, cl_value);
+CREATE INDEX ft_x_isgp_p001 ON ft_t_isgp USING btree (instr_id, prt_purp_typ, end_tms);
+CREATE INDEX ft_x_ispc_i004 ON ft_t_ispc USING btree (prc_tms, adjst_tms, prc_valid_typ);
+CREATE INDEX ft_x_ispc_i005 ON ft_t_ispc USING btree (instr_id, job_id);
+CREATE INDEX ft_x_ispc_i001 ON ft_t_ispc USING btree (instr_id, prc_tms);
+CREATE INDEX ft_x_rtql_p003 ON ft_t_rtql USING btree (fins_rtng_oid);

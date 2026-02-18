@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <beFields>
+    <beField class="BETEXT" displayCaption="Issuer Mnem" entityTypeId="++3qwBhS2etxm004" id="++A8qWEGgMr0S00b" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MHIISSRMNEM" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Start Date/Time" entityTypeId="++3qwBhS2etxm004" id="++A8-wgGgMr0S0S5" mandatory="0" multiplicity="SINGLE_OR_NULL" name="ISSRStartDateTime" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Data Stat Type" entityTypeId="++3qwBhS2etxm004" id="00A9ExEWgMr0S00Z" mandatory="0" multiplicity="SINGLE_OR_NULL" name="ISSRDataStatTyp" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Data Source ID" entityTypeId="++3qwBhS2etxm004" id="00A9ExEWgMr0S00X" mandatory="0" multiplicity="SINGLE_OR_NULL" name="ISSRDataSourceID" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Last Change Date/Time" entityTypeId="++3qwBhS2etxm004" id="00AIe3sWgMr0u025" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="IRGPISSRLastChangeDateTime" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Last Change User" entityTypeId="++3qwBhS2etxm004" id="00AIe3sWgMr0u027" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="IRGPISSRLastChangeUser" nameSpace="MHI"/>
+    <beField class="BETSTAMP" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="End Date/Time" entityTypeId="++3qwBhS2etxm004" id="00ANxAK0gMr1m04D" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="IRGPISSREndDateTime" nameSpace="MHI"/>
+    <beField class="BETSTAMP" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Start Date/Time" entityTypeId="++3qwBhS2etxm004" id="00ANxAK0gMr1m04B" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="IRGPISSRStartDateTime" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Last Published" entityTypeId="++3qwBhS2etxm004" id="++ACCSJmgMr0S01p" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PBATISSRLastchangeDate" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Last Updated" entityTypeId="++3qwBhS2etxm004" id="++ACCSJmgMr0S01x" mandatory="0" multiplicity="SINGLE_OR_NULL" name="UPD1ISSRLastUpdated" nameSpace="MHI"/>
+    <beField class="BEDEC" displayCaption="Version" entityTypeId="++3qwBhS2etxm004" id="++ACCSJmgMr0S01z" mandatory="0" multiplicity="SINGLE_OR_NULL" name="UPD1ISSRVersion" nameSpace="MHI">
+      <fieldConfig id="++ACCSJmgMr0S01-" nameSpace="MHI" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+    <beField class="BETEXT" displayCaption="Instrument Issuer ID" entityTypeId="++3qwBhS2etxm004" id="00A9FWN0gMr0S01d" mandatory="0" multiplicity="SINGLE_OR_NULL" name="ISSRInstrumentIssuerId" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Portfolio OID" entityTypeId="++3qwBhS2etxm004" id="00AFhOYWgMr0u02b" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioOID" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Series" entityTypeId="++3qwBhS2etxm004" id="00AFhOYWgMr0u02l" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioSeries" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Collateral Type" entityTypeId="++3qwBhS2etxm004" id="00AFhOYWgMr0u02d" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioCollateralType" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Re-calc Required Mapped" entityTypeId="++3qwBhS2etxm004" id="00AFhOYWgMr0u02q" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioRecalcRequired" nameSpace="MHI"/>
+    <beField class="BEINT" displayCaption="Rating Difference Mapped" entityTypeId="++3qwBhS2etxm004" id="00AFhOYWgMr0u02n" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioRatingDifference" nameSpace="MHI">
+      <fieldConfig id="00AFhOYWgMr0u02o" nameSpace="MHI" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+    <beField class="BEDATE" displayCaption="Last Re-calc Date" entityTypeId="++3qwBhS2etxm004" id="00AFhOYWgMr0u02u" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioLastRecalcDate" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Group" entityTypeId="++3qwBhS2etxm004" id="00AFhOYWgMr0u02j" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioGroup" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Unique" entityTypeId="++3qwBhS2etxm004" id="00AFhOYWgMr0u04H" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioUNIQUE" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="FCY" entityTypeId="++3qwBhS2etxm004" id="00AFhOYWgMr0u04M" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioFCY" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Derivation Rule" entityTypeId="++3qwBhS2etxm004" id="00AFhOYWgMr0u02w" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioDerivationRule" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Subordinated" entityTypeId="++3qwBhS2etxm004" id="00AFlUZWgMr0u01D" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioSubordinatedToShow" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Re-Calc Required" entityTypeId="++3qwBhS2etxm004" id="++AGUtdmgMr0u015" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioReCalcRequiredToShow" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Secured" entityTypeId="++3qwBhS2etxm004" id="++AGUtdmgMr0u00c" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrPortfolioSecuredToShow" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Rating Difference" entityTypeId="++3qwBhS2etxm004" id="++AGUtdmgMr0u00t" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="MHIissrRatingDifferenceToShow" nameSpace="MHI"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="Issuer Information" displayCaption="Issuer Information" entityTypeId="++3qwBhS2etxm004" frequencyInd="0" id="004WlTSC2etq8017" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="IssuerInformation" nameSpace="GSC">
+      <part defNameSpace="MHI" fieldId="++A8qWEGgMr0S00b" id="++A8qWEGgMr0S00d" prntReqdInd="0" seq="47"/>
+      <part defNameSpace="MHI" fieldId="++A8-wgGgMr0S0S5" id="++A8-wgGgMr0S0S7" prntReqdInd="0" seq="48"/>
+      <part defNameSpace="MHI" fieldId="00A9ExEWgMr0S00Z" id="00A9ExEWgMr0S00b" prntReqdInd="0" seq="49"/>
+      <part defNameSpace="MHI" fieldId="00A9ExEWgMr0S00X" id="00A9ExEWgMr0S00c" prntReqdInd="0" seq="50"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Issuer As a Participant" displayCaption="Issuer As a Participant" entityTypeId="++3qwBhS2etxm004" frequencyInd="0" id="006IilvC2etpe00X" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="IssuerAsAParticipant" nameSpace="GSC">
+      <part defNameSpace="MHI" fieldId="00AIe3sWgMr0u025" id="00AIe3sWgMr0u029" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="MHI" fieldId="00AIe3sWgMr0u027" id="00AIe3sWgMr0u02A" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="MHI" fieldId="00ANxAK0gMr1m04D" id="00ANxAK0gMr1m04F" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="MHI" fieldId="00ANxAK0gMr1m04B" id="00ANxAK0gMr1m04G" prntReqdInd="0" seq="5"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHI Related Entities" entityTypeId="++3qwBhS2etxm004" frequencyInd="0" id="00A9FWN0gMr0S01+" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHIRelatedEntities" nameSpace="MHI">
+      <part beRelationId="00A9FWN0gMr0S023" defNameSpace="MHI" id="00A9FWN0gMr0S029" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="Publishing" entityTypeId="++3qwBhS2etxm004" frequencyInd="0" id="++ACCSJmgMr0S020" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="Publishing" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="++ACCSJmgMr0S01p" id="++ACCSJmgMr0S022" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="++ACCSJmgMr0S01x" id="++ACCSJmgMr0S023" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="MHI" fieldId="++ACCSJmgMr0S01z" id="++ACCSJmgMr0S024" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S01d" id="++ACCSJmgMr0S028" prntReqdInd="0" seq="3"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="Assets" entityTypeId="++3qwBhS2etxm004" frequencyInd="0" id="++AGUtdmgMr0u02j" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="Assets" nameSpace="MHI">
+      <part beRelationId="++AGqlxGgMr0u06M" defNameSpace="MHI" id="++AGqlxGgMr0u06V" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="this data group is by relation" displayCaption="Portfolio test" entityTypeId="++3qwBhS2etxm004" frequencyInd="0" id="++AFvVRGgMr0u00f" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHI_Portfolio" nameSpace="MHI">
+      <part beRelationId="++AGqlxGgMr0u05c" defNameSpace="MHI" id="++AGqlxGgMr0u05j" prntReqdInd="0" seq="0"/>
+      <part beRelationId="++AGqlxGgMr0u05n" defNameSpace="MHI" id="++AGqlxGgMr0u05u" prntReqdInd="0" seq="1"/>
+      <part dataGroupId="++AGUtdmgMr0u02j" defNameSpace="MHI" id="++AG-47GgMr0u02O" multiplicity="MULTIPLE_OR_NULL" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="MHI" fieldId="00AFhOYWgMr0u02b" id="++AFxvWmgMr0u00F" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="MHI" fieldId="00AFhOYWgMr0u02l" id="++AFxvWmgMr0u00G" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="MHI" fieldId="00AFhOYWgMr0u02d" id="00AGRML0gMr0u0CN" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="MHI" fieldId="00AFhOYWgMr0u02q" id="++AGAiGGgMr0u00B" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="MHI" fieldId="00AFhOYWgMr0u02n" id="++AGAiGGgMr0u00A" prntReqdInd="0" seq="7"/>
+      <part defNameSpace="MHI" fieldId="00AFhOYWgMr0u02u" id="00AGLjO0gMr0u001" prntReqdInd="0" seq="8"/>
+      <part defNameSpace="MHI" fieldId="00AFhOYWgMr0u02j" id="++AGAiGGgMr0u00C" prntReqdInd="0" seq="9"/>
+      <part defNameSpace="MHI" fieldId="00AFhOYWgMr0u04H" id="++AGAiGGgMr0u00V" prntReqdInd="0" seq="10"/>
+      <part defNameSpace="MHI" fieldId="00AFhOYWgMr0u04M" id="++AGAiGGgMr0u00k" prntReqdInd="0" seq="11"/>
+      <part defNameSpace="MHI" fieldId="00AFhOYWgMr0u02w" id="00AGLjO0gMr0u000" prntReqdInd="0" seq="12"/>
+      <part defNameSpace="MHI" fieldId="00AFlUZWgMr0u01D" id="00AGRML0gMr0u0CF" prntReqdInd="0" seq="13"/>
+      <part defNameSpace="MHI" fieldId="++AGUtdmgMr0u015" id="++AGUtdmgMr0u016" prntReqdInd="0" seq="14"/>
+      <part defNameSpace="MHI" fieldId="++AGUtdmgMr0u00c" id="++AGUtdmgMr0u00d" prntReqdInd="0" seq="15"/>
+      <part defNameSpace="MHI" fieldId="++AGUtdmgMr0u00t" id="++AGUtdmgMr0u00v" prntReqdInd="0" seq="16"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm004" frequencyInd="0" id="++4Hqs3S2etry00M" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="Issuer- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="00A9FWN0gMr0S01+" defNameSpace="MHI" id="00A9FWN0gMr0S020" prntReqdInd="0" seq="30"/>
+      <part dataGroupId="++ACCSJmgMr0S020" defNameSpace="MHI" id="++ACCSJmgMr0S021" prntReqdInd="0" seq="31"/>
+      <part dataGroupId="++AFvVRGgMr0u00f" defNameSpace="MHI" displayCaption="Portfolio" id="++AFvVRGgMr0u00h" prntReqdInd="0" seq="32"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="00A9FWN0gMr0S024" name="FT_T_ISSR-To-FT_T_ISSU00" nameSpace="MHI" srcTable="FT_T_ISSR" tgtTable="FT_T_ISSU">
+      <field fromColumn="INSTR_ISSR_ID" id="00A9FWN0gMr0S025" nameSpace="MHI" toColumn="INSTR_ISSR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AFvVRGgMr0u00a" name="FT_T_ISSR-To-FT_T_ISSU01" nameSpace="MHI" srcTable="FT_T_ISSR" tgtTable="FT_T_ISSU">
+      <field fromColumn="INSTR_ISSR_ID" id="++AFvVRGgMr0u00b" nameSpace="MHI" toColumn="INSTR_ISSR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AFvVRGgMr0u01S" name="FT_T_ISSR-To-FT_T_ISSU02" nameSpace="MHI" srcTable="FT_T_ISSR" tgtTable="FT_T_ISSU">
+      <field fromColumn="INSTR_ISSR_ID" id="++AFvVRGgMr0u01T" nameSpace="MHI" toColumn="INSTR_ISSR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="(#TO_TABLE#.pub_audit_id || #TO_TABLE#.pub_sq_num) =  (&#10;select pub_audit_id || pub_sq_num from (&#10;select pub_audit_id , p.pub_sq_num , row_number() OVER (partition by pub_cross_reF_id order by last_chg_tms desc) AS rownum&#10;from fT_T_pbat p where p.pub_cross_ref_id = #TO_TABLE#.pub_cross_ref_id) a where rownum=1&#10;)" id="++ACCSJmgMr0S01m" name="FT_T_ISSR-To-FT_T_PBAT00" nameSpace="MHI" srcTable="FT_T_ISSR" tgtTable="FT_T_PBAT">
+      <field fromColumn="INSTR_ISSR_ID" id="++ACCSJmgMr0S01n" nameSpace="MHI" toColumn="PUB_CROSS_REF_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="#TO_TABLE#.upd1_oid =  (&#10;select upd1_oid  from (&#10;select u.upd1_oid , row_number() over (partition by xref_tbl_row_oid order by u.version desc ) rownum&#10;from fT_T_upd1 u where u.xref_tbl_row_oid = #TO_TABLE#.xref_tbl_row_oid ) a where rownum = 1&#10;)" id="++ACCSJmgMr0S01t" name="FT_T_ISSR-To-FT_T_UPD100" nameSpace="MHI" srcTable="FT_T_ISSR" tgtTable="FT_T_UPD1">
+      <field fromColumn="INSTR_ISSR_ID" id="++ACCSJmgMr0S01u" nameSpace="MHI" toColumn="XREF_TBL_ROW_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="#TO_TABLE#.ISS_TYP='PORT'" id="++AFxvWmgMr0u000" name="FT_T_ISSR-To-FT_T_ISSUPortfolio" nameSpace="MHI" srcTable="FT_T_ISSR" tgtTable="FT_T_ISSU">
+      <field fromColumn="INSTR_ISSR_ID" id="++AFxvWmgMr0u001" nameSpace="MHI" toColumn="INSTR_ISSR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="#TO_TABLE#.PRT_PURP_TYP = 'PRTFLIOP'" id="00AGLjO0gMr0u01I" name="ISSU-AssetInfo-ISGP" nameSpace="MHI" srcTable="FT_T_ISSU" tgtTable="FT_T_ISGP">
+      <field fromColumn="INSTR_ID" id="00AGLjO0gMr0u01J" nameSpace="MHI" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="#TO_TABLE#.PRT_PURP_TYP = 'PRTFLIOC'" id="++AG-47GgMr0u02M" name="PortfolioParentToPortfolioChild" nameSpace="MHI" srcTable="FT_T_ISGP" tgtTable="FT_T_ISGP">
+      <field fromColumn="PRNT_ISS_GRP_OID" id="++AG-47GgMr0u02N" nameSpace="MHI" toColumn="PRNT_ISS_GRP_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AGqlxGgMr0u06N" name="FT_T_ISGP-To-FT_T_ISSU00" nameSpace="MHI" srcTable="FT_T_ISGP" tgtTable="FT_T_ISSU">
+      <field fromColumn="INSTR_ID" id="++AGqlxGgMr0u06O" nameSpace="MHI" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AFgoUGgMr0u1-X" name="FT_T_ISSU-To-FT_T_ISLL01" nameSpace="MHI" srcTable="FT_T_ISSU" tgtTable="FT_T_ISLL">
+      <field fromColumn="INSTR_ID" id="++AFgoUGgMr0u1-Y" nameSpace="MHI" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AGAiGGgMr0u00q" name="FT_T_ISSU-To-FT_T_RIDFportCLINKED" nameSpace="MHI" srcTable="FT_T_ISSU" tgtTable="FT_T_RIDF">
+      <field fromColumn="INSTR_ID" id="++AGAiGGgMr0u00r" nameSpace="MHI" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AGAiGGgMr0u00u" name="FT_T_RIDF-To-FT_T_RISSportCLINKED" nameSpace="MHI" srcTable="FT_T_RIDF" tgtTable="FT_T_RISS">
+      <field fromColumn="RLD_ISS_FEAT_ID" id="++AGAiGGgMr0u00v" nameSpace="MHI" toColumn="RLD_ISS_FEAT_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AGqlxGgMr0u05d" name="FT_T_RISS-To-FT_T_ISSUPortfolioInformation" nameSpace="MHI" srcTable="FT_T_RISS" tgtTable="FT_T_ISSU">
+      <field fromColumn="INSTR_ID" id="++AGqlxGgMr0u05e" nameSpace="MHI" toColumn="INSTR_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AGqlxGgMr0u02y" name="FT_T_FRIP-To-FT_T_FINS01" nameSpace="MHI" srcTable="FT_T_FRIP" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="++AGqlxGgMr0u02z" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AGqlxGgMr0u05o" name="FT_T_FRIP-To-FT_T_FINS03" nameSpace="MHI" srcTable="FT_T_FRIP" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="++AGqlxGgMr0u05p" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Issuer" id="++4GrmAy2etwa0BL" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISSR_01" nameSpace="GSC" table="FT_T_ISSR" timeSeries="NONE">
+      <field id="00A9FWN0gMr0S026" nameSpace="MHI" relationId="00A9FWN0gMr0S024"/>
+      <field id="++AFvVRGgMr0u00c" nameSpace="MHI" relationId="++AFvVRGgMr0u00a"/>
+      <field id="++AFvVRGgMr0u01U" nameSpace="MHI" relationId="++AFvVRGgMr0u01S"/>
+      <field desc="Data Source ID" id="00A9ExEWgMr0S00W" name="DATA_SRC_ID" nameSpace="MHI"/>
+      <field desc="Data Status" id="00A9ExEWgMr0S00V" name="DATA_STAT_TYP" nameSpace="MHI"/>
+      <field desc="Fins Financial Institution OID" id="++A8qWEGgMr0S00a" name="FINS_INST_MNEM" nameSpace="MHI"/>
+      <field desc="Instrument Issuer ID" id="00A9FWN0gMr0S01a" name="INSTR_ISSR_ID" nameSpace="MHI"/>
+      <field desc="Start Date/Time" id="++A8-wgGgMr0S0S4" name="START_TMS" nameSpace="MHI"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issuer Group Participant" id="006IilvC2etpe00L" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="IRGP_ISSR" nameSpace="GSC" parentId="++4GrmAy2etwa0BL" table="FT_T_IRGP" timeSeries="LOGICAL_DELETE">
+      <field desc="End Date/Time" id="00ANxAK0gMr1m04A" name="END_TMS" nameSpace="MHI"/>
+      <field desc="Last Change Date/Time" id="00AIe3sWgMr0u023" name="LAST_CHG_TMS" nameSpace="MHI"/>
+      <field desc="Last Change User ID" id="00AIe3sWgMr0u024" name="LAST_CHG_USR_ID" nameSpace="MHI"/>
+      <field desc="Start Date/Time" id="00ANxAK0gMr1m049" name="START_TMS" nameSpace="MHI"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Publishing Audit" id="++ACCSJmgMr0S01k" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PBAT_ISSR_MHI" nameSpace="MHI" parentId="++4GrmAy2etwa0BL" relationId="++ACCSJmgMr0S01m" table="FT_T_PBAT" timeSeries="LOGICAL_DELETE">
+      <field desc="Last Change Date/Time" id="++ACCSJmgMr0S01o" name="LAST_CHG_TMS" nameSpace="MHI"/>
+      <option id="++ACCSJmgMr0S01l" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Entity Update Timestamp" id="++ACCSJmgMr0S01r" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="UPD1_ISSR_MHI" nameSpace="MHI" parentId="++4GrmAy2etwa0BL" relationId="++ACCSJmgMr0S01t" table="FT_T_UPD1" timeSeries="LOGICAL_DELETE">
+      <field desc="Last Update Timestanp" id="++ACCSJmgMr0S01v" name="UPDATED_TMSMP" nameSpace="MHI"/>
+      <field desc="Entity Version Number" id="++ACCSJmgMr0S01w" name="VERSION" nameSpace="MHI"/>
+      <option id="++ACCSJmgMr0S01s" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Porfolio under Issuer" id="++AFgoUGgMr0u1-T" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHI_ISSR_ISSU_PORTFOLIO_INFO" nameSpace="MHI" parentId="++4GrmAy2etwa0BL" relationId="++AFxvWmgMr0u000" table="FT_T_ISSU" timeSeries="LOGICAL_DELETE">
+      <field desc="Preferred Issue Name" id="++AFgoUGgMr0u1-d" name="PREF_ISS_NME" nameSpace="MHI"/>
+      <field desc="Series" id="++AFgoUGgMr0u1-e" name="SERIES_TYP" nameSpace="MHI"/>
+      <value id="++AFxvWmgMr0u00E" name="ISS_TYP" nameSpace="MHI" type="FILTER_FIELD" value="PORT" valueType="CONSTANT"/>
+      <option id="++AFgoUGgMr0u1-U" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issue Group Participant" id="00AGLjO0gMr0u01G" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHI_ISSU_ISGP_ASSETINFO" nameSpace="MHI" parentId="++AFgoUGgMr0u1-T" relationId="00AGLjO0gMr0u01I" table="FT_T_ISGP" timeSeries="LOGICAL_DELETE">
+      <option id="00AGLjO0gMr0u01H" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issue Group Participant" id="++AG-47GgMr0u02K" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="ISGP_PRTFLIOC" nameSpace="MHI" parentId="00AGLjO0gMr0u01G" relationId="++AG-47GgMr0u02M" table="FT_T_ISGP" timeSeries="LOGICAL_DELETE">
+      <field id="++AGqlxGgMr0u06P" nameSpace="MHI" relationId="++AGqlxGgMr0u06N"/>
+      <option id="++AG-47GgMr0u02L" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issue Collateral where isll.coll_typ='Subordinated' or 'Secured' based on which we populate their dummy fields as Yes" id="++AFgoUGgMr0u1-V" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISLL_COLLTYP" nameSpace="MHI" parentId="++AFgoUGgMr0u1-T" relationId="++AFgoUGgMr0u1-X" table="FT_T_ISLL" timeSeries="LOGICAL_DELETE">
+      <field desc="Collateral Type" id="++AFgoUGgMr0u1-Z" name="COLL_TYP" nameSpace="MHI"/>
+      <option id="++AFgoUGgMr0u1-W" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issue Statistic fields where=&quot;%ALIAS%.stat_def_id='MIZRECAL'&quot; - &#10;- stat_int_val_num&#10;- stat_char_val_txt" id="++AFgoUGgMr0u1-i" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISSR_ISSU_ISST_MIZRECAL" nameSpace="MHI" parentId="++AFgoUGgMr0u1-T" table="FT_T_ISST" timeSeries="LOGICAL_DELETE">
+      <field desc="Statistic Character Value" id="++AFgoUGgMr0u1-k" name="STAT_CHAR_VAL_TXT" nameSpace="MHI"/>
+      <field desc="Statistic Integer Value" id="++AFgoUGgMr0u1-l" name="STAT_INT_VAL_NUM" nameSpace="MHI"/>
+      <field desc="Statistic Date/Time Value" id="++AFgoUGgMr0u1-+" name="STAT_VAL_TMS" nameSpace="MHI"/>
+      <value id="00AFhOYWgMr0u02M" name="STAT_DEF_ID" nameSpace="MHI" type="FILTER_FIELD" value="MIZRECAL" valueType="CONSTANT"/>
+      <option id="++AFgoUGgMr0u1-j" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issue Collateral where IssueCollateral[isll.coll_typ='Mortgage Backed']/isll.coll_grp_desc" id="++AFgoUGgMr0u1-y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISLL_MortgageBacked" nameSpace="MHI" parentId="++AFgoUGgMr0u1-T" relationId="++AFgoUGgMr0u1-X" table="FT_T_ISLL" timeSeries="LOGICAL_DELETE">
+      <field desc="Collateral Group Description" id="++AFgoUGgMr0u1--" name="COLL_GRP_DESC" nameSpace="MHI"/>
+      <value id="00AFhOYWgMr0u028" name="COLL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="Mortgage Backed" valueType="CONSTANT"/>
+      <option id="++AFgoUGgMr0u1-z" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issue Classification" id="++AGAiGGgMr0u00G" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHI_ISSU_ISCL_PORTUNIQ" nameSpace="MHI" parentId="++AFgoUGgMr0u1-T" table="FT_T_ISCL" timeSeries="LOGICAL_DELETE">
+      <field desc="Classification Value" id="++AGAiGGgMr0u00Q" name="CL_VALUE" nameSpace="MHI"/>
+      <value id="++AGqlxGgMr0u04+" name="CLSF_PURP_TYP" nameSpace="MHI" type="FILTER_FIELD" value="INDCLASS" valueType="CONSTANT"/>
+      <value id="++AGAiGGgMr0u00P" name="INDUS_CL_SET_ID" nameSpace="MHI" type="FILTER_FIELD" value="MIZUNIQE" valueType="CONSTANT"/>
+      <option id="++AGAiGGgMr0u00H" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="++AGAiGGgMr0u00I" nameSpace="MHI" type="DEFAULT_MATCH_KEY" value="ISCL_MATCH_SET_PURP"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Industry Classification" id="++AGAiGGgMr0u00J" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHI_ISSU_ISCL_INCL_PORTUNIQ" nameSpace="MHI" parentId="++AGAiGGgMr0u00G" table="FT_T_INCL" timeSeries="LOGICAL_DELETE">
+      <field desc="Classification Value" id="++AGAiGGgMr0u00S" name="CL_VALUE" nameSpace="MHI"/>
+      <value id="++AGAiGGgMr0u00R" name="INDUS_CL_SET_ID" nameSpace="MHI" type="FILTER_FIELD" value="MIZUNIQE" valueType="CONSTANT"/>
+      <value id="++AGqlxGgMr0u02s" name="LEVEL_NUM" nameSpace="MHI" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <option id="++AGAiGGgMr0u00K" nameSpace="MHI" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="++AGAiGGgMr0u00L" nameSpace="MHI" type="DEFAULT_MATCH_KEY" value="INCL_VALUE_NUM"/>
+      <option id="++AGAiGGgMr0u00M" nameSpace="MHI" type="LOOKUP_ONLY" value="true"/>
+      <option id="++AGAiGGgMr0u00N" nameSpace="MHI" type="LOOKUP_ERR_LEVEL" value="ERROR"/>
+      <option id="++AGAiGGgMr0u00O" nameSpace="MHI" type="LOOKUP_ERR_TXT"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Related Issue Definition" id="++AGAiGGgMr0u00o" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHI_ISSU_RIDF_PORTCLINKED" nameSpace="MHI" parentId="++AFgoUGgMr0u1-T" relationId="++AGAiGGgMr0u00q" table="FT_T_RIDF" timeSeries="LOGICAL_DELETE">
+      <value id="++AGAiGGgMr0u00x" name="REL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="CREDLINK" valueType="CONSTANT"/>
+      <option id="++AGAiGGgMr0u00p" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Related Issue" id="++AGAiGGgMr0u00s" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHI_ISSU_RIDF_RISS_PORTCLINKED" nameSpace="MHI" parentId="++AGAiGGgMr0u00o" relationId="++AGAiGGgMr0u00u" table="FT_T_RISS" timeSeries="LOGICAL_DELETE">
+      <field id="++AGqlxGgMr0u05f" nameSpace="MHI" relationId="++AGqlxGgMr0u05d"/>
+      <value id="++AGAiGGgMr0u00w" name="ISS_PART_RL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="UNDLYING" valueType="CONSTANT"/>
+      <option id="++AGAiGGgMr0u00t" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Issue Statistic fields where=&quot;%ALIAS%.stat_def_id='MIZDRVRL'&quot;  - &#10;- stat_char_val_txt" id="00AFhOYWgMr0u02S" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISSR_ISSU_ISST_MIZDRVRL" nameSpace="MHI" parentId="++AFgoUGgMr0u1-T" table="FT_T_ISST" timeSeries="LOGICAL_DELETE">
+      <field desc="Statistic Character Value" id="00AFhOYWgMr0u02V" name="STAT_CHAR_VAL_TXT" nameSpace="MHI"/>
+      <value id="00AFhOYWgMr0u02U" name="STAT_DEF_ID" nameSpace="MHI" type="FILTER_FIELD" value="MIZDRVRL" valueType="CONSTANT"/>
+      <option id="00AFhOYWgMr0u02T" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Fins Role/Issue Participant" id="00AFqb+WgMr0u01f" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHI_ISSU_FRIP_FINS_GUARNTOR" nameSpace="MHI" parentId="++AFgoUGgMr0u1-T" table="FT_T_FRIP" timeSeries="LOGICAL_DELETE">
+      <field id="++AGqlxGgMr0u02-" nameSpace="MHI" relationId="++AGqlxGgMr0u02y"/>
+      <field id="++AGqlxGgMr0u05q" nameSpace="MHI" relationId="++AGqlxGgMr0u05o"/>
+      <value id="00AFqb+WgMr0u01h" name="FINSRL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="GUARNTOR" valueType="CONSTANT"/>
+      <option id="00AFqb+WgMr0u01g" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++A8qWEGgMr0S00b" groupMapping="0" id="++A8qWEGgMr0S00c" nameSpace="MHI" occFieldId="++A8qWEGgMr0S00a"/>
+    <mapping beFieldId="++A8-wgGgMr0S0S5" groupMapping="0" id="++A8-wgGgMr0S0S6" nameSpace="MHI" occFieldId="++A8-wgGgMr0S0S4"/>
+    <mapping beFieldId="00A9ExEWgMr0S00Z" groupMapping="0" id="00A9ExEWgMr0S00a" nameSpace="MHI" occFieldId="00A9ExEWgMr0S00V"/>
+    <mapping beFieldId="00A9ExEWgMr0S00X" groupMapping="0" id="00A9ExEWgMr0S00Y" nameSpace="MHI" occFieldId="00A9ExEWgMr0S00W"/>
+    <mapping beFieldId="00AIe3sWgMr0u025" groupMapping="0" id="00AIe3sWgMr0u026" nameSpace="MHI" occFieldId="00AIe3sWgMr0u023"/>
+    <mapping beFieldId="00AIe3sWgMr0u027" groupMapping="0" id="00AIe3sWgMr0u028" nameSpace="MHI" occFieldId="00AIe3sWgMr0u024"/>
+    <mapping beFieldId="00ANxAK0gMr1m04D" groupMapping="0" id="00ANxAK0gMr1m04E" nameSpace="MHI" occFieldId="00ANxAK0gMr1m04A"/>
+    <mapping beFieldId="00ANxAK0gMr1m04B" groupMapping="0" id="00ANxAK0gMr1m04C" nameSpace="MHI" occFieldId="00ANxAK0gMr1m049"/>
+    <mapping beRelationId="00A9FWN0gMr0S023" groupMapping="0" id="00A9FWN0gMr0S027" nameSpace="MHI" occFieldId="00A9FWN0gMr0S026"/>
+    <mapping beFieldId="++ACCSJmgMr0S01p" groupMapping="0" id="++ACCSJmgMr0S01q" nameSpace="MHI" occFieldId="++ACCSJmgMr0S01o"/>
+    <mapping beFieldId="++ACCSJmgMr0S01x" groupMapping="0" id="++ACCSJmgMr0S01y" nameSpace="MHI" occFieldId="++ACCSJmgMr0S01v"/>
+    <mapping beFieldId="++ACCSJmgMr0S01z" groupMapping="0" id="++ACCSJmgMr0S01+" nameSpace="MHI" occFieldId="++ACCSJmgMr0S01w"/>
+    <mapping beFieldId="00A9FWN0gMr0S01d" groupMapping="0" id="00A9FWN0gMr0S01e" nameSpace="MHI" occFieldId="00A9FWN0gMr0S01a"/>
+    <mapping beRelationId="++AGqlxGgMr0u06M" groupMapping="0" id="++AGqlxGgMr0u06Q" nameSpace="MHI" occFieldId="++AGqlxGgMr0u06P"/>
+    <mapping beRelationId="++AGqlxGgMr0u05c" groupMapping="0" id="++AGqlxGgMr0u05g" nameSpace="MHI" occFieldId="++AGqlxGgMr0u05f"/>
+    <mapping beRelationId="++AGqlxGgMr0u05n" groupMapping="0" id="++AGqlxGgMr0u05r" nameSpace="MHI" occFieldId="++AGqlxGgMr0u05q"/>
+    <mapping beFieldId="00AFhOYWgMr0u02b" groupMapping="0" id="00AFhOYWgMr0u02c" nameSpace="MHI" occFieldId="++AFgoUGgMr0u1-d"/>
+    <mapping beFieldId="00AFhOYWgMr0u02l" groupMapping="0" id="00AFhOYWgMr0u02m" nameSpace="MHI" occFieldId="++AFgoUGgMr0u1-e"/>
+    <mapping beFieldId="00AFhOYWgMr0u02d" groupMapping="0" id="00AGRML0gMr0u0CM" nameSpace="MHI" occFieldId="++AFgoUGgMr0u1-Z"/>
+    <mapping beFieldId="00AFhOYWgMr0u02q" groupMapping="0" id="00AFhOYWgMr0u02r" nameSpace="MHI" occFieldId="++AFgoUGgMr0u1-k"/>
+    <mapping beFieldId="00AFhOYWgMr0u02n" groupMapping="0" id="00AFhOYWgMr0u02p" nameSpace="MHI" occFieldId="++AFgoUGgMr0u1-l"/>
+    <mapping beFieldId="00AFhOYWgMr0u02u" groupMapping="0" id="00AFhOYWgMr0u02v" nameSpace="MHI" occFieldId="++AFgoUGgMr0u1-+"/>
+    <mapping beFieldId="00AFhOYWgMr0u02j" groupMapping="0" id="00AFhOYWgMr0u02k" nameSpace="MHI" occFieldId="++AFgoUGgMr0u1--"/>
+    <mapping beFieldId="00AFhOYWgMr0u04H" groupMapping="0" id="++AGAiGGgMr0u00T" nameSpace="MHI" occFieldId="++AGAiGGgMr0u00Q"/>
+    <mapping beFieldId="00AFhOYWgMr0u04H" groupMapping="0" id="++AGAiGGgMr0u00U" nameSpace="MHI" occFieldId="++AGAiGGgMr0u00S"/>
+    <mapping beFieldId="00AFhOYWgMr0u02w" groupMapping="0" id="00AFhOYWgMr0u02x" nameSpace="MHI" occFieldId="00AFhOYWgMr0u02V"/>
+  </mappings>
+  <entityRelations>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++4Hqs3S2etry00L" id="++5qymmy2etpe000" lookupField="++4eFFHy2etv4017" multiplicity="SINGLE_OR_NULL" name="FinancialInstitution" nameSpace="GSC" rltdEntityId="++4HwLjy2etpy007">
+      <part forPublishing="1" forUI="1" id="++5qymmy2etpe007" nameSpace="GSC" partId="++4eFFHy2etv4017"/>
+      <part forPublishing="1" forUI="1" id="++5qymmy2etpe009" nameSpace="GSC" partId="++5ZqLUy2etse0Dj"/>
+      <part forPublishing="1" forUI="1" id="++5qymmy2etpe00A" nameSpace="GSC" partId="++5ZqLUy2etse0Dk"/>
+      <part forPublishing="1" forUI="1" id="++5qymmy2etpe008" nameSpace="GSC" partId="004gu4GC2etry00H"/>
+      <part forPublishing="0" forUI="1" id="++AFxvWmgMr0u023" nameSpace="MHI" partId="005kiLnC2etqS026"/>
+    </entityRelation>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++4Hqs3S2etry00L" id="00A9FWN0gMr0S023" lookupField="00A9FWN0gMr0S01l" multiplicity="SINGLE_OR_NULL" name="RelatedIssue" nameSpace="MHI" rltdEntityId="++5SQ0Ly2etse000">
+      <part forPublishing="0" forUI="1" id="00A9FWN0gMr0S028" nameSpace="MHI" partId="00A9FWN0gMr0S01l"/>
+    </entityRelation>
+    <entityRelation entityId="++4Hqs3S2etry00L" id="++AGqlxGgMr0u06M" lookupField="005Q5i8i2etse005" multiplicity="SINGLE_OR_NULL" name="MHIissrAssetInformationISGPtoISSU" nameSpace="MHI" rltdEntityId="++5SQ0Ly2etse000">
+      <part forPublishing="0" forUI="1" id="++AGqlxGgMr0u06U" nameSpace="MHI" partId="++ABu5pGgMr0S01s"/>
+      <part forPublishing="0" forUI="1" id="++AGqlxGgMr0u06R" nameSpace="MHI" partId="005Q5i8i2etse002"/>
+      <part forPublishing="0" forUI="1" id="++AGqlxGgMr0u06T" nameSpace="MHI" partId="005Q5i8i2etse004"/>
+      <part forPublishing="0" forUI="1" id="++AGqlxGgMr0u06S" nameSpace="MHI" partId="005Q5i8i2etse005"/>
+    </entityRelation>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++4Hqs3S2etry00L" id="++AGqlxGgMr0u05c" lookupField="005Q5i8i2etse005" multiplicity="MULTIPLE_OR_NULL" name="MHIissrPortfolioRISStoISSU" nameSpace="MHI" rltdEntityId="++5SQ0Ly2etse000">
+      <part forPublishing="0" forUI="1" id="++AGqlxGgMr0u05h" nameSpace="MHI" partId="005Q5i8i2etse002"/>
+      <part forPublishing="0" forUI="1" id="++AGqlxGgMr0u05i" nameSpace="MHI" partId="005Q5i8i2etse005"/>
+    </entityRelation>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++4Hqs3S2etry00L" id="++AGqlxGgMr0u05n" lookupField="++5ZqLUy2etse0Dk" multiplicity="MULTIPLE_OR_NULL" name="MHIissrPortfolioFRIPtoFINS" nameSpace="MHI" rltdEntityId="++4HwLjy2etpy007">
+      <part forPublishing="0" forUI="1" id="++AGqlxGgMr0u05s" nameSpace="MHI" partId="++4eFFHy2etv4017"/>
+      <part forPublishing="0" forUI="1" id="++AGqlxGgMr0u05t" nameSpace="MHI" partId="++5ZqLUy2etse0Dk"/>
+    </entityRelation>
+  </entityRelations>
+  <naturalKeys>
+    <naturalKey dataGroupId="++AGUtdmgMr0u02j" id="++AGqlxGgMr0u06X" name="AssetsNaturalKey" nameSpace="MHI">
+      <part beFieldId="++AGqlxGgMr0u06V" id="++AGqlxGgMr0u06Y" nameSpace="MHI"/>
+    </naturalKey>
+    <naturalKey dataGroupId="++AFvVRGgMr0u00f" id="++AFxvWmgMr0u01d" name="MHI_PortfolioNaturalKey" nameSpace="MHI">
+      <part beFieldId="++AFxvWmgMr0u00F" id="++AFxvWmgMr0u01e" nameSpace="MHI"/>
+    </naturalKey>
+  </naturalKeys>
+</entities>

@@ -1,0 +1,26 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "UltimateParentUpdatePublish" ],
+  "title" : "UlitmateParentUpdatePublish",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Everyday",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "begin" : "07:15:00",
+      "end" : "23:59:59",
+      "repeat" : "01:00:00",
+      "whenHoliday" : "SUPPRESS"
+    }, {
+      "singleStart" : "00:15:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

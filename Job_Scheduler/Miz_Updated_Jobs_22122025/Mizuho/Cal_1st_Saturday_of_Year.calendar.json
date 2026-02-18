@@ -1,0 +1,8 @@
+{
+  "version" : "1.7.3",
+  "type" : "WORKINGDAYSCALENDAR",
+  "title" : "Cal_1st_Saturday_of_Year",
+  "includes" : {
+    "dates" : [ "2026-01-03", "2027-01-02", "2025-01-04" ]
+  }
+}

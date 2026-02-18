@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="LegalAgreement" createdUser="user1" freezeColumns="" id="?&lt;6VF11jW1" isDefault="N" isPublic="N" lookupId="ClearingAgreementsAndGuarantees" pageSize="50" screenType="SYSTEMSRCH" title="MBE_LAGRCEA_Search">
+  <users>
+    <user id="Pf6*01z9e1" user="" userGroup="" userRole="legaldepartment_MBE"/>
+    <user id="Pf6-01z9e1" user="" userGroup="" userRole="creditdepartment_MBE"/>
+    <user id="Pf6&amp;01z9e1" user="" userGroup="" userRole="data_office_MBE"/>
+    <user id="Pf6@01z9e1" user="" userGroup="" userRole="readonly_MBE"/>
+  </users>
+  <config>{}</config>
+  <buttons/>
+  <columns>
+    <column caption="Agreement Label" columnName="Agreement Description" fieldName="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementDescription" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tQm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Agreement Type" fieldName="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tRm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Organization ID" fieldName="ClearingAgreementsAndGuarantees.LegalAgreementDetail.Organization.Enterprise.EnterpriseInformation.OrganizationID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="MBE" filterable="N" fromRange="" id="(/tSm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="Legal Entity" columnName="BB Company ID" fieldName="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity.FinancialInstitution.FinancialInstitutionIdentifiers.BBCompanyID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tTm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Agreement Purpose" fieldName="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementPurpose" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="LGAGTCEA" filterable="N" fromRange="" id="(/tUm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Agreement Status" fieldName="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tVm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="AgreementSignatureDate" fieldName="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementSignatureDate" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tWm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="GS Agreement Reference" fieldName="ClearingAgreementsAndGuarantees.MHIAgreementReference.LAIDLAGRLeglAgrmntID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tXm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="7" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Old Style CSA" fieldName="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAANLAGRCSAMHIAnnexStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tYm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="8" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Variation Margin CSA" fieldName="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAANLAGRCSAVariationMarginCSA" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tZm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="9" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Initial Margin CSA" fieldName="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAANLAGRCSAMHIInitialMarginCSA" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tam&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="10" showRelLink="" sort="" toRange="" width="200"/>
+  </columns>
+</root>

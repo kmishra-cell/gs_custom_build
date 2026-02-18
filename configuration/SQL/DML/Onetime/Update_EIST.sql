@@ -1,0 +1,1 @@
+update ft_t_eist set iscd_oid = 'ETF=======', last_chg_tms=sysdate(), last_chg_usr_id='MHI:CSTM' where ext_iss_typ_txt='ETP' and end_tms is null;

@@ -1,0 +1,1 @@
+CREATE INDEX ft_x_isgp_p002 ON gc_own.ft_t_isgp USING btree (ISS_GRP_OID);

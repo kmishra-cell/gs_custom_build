@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="Futures" entitySubType="[]" id="Jn5fB1ftW1" isDefault="Y" isPublic="Y" screenType="SYSTEMFORM" title="F: MHI_Futures">
+  <control caption="Details" columns="2" fullQualPath="" hideDetail="N" id="NsAd41rge1" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="PAGEVIEW">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Summary" columns="2" fullQualPath="" hideDetail="N" id="NsAe41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Publishing and Update" columns="2" fullQualPath="" hideDetail="N" id="NsAf41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAe41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <buttons>
+          <button caption="Re-Publish" id="NsAj41rge1">
+            <property name="Event Type" value="GenericEvent"/>
+            <property name="Event Name" value="MizuhoPublishing"/>
+            <property name="Type" value="event"/>
+            <property name="EntityId" value="Futures.InstrumentDetails.ISSUInstrId"/>
+            <property name="AlwaysVisible" value="true"/>
+          </button>
+        </buttons>
+        <control caption="Last Updated" columns="2" fullQualPath="Futures.Publishing.UPD1ISSULastUpdated" hideDetail="N" id="NsAg41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAf41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Version" columns="2" fullQualPath="Futures.Publishing.UPD1ISSUVersion" hideDetail="N" id="NsAh41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAf41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Published" columns="2" fullQualPath="Futures.Publishing.PBATISSULastchangeDate" hideDetail="N" id="NsAi41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAf41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description" columns="2" fullQualPath="" hideDetail="N" id="NsAp41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAe41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instrument Name" columns="2" fullQualPath="Futures.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="NsAq41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAp41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Description" columns="2" fullQualPath="Futures.InstrumentDetails.PreferredInstrumentDescription" hideDetail="N" id="NsAr41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAp41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Instrument Identifier Type" columns="2" fullQualPath="Futures.InstrumentDetails.PreferredIdentifierType" hideDetail="N" id="NsAs41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAp41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Issue Date" columns="2" fullQualPath="Futures.InstrumentDetails.IssueDate" hideDetail="N" id="NsAt41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsAp41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change User" columns="2" fullQualPath="Futures.InstrumentDetails.InstrumentLastChangeUser" hideDetail="N" id="NsAu41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsAp41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Details" columns="2" fullQualPath="Futures.InstrumentDetails" hideDetail="N" id="NsAv41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAe41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Instrument Type" columns="2" fullQualPath="Futures.InstrumentDetails.InstrumentType" hideDetail="N" id="NsAw41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Denominated Currency" columns="2" fullQualPath="Futures.InstrumentDetails.PrincipalCurrency" hideDetail="N" id="NsAx41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Par Value" columns="2" fullQualPath="Futures.InstrumentDetails.ParValue" hideDetail="N" id="NsAy41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Par Value Type" columns="2" fullQualPath="Futures.InstrumentDetails.ParValueType" hideDetail="N" id="NsAz41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Unit Of Measure" columns="2" fullQualPath="Futures.InstrumentDetails.UnitOfMeasure" hideDetail="N" id="NsA$41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Unit Size" columns="2" fullQualPath="Futures.InstrumentDetails.UnitSize" hideDetail="N" id="NsA%41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Date" columns="2" fullQualPath="Futures.InstrumentDetails.MaturityDate" hideDetail="N" id="NsA@41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument System Status" columns="2" fullQualPath="Futures.InstrumentDetails.InstrumentSystemStatus" hideDetail="N" id="NsA&amp;amp;41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="When Issued Indicator" columns="2" fullQualPath="Futures.InstrumentDetails.WhenIssuedIndicator" hideDetail="N" id="NsA*41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Active Until" columns="2" fullQualPath="Futures.InstrumentDetails.ActiveUntil" hideDetail="N" id="NsA-41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Maturity Date" columns="2" fullQualPath="Futures.InstrumentDetails.FinalMaturity" hideDetail="N" id="NsA.41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Series" columns="2" fullQualPath="Futures.InstrumentDetails.Series" hideDetail="N" id="NsA/41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Security Form" columns="2" fullQualPath="Futures.InstrumentDetails.SecurityForm" hideDetail="N" id="NsA(41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Days To Settlement" columns="2" fullQualPath="Futures.InstrumentDetails.ISSUDaysToSettlement" hideDetail="N" id="NsA)41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Activity Status Date/Time" columns="2" fullQualPath="Futures.InstrumentDetails.InstrumentActivityStatusDateTime" hideDetail="N" id="NsA~41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Type" columns="2" fullQualPath="Futures.InstrumentDetails.InstrumentMaturityType" hideDetail="N" id="NsA?41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Illiquidity Indicator" columns="2" fullQualPath="Futures.InstrumentDetails.IlliquidityIndicator" hideDetail="N" id="NsA&amp;lt;41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Financial Instrument Short Name" columns="2" fullQualPath="Futures.InstrumentDetails.FinancialInstrumentShortName" hideDetail="N" id="NsA&amp;gt;41rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity/Expiration Extension Date" columns="2" fullQualPath="Futures.InstrumentDetails.MaturityExpirationExtensionDate" hideDetail="N" id="NsA051rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="NsAv41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issuer Details" columns="2" fullQualPath="" hideDetail="N" id="NsA151rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsAe41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Issuer Long Name" columns="2" fullQualPath="Futures.InstrumentDetails.Issuer.Issuer.IssuerInformation.IssuerName" hideDetail="N" id="NsA251rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsA151rge1" relatedPath="Futures.InstrumentDetails.Issuer" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issuer Name"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Issuer Identifier" columns="2" fullQualPath="Futures.InstrumentDetails.Issuer.Issuer.IssuerInformation.PreferredIssuerIdentifier" hideDetail="N" id="NsA351rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsA151rge1" relatedPath="Futures.InstrumentDetails.Issuer" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Issuer Identifier Type" columns="2" fullQualPath="Futures.InstrumentDetails.Issuer.Issuer.IssuerInformation.PreferredIssuerIdentifierType" hideDetail="N" id="NsA451rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsA151rge1" relatedPath="Futures.InstrumentDetails.Issuer" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Domicile" columns="2" fullQualPath="Futures.InstrumentDetails.Issuer.Issuer.ISOGeographicDetails.CountryOfDomicile" hideDetail="N" id="NsA551rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsA151rge1" relatedPath="Futures.InstrumentDetails.Issuer" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issuer Domicile"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trading Details" columns="2" fullQualPath="" hideDetail="N" id="NsA651rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsAe41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="First Notice Date" columns="2" fullQualPath="Futures.FuturesDetails.FirstNoticeDate" hideDetail="N" id="NsA751rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsA651rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Delivery Date" columns="2" fullQualPath="Futures.FuturesDetails.LastDeliveryDate" hideDetail="N" id="NsA851rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsA651rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="First Delivery Date" columns="2" fullQualPath="Futures.FuturesDetails.FirstDeliveryDate" hideDetail="N" id="NsA951rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsA651rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Contract Details" columns="2" fullQualPath="" hideDetail="N" id="NsAA51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsAe41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Tick Value" columns="2" fullQualPath="Futures.PrimaryMarket.PrimaryMarketTickValue" hideDetail="N" id="NsAB51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAA51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Tick Size" columns="2" fullQualPath="Futures.PrimaryMarket.PrimaryMktTickSize" hideDetail="N" id="NsAC51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAA51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Contract Value" columns="2" fullQualPath="Futures.FuturesDetails.ContractValue" hideDetail="N" id="NsAD51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAA51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Cheapest to Deliver Statistics" columns="2" fullQualPath="" hideDetail="N" id="NsAE51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsAe41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instrument Name" columns="2" fullQualPath="Futures.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="NsAF51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAE51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Sector Information" columns="2" fullQualPath="" hideDetail="N" id="NsAG51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsAe41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Country Of Risk" columns="2" fullQualPath="Futures.InstrumentGeographicalInformation.CountryOfRisk" hideDetail="N" id="NsAH51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAG51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Denominated Currency" columns="2" fullQualPath="Futures.InstrumentDetails.PrincipalCurrency" hideDetail="N" id="NsAI51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAG51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Currency"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Type" columns="2" fullQualPath="Futures.InstrumentDetails.InstrumentType" hideDetail="N" id="NsAJ51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAG51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exceptions" columns="2" fullQualPath="Futures.Exceptions" hideDetail="N" id="NsAK51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsAe41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Exceptions for Issue"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Description" columns="2" fullQualPath="Futures.InstrumentDescription" hideDetail="N" id="NsAL51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="5" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Identifiers" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers" hideDetail="N" id="NsAM51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="25" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Exchange Name" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.IdentifierMarketLookup.FinancialMarket.MarketDetails.MarketName" hideDetail="N" id="NsAN51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Value" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierValue" hideDetail="N" id="NsAO51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Context" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierIDContext" hideDetail="N" id="NsAP51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Usage" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierInstrumentUsage" hideDetail="N" id="NsAQ51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierOriginalDataProvider" hideDetail="N" id="NsAR51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierStartDateTime" hideDetail="N" id="NsAS51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trading Currency" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierTradingCurrency" hideDetail="N" id="NsAT51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="When Issued Indicator" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierWhenIssuedIndicator" hideDetail="N" id="NsAU51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierDataSourceID" hideDetail="N" id="NsAV51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierDataStatus" hideDetail="N" id="NsAW51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierEndDateTime" hideDetail="N" id="NsAX51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierLastChangeDateTime" hideDetail="N" id="NsAY51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Futures.AllInstrumentIdentifiers.AllIdentifierLastChangeUserID" hideDetail="N" id="NsAZ51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NsAM51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Identifiers"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Futures Details" columns="2" fullQualPath="Futures.FuturesDetails" hideDetail="N" id="NsAa51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument Comments" columns="2" fullQualPath="Futures.InstrumentComments" hideDetail="N" id="NsAb51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="5" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Comment Text" columns="2" fullQualPath="Futures.InstrumentComments.InstrumentCommentText" hideDetail="N" id="NsAc51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Status" columns="2" fullQualPath="Futures.InstrumentComments.InstrumentCommentStatus" hideDetail="N" id="NsAd51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Reason" columns="2" fullQualPath="Futures.InstrumentComments.InstrumentCommentReason" hideDetail="N" id="NsAe51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Line No." columns="2" fullQualPath="Futures.InstrumentComments.InstrumentCommentLineNo" hideDetail="N" id="NsAf51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Language" columns="2" fullQualPath="Futures.InstrumentComments.InstrumentCommentLanguage" hideDetail="N" id="NsAg51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Effective Date" columns="2" fullQualPath="Futures.InstrumentComments.InstrumentCommentEffectiveDate" hideDetail="N" id="NsAh51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Active Until" columns="2" fullQualPath="Futures.InstrumentComments.InstrumentCommentActiveUntil" hideDetail="N" id="NsAi51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Data Source" columns="2" fullQualPath="Futures.InstrumentComments.InstrumentCommentDataSource" hideDetail="N" id="NsAj51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Last Change Date" columns="2" fullQualPath="Futures.InstrumentComments.InstrumentCommentLastChangeDate" hideDetail="N" id="NsAk51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Large Instrument Comment" columns="2" fullQualPath="Futures.InstrumentComments.LargeInstrumentComments" hideDetail="N" id="NsAl51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Last Change User" columns="2" fullQualPath="Futures.InstrumentComments.InstrumentCommentLastChangeUser" hideDetail="N" id="NsAm51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NsAb51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issue Comments"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Classifications" columns="2" fullQualPath="Futures.AllInstrumentClassifications" hideDetail="N" id="NsAn51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="5" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Classification Value" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.ClassificationValue" hideDetail="N" id="NsAo51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Class Name" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.ClassName" hideDetail="N" id="NsAp51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Set" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.IndustryClassificationSetID" hideDetail="N" id="NsAq51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Value" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllInstrClsfIdentifier.InstrumentIdentifiers.IdentifiersDetails.IdentifierValue" hideDetail="N" id="NsAr51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Type" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllInstrClsfIdentifier.InstrumentIdentifiers.IdentifiersDetails.IdentifierType" hideDetail="N" id="NsAs51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit ID" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllInstrClsfGeoUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitID" hideDetail="N" id="NsAt51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit Type" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllInstrClsfGeoUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitType" hideDetail="N" id="NsAu51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Purpose" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllClassificationPurpose" hideDetail="N" id="NsAv51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllClassificationStartDateTime" hideDetail="N" id="NsAw51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllClassificationEndDateTime" hideDetail="N" id="NsAx51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllClassificationLastChangeDateTime" hideDetail="N" id="NsAy51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllClassificationLastChangeUserID" hideDetail="N" id="NsAz51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllClassificationDataSourceID" hideDetail="N" id="NsA$51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllClassificationDataStatus" hideDetail="N" id="NsA%51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllClassificationOriginalDataProvider" hideDetail="N" id="NsA@51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Description" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllClassificationIssueClassificationDescription" hideDetail="N" id="NsA&amp;amp;51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Value For Classification Amount" columns="2" fullQualPath="Futures.AllInstrumentClassifications.AllClassificationValueForClassificationAmount" hideDetail="N" id="NsA*51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="NsAn51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Classifications"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Instrument Calendar Details" columns="2" fullQualPath="Futures.InstrumentCalendarDetails" hideDetail="N" id="NsA-51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="5" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Calendar ID" columns="2" fullQualPath="Futures.InstrumentCalendarDetails.InstrumentCalendar.CalendarDefinition.Calendar.CalendarID" hideDetail="N" id="NsA.51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsA-51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Name" columns="2" fullQualPath="Futures.InstrumentCalendarDetails.InstrumentCalendar.CalendarDefinition.Calendar.CalendarName" hideDetail="N" id="NsA/51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsA-51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Purpose" columns="2" fullQualPath="Futures.InstrumentCalendarDetails.CalendarPurpose" hideDetail="N" id="NsA(51rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsA-51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Participant Description" columns="2" fullQualPath="Futures.InstrumentCalendarDetails.CalendarParticipantDescription" hideDetail="N" id="NsA)51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsA-51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Futures.InstrumentCalendarDetails.InstrumentCalendarStartDateTime" hideDetail="N" id="NsA~51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsA-51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="Futures.InstrumentCalendarDetails.InstrumentCalendarEndDateTime" hideDetail="N" id="NsA?51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsA-51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source ID" columns="2" fullQualPath="Futures.InstrumentCalendarDetails.InstrumentCalendarDataSourceId" hideDetail="N" id="NsA&amp;lt;51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsA-51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Futures.InstrumentCalendarDetails.InstrumentCalendarDataStatus" hideDetail="N" id="NsA&amp;gt;51rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsA-51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User ID" columns="2" fullQualPath="Futures.InstrumentCalendarDetails.IssueCalendarLastChangeUserID" hideDetail="N" id="NsA061rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsA-51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Futures.InstrumentCalendarDetails.IssueCalendarLastChangeDateTime" hideDetail="N" id="NsA161rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsA-51rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issue Calendar"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Underlying Related Instruments" columns="2" fullQualPath="Futures.UnderlyingRelatedInstruments" hideDetail="N" id="NsA261rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Related Instruments"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Market Listing" columns="2" fullQualPath="Futures.AllMarketListing" hideDetail="N" id="NsA361rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Exchange Name" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListExchange.FinancialMarket.MarketDetails.MarketName" hideDetail="N" id="NsA461rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MIC Code" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListExchange.FinancialMarket.MarketDetails.MICCode" hideDetail="N" id="NsA561rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Settlement Location Name" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSettLocation.SettlementLocation.SettlementLocationDetail.SettlementLocationName" hideDetail="N" id="NsA661rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="All Market Statistics" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics" hideDetail="N" id="NsA761rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Statistic Definition ID" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics.AllMarketStatistics.Statistics.StatisticsInformation.StatisticDefinitionID" hideDetail="N" id="NsA861rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsA761rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Statistic Description" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics.AllMarketStatistics.Statistics.StatisticsInformation.StatisticDescription" hideDetail="N" id="NsA961rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsA761rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Statistic Name" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics.AllMarketStatistics.Statistics.StatisticsInformation.StatisticName" hideDetail="N" id="NsAA61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsA761rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Statistic Value Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics.AllMarketStatistics.Statistics.StatisticsInformation.StatisticValueType" hideDetail="N" id="NsAB61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsA761rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Statistic Character Value" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics.AllMktListStatisticCharacterValue" hideDetail="N" id="NsAC61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsA761rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Statistic Amount Value" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics.AllMktListStatisticAmountValue" hideDetail="N" id="NsAD61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsA761rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Statistic Integer" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics.AllMktListStatisticIntegerValue" hideDetail="N" id="NsAE61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsA761rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Statistic Date Value" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics.AllMktListStatisticDateValue" hideDetail="N" id="NsAF61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsA761rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Statistic Date/Time" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics.AllMktListStatisticDateTimeValue" hideDetail="N" id="NsAG61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsA761rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Statistic Currency" columns="2" fullQualPath="Futures.AllMarketListing.AllMarketStatistics.AllMktListStatisticCurrency" hideDetail="N" id="NsAH61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsA761rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Redenomination Rounding Method" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListRedenominationRoundingMethod" hideDetail="N" id="NsAI61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Redenomination Date/Time" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListRedenominationDateTime" hideDetail="N" id="NsAJ61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Accrued Interest Flat Reason" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListAccruedInterestFlatReason" hideDetail="N" id="NsAK61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Actively Traded Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListActivelyTradedIndicator" hideDetail="N" id="NsAL61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Additional Listing Qualification Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListAdditionalListingQualificationType" hideDetail="N" id="NsAM61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Daily End Time" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListDailyEndTime" hideDetail="N" id="NsAN61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Daily Start Time" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListDailyStartTime" hideDetail="N" id="NsAO61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Days to Settlement" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListDaystoSettlement" hideDetail="N" id="NsAP61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Days to Settlement Buy" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListDaystoSettlementBuy" hideDetail="N" id="NsAQ61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Days to Settlement Sell" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListDaystoSettlementSell" hideDetail="N" id="NsAR61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Days to Settlement Text" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListDaystoSettlementText" hideDetail="N" id="NsAS61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Delisting Date/Time" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListDelistingDateTime" hideDetail="N" id="NsAT61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Dirty/Clean Price Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListDirtyCleanPriceIndicator" hideDetail="N" id="NsAU61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="EU Short Selling Eligibility Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListEUShortSellingEligibilityIndicator" hideDetail="N" id="NsAV61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Etf Principal RIC Text" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListEtfPrincipalRICText" hideDetail="N" id="NsAW61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exchange Stock Connect Quotation Status" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListExchangeStockConnectQuotationStatus" hideDetail="N" id="NsAX61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exchange Stock Connect Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListExchangeStockConnectType" hideDetail="N" id="NsAY61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="First Trading DateTime" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListFirstTradingDateTime" hideDetail="N" id="NsAZ61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fixed Exchange Rate Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListFixedExchangeRateIndicator" hideDetail="N" id="NsAa61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="22" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fully Funded Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListFullyFundedIndicator" hideDetail="N" id="NsAb61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="23" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic Unit ID" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListGeographicUnitID" hideDetail="N" id="NsAc61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="24" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic Unit Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListGeographicUnitType" hideDetail="N" id="NsAd61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="25" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Hedger Initial Margin Limit" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListHedgerInitialMarginLimit" hideDetail="N" id="NsAe61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="26" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Hedger Maintenance Margin Limit" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListHedgerMaintenanceMarginLimit" hideDetail="N" id="NsAf61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="27" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Home Stock Exchange Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListHomeStockExchangeIndicator" hideDetail="N" id="NsAg61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="28" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Initial Margin Amount" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListInitialMarginAmount" hideDetail="N" id="NsAh61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="29" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Pricing Unit" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListIssuePricingUnit" hideDetail="N" id="NsAi61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="30" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Pricing Volume" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListIssuePricingVolume" hideDetail="N" id="NsAj61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="31" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Pricing Volume Unit Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListIssuePricingVolumeUnitType" hideDetail="N" id="NsAk61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="32" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Quotation Status" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListIssueQuotationStatus" hideDetail="N" id="NsAl61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="33" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Trading Unit" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListIssueTradingUnit" hideDetail="N" id="NsAm61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="34" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issuer Approval Trading Date" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListIssuerApprovalTradingDate" hideDetail="N" id="NsAn61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="35" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issuer Request Trading Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListIssuerRequestTradingIndicator" hideDetail="N" id="NsAo61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="36" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issuer Requested Trading Date" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListIssuerRequestedTradingDate" hideDetail="N" id="NsAp61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="37" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Trading DateTime" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListLastTradingDateTime" hideDetail="N" id="NsAq61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="38" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Listed Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListListedIndicator" hideDetail="N" id="NsAr61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="39" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Listing Date/Time" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListListingDateTime" hideDetail="N" id="NsAs61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="40" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Maintenance Margin Amount" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMaintenanceMarginAmount" hideDetail="N" id="NsAt61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="41" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Marginable Security Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMarginableSecurityIndicator" hideDetail="N" id="NsAu61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="42" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Market Classification" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMarketClassification" hideDetail="N" id="NsAv61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="43" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Market Issue Typ" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMarketIssueTyp" hideDetail="N" id="NsAw61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="44" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Market Segment Name" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMarketSegmentName" hideDetail="N" id="NsAx61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="45" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MiFID Available Shares" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMiFIDAvailableShares" hideDetail="N" id="NsAy61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="46" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MiFID Free Float Shares" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMiFIDFreeFloatShares" hideDetail="N" id="NsAz61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="47" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MiFID Free Float to Shares" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMiFIDFreeFloattoShares" hideDetail="N" id="NsA$61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="48" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MiFID Liquid Shares" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMiFIDLiquidShares" hideDetail="N" id="NsA%61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="49" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MiFID Regulated Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMiFIDRegulatedIndicator" hideDetail="N" id="NsA@61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="50" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Multiple Shares Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMultipleSharesIndicator" hideDetail="N" id="NsA&amp;amp;61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="51" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="NASDAQ Portal Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListNASDAQPortalIndicator" hideDetail="N" id="NsA*61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="52" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="New Quote Calculation Method" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListNewQuoteCalculationMethod" hideDetail="N" id="NsA-61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="53" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="New Quote Method Effective Date/Time" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListNewQuoteMethodEffectiveDateTime" hideDetail="N" id="NsA.61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="54" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="No Naked Short Sell Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListNoNakedShortSellIndicator" hideDetail="N" id="NsA/61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="55" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="No Short Sell Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListNoShortSellIndicator" hideDetail="N" id="NsA(61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="56" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Non Tradable Listing Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListNonTradableListingIndicator" hideDetail="N" id="NsA)61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="57" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Normal Market Size" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListNormalMarketSize" hideDetail="N" id="NsA~61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="58" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Official Place of Listing Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListOfficialPlaceofListingIndicator" hideDetail="N" id="NsA?61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="59" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Old Quote Calculation Method" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListOldQuoteCalculationMethod" hideDetail="N" id="NsA&amp;lt;61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="60" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Option Cross Strike Price" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListOptionCrossStrikePrice" hideDetail="N" id="NsA&amp;gt;61rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="61" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Option Eligibility Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListOptionEligibilityIndicator" hideDetail="N" id="NsA071rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="62" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Options Available Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListOptionsAvailableIndicator" hideDetail="N" id="NsA171rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="63" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Place of Listing Ind" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListOriginalPlaceofListingInd" hideDetail="N" id="NsA271rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="64" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parity Price Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListParityPriceIndicator" hideDetail="N" id="NsA371rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="65" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Preferred Issue ID" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPreferredIssueID" hideDetail="N" id="NsA471rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="66" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Preferred Issue ID Context" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPreferredIssueIDContext" hideDetail="N" id="NsA571rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="67" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Preferred Price Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPreferredPriceType" hideDetail="N" id="NsA671rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="68" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Price Currency" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPriceCurrency" hideDetail="N" id="NsA771rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="69" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Price Lower Limit" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPriceLowerLimit" hideDetail="N" id="NsA871rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="70" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Price Upper Limit" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPriceUpperLimit" hideDetail="N" id="NsA971rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="71" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Pricing Multiplier" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPricingMultiplier" hideDetail="N" id="NsAA71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="72" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Pricing Partly Paid Amount" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPricingPartlyPaidAmount" hideDetail="N" id="NsAB71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="73" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Pricing Unit of Measure" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPricingUnitofMeasure" hideDetail="N" id="NsAC71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="74" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Primary Trading Market" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPrimaryTradingMarket" hideDetail="N" id="NsAD71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="75" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Processed When Distributed Flag Ind" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListProcessedWhenDistributedFlagInd" hideDetail="N" id="NsAE71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="76" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Processed When Issued Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListProcessedWhenIssuedIndicator" hideDetail="N" id="NsAF71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="77" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Round Lot Size" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListRoundLotSize" hideDetail="N" id="NsAG71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="78" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="SEC Tick Size Group Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSECTickSizeGroupType" hideDetail="N" id="NsAH71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="79" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="SSE SEHK Eligibility Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSSESEHKEligibilityIndicator" hideDetail="N" id="NsAI71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="80" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="SSE SEHK Quotation Status Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSSESEHKQuotationStatusType" hideDetail="N" id="NsAJ71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="81" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Seasoned Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSeasonedIndicator" hideDetail="N" id="NsAK71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="82" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Security Short Sale Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSecurityShortSaleIndicator" hideDetail="N" id="NsAL71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="83" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Settlement Currency" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSettlementCurrency" hideDetail="N" id="NsAM71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="84" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Settlement Cycle" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSettlementCycle" hideDetail="N" id="NsAN71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="85" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Settlement Location Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSettlementLocationType" hideDetail="N" id="NsAO71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="86" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Settlement Method" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSettlementMethod" hideDetail="N" id="NsAP71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="87" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Short Sale Restriction Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListShortSaleRestrictionType" hideDetail="N" id="NsAQ71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="88" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Space Low" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSpaceLow" hideDetail="N" id="NsAR71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="89" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Space Medium" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSpaceMedium" hideDetail="N" id="NsAS71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="90" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Specialist Identifier" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSpecialistIdentifier" hideDetail="N" id="NsAT71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="91" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Speculator Initial Margin Limit" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSpeculatorInitialMarginLimit" hideDetail="N" id="NsAU71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="92" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Speculator Maintenance Margin Limit" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSpeculatorMaintenanceMarginLimit" hideDetail="N" id="NsAV71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="93" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListStartDateTime" hideDetail="N" id="NsAW71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="94" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Tick Size" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTickSize" hideDetail="N" id="NsAX71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="95" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Tick Size Currency" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTickSizeCurrency" hideDetail="N" id="NsAY71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="96" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Tick Value" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTickValue" hideDetail="N" id="NsAZ71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="97" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Tick Value Currency" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTickValueCurrency" hideDetail="N" id="NsAa71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="98" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trade Blackout Period Days" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTradeBlackoutPeriodDays" hideDetail="N" id="NsAb71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="99" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trade Blackout Period Days Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTradeBlackoutPeriodDaysType" hideDetail="N" id="NsAc71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="100" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trade Blackout Period Start Day" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTradeBlackoutPeriodStartDay" hideDetail="N" id="NsAd71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="101" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trade Lot Size" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTradeLotSize" hideDetail="N" id="NsAe71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="102" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trade Suspension Period End Date/Time" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTradeSuspensionPeriodEndDateTime" hideDetail="N" id="NsAf71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="103" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trade Suspension Period Start Date/Time" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTradeSuspensionPeriodStartDateTime" hideDetail="N" id="NsAg71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="104" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trading Currency" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTradingCurrency" hideDetail="N" id="NsAh71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="105" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trading Floor Location" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTradingFloorLocation" hideDetail="N" id="NsAi71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="106" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trading Status" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTradingStatus" hideDetail="N" id="NsAj71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="107" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trading Unit of Measure" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTradingUnitofMeasure" hideDetail="N" id="NsAk71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="108" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="BB Composite Ticker" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListBBCompositeTicker" hideDetail="N" id="NsAl71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="109" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="BB Global" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListBBGlobal" hideDetail="N" id="NsAm71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="110" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="BB Ticker Exchange" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListBBTickerExchange" hideDetail="N" id="NsAn71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="111" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="BB Trading Symbol" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListBBTradingSymbol" hideDetail="N" id="NsAo71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="112" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="BB Unique" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListBBUnique" hideDetail="N" id="NsAp71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="113" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Composite BB Global" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListCompositeBBGlobal" hideDetail="N" id="NsAq71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="114" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="RIC" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListRIC" hideDetail="N" id="NsAr71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="115" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="RT Ticker" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListRTTicker" hideDetail="N" id="NsAs71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="116" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="SEDOL" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSEDOL" hideDetail="N" id="NsAt71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="117" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Ticker" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListTicker" hideDetail="N" id="NsAu71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="118" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Consolidated RIC" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListConsolidatedRIC" hideDetail="N" id="NsAv71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="119" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Listing Version" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListListingVersion" hideDetail="N" id="NsAw71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="120" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Market MIC" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMarketMIC" hideDetail="N" id="NsAx71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="121" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MIC For Local Exchange" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListMICForLocalExchange" hideDetail="N" id="NsAy71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="122" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Operating MIC" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListOperatingMIC" hideDetail="N" id="NsAz71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="123" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="LSE Segment Classification" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListLSESegmentClassification" hideDetail="N" id="NsA$71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="124" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="LSE Sector Classification" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListLSESectorClassification" hideDetail="N" id="NsA%71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="125" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exchange Market Group" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListExchangeMarketGroup" hideDetail="N" id="NsA@71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="126" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exchange Sub Market Group" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListExchangeSubMarketGroup" hideDetail="N" id="NsA&amp;amp;71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="127" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Country Calendar" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListCountryCalendar" hideDetail="N" id="NsA*71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="128" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exchange Calendar" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListExchangeCalendar" hideDetail="N" id="NsA-71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="129" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Settlement Calendar" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListSettlementCalendar" hideDetail="N" id="NsA.71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="130" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Primary Exchange Name" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPrimaryExchangeName" hideDetail="N" id="NsA/71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="131" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Primary Exchange Code" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListPrimaryExchangeCode" hideDetail="N" id="NsA(71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="132" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Days To Settlement Convention" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListDaysToSettlementConvention" hideDetail="N" id="NsA)71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="133" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exchange Code" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListExchangeCode" hideDetail="N" id="NsA~71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="134" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="FactSet Listing ID" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListFactSetListingID" hideDetail="N" id="NsA?71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="135" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="FactSet Exchange Ticker" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListFactSetExchangeTicker" hideDetail="N" id="NsA&amp;lt;71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="136" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="FactSet Primary Listing ID" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListFactSetPrimaryListingID" hideDetail="N" id="NsA&amp;gt;71rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="137" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="FactSet Listing Level BB Global" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListFactSetListingLevelBBGlobal" hideDetail="N" id="NsA081rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="138" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListDataSourceId" hideDetail="N" id="NsA181rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="139" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Redenomination Method" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListRedenominationMethod" hideDetail="N" id="NsA281rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="140" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListOriginalDataProvider" hideDetail="N" id="NsA381rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="141" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Bloomberg Composite Exchange Code" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListBloombergCompositeExchangeCode" hideDetail="N" id="NsA481rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="142" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Cash Settlement Indicator" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListCashSettlementIndicator" hideDetail="N" id="NsA581rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="143" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Risk Type" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListRiskType" hideDetail="N" id="NsA681rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="144" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exchange Identifier" columns="2" fullQualPath="Futures.AllMarketListing.AllMktLstExchangeIdentifier" hideDetail="N" id="NsA781rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="145" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Ultumus Ref Listing ID" columns="2" fullQualPath="Futures.AllMarketListing.AllMktListUltumusRefListingID" hideDetail="N" id="NsA881rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="146" pageSize="0" parentId="NsA361rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Market Listing"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Instrument Statistics" columns="2" fullQualPath="Futures.AllInstrumentStatistics" hideDetail="N" id="NsA981rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="5" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Statistic Definition ID" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatistics.Statistics.StatisticsInformation.StatisticDefinitionID" hideDetail="N" id="NsAA81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Name" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatistics.Statistics.StatisticsInformation.StatisticName" hideDetail="N" id="NsAB81rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Value Type" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatistics.Statistics.StatisticsInformation.StatisticValueType" hideDetail="N" id="NsAC81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Character Value" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticCharacterValue" hideDetail="N" id="NsAD81rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Amount Value" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticAmountValue" hideDetail="N" id="NsAE81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Denominated Currency" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticDenominatedCurrency" hideDetail="N" id="NsAF81rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Date Value" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticDateValue" hideDetail="N" id="NsAG81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic DateTime Value" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticDateTimeValue" hideDetail="N" id="NsAH81rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Integer Value" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticIntegerValue" hideDetail="N" id="NsAI81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticOriginalDataProvider" hideDetail="N" id="NsAJ81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Redistributor ID" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticDataRedistributorID" hideDetail="N" id="NsAK81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticDataSourceID" hideDetail="N" id="NsAL81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticDataStatus" hideDetail="N" id="NsAM81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticStartDateTime" hideDetail="N" id="NsAN81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticEndDateTime" hideDetail="N" id="NsAO81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticLastChangeDateTime" hideDetail="N" id="NsAP81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Futures.AllInstrumentStatistics.AllStatisticLastChangeUserID" hideDetail="N" id="NsAQ81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="NsA981rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Statistics"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Prices" columns="2" fullQualPath="Futures.Prices" hideDetail="N" id="NsAR81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="Y" orderNum="10" pageSize="5" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Exchange Name" columns="2" fullQualPath="Futures.Prices.PriceForMarket.FinancialMarket.MarketDetails.MarketName" hideDetail="N" id="NsAS81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Value" columns="2" fullQualPath="Futures.Prices.InstrumentIdentifierforPrices.InstrumentIdentifiers.IdentifiersDetails.IdentifierValue" hideDetail="N" id="NsAT81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Type" columns="2" fullQualPath="Futures.Prices.InstrumentIdentifierforPrices.InstrumentIdentifiers.IdentifiersDetails.IdentifierType" hideDetail="N" id="NsAU81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Usage Type" columns="2" fullQualPath="Futures.Prices.InstrumentIdentifierforPrices.InstrumentIdentifiers.IdentifiersDetails.IdentifierUsageType" hideDetail="N" id="NsAV81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Price Date" columns="2" fullQualPath="Futures.Prices.PriceDate" hideDetail="N" id="NsAW81rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Price Currency" columns="2" fullQualPath="Futures.Prices.PriceCurrency" hideDetail="N" id="NsAX81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Adjusted Date" columns="2" fullQualPath="Futures.Prices.PriceAdjustedDate" hideDetail="N" id="NsAY81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Price Source" columns="2" fullQualPath="Futures.Prices.PriceSource" hideDetail="N" id="NsAZ81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Price Vendor" columns="2" fullQualPath="Futures.Prices.PriceVendor" hideDetail="N" id="NsAa81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Price Quote Method" columns="2" fullQualPath="Futures.Prices.PriceQuoteMethod" hideDetail="N" id="NsAb81rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Pricing Method Type" columns="2" fullQualPath="Futures.Prices.PricingMethodType" hideDetail="N" id="NsAc81rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Price Validity" columns="2" fullQualPath="Futures.Prices.PriceValidity" hideDetail="N" id="NsAd81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Price Source Description" columns="2" fullQualPath="Futures.Prices.PriceSourceDescription" hideDetail="N" id="NsAe81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Additional Price Qualification" columns="2" fullQualPath="Futures.Prices.AdditionalPriceQualification" hideDetail="N" id="NsAf81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Quote Lot Size" columns="2" fullQualPath="Futures.Prices.QuoteLotSize" hideDetail="N" id="NsAg81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trade Volume" columns="2" fullQualPath="Futures.Prices.TradeVolume" hideDetail="N" id="NsAh81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Dirty Clean Indicator" columns="2" fullQualPath="Futures.Prices.DirtyCleanIndicator" hideDetail="N" id="NsAi81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Real Nominal Indicator" columns="2" fullQualPath="Futures.Prices.RealNominalIndicator" hideDetail="N" id="NsAj81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Open Price" columns="2" fullQualPath="Futures.Prices.OpenPrice" hideDetail="N" id="NsAk81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Closing Price" columns="2" fullQualPath="Futures.Prices.ClosingPrice" hideDetail="N" id="NsAl81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Price" columns="2" fullQualPath="Futures.Prices.LastPrice" hideDetail="N" id="NsAm81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Ask Price" columns="2" fullQualPath="Futures.Prices.AskPrice" hideDetail="N" id="NsAn81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Bid Price" columns="2" fullQualPath="Futures.Prices.BidPrice" hideDetail="N" id="NsAo81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="22" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Mid Price" columns="2" fullQualPath="Futures.Prices.MidPrice" hideDetail="N" id="NsAp81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="23" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Low Price" columns="2" fullQualPath="Futures.Prices.LowPrice" hideDetail="N" id="NsAq81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="24" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="High Price" columns="2" fullQualPath="Futures.Prices.HighPrice" hideDetail="N" id="NsAr81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="25" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="52 Week High" columns="2" fullQualPath="Futures.Prices.Week52High" hideDetail="N" id="NsAs81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="26" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="52 Week Low" columns="2" fullQualPath="Futures.Prices.Week52Low" hideDetail="N" id="NsAt81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="27" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Future Open Interest" columns="2" fullQualPath="Futures.Prices.FutureOpenInterest" hideDetail="N" id="NsAu81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="28" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Net Asset Value" columns="2" fullQualPath="Futures.Prices.NetAssetValue" hideDetail="N" id="NsAv81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="29" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Settlement Price" columns="2" fullQualPath="Futures.Prices.SettlementPrice" hideDetail="N" id="NsAw81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="30" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Bid Business Date" columns="2" fullQualPath="Futures.Prices.BidBusinessDate" hideDetail="N" id="NsAx81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="31" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Mid Business Date" columns="2" fullQualPath="Futures.Prices.MidBusinessDate" hideDetail="N" id="NsAy81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="32" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Ask Business Date" columns="2" fullQualPath="Futures.Prices.AskBusinessDate" hideDetail="N" id="NsAz81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="33" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Business Date" columns="2" fullQualPath="Futures.Prices.LastBusinessDate" hideDetail="N" id="NsA$81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="34" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Close Business Date" columns="2" fullQualPath="Futures.Prices.CloseBusinessDate" hideDetail="N" id="NsA%81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="35" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Net Asset Value Business Date" columns="2" fullQualPath="Futures.Prices.NetAssetValueBusinessDate" hideDetail="N" id="NsA@81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="36" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Settlement Business Date" columns="2" fullQualPath="Futures.Prices.SettlementBusinessDate" hideDetail="N" id="NsA&amp;amp;81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="37" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fixing Business Date" columns="2" fullQualPath="Futures.Prices.FixingBusinessDate" hideDetail="N" id="NsA*81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="38" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Open Business Date" columns="2" fullQualPath="Futures.Prices.OpenBusinessDate" hideDetail="N" id="NsA-81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="39" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Low Business Date" columns="2" fullQualPath="Futures.Prices.LowBusinessDate" hideDetail="N" id="NsA.81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="40" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="High Business Date" columns="2" fullQualPath="Futures.Prices.HighBusinessDate" hideDetail="N" id="NsA/81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="41" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Evaluated Price" columns="2" fullQualPath="Futures.Prices.EvaluatedPrice" hideDetail="N" id="NsA(81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="42" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Evaluated Price Business Date" columns="2" fullQualPath="Futures.Prices.EvaluatedPriceBusinessDate" hideDetail="N" id="NsA)81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="43" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Par Spread" columns="2" fullQualPath="Futures.Prices.ParSpread" hideDetail="N" id="NsA~81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="44" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Par Spread Business Date" columns="2" fullQualPath="Futures.Prices.ParSpreadBusinessDate" hideDetail="N" id="NsA?81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="45" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Points Upfront" columns="2" fullQualPath="Futures.Prices.PointsUpfront" hideDetail="N" id="NsA&amp;lt;81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="46" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Points Upfront Business Date" columns="2" fullQualPath="Futures.Prices.PointsUpfrontBusinessDate" hideDetail="N" id="NsA&amp;gt;81rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="47" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Composite Price" columns="2" fullQualPath="Futures.Prices.CompositePrice" hideDetail="N" id="NsA091rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="48" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Composite Price Business Date" columns="2" fullQualPath="Futures.Prices.CompositePriceBusinessDate" hideDetail="N" id="NsA191rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="49" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Composite Spread" columns="2" fullQualPath="Futures.Prices.CompositeSpread" hideDetail="N" id="NsA291rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="50" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Composite Spread Business Date" columns="2" fullQualPath="Futures.Prices.CompositeSpreadBusinessDate" hideDetail="N" id="NsA391rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="51" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Model Price" columns="2" fullQualPath="Futures.Prices.ModelPrice" hideDetail="N" id="NsA491rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="52" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Model Price Business Date" columns="2" fullQualPath="Futures.Prices.ModelPriceBusinessDate" hideDetail="N" id="NsA591rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="53" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Model Spread" columns="2" fullQualPath="Futures.Prices.ModelSpread" hideDetail="N" id="NsA691rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="54" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Model Spread Business Date" columns="2" fullQualPath="Futures.Prices.ModelSpreadBusinessDate" hideDetail="N" id="NsA791rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="55" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Adjustment Factor" columns="2" fullQualPath="Futures.Prices.ISPCAdjustmentFactor" hideDetail="N" id="NsA891rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="56" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="AdjustFactor Business Date" columns="2" fullQualPath="Futures.Prices.AdjustFactorBusinessDate" hideDetail="N" id="NsA991rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="57" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Contributed Price Quantity" columns="2" fullQualPath="Futures.Prices.ContributedPriceQuantity" hideDetail="N" id="NsAA91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="58" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Assumed Recovery Rate" columns="2" fullQualPath="Futures.Prices.AssumedRecoveryRate" hideDetail="N" id="NsAB91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="59" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Assumed Recovery Business Date" columns="2" fullQualPath="Futures.Prices.AssumedRecoveryBusinessDate" hideDetail="N" id="NsAC91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="60" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Real Recovery Rate" columns="2" fullQualPath="Futures.Prices.RealRecoveryRate" hideDetail="N" id="NsAD91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="61" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Real Recovery Business Date" columns="2" fullQualPath="Futures.Prices.RealRecoveryBusinessDate" hideDetail="N" id="NsAE91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="62" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Skew Price" columns="2" fullQualPath="Futures.Prices.SkewPrice" hideDetail="N" id="NsAF91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="63" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Skew Price Business Date" columns="2" fullQualPath="Futures.Prices.SkewPriceBusinessDate" hideDetail="N" id="NsAG91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="64" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Skew Spread" columns="2" fullQualPath="Futures.Prices.SkewSpread" hideDetail="N" id="NsAH91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="65" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Skew Spread Business Date" columns="2" fullQualPath="Futures.Prices.SkewSpreadBusinessDate" hideDetail="N" id="NsAI91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="66" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Conventional Spread" columns="2" fullQualPath="Futures.Prices.ConventionalSpread" hideDetail="N" id="NsAJ91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="67" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Conventional Spread Business Date" columns="2" fullQualPath="Futures.Prices.ConventionalSpreadBusinessDate" hideDetail="N" id="NsAK91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="68" pageSize="0" parentId="NsAR81rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="SOI" columns="2" fullQualPath="Futures.InstrumentAsAParticipant" hideDetail="N" id="NsAL91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="5" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Instrument Group Name" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentGroup" hideDetail="N" id="NsAM91rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Purpose" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantPurpType" hideDetail="N" id="NsAN91rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Effective Date" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantEffectiveDate" hideDetail="N" id="NsAO91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Description" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantDescription" hideDetail="N" id="NsAP91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Effective Until" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantEffectiveUntil" hideDetail="N" id="NsAQ91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Type" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantParticipationType" hideDetail="N" id="NsAR91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Percent" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantParticipationPercent" hideDetail="N" id="NsAS91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Amount" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantParticipationAmount" hideDetail="N" id="NsAT91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Currency" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantParticipationCurrency" hideDetail="N" id="NsAU91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantDataStatus" hideDetail="N" id="NsAV91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source ID" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantDataSourceId" hideDetail="N" id="NsAW91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User ID" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantLastChangeUserId" hideDetail="N" id="NsAX91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Futures.InstrumentAsAParticipant.InstrumentParticipantLastChangeDateTime" hideDetail="N" id="NsAY91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NsAL91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Issue Group Participants"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="All Geographical Information" columns="2" fullQualPath="Futures.AllGeographicalInformation" hideDetail="N" id="NsAZ91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="5" parentId="NsAd41rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Geographic Unit Name" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicalUnit.GeographicalUnit.GeographicUnitInformation.GeographicUnitName" hideDetail="N" id="NsAa91rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit ID" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicalUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitID" hideDetail="N" id="NsAb91rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit Type" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicalUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitType" hideDetail="N" id="NsAc91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic Unit Purpose" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicUnitPurpose" hideDetail="N" id="NsAd91rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic Unit Description" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicUnitDescription" hideDetail="N" id="NsAe91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicOriginalDataProvider" hideDetail="N" id="NsAf91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Amount" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicParticipationAmount" hideDetail="N" id="NsAg91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Currency" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicParticipationCurrency" hideDetail="N" id="NsAh91rge1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Percent" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicParticipationPercent" hideDetail="N" id="NsAi91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Land Area Unit of Measure" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicLandAreaUnitofMeasure" hideDetail="N" id="NsAj91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Land Area Amount" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicLandAreaAmount" hideDetail="N" id="NsAk91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Currency Type" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicCurrencyType" hideDetail="N" id="NsAl91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Redistributor ID" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicDataRedistributorID" hideDetail="N" id="NsAm91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicDataSourceID" hideDetail="N" id="NsAn91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicDataStatus" hideDetail="N" id="NsAo91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicStartDateTime" hideDetail="N" id="NsAp91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicEndDateTime" hideDetail="N" id="NsAq91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicLastChangeDateTime" hideDetail="N" id="NsAr91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="Futures.AllGeographicalInformation.AllGeographicLastChangeUserID" hideDetail="N" id="NsAs91rge1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="NsAZ91rge1" relatedPath="" screenId="Jn5fB1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Issue Geographic Units"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+  </control>
+</root>

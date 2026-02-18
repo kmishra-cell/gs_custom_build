@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="MiscOperations" createdUser="user1" freezeColumns="" id="Oxq5m&gt;XDW1" isDefault="N" isPublic="Y" lookupId="MiscOperations" pageSize="50" screenType="SYSTEMSRCH" title="MISC_Operations">
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Parent Issue Group OID" fieldName="MiscOperations.Operations.MHI1ParentIssueGroupOID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t@o&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="MHI1Mhi1Oid" fieldName="MiscOperations.Operations.MHI1Mhi1Oid" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t&amp;amp;o&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Organization ID" fieldName="MiscOperations.Operations.MHI1OrganizationID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t*o&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Financial Market OID" fieldName="MiscOperations.Operations.MHI1FinancialMarketOid" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t-o&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width=""/>
+  </columns>
+</root>

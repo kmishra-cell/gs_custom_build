@@ -1,0 +1,2 @@
+update ft_t_lacd set gunt_oid = 'GUNT45B===' where lacd_oid in ('(CxIO8SBG1','(CxQO8SBG1','(CxRR8SBG1','(CxgQ8SBG1','cAxLT84z81',
+'cAxMT84z81','cAxNT84z81','cAxOT84z81','cAxpT84z81','cAxqT84z81','tZtcP8SBG1');

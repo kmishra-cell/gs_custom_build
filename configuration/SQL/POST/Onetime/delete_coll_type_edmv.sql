@@ -1,0 +1,1 @@
+delete from ft_t_edmv where edmv_oid in ('o-AW32?le1','o-w-o(?le1','o-AT31?le1','p-wgo~?le1','p-AM24?le1','o-A)26?le1','p-AD24?le1','p-wfo)?le1','o-AZ31?le1','p-wbo/?le1','p-wQo~?le1','o-wwo(?le1','p-wMo/?le1','o-At32?le1');

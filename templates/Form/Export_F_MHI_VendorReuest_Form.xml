@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="VendorRequestConfigurationType" entitySubType="[]" id="$MvDm&gt;9$W1" isDefault="N" isPublic="Y" screenType="SYSTEMFORM" title="F: MHI_VendorReuest_Form">
+  <control caption="Request Type Details" columns="2" fullQualPath="VendorRequestConfigurationType.RequestTypeDetails" hideDetail="N" id="CDupq&amp;gt;H3e1" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="$MvDm&amp;gt;9$W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+    <buttons>
+      <button caption="Request" id="CDuqq&gt;H3e1">
+        <property name="Shared Role" value=""/>
+        <property name="Shared Group" value=""/>
+        <property name="Event Type" value="GenericEvent"/>
+        <property name="Type" value="event"/>
+        <property name="Event Name" value="Raise Request"/>
+        <property name="EntityObjectAsXML" value="EOBJ_XML"/>
+        <property name="GSOName" value="VendorRequestConfigurationType"/>
+        <property name="Shared User" value=""/>
+        <property name="Current User" value="Logged in User"/>
+      </button>
+    </buttons>
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Vendor" columns="2" fullQualPath="VendorRequestConfigurationType.RequestTypeDetails.VRCTVendorID" hideDetail="N" id="CDu$q&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDupq&amp;gt;H3e1" relatedPath="" screenId="$MvDm&amp;gt;9$W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Type" columns="2" fullQualPath="VendorRequestConfigurationType.RequestTypeDetails.VRCTVendorRequestType" hideDetail="N" id="CDu%q&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="Details" lazyInd="N" orderNum="1" pageSize="0" parentId="CDupq&amp;gt;H3e1" relatedPath="" screenId="$MvDm&amp;gt;9$W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Vendor Request Configuration Details" columns="2" fullQualPath="VendorRequestConfigurationType.VendorRequestConfigurationDetails" hideDetail="N" id="CDu@q&amp;gt;H3e1" inlineEdit="N" labelName="" lazyInd="N" orderNum="1" pageSize="10" parentId="" relatedPath="" screenId="$MvDm&amp;gt;9$W1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="ID Context" columns="2" fullQualPath="VendorRequestConfigurationType.VendorRequestConfigurationDetails.VRCDIDContext" hideDetail="N" id="CDu&amp;amp;q&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu@q&amp;gt;H3e1" relatedPath="" screenId="$MvDm&amp;gt;9$W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Issue ID" columns="2" fullQualPath="VendorRequestConfigurationType.VendorRequestConfigurationDetails.VRCDIssueID" hideDetail="N" id="CDu*q&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu@q&amp;gt;H3e1" relatedPath="" screenId="$MvDm&amp;gt;9$W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Exchange Name" columns="2" fullQualPath="VendorRequestConfigurationType.VendorRequestConfigurationDetails.ExchangeName.FinancialMarket.MarketDetails.MarketName" hideDetail="N" id="CDu-q&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu@q&amp;gt;H3e1" relatedPath="" screenId="$MvDm&amp;gt;9$W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="MIC Code" columns="2" fullQualPath="VendorRequestConfigurationType.VendorRequestConfigurationDetails.ExchangeName.FinancialMarket.MarketDetails.MICCode" hideDetail="N" id="CDu.q&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu@q&amp;gt;H3e1" relatedPath="" screenId="$MvDm&amp;gt;9$W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="BB Market Sector Type" columns="2" fullQualPath="VendorRequestConfigurationType.VendorRequestConfigurationDetails.VRCDBBMarketSectorType" hideDetail="N" id="CDu/q&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDu@q&amp;gt;H3e1" relatedPath="" screenId="$MvDm&amp;gt;9$W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Vendor Request Type" columns="2" fullQualPath="VendorRequestConfigurationType.VendorRequestConfigurationDetails.VRCDVendorRequestType" hideDetail="N" id="CDu(q&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDu@q&amp;gt;H3e1" relatedPath="" screenId="$MvDm&amp;gt;9$W1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

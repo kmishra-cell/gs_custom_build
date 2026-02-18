@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="LegalAgreement" createdUser="user1" freezeColumns="" id="R6B6011jW1" isDefault="N" isPublic="N" lookupId="ISDAMasterAgreementsAndCSAAgreement" pageSize="50" screenType="SYSTEMSRCH" title="MHI_LEGAGRMT_Search">
+  <users>
+    <user id="5f5U111ie1" user="" userGroup="" userRole="creditdepartment"/>
+    <user id="5f5V111ie1" user="" userGroup="" userRole="readonly"/>
+    <user id="5f5W111ie1" user="" userGroup="" userRole="task_supervisor"/>
+    <user id="5f5a111ie1" user="" userGroup="" userRole="creditmanagement"/>
+    <user id="5f5X111ie1" user="" userGroup="" userRole="data_office"/>
+    <user id="5f5Y111ie1" user="" userGroup="" userRole="tradesupport"/>
+    <user id="5f5Z111ie1" user="" userGroup="" userRole="legaldepartment"/>
+    <user id="5f5b111ie1" user="" userGroup="" userRole="support"/>
+  </users>
+  <config>{}</config>
+  <buttons/>
+  <columns>
+    <column caption="Agreement Label" columnName="Agreement Description" fieldName="ISDAMasterAgreementsAndCSAAgreement.LegalAgreementDetail.LAGRAgreementDescription" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t(n&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Agreement Type" fieldName="ISDAMasterAgreementsAndCSAAgreement.LegalAgreementDetail.LAGRAgreementType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t)n&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="Legal Entity" columnName="BB Company ID" fieldName="ISDAMasterAgreementsAndCSAAgreement.MHIISDALegalEntity.ISDALegalEntity.FinancialInstitution.FinancialInstitutionIdentifiers.BBCompanyID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t~n&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Organization ID" fieldName="ISDAMasterAgreementsAndCSAAgreement.LegalAgreementDetail.MHIOrgID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="MBE,MHI" filterable="N" fromRange="" id="(/t?n&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Agreement Purpose" fieldName="ISDAMasterAgreementsAndCSAAgreement.LegalAgreementDetail.LAGRAgreementPurpose" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="LEGAGRMT" filterable="N" fromRange="" id="(/t&amp;lt;n&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Agreement Status" fieldName="ISDAMasterAgreementsAndCSAAgreement.LegalAgreementDetail.LAGRAgreementStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t&amp;gt;n&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="AgreementSignatureDate" fieldName="ISDAMasterAgreementsAndCSAAgreement.LegalAgreementDetail.LAGRAgreementSignatureDate" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t0o&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="GS Agreement Reference" fieldName="ISDAMasterAgreementsAndCSAAgreement.ISDAGSRef.LAIDLAGRLeglAgrmntID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t1o&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="7" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Old Style CSA" fieldName="ISDAMasterAgreementsAndCSAAgreement.LegalAgreementDetail.LAANLAGRCSAMHIAnnexStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t2o&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="8" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Variation Margin CSA" fieldName="ISDAMasterAgreementsAndCSAAgreement.LegalAgreementDetail.LAANLAGRCSAVariationMarginCSA" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t3o&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="9" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Initial Margin CSA" fieldName="ISDAMasterAgreementsAndCSAAgreement.LegalAgreementDetail.LAANLAGRCSAMHIInitialMarginCSA" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t4o&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="10" showRelLink="" sort="" toRange="" width="200"/>
+  </columns>
+</root>

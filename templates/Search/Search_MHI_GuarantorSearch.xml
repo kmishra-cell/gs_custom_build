@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="FinancialInstitution" createdUser="user1" freezeColumns="" id="f&gt;8-F1n~W1" isDefault="N" isPublic="N" lookupId="FinancialInstitution" pageSize="50" screenType="SYSTEMSRCH" title="MHI_GuarantorSearch">
+  <config>{}</config>
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Institution Name" fieldName="FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t/m&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Institution Type" fieldName="FinancialInstitution.FinancialInstitutionDetails.InstitutionType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t(m&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Institution Role Name" fieldName="FinancialInstitution.FinancialInstitutionRole.InstitutionRoleName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t)m&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Institution Role Type" fieldName="FinancialInstitution.FinancialInstitutionRole.InstitutionRoleType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="GUARNTOR" filterable="N" fromRange="" id="(/t~m&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Institution Identifier Type" fieldName="FinancialInstitution.AllInstitutionIdentifiers.AllFinsIDContext" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t?m&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Institution Identifier Value" fieldName="FinancialInstitution.AllInstitutionIdentifiers.AllFinsIdentifier" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t&amp;lt;m&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="BB Company ID" fieldName="FinancialInstitution.FinancialInstitutionIdentifiers.BBCompanyID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t&amp;gt;m&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width=""/>
+  </columns>
+</root>

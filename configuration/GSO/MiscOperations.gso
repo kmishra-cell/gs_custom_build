@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <entiyTypes>
+    <entiyType id="00AByfdWgMr0S01f" mainTable="FT_V_MHI1" name="MiscOperations" nameSpace="MHI"/>
+  </entiyTypes>
+  <beFields>
+    <beField class="BETEXT" customDomainSQL="select distinct grp_nme as DISPLAY_NAME, PRNT_ISS_GRP_OID as CODE&#10;from ft_t_isgp g, ft_t_isgr r&#10;where r.iss_grp_oid=g.PRNT_ISS_GRP_OID&#10;and g.end_tms is null&#10;and r.end_tms is null&#10;and g.PRT_PURP_TYP = 'INTEREST'&#10;order by 1" displayCaption="Parent Issue Group OID" entityTypeId="00AByfdWgMr0S01f" id="00AByfdWgMr0S020" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MHI1ParentIssueGroupOID" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="MHI1Mhi1Oid" entityTypeId="00AByfdWgMr0S01f" id="00AByfdWgMr0S01w" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MHI1Mhi1Oid" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="select ENT_SHORT_NME as DISPLAY_NAME, ORG_ID as CODE from FT_T_ENTR where DATA_SRC_ID='MHI'" displayCaption="Organization ID" entityTypeId="00AByfdWgMr0S01f" id="00AByfdWgMr0S01-" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MHI1OrganizationID" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="select distinct &#10;       (select mkt_nme &#10;        from ft_t_mrkt &#10;        where mkt_oid = m.mkt_oid) as DISPLAY_NAME,&#10;       m.mkt_oid as CODE&#10;       --g.prnt_iss_grp_oid&#10;from ft_t_isgp g&#10;left join ft_t_mkis m &#10;       on g.instr_id = m.instr_id&#10;      and m.end_tms is null&#10;where g.end_tms is null&#10;  and g.prt_purp_typ = 'INTEREST'&#10;order by 1" displayCaption="Financial Market OID" entityTypeId="00AByfdWgMr0S01f" id="00AByfdWgMr0S01y" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MHI1FinancialMarketOid" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Comment Text" entityTypeId="00AByfdWgMr0S01f" id="++AB-5bGgMr0S003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MHI1CommentText" nameSpace="MHI"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="Operations" entityTypeId="00AByfdWgMr0S01f" frequencyInd="0" id="00AByfdWgMr0S023" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="Operations" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00AByfdWgMr0S020" id="00AByfdWgMr0S024" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00AByfdWgMr0S01w" id="00AByfdWgMr0S025" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="MHI" fieldId="00AByfdWgMr0S01-" id="00AByfdWgMr0S026" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="MHI" fieldId="00AByfdWgMr0S01y" id="00ABy+YWgMr0S000" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="MHI" fieldId="++AB-5bGgMr0S003" id="++AB-5bGgMr0S005" prntReqdInd="0" seq="4"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="00AByfdWgMr0S01f" frequencyInd="0" id="00AByfdWgMr0S01h" ignoreDeleteChildren="false" multiplicity="SINGLE" name="MiscOperations- Root DataGroup" nameSpace="MHI">
+      <part dataGroupId="00AByfdWgMr0S023" defNameSpace="MHI" id="00AByfdWgMr0S022" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for MhiOperations" id="00AByfdWgMr0S01q" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHI1_01" nameSpace="MHI" table="FT_V_MHI1" timeSeries="NONE">
+      <field desc="Comment Text" id="++AB-5bGgMr0S002" name="CMNT_TXT" nameSpace="MHI"/>
+      <field desc="MHI1_OID" id="00AByfdWgMr0S01s" name="MHI1_OID" nameSpace="MHI"/>
+      <field desc="Financial Market OID" id="00AByfdWgMr0S01t" name="MKT_OID" nameSpace="MHI"/>
+      <field desc="Organization ID" id="00AByfdWgMr0S01u" name="ORG_ID" nameSpace="MHI"/>
+      <field desc="Parent Issue Group OID" id="00AByfdWgMr0S01v" name="PRNT_ISS_GRP_OID" nameSpace="MHI"/>
+      <option id="00AByfdWgMr0S01r" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="00AByfdWgMr0S020" groupMapping="0" id="00AByfdWgMr0S021" nameSpace="MHI" occFieldId="00AByfdWgMr0S01v"/>
+    <mapping beFieldId="00AByfdWgMr0S01w" groupMapping="0" id="00AByfdWgMr0S01x" nameSpace="MHI" occFieldId="00AByfdWgMr0S01s"/>
+    <mapping beFieldId="00AByfdWgMr0S01-" groupMapping="0" id="00AByfdWgMr0S01+" nameSpace="MHI" occFieldId="00AByfdWgMr0S01u"/>
+    <mapping beFieldId="00AByfdWgMr0S01y" groupMapping="0" id="00AByfdWgMr0S01z" nameSpace="MHI" occFieldId="00AByfdWgMr0S01t"/>
+    <mapping beFieldId="++AB-5bGgMr0S003" groupMapping="0" id="++AB-5bGgMr0S004" nameSpace="MHI" occFieldId="++AB-5bGgMr0S002"/>
+  </mappings>
+  <businessEntities>
+    <businessEntity cachedisableInd="N" completenessType="" dataGroupId="00AByfdWgMr0S01h" defaultInd="1" displayCaption="MiscOperations" entityTypeId="00AByfdWgMr0S01f" id="00AByfdWgMr0S01g" mavenVersion="9.0" name="MiscOperations" nameSpace="MHI" ruleVersion="0.0" version="10.0">
+      <configurations>
+        <configuration id="00AByfdWgMr0S01i" ignoreDeleteChildren="false" nameSpace="MHI" option="HIDDEN"/>
+        <configuration id="00AByfdWgMr0S01j" ignoreDeleteChildren="false" nameSpace="MHI" option="MULTIPLICITY_REQUIRE"/>
+        <configuration id="00AByfdWgMr0S01k" ignoreDeleteChildren="false" nameSpace="MHI" option="KEEPIN_SYNC"/>
+        <configuration id="00AByfdWgMr0S01l" ignoreDeleteChildren="false" nameSpace="MHI" option="WEIGHTAGE"/>
+        <configuration id="00AByfdWgMr0S01m" ignoreDeleteChildren="false" nameSpace="MHI" option="LABEL"/>
+        <configuration id="00AByfdWgMr0S01n" ignoreDeleteChildren="false" nameSpace="MHI" option="DOMAIN"/>
+        <configuration data="COMPLETE" id="00AByfdWgMr0S01o" ignoreDeleteChildren="false" nameSpace="MHI" option="BEDEINITIONFSTATUS"/>
+        <configuration id="00AByfdWgMr0S01p" ignoreDeleteChildren="false" nameSpace="MHI" option="CDEFIELD"/>
+      </configurations>
+    </businessEntity>
+  </businessEntities>
+</entities>

@@ -1,0 +1,23 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "SnPSeedV4" ],
+  "title" : "SnP Seed V4",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Sundays",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "begin" : "10:00:00",
+      "end" : "12:45:00",
+      "repeat" : "00:30:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

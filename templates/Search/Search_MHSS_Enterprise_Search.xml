@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="Enterprise" createdUser="user1" freezeColumns="" id="AKwBm&gt;nlW1" isDefault="N" isPublic="N" lookupId="Enterprise" pageSize="50" screenType="SYSTEMSRCH" title="MHSS_Enterprise_Search">
+  <users>
+    <user id="5f5tE11ie1" user="" userGroup="" userRole="readonly_MHSS"/>
+    <user id="5f5vE11ie1" user="" userGroup="" userRole="support"/>
+    <user id="5f5uE11ie1" user="" userGroup="" userRole="legaldepartment_MHSS"/>
+    <user id="5f5sE11ie1" user="" userGroup="" userRole="data_office_MHSS"/>
+  </users>
+  <config>{}</config>
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Enterprise Legal Name" fieldName="Enterprise.EnterpriseInformation.EnterpriseLegalName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tMo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Enterprise Short Name" fieldName="Enterprise.EnterpriseInformation.EnterpriseShortName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tNo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Organization ID" fieldName="Enterprise.EnterpriseInformation.OrganizationID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="MHSS" filterable="N" fromRange="" id="(/tOo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width="1144"/>
+  </columns>
+</root>

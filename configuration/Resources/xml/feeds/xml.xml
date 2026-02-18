@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vendor-definition>
+    <name>xml</name>
+    <!-- XMLBinaryPreparation uses the BOM to detect the byte order and encoding -->
+    <!-- If no BOM is available in the file UTF-8 is assumed -->
+    <streamPreparation type="com.j2fe.feeds.generic.preparation.XMLBinaryPreparation"/>
+    <messageSplitter type="com.j2fe.feeds.generic.splitters.XMLSplitter"/>
+</vendor-definition>

@@ -1,0 +1,33 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.7.3",
+  "timeZone" : "Europe/London",
+  "instructions" : [ {
+    "TYPE" : "Execute.Named",
+    "jobName" : "MZ_ASOF_DATE_Report",
+    "label" : "MZ_ASOF_DATE_Report"
+  } ],
+  "jobs" : {
+    "MZ_ASOF_DATE_Report" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param $eventName $targetApplication\n",
+        "env" : {
+          "scripts_home" : "'/gold/app/jobscheduler/scripts'",
+          "input_param" : "'/gold/app/jobscheduler/JSInputParams/MZ_ASOF_DATE_Report.json'",
+          "eventName" : "'MZ_ASOF_DATE_Report_Event'",
+          "targetApplication" : "'fileloading'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 15,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "isNotRestartable" : false
+    }
+  }
+}

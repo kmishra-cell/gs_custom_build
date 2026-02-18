@@ -1,0 +1,16 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "MZ_BoEUpdatesReport" ],
+  "title" : "MZ_BoEUpdatesReport",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Tue-Fri",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "06:45:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ ]
+}

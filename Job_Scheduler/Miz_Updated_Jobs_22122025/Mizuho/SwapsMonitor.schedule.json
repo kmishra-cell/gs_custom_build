@@ -1,0 +1,21 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "SwapsMonitor" ],
+  "title" : "Swaps Monitor",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Everyday",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "22:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

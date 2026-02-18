@@ -1,0 +1,16 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "AlacraOutboundMonthly" ],
+  "title" : "AlacraOutboundMonthly",
+  "submitOrderToControllerWhenPlanned" : false,
+  "planOrderAutomatically" : false,
+  "calendars" : [ {
+    "calendarName" : "Cal_Last_Day_of_Month",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "18:15:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ ]
+}

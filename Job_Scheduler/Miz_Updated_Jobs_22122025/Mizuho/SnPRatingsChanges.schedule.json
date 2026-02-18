@@ -1,0 +1,21 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "SnPRatingsChanges" ],
+  "title" : "SnP Ratings Changes",
+  "submitOrderToControllerWhenPlanned" : false,
+  "planOrderAutomatically" : false,
+  "calendars" : [ {
+    "calendarName" : "Cal_Everyday",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "04:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

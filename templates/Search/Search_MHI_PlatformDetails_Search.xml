@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="FinancialInstitution" createdUser="user1" freezeColumns="" id="m&lt;t3y&gt;5GW1" isDefault="N" isPublic="Y" lookupId="FinancialInstitution" pageSize="50" screenType="SYSTEMSRCH" title="MHI_PlatformDetails_Search">
+  <config>{"ADVANCE_FILTER":[{"Query":"{\"joinOperator\":\"AND\",\"allSubCriterions\":[{\"criterianField\":\"FinancialInstitution.MHIPlatformDeatils.MHIFINRFINSPlatformName\",\"operator\":\"EQUALS\",\"caseSensitive\":true,\"value\":\"CLEARER\"}]}"}]}</config>
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Institution Name" fieldName="FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tDo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="1534"/>
+  </columns>
+</root>

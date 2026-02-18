@@ -1,0 +1,16 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "RebuildIOI2Task" ],
+  "title" : "RebuildIOI2Task",
+  "submitOrderToControllerWhenPlanned" : false,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Mondays",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "23:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ ]
+}

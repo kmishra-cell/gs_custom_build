@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <beFields>
+    <beField class="BETEXT" customDomainSQL="select intrnl_dmn_desc as DISPLAY_NAME,intrnl_dmn_val_txt AS CODE from ft_T_idmv where fld_id = '00000325' &#10;and qual_val_txt in ('LGAGTCEA','REPOAGRMNT','LEGAGRMNT') order by 1 asc" desc="Agreement Type - This is a value that designates the type of a Legal Agreement table occurrence.  For example, the Agreement Type field might specify &quot;product purchase&quot;, &quot;fee agreement&quot;, or &quot;establish account&quot;." displayCaption="Agreement Type" entityTypeId="BGLAGR0000000001" id="MZYVDSVYGYLGLMOM" mandatory="0" multiplicity="SINGLE" name="LAGRAgreementType" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select intrnl_dmn_val_txt as CODE , intrnl_dmn_val_nme as DISPLAY_NAME  from ft_T_idmv where fld_id='00000320' and last_chg_usr_id = 'MHI:CSTM' order by 1 asc" desc="Agreement Purpose - The Agreement Purpose field identifies the business purpose for the existence of a legal agreement.  The Agreement Purpose field might contain values such as &quot;establish&quot;, &quot;assign&quot;, or &quot;amend&quot;." displayCaption="Agreement Purpose" entityTypeId="BGLAGR0000000001" id="AVABHUHWDOEMZOPI" mandatory="0" multiplicity="SINGLE" name="LAGRAgreementPurpose" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select intrnl_dmn_val_nme as DISPLAY_NAME,intrnl_dmn_val_txt AS CODE from ft_T_idmv where fld_id='01841382' order by 1 asc" desc="Legal Jurisdiction - This field identifies a country, state, city, or other jurisdiction whose laws primarily govern a legal agreement such as a contract." displayCaption="Legal Jurisdiction" entityTypeId="BGLAGR0000000001" id="YJSJRATSERCRQOLJ" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LAGRLegalJurisdiction" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select intrnl_dmn_val_nme as DISPLAY_NAME,intrnl_dmn_val_txt AS CODE from ft_T_idmv where fld_id='01841381' order by 1 asc" desc="Indicates whether a legal opinion is present." displayCaption="Legal Opinion Indicator" entityTypeId="BGLAGR0000000001" id="++7ExQQy2euPC00B" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LegalOpinionIndicator" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="select intrnl_dmn_val_nme  as DISPLAY_NAME,intrnl_dmn_val_txt AS CODE from ft_T_idmv where fld_id='00173418' and last_chg_usr_id = 'MHI:CSTM' and intrnl_dmn_val_txt !='OUTSTAND' order by 1 asc" displayCaption="Agreement Status" entityTypeId="BGLAGR0000000001" id="++96KQpS2etgS002" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LAGRAgreementStatus" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="SELECT * &#10;FROM (&#10;    SELECT DISTINCT &#10;        FT_T_IDMV.INTRNL_DMN_VAL_TXT || ' - ' || FT_T_IDMV.INTRNL_DMN_VAL_NME AS DISPLAY_NAME, &#10;        FT_T_IDMV.INTRNL_DMN_VAL_TXT as CODE&#10;    FROM FT_T_IDMV&#10;    JOIN FT_T_ISID &#10;        ON FT_T_IDMV.INTRNL_DMN_VAL_TXT = FT_T_ISID.ISS_ID&#10;    WHERE FT_T_ISID.ID_CTXT_TYP = 'ISO CURR'&#10;      AND FT_T_IDMV.FLD_DATA_CL_ID = 'CURRENCY'&#10;      AND (&#10;            FT_T_IDMV.DATA_STAT_TYP NOT IN ('OBSOLETE', 'DELETED') &#10;            OR FT_T_IDMV.DATA_STAT_TYP IS NULL&#10;          )&#10;    ORDER BY DISPLAY_NAME&#10;) AS currency_data&#10;UNION&#10;SELECT '==U - Unknown' AS TEXT, '==U' AS INTRNL_DMN_VAL_TXT" desc="This field specifies the currency in which the amounts in this table occurrence are denominated.  This field is typically given as an ISO Currency Code." displayCaption="Agreement Currency" entityTypeId="BGLAGR0000000001" id="++8LPzhy2etgS006" mandatory="0" multiplicity="SINGLE_OR_NULL" name="AgreementCurrency" nameSpace="GSC"/>
+    <beField class="BETSTAMP" displayCaption="AgreemenApprovaDate" entityTypeId="BGLAGR0000000001" id="00A7gfV0gMr0S004" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LAGRAgreementApprovalDate" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Legal Jurisdiction Name" entityTypeId="BGLAGR0000000001" id="00A8n2X0gMr0S00K" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LAGRLegalJurisdictionName" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Parent Legal Agreement ID" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S003" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LAGRParentLegalAgreementID" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Termination Currency" entityTypeId="BGLAGR0000000001" id="00AB8P90gMr0S1BJ" mandatory="0" multiplicity="SINGLE_OR_NULL" name="TerminationCurrency" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Old Style CSA" entityTypeId="BGLAGR0000000001" id="++ACCSJmgMr0S02M" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LAANLAGRCSAMHIAnnexStatus" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Variation Margin CSA" entityTypeId="BGLAGR0000000001" id="++ACCSJmgMr0S02e" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LAANLAGRCSAVariationMarginCSA" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Initial Margin CSA" entityTypeId="BGLAGR0000000001" id="++ACCSJmgMr0S02Y" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LAANLAGRCSAMHIInitialMarginCSA" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Organization ID" entityTypeId="BGLAGR0000000001" id="00AFd0lWgMr2m00V" mandatory="0" multiplicity="SINGLE_OR_NULL" name="MHIOrgID" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="SELECT DISTINCT annex_modl_typ AS display_name&#10;FROM FT_T_LAAN&#10;WHERE annex_modl_typ NOT LIKE 'DUMMY%'&#10;  AND annex_modl_typ != 'REPO'" desc="Annex Model - This field contains the model annex, contract or agreement used as the basis for the Annex." displayCaption="Annex Model" entityTypeId="BGLAGR0000000001" id="UZADEEEQFUITRQRF" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAANLAGRAnnexModel" nameSpace="GSC"/>
+    <beField class="BETEXT" customDomainSQL="SELECT CASE &#10;           WHEN EXISTS (&#10;               SELECT 1 &#10;               FROM FT_T_LAAN laan&#10;               WHERE laan.lagr_oid = lagr.lagr_oid &#10;                 AND laan.annex_modl_typ = 'CSA'&#10;           ) THEN 'CSA' &#10;           ELSE ' '&#10;       END AS display_name&#10;FROM FT_T_LAGR lagr" displayCaption="LAANLAGRLegalAgreementAnnexureOID" entityTypeId="BGLAGR0000000001" id="++ABoSImgMr0S02W" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAANLAGRLegalAgreementAnnexureOID" nameSpace="MHI">
+      <fieldConfig id="++ABoSImgMr0S02b" nameSpace="MHI" type="CLEAR_DOMAIN_CACHE" value="N"/>
+      <fieldConfig id="++ABoSImgMr0S02c" nameSpace="MHI" type="TEXT_DISPLAY" value="TEXT"/>
+    </beField>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="Legal Agreement Details" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="006RJeki2etZa00N" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="LegalAgreementDetail" nameSpace="GSC">
+      <part beRelationId="00AEAU0WgMr0u000" defNameSpace="MHI" id="00AEAU0WgMr0u008" prntReqdInd="0" seq="1"/>
+      <part beRelationId="00AEAU0WgMr0u009" defNameSpace="MHI" id="00AEAU0WgMr0u00H" prntReqdInd="0" seq="3"/>
+      <part beRelationId="00AEAU0WgMr0u00I" defNameSpace="MHI" id="00AEAU0WgMr0u00Q" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="MHI" fieldId="00A7gfV0gMr0S004" id="00A7gfV0gMr0S006" prntReqdInd="0" seq="40"/>
+      <part defNameSpace="MHI" fieldId="00A8n2X0gMr0S00K" id="00A8n2X0gMr0S00M" prntReqdInd="0" seq="41"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S003" id="00A9FWN0gMr0S005" prntReqdInd="0" seq="42"/>
+      <part defNameSpace="MHI" fieldId="00AB8P90gMr0S1BJ" id="00AB8P90gMr0S1BL" prntReqdInd="0" seq="43"/>
+      <part defNameSpace="MHI" fieldId="++ACCSJmgMr0S02M" id="++ACCSJmgMr0S02O" prntReqdInd="0" seq="44"/>
+      <part defNameSpace="MHI" fieldId="++ACCSJmgMr0S02e" id="++ACCSJmgMr0S02g" prntReqdInd="0" seq="45"/>
+      <part defNameSpace="MHI" fieldId="++ACCSJmgMr0S02Y" id="++ACCSJmgMr0S02h" prntReqdInd="0" seq="46"/>
+      <part defNameSpace="MHI" fieldId="00AFd0lWgMr2m00V" id="00AFd0lWgMr2m00X" prntReqdInd="0" seq="47"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="Annex" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="006bbR5C2etZa02u" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="Annexure" nameSpace="GSC">
+      <part defNameSpace="MHI" fieldId="++ABoSImgMr0S02W" id="++ABoSImgMr0S02Y" prntReqdInd="0" seq="32"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="00AEAU0WgMr0u001" name="FT_T_LAGR-To-FT_T_ENTR01" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AEAU0WgMr0u002" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AEAU0WgMr0u00A" name="FT_T_LAGR-To-FT_T_ENTR02" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AEAU0WgMr0u00B" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AEAU0WgMr0u00J" name="FT_T_LAGR-To-FT_T_ENTR03" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AEAU0WgMr0u00K" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00A9FWN0gMr0S00A" name="FT_T_LAGR-To-FT_T_LAGR00" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_LAGR">
+      <field fromColumn="LAGR_OID" id="00A9FWN0gMr0S00B" nameSpace="MHI" toColumn="PRNT_LAGR_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurence for Legal Agreement" id="LRWPCMQTJYAFDNFR" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="LAGR_01" nameSpace="GSC" table="FT_T_LAGR" timeSeries="NONE">
+      <field id="00AEAU0WgMr0u003" nameSpace="MHI" relationId="00AEAU0WgMr0u001"/>
+      <field id="00AEAU0WgMr0u00C" nameSpace="MHI" relationId="00AEAU0WgMr0u00A"/>
+      <field id="00AEAU0WgMr0u00L" nameSpace="MHI" relationId="00AEAU0WgMr0u00J"/>
+      <field id="00A9FWN0gMr0S00C" nameSpace="MHI" relationId="00A9FWN0gMr0S00A"/>
+      <field desc="Agreement Approval Date" id="00A7gfV0gMr0S003" name="AGRMNT_APRVL_DTE" nameSpace="MHI"/>
+      <field desc="Events of Default Currency" id="00AB8P90gMr0S1BI" name="EV_DFLT_CURR_CDE" nameSpace="MHI"/>
+      <field desc="Legal Jurisdiction Name" id="00A8n2X0gMr0S00J" name="LEG_JURIS_NME" nameSpace="MHI"/>
+      <field desc="Organization ID" id="00AFd0lWgMr2m00U" name="ORG_ID" nameSpace="MHI"/>
+      <field desc="Parent Legal Agreement OID" id="00A8mbHWgMr0S3zP" name="PRNT_LAGR_OID" nameSpace="MHI"/>
+      <option id="CSSCHQNVJSWCPSNA" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="DEJGNACJVFMWBJXT" nameSpace="GSC" type="DEFAULT_MATCH_KEY"/>
+      <option id="PLTTHJWGXIMEVONM" nameSpace="GSC" type="UI_PUB_ONLY" value="false"/>
+      <option id="RTIKESNMWGJCTQJK" nameSpace="GSC" type="LOOKUP_ONLY" value="false"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Legal Agreement Annexure" id="++ACCSJmgMr0S02I" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="LAAN_LAGR_MHI_CSA" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_LAAN" timeSeries="LOGICAL_DELETE">
+      <field desc="Annex Status" id="++ACCSJmgMr0S02L" name="ANNEX_STAT_TYP" nameSpace="MHI"/>
+      <value id="++ACCSJmgMr0S02K" name="ANNEX_MODL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="CSA" valueType="CONSTANT"/>
+      <option id="++ACCSJmgMr0S02J" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Legal Agreement Annexure" id="++ACCSJmgMr0S02U" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="LAAN_LAGR_MHI_IM" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_LAAN" timeSeries="LOGICAL_DELETE">
+      <field desc="Annex Status" id="++ACCSJmgMr0S02X" name="ANNEX_STAT_TYP" nameSpace="MHI"/>
+      <value id="++ACCSJmgMr0S02W" name="ANNEX_MODL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="IM" valueType="CONSTANT"/>
+      <option id="++ACCSJmgMr0S02V" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Legal Agreement Annexure" id="++ACCSJmgMr0S02a" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="LAAN_LAGR_VM_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_LAAN" timeSeries="LOGICAL_DELETE">
+      <field desc="Annex Status" id="++ACCSJmgMr0S02d" name="ANNEX_STAT_TYP" nameSpace="MHI"/>
+      <value id="++ACCSJmgMr0S02c" name="ANNEX_MODL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="VM" valueType="CONSTANT"/>
+      <option id="++ACCSJmgMr0S02b" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurence for Legal Agreement Annexure" id="UGQNGCOHJOWBRMFV" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="LAAN_LAGR" nameSpace="GSC" parentId="LRWPCMQTJYAFDNFR" table="FT_T_LAAN" timeSeries="LOGICAL_DELETE">
+      <field desc="Legal Agreement Annexure OID" id="++ABoSImgMr0S02V" name="LAAN_OID" nameSpace="MHI"/>
+      <option id="OELMQOIYXTKSYCLP" nameSpace="GSC" type="LOOKUP_ONLY" value="false"/>
+      <option id="RETIZENRBIYFWZZG" nameSpace="GSC" type="UI_PUB_ONLY" value="false"/>
+      <option id="WZHKVEIMBNBLHUNP" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="XKRZKEOVXVSKYULR" nameSpace="GSC" type="DEFAULT_MATCH_KEY"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beRelationId="00AEAU0WgMr0u000" groupMapping="0" id="00AEAU0WgMr0u004" nameSpace="MHI" occFieldId="00AEAU0WgMr0u003"/>
+    <mapping beRelationId="00AEAU0WgMr0u009" groupMapping="0" id="00AEAU0WgMr0u00D" nameSpace="MHI" occFieldId="00AEAU0WgMr0u00C"/>
+    <mapping beRelationId="00AEAU0WgMr0u00I" groupMapping="0" id="00AEAU0WgMr0u00M" nameSpace="MHI" occFieldId="00AEAU0WgMr0u00L"/>
+    <mapping beFieldId="MZYVDSVYGYLGLMOM" groupMapping="0" id="TEBFZEZBJWBVLVQK" nameSpace="GSC" occFieldId="JEAOFLPRHTVPFRMB"/>
+    <mapping beFieldId="AVABHUHWDOEMZOPI" groupMapping="0" id="TPAMQTIPYLYKYRFS" nameSpace="GSC" occFieldId="OSPJQQCEHXZMFKJG"/>
+    <mapping beFieldId="YJSJRATSERCRQOLJ" groupMapping="0" id="CUGKGRTJLVJFGWQJ" nameSpace="GSC" occFieldId="QGDQKVOKXWRJPOUF"/>
+    <mapping beFieldId="++7ExQQy2euPC00B" groupMapping="0" id="++7ExQQy2euPC00C" nameSpace="GSC" occFieldId="++7ExQQy2euPC00A"/>
+    <mapping beFieldId="++96KQpS2etgS002" groupMapping="0" id="++96KQpS2etgS003" nameSpace="GSC" occFieldId="++96KQpS2etgS001"/>
+    <mapping beFieldId="++8LPzhy2etgS006" groupMapping="0" id="++8LPzhy2etgS007" nameSpace="GSC" occFieldId="++8LPzhy2etgS005"/>
+    <mapping beFieldId="00A7gfV0gMr0S004" groupMapping="0" id="00A7gfV0gMr0S005" nameSpace="MHI" occFieldId="00A7gfV0gMr0S003"/>
+    <mapping beFieldId="00A8n2X0gMr0S00K" groupMapping="0" id="00A8n2X0gMr0S00L" nameSpace="MHI" occFieldId="00A8n2X0gMr0S00J"/>
+    <mapping beFieldId="00A9FWN0gMr0S003" groupMapping="0" id="00A9FWN0gMr0S004" nameSpace="MHI" occFieldId="00A8mbHWgMr0S3zP"/>
+    <mapping beFieldId="00AB8P90gMr0S1BJ" groupMapping="0" id="00AB8P90gMr0S1BK" nameSpace="MHI" occFieldId="00AB8P90gMr0S1BI"/>
+    <mapping beFieldId="++ACCSJmgMr0S02M" groupMapping="0" id="++ACCSJmgMr0S02N" nameSpace="MHI" occFieldId="++ACCSJmgMr0S02L"/>
+    <mapping beFieldId="++ACCSJmgMr0S02e" groupMapping="0" id="++ACCSJmgMr0S02f" nameSpace="MHI" occFieldId="++ACCSJmgMr0S02d"/>
+    <mapping beFieldId="++ACCSJmgMr0S02Y" groupMapping="0" id="++ACCSJmgMr0S02Z" nameSpace="MHI" occFieldId="++ACCSJmgMr0S02X"/>
+    <mapping beFieldId="00AFd0lWgMr2m00V" groupMapping="0" id="00AFd0lWgMr2m00W" nameSpace="MHI" occFieldId="00AFd0lWgMr2m00U"/>
+    <mapping beFieldId="UZADEEEQFUITRQRF" groupMapping="0" id="CZXECUCZHZKGFHOG" nameSpace="GSC" occFieldId="XQFFIXDSGQQZHNCN"/>
+    <mapping beFieldId="++ABoSImgMr0S02W" groupMapping="0" id="++ABoSImgMr0S02X" nameSpace="MHI" occFieldId="++ABoSImgMr0S02V"/>
+  </mappings>
+  <entityRelations>
+    <entityRelation entityId="006RJeki2etZa00j" id="00AEAU0WgMr0u000" lookupField="++4iXZUy2etu003L" multiplicity="SINGLE_OR_NULL" name="MHIOrganization" nameSpace="MHI" rltdEntityId="++4iXZUy2etu002n">
+      <part forPublishing="0" forUI="1" id="00AEAU0WgMr0u005" nameSpace="MHI" partId="++4iXZUy2etu003J"/>
+      <part forPublishing="0" forUI="1" id="00AEAU0WgMr0u006" nameSpace="MHI" partId="++4iXZUy2etu003K"/>
+      <part forPublishing="0" forUI="1" id="00AEAU0WgMr0u007" nameSpace="MHI" partId="++4iXZUy2etu003L"/>
+    </entityRelation>
+    <entityRelation entityId="006RJeki2etZa00j" id="00AEAU0WgMr0u009" lookupField="++4iXZUy2etu003L" multiplicity="SINGLE_OR_NULL" name="MBEOrganization" nameSpace="MHI" rltdEntityId="++4iXZUy2etu002n" templateName="AKw6m&gt;nlW1">
+      <part forPublishing="0" forUI="1" id="00AEAU0WgMr0u00E" nameSpace="MHI" partId="++4iXZUy2etu003J"/>
+      <part forPublishing="0" forUI="1" id="00AEAU0WgMr0u00F" nameSpace="MHI" partId="++4iXZUy2etu003K"/>
+      <part forPublishing="0" forUI="1" id="00AEAU0WgMr0u00G" nameSpace="MHI" partId="++4iXZUy2etu003L"/>
+    </entityRelation>
+    <entityRelation entityId="006RJeki2etZa00j" id="00AEAU0WgMr0u00I" lookupField="++4iXZUy2etu003L" multiplicity="SINGLE_OR_NULL" name="MHSSOrganization" nameSpace="MHI" rltdEntityId="++4iXZUy2etu002n" templateName="AKwBm&gt;nlW1">
+      <part forPublishing="0" forUI="1" id="00AEAU0WgMr0u00N" nameSpace="MHI" partId="++4iXZUy2etu003J"/>
+      <part forPublishing="0" forUI="1" id="00AEAU0WgMr0u00O" nameSpace="MHI" partId="++4iXZUy2etu003K"/>
+      <part forPublishing="0" forUI="1" id="00AEAU0WgMr0u00P" nameSpace="MHI" partId="++4iXZUy2etu003L"/>
+    </entityRelation>
+  </entityRelations>
+</entities>

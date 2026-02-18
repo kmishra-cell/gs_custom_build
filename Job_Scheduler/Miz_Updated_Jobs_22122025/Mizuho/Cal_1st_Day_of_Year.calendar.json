@@ -1,0 +1,8 @@
+{
+  "version" : "1.7.3",
+  "type" : "WORKINGDAYSCALENDAR",
+  "title" : "Cal_1st_Day_of_Year",
+  "includes" : {
+    "dates" : [ "2025-01-01", "2026-01-01", "2027-01-01" ]
+  }
+}

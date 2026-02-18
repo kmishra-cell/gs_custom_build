@@ -1,0 +1,2342 @@
+<?xml version="1.0" encoding="UTF-8"?>       
+<!DOCTYPE MSGSET SYSTEM "msgtype.dtd">
+<MSGSET SET="STREETREF">
+	<SEGMENT TYPE="Initial">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCRealignALIDAfterMerge"/>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCIssuerDerivation">
+			<PARAM>INITIAL</PARAM>
+			<PARAM>CUSIP-3,CINS-3</PARAM>
+			<PARAM>CUSIP,CINS</PARAM>
+			<PARAM>MarkitREDEntity,SPGISFEntityIdentifiers,MoodysRDS_Organization,SP_XF_EntityRatings,SP_XF_SecurityRatings,MoodysRDS_Instrument</PARAM>
+			<PARAM>ISIDPLUS,CRSSWALK,MOODYS_RDS,SNPXF_RT</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCModelForcedReevaluation"/>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCRatioNormalization">
+			<PARAM>MT564</PARAM>
+			<PARAM>IssueActionParticipant-BASE_FOR_RATIO=EV_BAS_PRT_CAMT,ORIG_BASE_FOR_RATIO=ORIG_EV_BAS_PRT_CAMT;DERIVE_FROM_RATIO=EV_PART_CAMT-10,ORIG_DERIVE_FROM_RATIO=ORIG_EV_PART_CAMT</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMIZNonUniqueIdentifier</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIIgnoreNRRatings</PARAM>
+			<PARAM>MHI</PARAM>
+			<!-- ignore rating sets where data_src_id in list, separated by comma -->
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIUniqueCheckAndIDLookup"/>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHISettlementCalCheck</PARAM>
+		</RULE>
+		<!--    <RULE ORDER_TYP="B" RULE_NME="CGSCRemoveIssueUsageTypeFieldFromMessage">     <PARAM>BBUNIQUE,BBGLOBAL,SEDOL,RIC</PARAM>    </RULE>    -->
+		<RULE ORDER_TYP="B" RULE_NME="CGSCCheckForIdenitifersInMessage">
+			<PARAM>InteractiveDataDescriptive</PARAM>
+			<PARAM>ISIN,CUSIP</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCLookupCAListingInfoBasedOnSecurity">
+			<PARAM>IssueIdentifierCAListingLookup</PARAM>
+			<PARAM>BBUNIQUE</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrIssueActionID">
+			<PARAM>NULLVALUEMATCH=Y</PARAM>
+			<PARAM>PROPRIETARY_IDENTIFIERS=BB-CRPACTID=NM;FIDELITY ISO15022-CAFIDEL=NM;IDCISO-CRPACTID=NM;REUTERS-DVMKEVID,CRPACTID,CPCGMKID,RTCPACID=NM;TELEKURS-CRPACTID=NM;TRDSSISO-CRPACTID=NM</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIModelDefault">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCCheckPrimaryMktIdentifier">
+			<PARAM>TELEKURS,BB,REUTERS</PARAM>
+			<PARAM>INITIAL</PARAM>
+			<PARAM>EQSHR,OPTIONS,COMMON,CVTPFD,FUND,FUTURES,INDEXOP,PFD,RECEIPTS,RIGHTS,UNIT,UNITTRST,WARRANTS,HYBRID,MISC,LTDPART,REALESTA</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCResolveListingUsingCADetails">
+			<PARAM>CAProcessing</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCEquateListing">
+			<PARAM>EQSHR,OPTIONS,COMMON,CVTPFD,FUND,FUTURES,INDEXOP,PFD,RECEIPTS,RIGHTS,UNIT,UNITTRST,WARRANTS,MISC,HYBRID,STRATRAD,BOND,CASHSEC,COML PPR,FIXDBOND,GOVTBOND,IRG,LOAN,MONEYMAR,REPO,TBILL,TBOND,TNOTE,VAR BOND,ZERO CPN,CALL OPT,PUT OPT,COMODITY,CVTBOND,INDEX,REALESTA,LTDPART,ETF,ETN,ETP</PARAM>
+			<PARAM>BBUNQEXH,BBCMPSEC,BBUNIQUE,BBCPTICK,LISTSYMB,PREFSYMB,TELEKURS,TICKER,RIC,TRDGSYMB,CPBBUNIQ,CPTICKER,EQFUNDTK,CPGLOBAL,BBGLOBAL,BBTRDGSYMB,SECREF,CCASS</PARAM>
+			<PARAM>Y</PARAM>
+			<PARAM>SEDOL,CPSEDOL</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCCheckUndeleteIdentifier">
+			<PARAM>ISSU,FINR,FINS,ACCT,ISSR,MRKT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="Issue">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIValIssueOverride">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCPricingFXRT">
+			<PARAM>ReutersEquityPricing,TKPRD</PARAM>
+		</RULE>
+		<!--Merged 14/07-->
+		<RULE ORDER_TYP="F" RULE_NME="CFTIInternalIdentifierCreator">
+			<PARAM>MIZUHO</PARAM>
+		</RULE>
+		<!--Renaming CGSCEndDateISID-->
+		<RULE ORDER_TYP="B" RULE_NME="CGSCEndDateIdentifiers">    </RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueIdentifier">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCSetGlobalIdentifierIndicator">    </RULE>
+		<RULE ORDER_TYP="D" RULE_NME="CGSCSetGlobalIdentifierIndicator">    </RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICheckPrimaryIDToBeUpdated">    </RULE>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCCreateUnderlyingLink">    </RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIMTNISINChange</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="Issuer">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCEndDateIdentifiers">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHICheckIssuerFinsRel</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FinancialInstitution">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCEndDateIdentifiers">    </RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+		<!-- EG-9737 Added CRR to exclude from Ignore List -->
+		<!-- EG-10093 Added BCA, ADJ to exclude from Ignore List -->
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIIgnoreRatings</PARAM>
+			<PARAM>MOODYS_RDS</PARAM>
+			<PARAM>CLM,CRR,CTP,SCD,SI,BCA,ADJ</PARAM>
+		</RULE>
+		<!--  EG-6997 - new entry -->
+		<!-- EG-8701 change    <RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">     <PARAM>CJavaMHIFindUPChildren</PARAM>    </RULE> -->
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHICreateIssuer</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueActionDeclaration">
+		<RULE ORDER_TYP="A" RULE_NME="CFTILoadLogicalKey">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>IADC_IMGID_ISSU_ISSR_ISCTP</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructGeoUnit">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrMKTOID">
+			<PARAM>N</PARAM>
+			<PARAM>N</PARAM>
+		</RULE>
+		<!--  <RULE ORDER_TYP="B" RULE_NME="CFTIFKLookupRule">     <PARAM>FINS</PARAM>     <PARAM>OFR_</PARAM>    </RULE>-->
+		<RULE ORDER_TYP="B" RULE_NME="CGSCMergeEntity">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCSetMatchKeyForMergeMsg">
+			<PARAM>IssueActionStatistic:IASS_MATCH_1,IssueActionPrtComment:GNCM_MATCH</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CGSCStoreListingIDDetailsOfCA">
+			<PARAM>IssueIdentifierCAListingLookup</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="EmployeeCustomerRole">
+		<!--  <RULE ORDER_TYP="B" RULE_NME="CFTIFKLookupRule">     <PARAM>CUID</PARAM>    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="GeographicUnit">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIAddMhiGeoUnitID</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="GeographicUnitGroup">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIAddMhiGeoUnitGrpID</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ISSUIssueActionDeclaration">
+		<RULE ORDER_TYP="A" RULE_NME="CFTILoadLogicalKey">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>IADC_IMGID_ISSU_ISSR_ISCTP</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructGeoUnit">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrMKTOID">
+			<PARAM>N</PARAM>
+			<PARAM>N</PARAM>
+		</RULE>
+		<!--  <RULE ORDER_TYP="B" RULE_NME="CFTIFKLookupRule">     <PARAM>FINS</PARAM>     <PARAM>OFR_</PARAM>    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="IssueActionParticipant">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrFieldValue">
+			<PARAM>ISSACT_PROC_ID</PARAM>
+			<PARAM>PRNT_ISSACT_PROC_ID</PARAM>
+			<PARAM>STRING</PARAM>
+			<PARAM>W</PARAM>
+		</RULE>
+		<!--  <RULE ORDER_TYP="B" RULE_NME="CFTIFKLookupRule">     <PARAM>IAIP</PARAM>     <PARAM>PRNT_</PARAM>     <PARAM>(ISSACT_PRT_ID,PRNT_ISSACT_PRT_ID)</PARAM>     <PARAM>MATCH=IAIP_MATCH_1</PARAM>    </RULE>-->
+		<!--<RULE ORDER_TYP="B" RULE_NME="CFTIConstrInstrIDForIAIP">     <PARAM>DENOM_CURR_CDE</PARAM>     <PARAM>ISID</PARAM>    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="IssuerClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructClassification">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssuerGeoUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructGeoUnit">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssuerRating">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructIssueRating">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueDescription">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrMKTOID">
+			<PARAM>N</PARAM>
+			<PARAM>N</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueRating">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructIssueRating">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDeriveEffectiveTms">
+			<PARAM>BBCorpGovtConvPrfd</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDeriveEffectiveTms">
+			<PARAM>SP_XF_GR_SecurityRatings</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDeriveEffectiveTms">
+			<PARAM>SP_XF_GR_EntityRatings</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDeriveEffectiveTms">
+			<PARAM>MoodysRDS_Instrument</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDeriveEffectiveTms">
+			<PARAM>FitchRDS_IssueRatings</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueStatistic">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrMKTOID">
+			<PARAM>Y</PARAM>
+			<PARAM>N</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueCrossReference">
+		<!--  <RULE ORDER_TYP="B" RULE_NME="CFTIFKLookupRule">     <PARAM>ISID</PARAM>     <PARAM>RLD_</PARAM>    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="MarketIssueCharacteristics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCCreateListing">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCCheckPrimaryMktIdentifier">
+			<PARAM>TELEKURS,BB,REUTERS</PARAM>
+			<PARAM>MARKET</PARAM>
+			<PARAM>EQSHR,OPTIONS,COMMON,CVTPFD,FUND,FUTURES,INDEXOP,PFD,RECEIPTS,RIGHTS,UNIT,UNITTRST,WARRANTS,HYBRID,MISC,LTDPART,REALESTA</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CGSCCreateMIXR">
+			<PARAM/>
+			<PARAM>WARNING</PARAM>
+		</RULE>
+		<!--Merged 14/07-->
+		<RULE ORDER_TYP="A" RULE_NME="CGSCListingUniqueIdentifier">
+			<PARAM>Rule to Add MHI Listing ID</PARAM>
+			<PARAM>MHILIST</PARAM>
+			<PARAM>MHI_LISTING_ID</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="RelatedIssueDefinition">
+		<!-- <RULE ORDER_TYP="B" RULE_NME="CFTIFKLookupRule">     <PARAM>RIDF</PARAM>     <PARAM>RLD_</PARAM>    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="RelatedIssue">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCUpdateMissingUnderlyingInfo">
+			<PARAM>Y</PARAM>
+			<!--Merged 14/07-->
+			<PARAM>ENABLE_DATA_CORRECTION=UNDERLYG:UNDLYING,CERTDPST:UNDLYING</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="UnderwriterCharacteristics">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrMKTOID">
+			<PARAM>N</PARAM>
+			<PARAM>N</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrOFFERNUM">    </RULE>
+	</SEGMENT>
+	<!-- GT 137228 SEGMENT TYPE="FinsRoleIssueParticipant">    <RULE ORDER_TYP="B" RULE_NME="CFTIConstFINS">     <PARAM>N</PARAM>    </RULE>    <RULE ORDER_TYP="B" RULE_NME="CFTIValInFuture">     <PARAM>.FIRST_TRD_TNS</PARAM>    </RULE>   </SEGMENT-->
+	<SEGMENT TYPE="IssueDocument">
+		<!--  <RULE ORDER_TYP="B" RULE_NME="CFTIFKLookupRule">     <PARAM>DCDF</PARAM>    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="IncomeEventDefinition">   </SEGMENT>
+	<SEGMENT TYPE="IncomeEventDefReplace">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIReplaceIncomeEventDef"/>
+	</SEGMENT>
+	<SEGMENT TYPE="IncomePaymentDefinition">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrCurrency">
+			<PARAM>.PAY_CURR_CDE</PARAM>
+			<PARAM>.EV_INSTR_ID</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IncomePaymentDefReplace">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCIncomePaymentDefReplace"/>
+	</SEGMENT>
+	<SEGMENT TYPE="StandardIndexStatistics">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrSourceFINS">
+			<PARAM>N</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="PrincipalPaymentDefinition">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrCurrency">
+			<PARAM>.PAY_CURR_CDE</PARAM>
+			<PARAM>.EV_INSTR_ID</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="PrincipalPaymentDefReplace">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCPrincipalPaymentDefReplace">    </RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="PrincipalEventDefReplace">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIReplacePrincipalEventDef">    </RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IndustryClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CFTIGenerateCrossRefId">
+			<PARAM>Y</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="Final">
+		<!-- EG-8701 - Moved CJavaMHIFindUPChildren to Final segment -->
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIFindUPChildren</PARAM>
+			<!-- Inventory names -->
+			<PARAM>MHI Inventory,MHSS Inventory,MHBK Inventory,MBE Inventory</PARAM>
+			<!-- Inventory OIDS -->
+			<PARAM>IRGR000006,IRGR000016,IRGR000026,IRGR000036</PARAM>
+			<!-- Publish Customers Y/N -->
+			<PARAM>N,N,N,N</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIValIssueIdentifiers">
+			<PARAM>INTERNAL_IDENTIFIERS=INTERNAL,COMMON</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIPublishDescendantsIP</PARAM>
+			<!-- Customer publishing flag -->
+			<PARAM>N</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrPrefId">
+			<PARAM>Issue</PARAM>
+			<PARAM>PREF_ID_CTXT_TYP</PARAM>
+			<PARAM>PREF_ISS_ID</PARAM>
+			<!--Merged 14/07-->
+			<PARAM>ISIN,CUSIP,CINS,SEDOL,MDY</PARAM>
+			<PARAM>Y</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrPrefId">
+			<PARAM>FinancialInstitution</PARAM>
+			<PARAM>PREF_FINS_ID_CTXT_TYP</PARAM>
+			<PARAM>PREF_FINS_ID</PARAM>
+			<PARAM>LEI,CUSIP,CINS,DUNS,S&amp;P,BBCMPYID,BCN,GK,RED,RTORGLID,FTCMPYID,BIC</PARAM>
+			<PARAM>Y</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCEndDateMIXR">
+			<PARAM>BBCMPSEC,BBUNIQUE,BBCPTICK,LISTSYMB,PREFSYMB,TELEKURS,TICKER,RIC,TRDGSYMB,CPBBUNIQ,CPTICKER,EQFUNDTK,CPGLOBAL,BBGLOBAL,BBTRDGSYMB,SECREF,CCASS</PARAM>
+			<PARAM>SEDOL</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCCheckPrimaryMktIdentifier">
+			<PARAM>TELEKURS,BB,REUTERS</PARAM>
+			<PARAM>FINAL</PARAM>
+			<PARAM>EQSHR,OPTIONS,COMMON,CVTPFD,FUND,FUTURES,INDEXOP,PFD,RECEIPTS,RIGHTS,UNIT,UNITTRST,WARRANTS,HYBRID,MISC,LTDPART,REALESTA</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIHqlaCopyToExchanges</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCConsolidationStat">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCSwapIssueActionID">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMIZHighLiquidityForEquity</PARAM>
+			<PARAM>EQSHR</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMIZDebtProductClfn</PARAM>
+			<PARAM>BOND,LOAN,FIXDBOND,CASHSEC,ABS,COML PPR,MORTGAGE,TBOND,CVTBOND</PARAM>
+			<PARAM>IssueIdentifier,Issuer,RelatedIssueDefinition,ISSUIssueGroupParticipant</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMIZSecRefGeneration</PARAM>
+			<PARAM>0.5,12;0.25,14;0.75,34;0.125,18;0.375,38;0.625,58;0.875,78</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMIZFSAIssueGroup</PARAM>
+			<PARAM>ABS,BOND,FIXDBOND,MORTGAGE</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMIZFCYIssueGroup</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCValidateDPICConfig">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMIZResetRecalculateIssue</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHICollateralTypes</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHICouponSchedules</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIFenergoAddToIOI</PARAM>
+			<PARAM>FENERGO:IRGR000006;STATICMASTER:IRGR000016;LOTUSNOTES:IRGR000036</PARAM>
+			<PARAM>CCIF:IRGR000036;ISS_GCIF:IRGR000036;LNLEGID:IRGR000036</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIBofEGicsPartyTypeCodes</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIPartyClientRef</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIListingIdUnlisted</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIIdentiferCorrection</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIAcctClsfGenerator</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIDeriveSettleCodes</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMIZQualifyingDebt</PARAM>
+			<PARAM>INTEREST</PARAM>
+			<PARAM>100</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIRelatedIssues</PARAM>
+			<PARAM>BBEQEUROCSTM,MEMBER_OF,BNCHMRK</PARAM>
+			<PARAM>BBCMDTPXCSTM,CTD_BASKET,DELIVER</PARAM>
+			<PARAM>BBINDXPXCOMPSTN,COMPSTN,UNDLYING</PARAM>
+			<PARAM>BBCGCPFDCSTM,CDSREFEN,UNDLYING</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIIdentifierEndDate</PARAM>
+			<PARAM>SEDOL</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIUpdatedTMS</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaIssuerInternalPolicyDerived</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIIssuerRatingDerived</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIFRTBCategoryCheck</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHISFTRSecCollType</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHICheckEndLegalAgrmntAnnexe</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIRemoveOldDeliveryType</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaIssuerMatchEnhancement</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHSCDeriveRecordDate</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCEndDateFinsFinsRole">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCEndDateMultiEntityHierarchy">
+			<PARAM>FINS,CUST,FRCP,FINSRL_TYP=CREDHIER</PARAM>
+			<PARAM>CUST,ACCT,CACR,RL_TYP=CREDHIER</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleOrphanEntity">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCCheckEnddateIdentifier">
+			<PARAM>ISSU,FINR,ACCT,ISSR,MRKT</PARAM>
+			<PARAM>EXCLUDEIDCTXTYP=CLIENTREF</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIAddDummyAnnexures</PARAM>
+		</RULE>
+		<!--<RULE ORDER_TYP="B" RULE_NME="CFTIIssueVersionNumber">             <PARAM>ISSVERNO</PARAM>        </RULE>-->
+		<!--<RULE ORDER_TYP="B" RULE_NME="CGSCInsertAEDLforAudit">     <PARAM>CHILDTABLESTOBEEXCLUDED=ISPC</PARAM>    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="EmptyFieldMatch">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCEndDateSuspect">    </RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ConsolidationStatus">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCEndDateSuspect">    </RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CFTILoadLogicalKey">    </RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FinsRoleRating">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructIssueRating">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FINSRoleGeographicUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructGeoUnit">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FinancialInstitutionStatistic">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrSTDFOID">
+			<PARAM>Y</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FinancialMarket">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrSourceFINS">
+			<PARAM>N</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructGeoUnit">    </RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>MarketFeeds_ISO,MarketFeeds_CNTRY,MarketFeeds_BB,MarketFeeds_CC,MarketFeeds_IDC,MarketFeeds_RT,MarketFeeds_SMON,MarketFeeds_VDF,MarketFeeds_WM,MarketFeeds_SIRS</PARAM>
+			<PARAM>NOERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructClassification">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+		<!--Merged 14/07-->
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIRemoveOldUseOfProceeds</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="CompanyStatistics">   </SEGMENT>
+	<SEGMENT TYPE="IssueGeoUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructGeoUnit">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueGeoStatistics">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructGeoUnit">
+			<PARAM>N</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueRegulatoryCharacteristics">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructGeoUnit">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="GeoUnitCalendarParticipant">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructGeoUnit">
+			<PARAM>E</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="MarketIssueStatistic">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstrSourceFINS">
+			<PARAM>N</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="MarketIndexDefinition">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructGeoUnit">    </RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="PrincipalEventDefinition">   </SEGMENT>
+	<SEGMENT TYPE="AddressType">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIADTPProcessing"/>
+		<RULE ORDER_TYP="D" RULE_NME="CFTIADTPProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="MailingAddress">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIAddressProcessing">
+			<PARAM>MADR</PARAM>
+			<PARAM>AddressType</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="D" RULE_NME="CFTIAddressProcessing">
+			<PARAM>MADR</PARAM>
+			<PARAM>AddressType</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ElectronicAddress">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIAddressProcessing">
+			<PARAM>EADR</PARAM>
+			<PARAM>AddressType</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="D" RULE_NME="CFTIAddressProcessing">
+			<PARAM>EADR</PARAM>
+			<PARAM>AddressType</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="CentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_FINS</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="FINSCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_FINS</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="ACCTCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_ACCT</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="CUSTCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_CUST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="ENTRCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_ENTR_MATCH</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="AUSRCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="EMPLCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_9</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="CNTCCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_CNTC_MATCH</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="ISSRCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_5</PARAM>
+			<PARAM>L</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="DLERCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_15</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="DLBRCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_16</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="DREPCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_17</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="FPROCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_18</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="FINRCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_6</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="ISSUCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_13</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="MRKTCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_14</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="PARTCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_PART</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="PRODCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_PROD</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="LAGRCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_20</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="LAANCentralCrossReference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIGetEntityDetailsForCCRF"/>
+		<RULE ORDER_TYP="B" RULE_NME="CFTISetMatchKey">
+			<PARAM>CCRF_MATCH_21</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="A" RULE_NME="CFTICCRFProcessing"/>
+		<RULE ORDER_TYP="F" RULE_NME="CFTICCRFProcessing"/>
+	</SEGMENT>
+	<SEGMENT TYPE="FinancialInstitutionRole">
+		<RULE ORDER_TYP="A" RULE_NME="CFTIRemoveIfUpdate">
+			<PARAM>CROSS_REF_ID</PARAM>
+			<PARAM>STRING</PARAM>
+			<PARAM>N</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CFTIRemoveIfUpdate">
+			<PARAM>START_TMS</PARAM>
+			<PARAM>TMS</PARAM>
+			<PARAM>N</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FinancialInstitutionRating">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructIssueRating">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDeriveEffectiveTms">
+			<PARAM>MoodysRDS_Organization</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDeriveEffectiveTms">
+			<PARAM>FitchRDS_IssueRatings</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDeriveEffectiveTms">
+			<PARAM>FitchRDS_IssuerRatings</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FINSRatingOpinions">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDeriveEffectiveTms">
+			<PARAM>MoodysRDS_Organization</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ISSURatingOpinions">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCDeriveEffectiveTms">
+			<PARAM>FitchRDS_IssueRatings</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="CustomerRating">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructIssueRating">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="AccountAlternateIdentifier">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIStratusUnique</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ApplicationUserGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CFTISeqNumGenerator">
+			<PARAM>PRT_NUM</PARAM>
+			<PARAM>LNUM</PARAM>
+			<PARAM>E</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="AUSRApplicationUserGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CFTISeqNumGenerator">
+			<PARAM>PRT_NUM</PARAM>
+			<PARAM>LNUM</PARAM>
+			<PARAM>E</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FeeTypeGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CFTISeqNumGenerator">
+			<PARAM>PRT_NUM</PARAM>
+			<PARAM>LNUM</PARAM>
+			<PARAM>E</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FTGRFeeTypeGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CFTISeqNumGenerator">
+			<PARAM>PRT_NUM</PARAM>
+			<PARAM>LNUM</PARAM>
+			<PARAM>E</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ElectronicAddressPreference">
+		<RULE ORDER_TYP="B" RULE_NME="CFTICopyFieldFromStorage">
+			<PARAM>CNTL_CROSS_REF_OID</PARAM>
+			<PARAM>CCRF</PARAM>
+		</RULE>
+	</SEGMENT>
+	<!-- BZ11259 SEGMENT TYPE="Customer">    <RULE ORDER_TYP="F" RULE_NME="CFTIInternalCustomerIdentifier">     <PARAM>INTRNLID</PARAM>    </RULE>   </SEGMENT-->
+	<SEGMENT TYPE="FundInvestmentCriteriaDetail">
+		<!--  <RULE ORDER_TYP="B" RULE_NME="CFTIFKLookupRule">     <PARAM>ISID</PARAM>     <PARAM/>     <PARAM>(INSTR_ID)</PARAM>     <PARAM>MATCH=ISID3_ID_CTXT_ISS_ID</PARAM>    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="ISSRIssuerGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIPartyClientRef</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIIssuerUPAddToIOI</PARAM>
+			<PARAM>INTEREST</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="CustomerIdentifier">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIStratusUnique</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="LegalAgreement">
+		<RULE ORDER_TYP="A" RULE_NME="CFTISeqNumGenerator">
+			<PARAM>CROSS_REF_ID</PARAM>
+			<PARAM>STRING</PARAM>
+			<PARAM>E</PARAM>
+			<PARAM>OID</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIValidateLegAgrmntLabel</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIEnddateMarginCall</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIAddLegalRef</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ISSUIssueGroupParticipant">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMIZIndexIssueGroup</PARAM>
+			<PARAM>INDEX</PARAM>
+			<PARAM>HighLiquidity</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ChangeAuditLog">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCBulkApproval">    </RULE>
+		<!--<RULE ORDER_TYP="A" RULE_NME="CGSCChangeApproval">    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="BNCHClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ExecutedTradeClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="CustomerClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructClassification">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IADCIssueActionClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="AccountClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="EnterpriseClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="MKISMarketIssueClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueTypeClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="EmployeeClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="SubdivisionClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="TransactionEventClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FinancialInstitutionClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+		<!--<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">     <PARAM>CJavaBasel3AttrDeriveExposureClass</PARAM>     <PARAM>INTEREST</PARAM>    </RULE>-->
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaBasel3AttrDeriveIniExposureClass</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaBasel3AttrDeriveThirdCtyEquiv</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaBasel3AttrDeriveInterExposureClass</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaBasel3AttrDeriveFinalExposureClass</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FinsRoleClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="GUNTGeographicUnitRating">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="BNCHRating">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="LMTGLoanMortgageRating">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ACCTAccountRating">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FinancialInstitutionGeoUnitPrt">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaBasel3AttrDeriveThirdCtyEquiv</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaBasel3AttrDeriveInterExposureClass</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaBasel3AttrDeriveCntrlGovt</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssueActionGeographicUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="CustomerGeographicUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="EmployeeGeographicUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="PRODProductGeographicUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="BNCHGeographicUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="GUNTLoanMortgageGeographicUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="MRKTMarketGeographicUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="AccountGeographicUnit">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ACCTTaxWithholding">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ISSUTaxWithholding">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="BFDFDataGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDerivePartSeqNumForDGDP">    </RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="BFDFBusinessEntityFieldDefinition">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCRejectDeletionIfRelatedDataExist">    </RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="TaxTreatmentCharacteristics">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ISSUIssueThresholdValues">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ISSUIssueRegulatoryValues">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>GUNT</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="LACDLegalAgreementAnnexParticipantRating">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="LAAPLegalAgreementAnnexParticipantRating">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="RTVLLegalAgreementAnnexParticipantRating">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="PartyClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructClassification">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="PARTPartyRating">
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>RTVL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FinancialInstitutionIdentifier">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCSetGlobalIdentifierIndicator">    </RULE>
+		<RULE ORDER_TYP="D" RULE_NME="CGSCSetGlobalIdentifierIndicator">    </RULE>
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIStratusUnique</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IssuerIdentifier">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCSetGlobalIdentifierIndicator">    </RULE>
+		<RULE ORDER_TYP="D" RULE_NME="CGSCSetGlobalIdentifierIndicator">    </RULE>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIStratusUnique</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="InternalDomainValue">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>DomainAsService</PARAM>
+			<PARAM>NOERROR</PARAM>
+		</RULE>
+		<!--<RULE ORDER_TYP="B" RULE_NME="CGSCIgnoreDVIDMC">    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="IDMVExternalDomainValue">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>DomainAsService</PARAM>
+			<PARAM>NOERROR</PARAM>
+		</RULE>
+		<!--<RULE ORDER_TYP="B" RULE_NME="CGSCIgnoreDVIDMC">    </RULE>-->
+	</SEGMENT>
+	<SEGMENT TYPE="FinancialMarketIdentifier">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>MarketFeeds_ISO,MarketFeeds_CNTRY,MarketFeeds_BB,MarketFeeds_CC,MarketFeeds_IDC,MarketFeeds_RT,MarketFeeds_SMON,MarketFeeds_VDF,MarketFeeds_WM,MarketFeeds_SIRS</PARAM>
+			<PARAM>NOERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ExternalIssueActionType">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>WARNING</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ExternalIssueType">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>WARNING</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="ExternalIndustryClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="IndustryClassificationSet">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="GeographicUnitIdentifier">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="CalendarDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FinsMarketCalendarParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="FINSFinancialInstitutionRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="INCLNLSNameandDescription">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="GUNTNLSNameAndDescription">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="CYCHNLSNameAndDescription">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>ERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="SettlementLocation">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCRetainCustomValues">
+			<PARAM>GS_ADDTNLDMN</PARAM>
+			<PARAM>NOERROR</PARAM>
+		</RULE>
+	</SEGMENT>
+	<!--<SEGMENT TYPE="AuditEntityLinkDetails">    <RULE ORDER_TYP="D" RULE_NME="CGSCInsertAEDLforAudit">    <PARAM>CHILDTABLESTOBEEXCLUDED=ISPC</PARAM>    </RULE>   </SEGMENT>-->
+	<!--<SEGMENT TYPE="ISSTManageIssueVersion">    <RULE ORDER_TYP="D" RULE_NME="CFTIIssueVersionNumber">             <PARAM>ISSVERNO</PARAM>        </RULE>   </SEGMENT>-->
+	<SEGMENT TYPE="WARCWarehouseActivityRunConfiguration">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPRLGSWRatingSetDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGNTGSWRatingSetDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTSGSWRatingValue">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWAccountAccountRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWAccountPartyAgreementDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGNTGSWAccountPartyAgreementDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WLAGGSWAccountPartyAgreementDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPTKGSWAccountPartyAgreementDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWCorporateActionInformation">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWCumReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WBNDGSWCumReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWCumReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGNTGSWCumReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWCumReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WITYGSWCumReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WNCLGSWCumReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPOSGSWCumReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPTKGSWPerson">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWDepositoryOptions">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPRLGSWDepositoryOptions">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWIssueOtherDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPTKGSWLegalAgreement">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWLotContingentDeferredSalesCharge">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWLotContingentDeferredSalesCharge">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWLotContingentDeferredSalesCharge">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPTKGSWLotContingentDeferredSalesCharge">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWMulti-ClassifAttribReportData">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWMulti-ClassifAttribReportData">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWMulti-ClassifAttribReportData">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WMCRGSWMulti-ClassifAttribReportData">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWPerformanceAnalyticsCompSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WBNDGSWPerformanceAnalyticsCompSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWPerformanceAnalyticsCompSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGNTGSWPerformanceAnalyticsCompSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWPerformanceAnalyticsCompSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WITYGSWPerformanceAnalyticsCompSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WNCLGSWPerformanceAnalyticsCompSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPOSGSWPerformanceAnalyticsCompSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWPerformanceAnalyticsTimeSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WBNDGSWPerformanceAnalyticsTimeSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWPerformanceAnalyticsTimeSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGNTGSWPerformanceAnalyticsTimeSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWPerformanceAnalyticsTimeSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WITYGSWPerformanceAnalyticsTimeSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WNCLGSWPerformanceAnalyticsTimeSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPOSGSWPerformanceAnalyticsTimeSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPDKGSWProductIssueRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWProductIssueRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWPerformanceAttribution">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGNTGSWPerformanceAttribution">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WBNDGSWPerformanceAttribution">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWPerformanceAttribution">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWPerformanceAttribution">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPOSGSWPerformanceAttribution">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WNCLGSWPerformanceAttribution">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WITYGSWPerformanceAttribution">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWRiskAttributionReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWRiskAttributionReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWRiskAttributionReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRARGSWRiskAttributionReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGNTGSWReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WBNDGSWReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WITYGSWReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPOSGSWReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WNCLGSWReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWRiskMatrixReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWRiskMatrixReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWRiskMatrixReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRMRGSWRiskMatrixReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWRiskParameterRollOver">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WMTKGSWRiskParameterRollOver">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWRelatedIssueStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWRelatedIssueStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWRatingOpinions">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTSGSWRatingOpinions">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPTKGSWRatingOpinions">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGRTGSWRatingQualifier">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISRGSWRatingQualifier">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPRTGSWRatingQualifier">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTSGSWRatingValueCross-Reference">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTVGSWRatingValueCross-Reference">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WTRDGSWTransactionTransactionRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWAccountAllocation">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPCFFaturesParentConfiguration">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAccountIssueRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WTRDGSWTransactionInsuranceExtension">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWACKAccount">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAccountSummary">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWDateDefinition">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKIssue">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPosition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAccountingTransaction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWTransactionEventClass">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWLots">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWLOTSAlternateCurrency">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAlternateCurrency">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAccountGroup">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWACKAccountGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWACKAccountClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWNCSIndustryClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIndustryClassificationSet">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAccountShareClass">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWACKAccountShareClass">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAccountSummaryAlternateCurrency">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWACSAccountSummaryAlternateCurrency">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWTransactionAlternateCurrency">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWTRNTransactionAlternateCurrency">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPositionAlternateCurrency">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPOSPositionAlternateCurrency">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKIssueClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKParty">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPartyAddress">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKPartyAddress">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWGeographicUnit">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIndustryClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPartyGroup">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPartyGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKPartyGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAccountIssueClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWACKAccountIssueClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPartyAccountRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKPartyAccountRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueStatistic">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKIssueStatistic">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWFXRate">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWRatings">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueRatings">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKIssueRatings">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueType">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWCalendarDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWCalendarDateParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWCADCalendarDateParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWBandRange">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueBand">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKIssueBand">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWTransactionEventClassification">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAccountFact">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWACKAccountFact">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPreferredClassificationSet">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWHolding">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPOSHolding">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAccountGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWAGRAccountGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPGRPartyGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWTransaction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPartyRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKPartyRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWMarketListing">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKMarketListing">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKIssuePrice">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWAccountKey">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueKey">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPartyKey">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWEnterprise">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWEnterpriseGroup">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWEnterpriseGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWENREnterpriseGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWGeographicUnitGroup">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWGeographicUnitGroupPrt">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWGNRGeographicUnitGroupPrt">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWGeographicUnitRating">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWRTNGSGeographicUnitRating">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKIssueMatrixRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWMTKIssueMatrixRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueEventDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWIEKIssueEventDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueEventKey">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueEventPayment">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWIEKIssueEventPayment">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueGroup">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssueGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWIGRIssueGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWRTNGSLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWINCLLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWGNRLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWGUNTLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWISTYLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWAGRLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWENRLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWMatrixData">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWMatrixDataKey">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWMTKMatrixDataKey">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWMatrixDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWMTKMatrixDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWMatrixKey">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWMTKMatrixOperand">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWMTKMatrixParameter">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWMatrixStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWMTKMatrixStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWParameter">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPartyPartyRelationship">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKPartyPartyRelationship">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKPartyClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKPartyRating">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWCompanyStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKCompanyStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKRelatedIssue">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWACKRiskCalculationParameters">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKRiskCalculationParameters">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKSecurityLendingStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWHOLDSecurityLendingStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWIssuePrice">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWPartyIssueRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWISKPartyIssueRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWPTKPartyIssueRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWWTRDAccountingTransaction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="GSWEnterpriseKey">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPDKGSWProductKey">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPDKGSWProduct">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WNCLGSWProduct">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPDKGSWProductPurchase">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWProductPurchase">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPTKGSWProductPurchase">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWCumReturnsPortfolioPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWCumReturnsPortfolioPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWWeightReturnsAnalyticsFlow">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWWeightReturnsAnalyticsFlow">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WTGRGSWIssueTypeGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WITYGSWIssueTypeGroupParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WTGRGSWIssueTypeGroup">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPIRGSWIssueCollateral">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WIGRGSWIssueCollateral">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWIssueCollateral">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WICLGSWIssueCollateral">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACRGSWAccountAccountRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WAGDGSWAggregateAccountCriteriaDetail">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WAOIGSWAttributeofInterest">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WAPAGSWAccountPartyAgreementDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WCANGSWCorporateActionInformation">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WCRIGSWCumReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WCUHGSWPerson">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDOPGSWDepositoryOptions">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WECFGSWEmailConfiguration">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WERNGSWErrorResolution">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISDGSWIssueOtherDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WLAGGSWLegalAgreement">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WLDCGSWLotContingentDeferredSalesCharge">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WMCDGSWMulti-ClassifAttribReportData">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WMCRGSWMulti-ClassifAttribReportDef">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPASGSWPerformanceAnalyticsCompSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPATGSWPerformanceAnalyticsTimeSeries">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPCTGSWPositionConsistencyTreatment">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPDIGSWProductIssueRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPEAGSWPerformanceAttribution">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPKEGSWPackageExecutionDependency">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRADGSWRiskAttributionReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRARGSWRiskAttributionReportDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRIPGSWReturnsInvestorPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRMDGSWRiskMatrixReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRMRGSWRiskMatrixReportDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRPRGSWRiskParameterRollOver">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRSTGSWRelatedIssueStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTOGSWRatingOpinions">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTQGSWRatingQualifier">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTXGSWRatingValueCross-Reference">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WSTRGSWStrategy">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WTRLGSWTransactionTransactionRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WUFDGSWUser-DefinedFieldDefinition">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPRUGSWPartyRuleRequirement">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPTKGSWPartyRuleRequirement">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WLGRGSWLedger">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGLSGSWGeneralLedgerSummary">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWGeneralLedgerSummary">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWGeneralLedgerSummary">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WLGRGSWGeneralLedgerSummary">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WMICGSWMarketIssueCharacteristics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWMarketIssueCharacteristics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPTKGSWMarketIssueCharacteristics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WTGRGSWMarketIssueCharacteristics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGNTGSWMarketIssueCharacteristics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WMIDGSWMarketIssueOtherDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WMICGSWMarketIssueOtherDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WMILGSWMarketIssueClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WMICGSWMarketIssueClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WNCLGSWMarketIssueClassification">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WLMTGSWLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WENKGSWLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTSGSWLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTVGSWLimitInstruction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WTLTGSWTaxLotTransaction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWTaxLotTransaction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWTaxLotTransaction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WTRDGSWTaxLotTransaction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTSGSWRatingSetDefinition">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRTVGSWRatingValue">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WRCPGSWRiskCalculationParameters">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WITYGSWRiskCalculationParameters">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WENKGSWRiskCalculationParameters">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WTRDGSWRiskCalculationParameters">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WITYGSWCumReturnsPortfolioPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WNCLGSWCumReturnsPortfolioPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGNTGSWCumReturnsPortfolioPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWCumReturnsPortfolioPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WBNDGSWCumReturnsPortfolioPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPOSGSWCumReturnsPortfolioPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WITYGSWWeightReturnsAnalyticsFlow">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WNCLGSWWeightReturnsAnalyticsFlow">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WGNTGSWWeightReturnsAnalyticsFlow">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWWeightReturnsAnalyticsFlow">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WBNDGSWWeightReturnsAnalyticsFlow">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPOSGSWWeightReturnsAnalyticsFlow">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WSTRGSWWeightReturnsAnalyticsFlow">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWAccountOtherDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WLGRGSWTransactionEventJournal">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WTRNGSWTransactionEventJournal">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPOSGSWTransactionEventJournal">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWTransactionEventJournal">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWTransactionEventJournal">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WSACGSWSub-AccountCriteria">
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WAALGSWAccountAllocation">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WCRPGSWCumReturnsPortfolioPerspective">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WWRAGSWWeightReturnsAnalyticsFlow">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWClassificationReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWAccountAllocationMeasurement">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWIssueFact">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WDTDGSWAccountAllocation">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWSecurityLendingStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPTKGSWSecurityLendingStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WENKGSWEnterprise">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWAccountIssueRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WAGTGSWAggregatedTransactions">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPTKGSWPartyOtherDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWPartySanction">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="ACCTAccountIssueClassification">
+		<RULE ORDER_TYP="B" RULE_NME="CFTIConstructClassification">    </RULE>
+		<RULE ORDER_TYP="B" RULE_NME="CGSCHandleCompositeKey">
+			<PARAM>INCL</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="WCRDGSWClassificationReportDetails">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+		<RULE ORDER_TYP="F" RULE_NME="CGSCDWHUpdateEntityInfo"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWPartyAccountRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWAccountRegulatoryReporting">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGswProductAccountRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WPDKGswProductAccountRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWAccountParticipantStatistics">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGswEntityCalendarParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGswEntityCalendarParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WCADGswEntityCalendarParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WISKGSWAccountIssueRole">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWAccountParticipant">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="WACKGSWAccountSummary">
+		<RULE ORDER_TYP="A" RULE_NME="CGSCDWHUpdateVersionTimeStamp"/>
+	</SEGMENT>
+	<SEGMENT TYPE="Employee">
+		<RULE ORDER_TYP="A" RULE_NME="CFTISeqNumGenerator">
+			<PARAM>PREF_EMPLOYEE_ID</PARAM>
+			<PARAM>STRING</PARAM>
+			<PARAM>E</PARAM>
+		</RULE>
+	</SEGMENT>
+	<SEGMENT TYPE="EntityUpdateTimestamp">
+		<RULE ORDER_TYP="D" RULE_NME="CGSCInvokeJavaRule">
+			<PARAM>CJavaMHIUpdatedTMS</PARAM>
+		</RULE>
+	</SEGMENT>
+</MSGSET>

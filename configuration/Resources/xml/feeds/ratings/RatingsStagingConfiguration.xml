@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vendor-definition>
+  <name>RatingsStagingConfiguration</name>
+  <encoding>ISO-8859-1</encoding>
+  <textPreparation type="com.j2fe.feeds.stp.STPFeedPreparation">
+    <variables>
+      <inputDirectory></inputDirectory>
+      <outputDirectory></outputDirectory>
+      <moveDirectory></moveDirectory>
+      <vendorDirectory></vendorDirectory>
+      <moveInputFiles>true</moveInputFiles>
+    </variables>
+    <pull type="com.j2fe.feeds.stp.RatingPullFeed">
+	  <processDescriptiveData>true</processDescriptiveData>
+      <name>RATINGSV4</name>
+      <source>SFTP</source>
+      <sourceId>sftp/snp/ratings</sourceId>
+      <sortAscending>true</sortAscending>
+      <pattern>RXSPGCrossRef*.zip</pattern>
+      <pattern>RXSPGParticipants*.zip</pattern>
+      <pattern>RXSPGRatings*.zip</pattern>
+      <reDownloadDownloadedFiles>false</reDownloadDownloadedFiles>
+      <persistTime>true</persistTime>
+    </pull>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGCrossRef*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPINDUSTRYCHAR.CHANGEBIT~SPINDUSTRYCHAR.CHARID~SPINDUSTRYCHAR.OBJECTID~SPINDUSTRYCHAR.CHARTYPEID~SPINDUSTRYCHAR.SUBTYPEID~SPINDUSTRYCHAR.PRIMARYFLAG</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spIndustryChar.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGCrossRef*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPRATINGIDENTIFIER.CHANGEBIT~SPRATINGIDENTIFIER.SYMBOLID~SPRATINGIDENTIFIER.SYMBOLTYPEID~SPRATINGIDENTIFIER.SYMBOLVALUE~SPRATINGIDENTIFIER.OBJECTID~SPRATINGIDENTIFIER.RELATEDCOMPANYID~SPRATINGIDENTIFIER.ACTIVEFLAG~SPRATINGIDENTIFIER.PRIMARYFLAG</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spRatingIdentifier.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPASSESSMENTDATA.CHANGEBIT~SPASSESSMENTDATA.ASSESSMENTDETAILID~SPASSESSMENTDATA.ENTITYSYMBOLVALUE~SPASSESSMENTDATA.INSTRUMENTSYMBOLVALUE~SPASSESSMENTDATA.SECURITYSYMBOLVALUE~SPASSESSMENTDATA.OBJECTTYPEID~SPASSESSMENTDATA.ORGDEBTTYPECODE~SPASSESSMENTDATA.ASSESSMENTTYPECODE~SPASSESSMENTDATA.CURRENTASSESSMENTSYMBOL~SPASSESSMENTDATA.ASSESSMENTSYMBOL~SPASSESSMENTDATA.ASSESSMENTDATE~SPASSESSMENTDATA.CREDITWATCH~SPASSESSMENTDATA.OUTLOOK~SPASSESSMENTDATA.CREDITWATCHDATE~SPASSESSMENTDATA.OUTLOOKDATE~SPASSESSMENTDATA.PRIORASSESSMENTSYMBOL~SPASSESSMENTDATA.PRIORCREDITWATCH~SPASSESSMENTDATA.PRIOROUTLOOK~SPASSESSMENTDATA.ASSESSMENTQUALIFIER~SPASSESSMENTDATA.REGULATORYINDICATOR~SPASSESSMENTDATA.REGULATORYQUALIFIER~SPASSESSMENTDATA.ASSESSMENTACTIONWORD~SPASSESSMENTDATA.CWOLACTIONWORD~SPASSESSMENTDATA.CWOLIND~SPASSESSMENTDATA.MATURITYDATE~SPASSESSMENTDATA.CUSIP~SPASSESSMENTDATA.CINS~SPASSESSMENTDATA.ISIN</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spAssessmentData.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPASSESSMENTDATA.CHANGEBIT~SPASSESSMENTDATA.ASSESSMENTDETAILID~SPASSESSMENTDATA.ENTITYSYMBOLVALUE~SPASSESSMENTDATA.INSTRUMENTSYMBOLVALUE~SPASSESSMENTDATA.SECURITYSYMBOLVALUE~SPASSESSMENTDATA.OBJECTTYPEID~SPASSESSMENTDATA.ORGDEBTTYPECODE~SPASSESSMENTDATA.ASSESSMENTTYPECODE~SPASSESSMENTDATA.CURRENTASSESSMENTSYMBOL~SPASSESSMENTDATA.ASSESSMENTSYMBOL~SPASSESSMENTDATA.ASSESSMENTDATE~SPASSESSMENTDATA.CREDITWATCH~SPASSESSMENTDATA.OUTLOOK~SPASSESSMENTDATA.CREDITWATCHDATE~SPASSESSMENTDATA.OUTLOOKDATE~SPASSESSMENTDATA.PRIORASSESSMENTSYMBOL~SPASSESSMENTDATA.PRIORCREDITWATCH~SPASSESSMENTDATA.PRIOROUTLOOK~SPASSESSMENTDATA.ASSESSMENTQUALIFIER~SPASSESSMENTDATA.REGULATORYINDICATOR~SPASSESSMENTDATA.REGULATORYQUALIFIER~SPASSESSMENTDATA.ASSESSMENTACTIONWORD~SPASSESSMENTDATA.CWOLACTIONWORD~SPASSESSMENTDATA.CWOLIND~SPASSESSMENTDATA.MATURITYDATE~SPASSESSMENTDATA.CINS~SPASSESSMENTDATA.ISIN</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spAssessmentDataNoCUSIP.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPASSESSMENTLEVELDATA.CHANGEBIT~SPASSESSMENTLEVELDATA.ASSESSMENTDETAILID~SPASSESSMENTLEVELDATA.ASSESSMENTDATAITEMID~SPASSESSMENTLEVELDATA.DATAVALUE</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spAssessmentLevelData.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPENTITYLEVELDATA.CHANGEBIT~SPENTITYLEVELDATA.ENTITYSYMBOLVALUE~SPENTITYLEVELDATA.RATINGDATAITEMID~SPENTITYLEVELDATA.DATAVALUE</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spEntityLevelData.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPENTITYSECTOR.CHANGEBIT~SPENTITYSECTOR.ENTITYSYMBOLVALUE~SPENTITYSECTOR.SECTORCODE~SPENTITYSECTOR.SUBSECTORCODE~SPENTITYSECTOR.INDUSTRYCODE~SPENTITYSECTOR.PRIMARYFLAG</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spEntitySector.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPINSTRUMENTLEVELDATA.CHANGEBIT~SPINSTRUMENTLEVELDATA.INSTRUMENTSYMBOLVALUE~SPINSTRUMENTLEVELDATA.RATINGDATAITEMID~SPINSTRUMENTLEVELDATA.DATAVALUE</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spInstrumentLevelData.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPINSTRUMENTSECTOR.CHANGEBIT~SPINSTRUMENTSECTOR.INSTRUMENTSYMBOLVALUE~SPINSTRUMENTSECTOR.SECTORCODE~SPINSTRUMENTSECTOR.SUBSECTORCODE~SPINSTRUMENTSECTOR.INDUSTRYCODE~SPINSTRUMENTSECTOR.PRIMARYFLAG</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spInstrumentSector.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPINSTRUMENTTOENTITY.CHANGEBIT~SPINSTRUMENTTOENTITY.INSTRUMENTSYMBOLVALUE~SPINSTRUMENTTOENTITY.ROLETYPECODE~SPINSTRUMENTTOENTITY.ENTITYSYMBOLVALUE</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spInstrumentToEntity.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPRATINGDATA.CHANGEBIT~SPRATINGDATA.RATINGDETAILID~SPRATINGDATA.ENTITYSYMBOLVALUE~SPRATINGDATA.INSTRUMENTSYMBOLVALUE~SPRATINGDATA.SECURITYSYMBOLVALUE~SPRATINGDATA.OBJECTTYPEID~SPRATINGDATA.ORGDEBTTYPECODE~SPRATINGDATA.RATINGTYPECODE~SPRATINGDATA.CURRENTRATINGSYMBOL~SPRATINGDATA.RATINGSYMBOL~SPRATINGDATA.RATINGDATE~SPRATINGDATA.CREDITWATCH~SPRATINGDATA.OUTLOOK~SPRATINGDATA.CREDITWATCHDATE~SPRATINGDATA.OUTLOOKDATE~SPRATINGDATA.PRIORRATINGSYMBOL~SPRATINGDATA.PRIORCREDITWATCH~SPRATINGDATA.PRIOROUTLOOK~SPRATINGDATA.RATINGQUALIFIER~SPRATINGDATA.REGULATORYINDICATOR~SPRATINGDATA.REGULATORYQUALIFIER~SPRATINGDATA.RATINGACTIONWORD~SPRATINGDATA.CWOLACTIONWORD~SPRATINGDATA.CWOLIND~SPRATINGDATA.MATURITYDATE~SPRATINGDATA.CUSIP~SPRATINGDATA.CINS~SPRATINGDATA.ISIN</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spRatingData.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPRATINGDATA.CHANGEBIT~SPRATINGDATA.RATINGDETAILID~SPRATINGDATA.ENTITYSYMBOLVALUE~SPRATINGDATA.INSTRUMENTSYMBOLVALUE~SPRATINGDATA.SECURITYSYMBOLVALUE~SPRATINGDATA.OBJECTTYPEID~SPRATINGDATA.ORGDEBTTYPECODE~SPRATINGDATA.RATINGTYPECODE~SPRATINGDATA.CURRENTRATINGSYMBOL~SPRATINGDATA.RATINGSYMBOL~SPRATINGDATA.RATINGDATE~SPRATINGDATA.CREDITWATCH~SPRATINGDATA.OUTLOOK~SPRATINGDATA.CREDITWATCHDATE~SPRATINGDATA.OUTLOOKDATE~SPRATINGDATA.PRIORRATINGSYMBOL~SPRATINGDATA.PRIORCREDITWATCH~SPRATINGDATA.PRIOROUTLOOK~SPRATINGDATA.RATINGQUALIFIER~SPRATINGDATA.REGULATORYINDICATOR~SPRATINGDATA.REGULATORYQUALIFIER~SPRATINGDATA.RATINGACTIONWORD~SPRATINGDATA.CWOLACTIONWORD~SPRATINGDATA.CWOLIND~SPRATINGDATA.MATURITYDATE~SPRATINGDATA.CINS~SPRATINGDATA.ISIN</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spRatingDataNoCUSIP.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPRATINGLEVELDATA.CHANGEBIT~SPRATINGLEVELDATA.RATINGDETAILID~SPRATINGLEVELDATA.RATINGDATAITEMID~SPRATINGLEVELDATA.DATAVALUE</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spRatingLevelData.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGRatings*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPSECURITYLEVELDATA.CHANGEBIT~SPSECURITYLEVELDATA.SECURITYSYMBOLVALUE~SPSECURITYLEVELDATA.RATINGDATAITEMID~SPSECURITYLEVELDATA.DATAVALUE</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spSecurityLevelData.txt</selectFile>
+    </prepare>
+    <prepare type="com.j2fe.feeds.stp.RatingStagingPrepareFeed">
+      <pattern>RXSPGParticipants*.zip</pattern>
+      <zipped>true</zipped>
+      <header>SPINSTRUMENTTOENTITY.CHANGEBIT~SPINSTRUMENTTOENTITY.INSTRUMENTSYMBOLVALUE~SPINSTRUMENTTOENTITY.ROLETYPECODE~SPINSTRUMENTTOENTITY.ENTITYSYMBOLVALUE</header>
+      <fullFilePattern>\\*Full*</fullFilePattern>
+      <persistTime>true</persistTime>
+      <replaceNewLineCharacter>#@#@#</replaceNewLineCharacter>
+      <selectFile>spParticipants.txt</selectFile>
+    </prepare>
+    <load type="com.j2fe.feeds.stp.RatingStagingLoadFeed"/>
+  </textPreparation>
+</vendor-definition>

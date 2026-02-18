@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <occurrences>
+    <occurrence desc="Occurrence for Issue" id="++4Gmmty2ettS01A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISSU_01" nameSpace="GSC" table="FT_T_ISSU" timeSeries="NONE">
+      <field desc="Instrument ID" id="++ABu5pGgMr0S01p" name="INSTR_ID" nameSpace="MHI"/>
+      <field desc="Instrument Issuer ID" id="00A9FWN0gMr0S01f" name="INSTR_ISSR_ID" nameSpace="MHI"/>
+      <option id="005uHGoi2etqq000" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+</entities>

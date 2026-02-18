@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TimeSeriesConfiguration SYSTEM "TimeSeries.dtd">
+<TimeSeriesConfiguration>
+	<Table Type="ISRT">
+	        <Attribute>RTNG_VALUE_OID</Attribute>
+	        <Attribute>WATCH_STAT_TYP</Attribute>
+	</Table>	
+	<Table Type="BDST" MatchingTolerance="10">
+   		<Attribute>OUTST_AMT</Attribute>
+	</Table>
+	<Table Type="IPDF">
+   		<Attribute>EV_CRTE</Attribute>
+	</Table> 
+	<Table Type="PPDF" MatchingTolerance="0">
+		 <Attribute>EV_CAMT</Attribute>	
+  		 <Attribute>EV_CRTE</Attribute>
+	</Table>
+	<Table Type="EQST" MatchingTolerance="0">
+ 		  <Attribute>SHR_OUTST_CQTY</Attribute>
+ 		  <Attribute>GRS_DPS_1YR_CRTE </Attribute>
+	</Table>
+	<Table Type="BNRT">
+	        <Attribute>RTNG_VALUE_OID</Attribute>
+	</Table>
+	<Table Type="BNMW">
+	</Table>
+</TimeSeriesConfiguration>

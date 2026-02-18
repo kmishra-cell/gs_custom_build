@@ -1,0 +1,21 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "MoodysOrganizationRatingsAdhocDailyFull" ],
+  "title" : "Moodys Organization Ratings Adhoc Daily Full",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_1st_Saturday_of_Year",
+    "timeZone" : "Asia/Kolkata",
+    "periods" : [ {
+      "singleStart" : "09:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

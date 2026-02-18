@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="Month and year (MMYY) when the futures contract would expire." displayCaption="Contract Expiry Month and Year" entityTypeId="++3qwBhS2etxm003" id="005k2kDC2etqS03H" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FuturesContractExpiryMonthAndYear" nameSpace="GSC">
+      <fieldConfig id="005sN5ji2etpe00f" nameSpace="GSC" type="PATTERN" value="MMYYYY"/>
+      <fieldConfig id="00AI9SfWgMr2m00G" nameSpace="MHI" type="CLEAR_DOMAIN_CACHE" value="N"/>
+      <fieldConfig id="005sN5ji2etpe00g" nameSpace="GSC" type="TEXT_DISPLAY" value="TEXT"/>
+    </beField>
+  </beFields>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue" id="++4Gmmty2ettS01A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISSU_01" nameSpace="GSC" table="FT_T_ISSU" timeSeries="NONE">
+      <field desc="Instrument ID" id="++ABu5pGgMr0S01p" name="INSTR_ID" nameSpace="MHI"/>
+      <field desc="Instrument Issuer ID" id="00A9FWN0gMr0S01f" name="INSTR_ISSR_ID" nameSpace="MHI"/>
+      <option id="005uHGoi2etqq000" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="005k2kDC2etqS03H" groupMapping="0" id="005k2kDC2etqS03J" nameSpace="GSC" occFieldId="005k2kDC2etqS03G"/>
+  </mappings>
+</entities>

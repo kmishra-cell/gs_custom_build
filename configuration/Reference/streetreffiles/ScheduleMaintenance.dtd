@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT EffEndDteColumnName (#PCDATA)>
+<!ELEMENT EffStartDteColumnName (#PCDATA)>
+<!ELEMENT ScheduleMaintenanceConfiguration (occurrence+)>
+<!ELEMENT attribute (#PCDATA)>
+<!ELEMENT occurrence (option)>
+<!ATTLIST occurrence
+	table (ft_t_firt | ft_t_irrt | ft_t_isrt | ft_t_rtop) #REQUIRED
+>
+<!ELEMENT option (attribute, EffStartDteColumnName, EffEndDteColumnName)>
+<!ATTLIST option
+	id (FIRT_1 | IRRT_1 | ISRT_1 | RTOP_1) #REQUIRED
+	MatchingTolerance CDATA #IMPLIED
+	messageTypes CDATA #IMPLIED
+>

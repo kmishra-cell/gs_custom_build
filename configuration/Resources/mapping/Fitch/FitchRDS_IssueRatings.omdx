@@ -1,0 +1,1831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="OMDX" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="LastChangedTms">2024-07-23 at 03:09:46 BST</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="MappingDesignerVersion">8.4.1.32REL</Option>
+    <Option key="OMDX.Base">FitchRDS_IssueRatings.mdx</Option>
+  </Options>
+  <Input vendorType="BB">
+    <Options/>
+    <Layout>
+      <Override>
+        <field ignoreFieldValue="" path="CountryCode"/>
+        <field ignore="1" ignoreFieldValue="" path="StateProvince"/>
+        <field ignoreFieldValue="" path="CUSIPIdentifier"/>
+        <field ignore="1" ignoreFieldValue="" path="IssueRecoveryRating"/>
+        <field ignore="1" ignoreFieldValue="" path="IssueDistressedRecoveryRating"/>
+        <field ignore="1" ignoreFieldValue="" path="UnenhancedLongTermIssueRating"/>
+        <field ignore="1" ignoreFieldValue="" path="LongTermNationalIssueRating"/>
+        <field ignore="1" ignoreFieldValue="" path="LongTermLocalCurrencyIssueRating"/>
+        <field ignore="1" ignoreFieldValue="" path="ShortTermIssueRating"/>
+        <field ignore="1" ignoreFieldValue="" path="UnenhancedShortTermIssueRating"/>
+        <field ignore="1" ignoreFieldValue="" path="ShortTermNationalIssueRating"/>
+        <field ignore="1" ignoreFieldValue="" path="ShortTermLocalCurrencyIssueRating"/>
+        <field ignore="1" ignoreFieldValue="" path="IssueVolatilityRating"/>
+      </Override>
+      <field decimals="0" desc="" excludedNullIdentifiers="" ident="LT Issue Rating Solicitation Status" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="LTIssueRatingSolicitationStatus" path="" pos="0" readonly="false" type="String"/>
+    </Layout>
+  </Input>
+  <Output>
+    <MappingFragments/>
+    <OutputDef>
+      <Node messageformat="GSREF" name="STREET_REF" type="message">
+        <Options>
+          <Option key="DocType">STREET_REF</Option>
+          <Option key="SystemId">fti://repository/dtd/STREET_REF</Option>
+          <Option key="OutputEncoding"/>
+        </Options>
+        <comment><![CDATA[EG-9960]]></comment>
+        <condition><![CDATA[if (OneHasValue(FitchIssueIDNumber, CUSIPIdentifier, ISINIdentifier))
+	return "ISSU";
+else
+	return "";]]></condition>
+        <Node name="MESSAGECONDITION" type="attribute">
+          <expr><![CDATA[if (OneHasValue(FitchIssueIDNumber, CUSIPIdentifier, ISINIdentifier))
+	return "ISSU";
+else
+	return "";]]></expr>
+        </Node>
+        <Node name="MSGSET" type="attribute"/>
+        <Node name="TRACE" type="attribute">
+          <expr><![CDATA[return "false";]]></expr>
+        </Node>
+        <Node name="TRANSACTIONCODE" type="attribute"/>
+        <Node name="USERID" type="attribute">
+          <expr><![CDATA[return "GUEST";]]></expr>
+        </Node>
+        <Node name="HEADER" type="element">
+          <Node name="CHECKLASTDBUPDATE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+          </Node>
+          <Node name="CHGAPPRTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+          </Node>
+          <Node name="CNTRYCDE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (!StrContainsOneOf("SRB", "XWI", "UNK", "XXX", "XSC"))
+		return Translate(FitchETT, false, "COUNTRY_CODES", CountryCode)
+else
+	return "";]]></expr>
+            </Node>
+          </Node>
+          <Node name="CURRENTTIMESTAMP" type="element"/>
+          <Node name="DATASOURCE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "FITCH";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ISSTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LOCALE" type="element">
+            <Node name="NLS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="TIMEZONE" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_ID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return FitchIssueIDNumber;]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_ID_CTXT_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "FITCH";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(IssueDebtLevelCode))
+	return IssueDebtLevelCode;
+else
+	return "MISC";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_NME" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return FitchIssueIDNumber;]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_TBL_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ISSU";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MERGEMESSAGE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MSGCLASSIFICATION" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MSGSET" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MSGTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORGID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PUBLISH" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="REALMSG" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="REFERRINGPAGE" type="element"/>
+          <Node name="ROLLBACKONSEGMENTERROR" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="SECURITYLABEL" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="TRANSLATE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MSGCLASSIFICATION" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "FTRDSISU";]]></expr>
+            </Node>
+          </Node>
+          <Node name="USERID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "FTRDSISUCSTM";]]></expr>
+            </Node>
+          </Node>
+          <Node name="VENDORRECORDID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return GetRecordIdentifier();]]></expr>
+            </Node>
+          </Node>
+          <Node name="VENDORTYPE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="VTTRMSGSET" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node name="Issue" type="segment">
+          <condition><![CDATA[if (OneHasValue(FitchIssueIDNumber, CUSIPIdentifier, ISINIdentifier))
+	return "Issue";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "REFERENCE";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute">
+            <expr><![CDATA[return "N";]]></expr>
+          </Node>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute"/>
+          <Node name="NESTED_ERR_LVL" type="attribute"/>
+          <Node name="NESTED_ERR_TXT" type="attribute"/>
+          <Node name="ONLY" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "Issue";]]></expr>
+          </Node>
+          <Node name="IssuerIdentifier" type="segment">
+            <condition><![CDATA[if (OneHasValue(IssuerID))
+	return "IssuerIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "INSTR_ISSR_ID";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "IRID1_IDCTXT_ISSR_ID";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "IssuerIdentifier";]]></expr>
+            </Node>
+            <Node name="ISSRID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return IssuerID;]]></expr>
+              </Node>
+            </Node>
+            <Node name="ISSRIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "FITCH";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="ACCESSAUTHTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="CLTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "NO ERROR";]]></expr>
+            </Node>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return StrRightCut(IssueClass, 20);]]></expr>
+            </Node>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (Strcmp(IssueRecordChangeCode, "Revision Issue"))
+	return "CHANGED";
+else if (Strcmp(IssueRecordChangeCode, "Delete"))
+	return "VENDOR DELETE";
+else
+	return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DECPRECNUM" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DENOMCURRCDE" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return IssueCurrencyCode;]]></expr>
+            </Node>
+          </Node>
+          <Node name="DFLTSTATTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DFLTTMS" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DISTRIBUTIONCURRCDE" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DLVIND" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DLVREASCDE" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="EISTOID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="EUROCNVRTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ILLIQUIDITYIND" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INCBASTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INDIVCERTIFIND" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRISSRID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISCDOID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSACTVYSTATREASTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneOf(IssueRecordChangeCode, "Called", "Matured", "Paid Out", "Delete"))
+	return Translate(FitchETT, false, "REAS_TYP", IssueRecordChangeCode)
+else
+	return "";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ISSACTVYSTATTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneOf(IssueRecordChangeCode, "Called", "Matured", "Paid Out", "Delete"))
+	return "INACTIVE";
+else
+	return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ISSALPHSRCHTXT" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSOBJTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSRATETXT" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSRID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSRIDCTXTTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSTMS" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[if (!OneHasValue(IssueDebtLevelCode))
+	return "Y";
+else
+	return "";]]></expr>
+            </Node>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(IssueDebtLevelCode))
+	return "YES";
+else
+	return "";]]></expr>
+            </Node>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(IssueDebtLevelCode))
+	return IssueDebtLevelCode;
+else
+	return "MISC";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ISSUTCQTY" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return IssueAmount;]]></expr>
+            </Node>
+          </Node>
+          <Node name="ISSUTMEASTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LIQUIDRIGHTRANKTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MATEXPTMS" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(IssueMaturityDate))
+	return Transform2FTIDate(
+			ReformatDateTime(IssueMaturityDate, "%Y-%M-%D", "%Y%M%D"),
+			"YYYYMMDD");
+else
+	return "";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MKTINDXDEFID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MONITORRESTRICTIONCDE" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="NOMVALUNITCAMT" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PARTFULLPDTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PARVALUETYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PRCMLTPLRCRTE" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PRCQTMETHTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PREFIDCTXTTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PREFISSDESC" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PREFISSID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PREFISSNME" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return IssueDescription;]]></expr>
+            </Node>
+          </Node>
+          <Node name="PRINBASTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PRINNOTLIND" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="SECFORMTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="SERIESTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERROR" type="attribute">
+              <expr><![CDATA[return "NO ERROR";]]></expr>
+            </Node>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "N";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return IssueTrancheSeries;]]></expr>
+            </Node>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="TRDGRSTTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="TYPEARNFORLIFECDE" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="WHENISSUEDIND" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="WTHHLDTAXIND" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="WTHHLDTAXLEVIEDSRCIND" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+
+ <Node name="IssueIdentifier" type="segment">
+          <condition><![CDATA[if (OneHasValue(FitchIssueIDNumber))
+	return "IssueIdentifier";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "REFERENCE";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute"/>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute">
+            <expr><![CDATA[return "ISID6_CTX_ID_MKT_USG";]]></expr>
+          </Node>
+          <Node name="ONLY" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueIdentifier";]]></expr>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ERGONOMICSYMBOLIND" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="IDCTXTTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "FITCH";]]></expr>
+            </Node>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRSYMBOLSTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISIDOID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return FitchIssueIDNumber;]]></expr>
+            </Node>
+          </Node>
+          <Node name="ISSUSAGETYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LISTINGSYMBOLIND" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MKTID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MKTIDCTXTTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MKTNME" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MKTOID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MULTISEDOLSYMBOLIND" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return Transform2FTIDate(SubString(TimeStamp(), 1, 10), "MM-DD-YYYY");]]></expr>
+            </Node>
+          </Node>
+          <Node name="TRADERSYMBOLIND" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="TRDNGCURRCDE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+ 
+        <Node displayName="LTISSURT" name="IssueRating" type="segment">
+          <condition><![CDATA[if (OneHasValue(LongTermIssueRating))
+	return "IssueRating";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "REFERENCE";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="COPY_TO" type="attribute"/>
+          <Node name="DUP_CHECK" type="attribute"/>
+          <Node name="ENDDATEIND" type="attribute"/>
+          <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+          <Node name="ERROR" type="attribute"/>
+          <Node name="LOOKUP" type="attribute"/>
+          <Node name="MATCH" type="attribute">
+            <expr><![CDATA[return "ISRT_MATCH_5";]]></expr>
+          </Node>
+          <Node name="ONLY" type="attribute"/>
+          <Node name="PARENT_LINK" type="attribute"/>
+          <Node name="PUBLISH" type="attribute"/>
+          <Node name="SEGPROCESSEDIND" type="attribute"/>
+          <Node name="START_TMS_MATCH" type="attribute"/>
+          <Node name="TRANSLATE" type="attribute"/>
+          <Node name="TSATTRIBUTE" type="attribute"/>
+          <Node name="TSOPTION" type="attribute"/>
+          <Node name="TSTOLERANCE" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueRating";]]></expr>
+          </Node>
+          <Node name="RatingValue" type="segment">
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "RatingValue";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "RTNG_CDE,RTNG_SET_OID,RTNG_VALUE_OID";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "RTNG_CDE,RTNG_SET_OID,RTNG_VALUE_OID";]]></expr>
+            </Node>
+            <Node name="DUP_CHECK" type="attribute"/>
+            <Node name="ENDDATEIND" type="attribute"/>
+            <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+            <Node name="ERROR" type="attribute"/>
+            <Node name="LOOKUP" type="attribute"/>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "RTVL_MATCH_1";]]></expr>
+            </Node>
+            <Node name="NESTED_ERR_LVL" type="attribute">
+              <expr><![CDATA[return "ERROR";]]></expr>
+            </Node>
+            <Node name="NESTED_ERR_TXT" type="attribute">
+              <expr><![CDATA[return Strcat("12|CONCTNS|NESTED|RTNGSETMNEM|LTISSURT|RTNGCDE|", Strcat(If(StrContainsOneOf(LongTermIssueRating, "("), StrWord(LongTermIssueRating, "(", 1), LongTermIssueRating), "|DATASRCID|FITCH"));]]></expr>
+            </Node>
+            <Node name="ONLY" type="attribute"/>
+            <Node name="PARENT_LINK" type="attribute"/>
+            <Node name="PUBLISH" type="attribute"/>
+            <Node name="SEGPROCESSEDIND" type="attribute"/>
+            <Node name="START_TMS_MATCH" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="TSATTRIBUTE" type="attribute"/>
+            <Node name="TSOPTION" type="attribute"/>
+            <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+            <Node name="TSTOLERANCE" type="attribute"/>
+            <Node name="RatingSetDefinition" type="segment">
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "REFERENCE";]]></expr>
+              </Node>
+              <Node name="COPY_FROM" type="attribute"/>
+              <Node name="COPY_TO" type="attribute">
+                <expr><![CDATA[return "RTNG_SET_OID";]]></expr>
+              </Node>
+              <Node name="DUP_CHECK" type="attribute"/>
+              <Node name="ENDDATEIND" type="attribute"/>
+              <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+              <Node name="ERROR" type="attribute"/>
+              <Node name="LOOKUP" type="attribute"/>
+              <Node name="MATCH" type="attribute">
+                <expr><![CDATA[return "RTNG_MATCH_1";]]></expr>
+              </Node>
+              <Node name="ONLY" type="attribute"/>
+              <Node name="PARENT_LINK" type="attribute"/>
+              <Node name="PUBLISH" type="attribute"/>
+              <Node name="SEGPROCESSEDIND" type="attribute"/>
+              <Node name="START_TMS_MATCH" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="TSATTRIBUTE" type="attribute"/>
+              <Node name="TSOPTION" type="attribute"/>
+              <Node name="TSTOLERANCE" type="attribute"/>
+              <Node name="TYPE" type="attribute">
+                <expr><![CDATA[return "RatingSetDefinition";]]></expr>
+              </Node>
+              <Node name="NESTED_ERR_LVL" type="attribute">
+                <expr><![CDATA[return "ERROR";]]></expr>
+              </Node>
+              <Node name="NESTED_ERR_TXT" type="attribute">
+                <expr><![CDATA[return Strcat("12|CONCTNS|NESTED|RTNGSETMNEM|LTISSURT|RTNGCDE|", Strcat(If(StrContainsOneOf(LongTermIssueRating, "("), StrWord(LongTermIssueRating, "(", 1), LongTermIssueRating), "|DATASRCID|FITCH"));]]></expr>
+              </Node>
+              <Node name="RTNGSETMNEM" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "LTISSURT";]]></expr>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LONGSHORTTERMTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RANKNUM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGCDE" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[if (StrContainsOneOf(LongTermIssueRating, "("))
+	return StrWord(LongTermIssueRating, "(", 1);
+else
+	return LongTermIssueRating;]]></expr>
+              </Node>
+            </Node>
+            <Node name="RTNGCDENUM" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGDESC" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGNME" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGSETOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGVALUEOID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node displayName="LTISSURT" name="IssueRating" type="segment">
+            <condition><![CDATA[if (Strcmp(LongTermIssueRating, "NR"))
+	return "IssueRating";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="COPY_FROM" type="attribute">
+              <expr><![CDATA[return "ISS_RTNG_OID";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "ISS_RTNG_OID";]]></expr>
+            </Node>
+            <Node name="DUP_CHECK" type="attribute"/>
+            <Node name="ENDDATEIND" type="attribute"/>
+            <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+            <Node name="ERROR" type="attribute"/>
+            <Node name="LOOKUP" type="attribute"/>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "ISRT_MATCH_8";]]></expr>
+            </Node>
+            <Node name="ONLY" type="attribute"/>
+            <Node name="PARENT_LINK" type="attribute"/>
+            <Node name="PUBLISH" type="attribute"/>
+            <Node name="SEGPROCESSEDIND" type="attribute"/>
+            <Node name="START_TMS_MATCH" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="TSATTRIBUTE" type="attribute"/>
+            <Node name="TSOPTION" type="attribute"/>
+            <Node name="TSTOLERANCE" type="attribute"/>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "IssueRating";]]></expr>
+            </Node>
+            <Node name="RatingValue" type="segment">
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "REFERENCE";]]></expr>
+              </Node>
+              <Node name="TYPE" type="attribute">
+                <expr><![CDATA[return "RatingValue";]]></expr>
+              </Node>
+              <Node name="COPY_FROM" type="attribute">
+                <expr><![CDATA[return "RTNG_CDE,RTNG_SET_OID,RTNG_VALUE_OID";]]></expr>
+              </Node>
+              <Node name="COPY_TO" type="attribute">
+                <expr><![CDATA[return "RTNG_CDE,RTNG_SET_OID,RTNG_VALUE_OID";]]></expr>
+              </Node>
+              <Node name="DUP_CHECK" type="attribute"/>
+              <Node name="ENDDATEIND" type="attribute"/>
+              <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+              <Node name="ERROR" type="attribute"/>
+              <Node name="LOOKUP" type="attribute"/>
+              <Node name="MATCH" type="attribute">
+                <expr><![CDATA[return "RTVL_MATCH_1";]]></expr>
+              </Node>
+              <Node name="NESTED_ERR_LVL" type="attribute">
+                <expr><![CDATA[return "ERROR";]]></expr>
+              </Node>
+              <Node name="NESTED_ERR_TXT" type="attribute">
+                <expr><![CDATA[return Strcat("12|CONCTNS|NESTED|RTNGSETMNEM|LTISSURT|RTNGCDE|", Strcat(If(StrContainsOneOf(LongTermIssueRating, "("), StrWord(LongTermIssueRating, "(", 1), LongTermIssueRating), "|DATASRCID|FITCH"));]]></expr>
+              </Node>
+              <Node name="ONLY" type="attribute"/>
+              <Node name="PARENT_LINK" type="attribute"/>
+              <Node name="PUBLISH" type="attribute"/>
+              <Node name="SEGPROCESSEDIND" type="attribute"/>
+              <Node name="START_TMS_MATCH" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="TSATTRIBUTE" type="attribute"/>
+              <Node name="TSOPTION" type="attribute"/>
+              <Node name="TSOVERLAPOVERRIDE" type="attribute"/>
+              <Node name="TSTOLERANCE" type="attribute"/>
+              <Node name="RatingSetDefinition" type="segment">
+                <Node name="ACTION" type="attribute">
+                  <expr><![CDATA[return "REFERENCE";]]></expr>
+                </Node>
+                <Node name="COPY_FROM" type="attribute"/>
+                <Node name="COPY_TO" type="attribute">
+                  <expr><![CDATA[return "RTNG_SET_OID";]]></expr>
+                </Node>
+                <Node name="DUP_CHECK" type="attribute"/>
+                <Node name="ENDDATEIND" type="attribute"/>
+                <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+                <Node name="ERROR" type="attribute"/>
+                <Node name="LOOKUP" type="attribute"/>
+                <Node name="MATCH" type="attribute">
+                  <expr><![CDATA[return "RTNG_MATCH_1";]]></expr>
+                </Node>
+                <Node name="ONLY" type="attribute"/>
+                <Node name="PARENT_LINK" type="attribute"/>
+                <Node name="PUBLISH" type="attribute"/>
+                <Node name="SEGPROCESSEDIND" type="attribute"/>
+                <Node name="START_TMS_MATCH" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="TSATTRIBUTE" type="attribute"/>
+                <Node name="TSOPTION" type="attribute"/>
+                <Node name="TSTOLERANCE" type="attribute"/>
+                <Node name="TYPE" type="attribute">
+                  <expr><![CDATA[return "RatingSetDefinition";]]></expr>
+                </Node>
+                <Node name="NESTED_ERR_LVL" type="attribute">
+                  <expr><![CDATA[return "ERROR";]]></expr>
+                </Node>
+                <Node name="NESTED_ERR_TXT" type="attribute">
+                  <expr><![CDATA[return Strcat("12|CONCTNS|NESTED|RTNGSETMNEM|LTISSURT|RTNGCDE|", Strcat(If(StrContainsOneOf(LongTermIssueRating, "("), StrWord(LongTermIssueRating, "(", 1), LongTermIssueRating), "|DATASRCID|FITCH"));]]></expr>
+                </Node>
+                <Node name="RTNGSETMNEM" type="element">
+                  <Node name="INSERT_ONLY" type="attribute"/>
+                  <Node name="TRANSLATE" type="attribute"/>
+                  <Node name="VALUE" type="attribute">
+                    <expr><![CDATA[return "LTISSURT";]]></expr>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="DATASRCID" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="DATASTATTYP" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="ENDTMS" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="LASTCHGTMS" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="LASTCHGUSRID" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="LONGSHORTTERMTYP" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="RANKNUM" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="RTNGCDE" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[if (StrContainsOneOf(LongTermIssueRating, "("))
+	return StrWord(LongTermIssueRating, "(", 1);
+else
+	return LongTermIssueRating;]]></expr>
+                </Node>
+              </Node>
+              <Node name="RTNGCDENUM" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="RTNGDESC" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="RTNGID" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="RTNGNME" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="RTNGSETOID" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="RTNGVALUEOID" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="STARTTMS" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+            </Node>
+            <Node name="IssueIdentifier" type="segment">
+              <condition><![CDATA[if (OneHasValue(ISINIdentifier))
+	return "IssueIdentifier";
+else
+	return "";]]></condition>
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "REFERENCE";]]></expr>
+              </Node>
+              <Node name="COPY_FROM" type="attribute">
+                <expr><![CDATA[return "INSTR_ID";]]></expr>
+              </Node>
+              <Node name="COPY_TO" type="attribute">
+                <expr><![CDATA[return "INSTR_ID";]]></expr>
+              </Node>
+              <Node name="DUP_CHECK" type="attribute"/>
+              <Node name="ENDDATEIND" type="attribute"/>
+              <Node name="ERRLVL_UNIQ_CHK" type="attribute"/>
+              <Node name="ERROR" type="attribute"/>
+              <Node name="LOOKUP" type="attribute"/>
+              <Node name="ONLY" type="attribute"/>
+              <Node name="PARENT_LINK" type="attribute"/>
+              <Node name="PUBLISH" type="attribute"/>
+              <Node name="SEGPROCESSEDIND" type="attribute"/>
+              <Node name="START_TMS_MATCH" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="TSTOLERANCE" type="attribute"/>
+              <Node name="TYPE" type="attribute">
+                <expr><![CDATA[return "IssueIdentifier";]]></expr>
+              </Node>
+              <Node name="DATASRCID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="DATASTATTYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "ACTIVE";]]></expr>
+                </Node>
+              </Node>
+              <Node name="ENDTMS" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="ERGONOMICSYMBOLIND" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="IDCTXTTYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "ISIN";]]></expr>
+                </Node>
+              </Node>
+              <Node name="INSTRID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="INSTRSYMBOLSTATTYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+                  <expr><![CDATA[return "Y";]]></expr>
+                </Node>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="ISIDOID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="ISSID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return ISINIdentifier;]]></expr>
+                </Node>
+              </Node>
+              <Node name="ISSUSAGETYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="LASTCHGTMS" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="LASTCHGUSRID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="LISTINGSYMBOLIND" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="MKTID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="MKTIDCTXTTYP" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="MKTNME" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="MKTOID" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="MULTISEDOLSYMBOLIND" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="STARTTMS" type="element">
+                <Node name="INSERT_ONLY" type="attribute">
+                  <expr><![CDATA[return "Y";]]></expr>
+                </Node>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return Transform2FTIDate(SubString(TimeStamp(), 1, 10), "MM-DD-YYYY");]]></expr>
+                </Node>
+              </Node>
+              <Node name="TRADERSYMBOLIND" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="TRDNGCURRCDE" type="element">
+                <Node name="INSERT_ONLY" type="attribute"/>
+                <Node name="TRANSLATE" type="attribute"/>
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+            </Node>
+            <Node name="DATASRCID" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="DATASTATTYP" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[if (StrContainsOneOf(LongTermIssueRating, "NR", "PIF", "WD"))
+	return "INACTIVE";
+else if (Strcmp(IssueRecordChangeCode, "Issue Rating Change"))
+	return "VENDOR CHANGED";
+else if (Strcmp(IssueRecordChangeCode, "Revision Rating"))
+	return "VENDOR CHANGED";
+else
+	return "ACTIVE";]]></expr>
+              </Node>
+            </Node>
+            <Node name="ENDTMS" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="INSTRID" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ISSRTNGOID" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGTMS" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="LASTCHGUSRID" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="MULTRTNGSALETYP" type="element">
+              <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="ORIGDATAPROVID" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGCDE" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGCURRCDE" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGCURRTYP" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGDEBTCLTYP" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGDIRECTIONTXT" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGEFFTMS" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[if (OneHasValue(LTIssueRatingEffectiveDate)
+		&& !Strcmp(LongTermIssueRating, "NR"))
+	return Transform2FTIDate(
+			ReformatDateTime(LTIssueRatingEffectiveDate, "%Y-%M-%D", "%Y%M%D"),
+			"YYYYMMDD");
+else
+	return Transform2FTIDate(SubString(TimeStamp(), 1, 10), "MM-DD-YYYY");]]></expr>
+              </Node>
+            </Node>
+            <Node name="RTNGSETOID" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGSNRTYTYP" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="RTNGSTATTYP" type="element">
+              <Node name="ERR_LVL" type="attribute">
+                <expr><![CDATA[if (OneHasValue(LTIssueRatingAction))
+	return "30";
+else
+	return "";]]></expr>
+              </Node>
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+                <expr><![CDATA[if (OneHasValue(LTIssueRatingAction))
+	return "Y";
+else
+	return "";]]></expr>
+              </Node>
+              <Node name="TRANSLATE" type="attribute">
+                <expr><![CDATA[if (OneHasValue(LTIssueRatingAction))
+	return "YES";
+else
+	return "";]]></expr>
+              </Node>
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[if (OneHasValue(LTIssueRatingAction))
+	return LTIssueRatingAction;
+else
+	return "";]]></expr>
+              </Node>
+            </Node>
+            <Node name="RTNGSYMBOLTXT" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return LongTermIssueRating;]]></expr>
+              </Node>
+            </Node>
+            <Node name="RTNGVALUEOID" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="SECNDMRKTIND" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="STARTTMS" type="element">
+              <Node name="INSERT_ONLY" type="attribute">
+                <expr><![CDATA[return "Y";]]></expr>
+              </Node>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return TimeStamp();]]></expr>
+              </Node>
+            </Node>
+            <Node name="UNDERLYENHCSALETYP" type="element">
+              <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="WATCHDTE" type="element">
+              <Node name="INSERT_ONLY" type="attribute"/>
+              <Node name="TRANSLATE" type="attribute"/>
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+            <Node name="WATCHEXPDTE" type="element">
+              <Node name="VALUE" type="attribute"/>
+            </Node>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (StrContainsOneOf(LongTermIssueRating, "NR", "PIF", "WD"))
+	return "INACTIVE";
+else if (Strcmp(IssueRecordChangeCode, "Issue Rating Change"))
+	return "VENDOR CHANGED";
+else if (Strcmp(IssueRecordChangeCode, "Revision Rating"))
+	return "VENDOR CHANGED";
+else
+	return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSRTNGOID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="MULTRTNGSALETYP" type="element">
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ORIGDATAPROVID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGCDE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGCURRCDE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGCURRTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGDEBTCLTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGDIRECTIONTXT" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGEFFTMS" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(LTIssueRatingEffectiveDate)
+		&& !Strcmp(LongTermIssueRating, "NR"))
+	return Transform2FTIDate(
+			ReformatDateTime(LTIssueRatingEffectiveDate, "%Y-%M-%D", "%Y%M%D"),
+			"YYYYMMDD");
+else
+	return Transform2FTIDate(SubString(TimeStamp(), 1, 10), "MM-DD-YYYY");]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGSETOID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGSNRTYTYP" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGSTATTYP" type="element">
+            <Node name="ERR_LVL" type="attribute">
+              <expr><![CDATA[if (OneHasValue(LTIssueRatingAction))
+	return "30";
+else
+	return "";]]></expr>
+            </Node>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute">
+              <expr><![CDATA[if (OneHasValue(LTIssueRatingAction))
+	return "Y";
+else
+	return "";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(LTIssueRatingAction))
+	return "YES";
+else
+	return "";]]></expr>
+            </Node>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(LTIssueRatingAction))
+	return LTIssueRatingAction;
+else
+	return "";]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGSYMBOLTXT" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return LongTermIssueRating;]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGVALUEOID" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="SECNDMRKTIND" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return TimeStamp();]]></expr>
+            </Node>
+          </Node>
+          <Node name="UNDERLYENHCSALETYP" type="element">
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="WATCHDTE" type="element">
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="WATCHEXPDTE" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node displayName="SOLICITATION STATUS" name="ISRTRatingQualifier" type="segment">
+          <condition><![CDATA[if (OneHasValue(LTIssueRatingSolicitationStatus))
+	return "ISRTRatingQualifier";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "ISRTRatingQualifier";]]></expr>
+          </Node>
+          <Node name="ACRTOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="BNRTOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="CSTRTNGOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ENDTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="FINRRTNGOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="FINSRTNGOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="GURTOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSRRTNGOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSRTNGOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGTMS" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="LASTCHGUSRID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PPRTOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGQUALREGIDIND" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="RTNGQUALTXT" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneOf(LTIssueRatingSolicitationStatus, "S", "B"))
+	return "Solicited";
+else if (Strcmp(LTIssueRatingSolicitationStatus, "U"))
+	return "Unsolicited";
+else
+	return "";]]></expr>
+            </Node>
+          </Node>
+          <Node name="RTNGQUALTYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "SOLICITATION STATUS";]]></expr>
+            </Node>
+            <Node name="TRANSLATE" type="attribute"/>
+          </Node>
+          <Node name="RTQLOID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="STARTTMS" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return Transform2FTIDate(SubString(TimeStamp(), 1, 10), "MM-DD-YYYY");]]></expr>
+            </Node>
+            <Node name="INSERT_ONLY" type="attribute">
+              <expr><![CDATA[return "Y";]]></expr>
+            </Node>
+          </Node>
+        </Node>
+      </Node>
+    </OutputDef>
+  </Output>
+  <Translation/>
+  <Expressions>
+    <Expression enabled="true" ident="GSDMFiltering">
+      <expr><![CDATA[if (OneHasValue(ISINIdentifier))
+	return "false";
+else
+	return "true";]]></expr>
+    </Expression>
+  </Expressions>
+</MappingDef>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<PackageDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PackageDescription.xsd" version="1.0" minInstallCenterVersion="8.7.1.x" custom="true" destination="VendorDetail">
+	<Package name="Package Name" type="full" version="8.8.1.04">
+		<Description>Description</Description>
+		<Component>Component</Component>
+		<Content>
+			<File type="Package" path="Custom_VD.tar.gz"/>
+		</Content>
+	</Package>
+	<Deployment>
+		<Prerequisites>
+			<Product id="Orchestrator" type="GOLDENSOURCE" name="Orchestrator">
+				<Version min="8.8.1.01"/>
+			</Product>
+			<Product id="vddb" type="GOLDENSOURCE" name="Datamodel VDDB">
+				<Version min="8.8.1.01"/>
+			</Product>
+			<!--Add Environment Variables here -->			
+		</Prerequisites>
+		<Locations>
+			<Location id="VDDBDataModel" type="Database" multiple="true">
+				<Description>The destination where the VDDB Datamodel was installed.</Description>
+				<Prerequisites>
+					<or>
+						<Prerequisite id="vddb"/>
+					</or>
+					<!--Add Prerequisites here -->
+				</Prerequisites>
+			</Location>
+			<Location id="EngineInstallation" type="EngineInstallation">
+				<Description>An Engine Installation where an Engine should be installed.</Description>
+				<Prerequisites>
+				</Prerequisites>
+			</Location>
+			<Location id="CFDataModel" multiple="true" type="Database">
+				<Description>The destination where the Configuration Datamodel was installed.</Description>
+				<Prerequisites/>
+			</Location>
+			<Location id="WFDataModel" multiple="true" type="Database">
+				<Description>The destination where the Workflow Datamodel was installed.</Description>
+				<Prerequisites/>
+			</Location>
+		</Locations>
+		<Tasks>
+			<!-- Unzip Installation Package -->
+			<tgz description="Unzip package archive" dest="tmp_out/" name="Unzip Package" src="Custom_VD.tar.gz" srcLoc="PackageZip"/>
+			
+			<!--Add Replace tokens here -->
+			
+			<!--Add code here --> 	
+		</Tasks>
+	</Deployment>
+</PackageDescription>

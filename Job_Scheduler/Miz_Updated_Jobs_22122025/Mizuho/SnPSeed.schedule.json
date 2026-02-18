@@ -1,0 +1,21 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "SnPSeed" ],
+  "title" : "SnP Seed",
+  "submitOrderToControllerWhenPlanned" : false,
+  "planOrderAutomatically" : false,
+  "calendars" : [ {
+    "calendarName" : "BuisnessDays",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "00:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

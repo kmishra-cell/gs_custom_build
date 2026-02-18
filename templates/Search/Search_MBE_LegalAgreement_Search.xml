@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="LegalAgreement" createdUser="user1" freezeColumns="" id="Pf6p11z9e1" isDefault="N" isPublic="N" lookupId="LegalAgreement" pageSize="50" screenType="SYSTEMSRCH" title="MBE_LegalAgreement_Search">
+  <users>
+    <user id="~1$9%&gt;z9e1" user="" userGroup="" userRole="creditdepartment_MBE"/>
+    <user id="~1$8%&gt;z9e1" user="" userGroup="" userRole="legaldepartment_MBE"/>
+    <user id="~1$7%&gt;z9e1" user="" userGroup="" userRole="data_office_MBE"/>
+    <user id="~1$6%&gt;z9e1" user="" userGroup="" userRole="readonly_MBE"/>
+  </users>
+  <config>{}</config>
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Agreement Type" fieldName="LegalAgreement.LegalAgreementDetail.LAGRAgreementType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="33Bl21HSe1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Organization ID" fieldName="LegalAgreement.LegalAgreementDetail.MHIOrgID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="MBE" filterable="N" fromRange="" id="33Bm21HSe1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Agreement Purpose" fieldName="LegalAgreement.LegalAgreementDetail.LAGRAgreementPurpose" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="33Bn21HSe1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Agreement Description" fieldName="LegalAgreement.LegalAgreementDetail.LAGRAgreementDescription" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="33Bo21HSe1" isRange="N" mobileTemplate="" operator="LIKE" orderNum="3" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="AgreementSignatureDate" fieldName="LegalAgreement.LegalAgreementDetail.LAGRAgreementSignatureDate" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="33Bq21HSe1" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Agreement Status" fieldName="LegalAgreement.LegalAgreementDetail.LAGRAgreementStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="33Br21HSe1" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Legal Agreement Identifier" fieldName="LegalAgreement.Identifiers.LAIDLAGRLegalAgreementIdentifier" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="33Bs21HSe1" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width=""/>
+  </columns>
+</root>

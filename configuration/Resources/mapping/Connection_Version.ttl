@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="TRT" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="LastChangedTms">2013-04-15 at 05:14:35 IST</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="MappingDesignerVersion">8.3.1.08REL</Option>
+  </Options>
+  <Translation>
+    <table name="Connection_Version">
+      <Options>
+        <Option key="description">imported from old external translation table</Option>
+      </Options>
+      <header>
+        <col name="MSFTYPE"/>
+        <col name="col"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>GS_VERSION</col>
+          <col>VERSION</col>
+          <col>8411</col>
+        </row>
+      </data>
+    </table>
+  </Translation>
+</MappingDef>

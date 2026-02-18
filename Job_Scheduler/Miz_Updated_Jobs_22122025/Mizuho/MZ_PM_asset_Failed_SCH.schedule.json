@@ -1,0 +1,24 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "MZ_PM_asset_Failed_SCH" ],
+  "title" : "MZ_PM_asset_Failed_SCH",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Everyday",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "06:00:00",
+      "whenHoliday" : "SUPPRESS"
+    }, {
+      "singleStart" : "09:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

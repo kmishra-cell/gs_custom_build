@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <beFields>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" desc="This field uniquely identifies the source that provided the data." displayCaption="Data Source ID" entityTypeId="++3qwBhS2etxm003" id="008gk-rC2es2C00E" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="RltdInstrIDDataSourceID" nameSpace="GSC"/>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" displayCaption="Rating Data Source Id" entityTypeId="++3qwBhS2etxm003" id="006lD5BC2etqG00L" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="DBRSHistRatingDataSourceId" nameSpace="GSC"/>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" displayCaption="Rating Data Source Id" entityTypeId="++3qwBhS2etxm003" id="006lD5BC2etqG00I" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="DBRSRatingDataSourceId" nameSpace="GSC"/>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" displayCaption="Rating Data Source Id" entityTypeId="++3qwBhS2etxm003" id="006lD5BC2etqG00X" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="JCRHistRatingDataSourceId" nameSpace="GSC"/>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" displayCaption="Rating Data Source Id" entityTypeId="++3qwBhS2etxm003" id="006lD5BC2etqG00T" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="JCRRatingDataSourceId" nameSpace="GSC"/>
+    <beField class="BETEXT" displayCaption="Comment Reason" entityTypeId="++3qwBhS2etxm003" id="00AGLjO0gMr0u01u" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHICommentReason" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Comment Text" entityTypeId="++3qwBhS2etxm003" id="00AGLjO0gMr0u01-" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHICommentText" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Created Date/Time" entityTypeId="++3qwBhS2etxm003" id="00AGLjO0gMr0u01v" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHICreatedDatetime" nameSpace="MHI"/>
+    <beField class="BEINT" displayCaption="Line Number" entityTypeId="++3qwBhS2etxm003" id="00AGLjO0gMr0u020" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHILineNumber" nameSpace="MHI">
+      <fieldConfig id="00AGLjO0gMr0u021" nameSpace="MHI" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+    <beField class="BETEXT" customDesc="" customDomainSQL="SELECT intrnl_dmn_val_nme as DISPLAY_NAME, intrnl_dmn_val_txt as CODE,(SELECT instr_id FROM ft_t_isid&#10;              WHERE iss_id = intrnl_dmn_val_txt  limit 1 ) AS rtfx_instr_id FROM ft_t_idmv&#10;              WHERE fld_data_cl_id = 'FIXBASIS'  &#10;             and  (DATA_STAT_TYP not in ('OBSOLETE','DELETED') or DATA_STAT_TYP is null)" customSQL="" desc="Rate Fixing Basis Txt" displayCaption="Rate Fixing Basis Txt" entityTypeId="++3qwBhS2etxm003" id="FLNDVLCIMFSVQTZC" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="AllIncomeRateFixingBasisTxt" nameSpace="GSC"/>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" desc="Data Source ID" displayCaption="Data Source ID" entityTypeId="++3qwBhS2etxm003" id="TOYGYLRTPHYJGASP" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="AllHistInstRtngQualDataSourceID" nameSpace="GSC"/>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" desc="Data Source ID" displayCaption="Data Source ID" entityTypeId="++3qwBhS2etxm003" id="EXJMOLCDAQLKAVYX" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="AllHistInstRtngDataSourceID" nameSpace="GSC"/>
+    <beField class="BEDATE" displayCaption="Start Date/Time" entityTypeId="++3qwBhS2etxm003" id="00AEt7TWgMr0u00D" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="AllHistInstRatingStartDateTime" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Soliticitation Staus" entityTypeId="++3qwBhS2etxm003" id="++AFvVRGgMr0u015" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHISoliticitationStausHist" nameSpace="MHI"/>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" desc="Data Source ID" displayCaption="Data Source ID" entityTypeId="++3qwBhS2etxm003" id="MVEPNPPBJMGOCRET" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="AllInstRtngQualDataSourceID" nameSpace="GSC"/>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" desc="Data Source ID" displayCaption="Data Source ID" entityTypeId="++3qwBhS2etxm003" id="HTZWHYRSBYWBLQWB" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="AllInstRtngDataSourceID" nameSpace="GSC"/>
+    <beField class="BEDATE" displayCaption="Start Date/Time" entityTypeId="++3qwBhS2etxm003" id="00AF0G10gMr0u00D" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHIInstrumentRatingStartDate" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Solicitation Status" entityTypeId="++3qwBhS2etxm003" id="++AFme6mgMr0u01b" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHISolicitationStatus" nameSpace="MHI"/>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" desc="Data Source ID" displayCaption="Data Source ID" entityTypeId="++3qwBhS2etxm003" id="OOLOTMMUYPBXIJBC" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="AllHistRtngOpinionDataSourceID" nameSpace="GSC"/>
+    <beField class="BETEXT" customMultiplicity="MULTIPLE_OR_NULL" desc="Data Source ID" displayCaption="Data Source ID" entityTypeId="++3qwBhS2etxm003" id="KKOCXNOKEJLKIECU" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="AllRtngOpinionDataSourceID" nameSpace="GSC"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="Payment Comment" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="00AGLjO0gMr0u024" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHIIPDFComments" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00AGLjO0gMr0u01u" id="00AGLjO0gMr0u025" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00AGLjO0gMr0u01-" id="00AGLjO0gMr0u026" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="MHI" fieldId="00AGLjO0gMr0u01v" id="00AGLjO0gMr0u027" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="MHI" fieldId="00AGLjO0gMr0u020" id="00AGLjO0gMr0u028" prntReqdInd="0" seq="3"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="All Income Schedule" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++6omlmy2etqG02G" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="AllIncomeSchedules" nameSpace="GSC">
+      <part dataGroupId="00AGLjO0gMr0u024" defNameSpace="MHI" id="++AGUtdmgMr0u006" multiplicity="MULTIPLE_OR_NULL" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="Instrument Ratings History" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++6vC+Jy2euPC018" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="AllInstrumentRatingsHistory" nameSpace="GSC">
+      <part defNameSpace="MHI" fieldId="00AEt7TWgMr0u00D" id="00AF0TcWgMr0u00J" prntReqdInd="0" seq="49"/>
+      <part defNameSpace="MHI" fieldId="++AFvVRGgMr0u015" id="++AFvVRGgMr0u017" prntReqdInd="0" seq="50"/>
+    </dataGroup>
+    <dataGroup customInd="0" desc="Ratings" displayCaption="Ratings" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++6vC+Jy2euPC000" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="AllInstrumentRatings" nameSpace="GSC">
+      <part defNameSpace="MHI" fieldId="00AF0G10gMr0u00D" id="00AF0TcWgMr0u00C" prntReqdInd="0" seq="52"/>
+      <part defNameSpace="MHI" fieldId="++AFme6mgMr0u01b" id="00AFqb+WgMr0u01w" prntReqdInd="0" seq="53"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="00AGLjO0gMr0u01o" name="FT_T_IPDF-To-FT_T_GNCM00" nameSpace="MHI" srcTable="FT_T_IPDF" tgtTable="FT_T_GNCM">
+      <field fromColumn="INC_PAY_DEF_ID" id="00AGLjO0gMr0u01p" nameSpace="MHI" toColumn="CROSS_REF_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue" id="++4Gmmty2ettS01A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISSU_01" nameSpace="GSC" table="FT_T_ISSU" timeSeries="NONE">
+      <field desc="Instrument ID" id="++ABu5pGgMr0S01p" name="INSTR_ID" nameSpace="MHI"/>
+      <field desc="Instrument Issuer ID" id="00A9FWN0gMr0S01f" name="INSTR_ISSR_ID" nameSpace="MHI"/>
+      <option id="005uHGoi2etqq000" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="00AGLjO0gMr0u01m" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHI_GNCM_IPDF" nameSpace="MHI" parentId="YZZRLAVMUQZIUVRQ" relationId="00AGLjO0gMr0u01o" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field desc="Comment Text" id="00AGLjO0gMr0u01r" name="CMNT_TXT" nameSpace="MHI"/>
+      <field desc="Comment Reason Mnemonic" id="00AGLjO0gMr0u01q" name="COMM_REAS_MNEM" nameSpace="MHI"/>
+      <field desc="Created Date/Time" id="00AGLjO0gMr0u01s" name="CREATED_TMS" nameSpace="MHI"/>
+      <field desc="Line Number" id="00AGLjO0gMr0u01t" name="LN_NUM" nameSpace="MHI"/>
+      <value id="++AGUtdmgMr0u00C" name="GNCM_TBL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="IPDF" valueType="CONSTANT"/>
+      <option id="00AGLjO0gMr0u01n" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurence for Issue Rating" id="JKKBUTVBCVEKEDGU" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="ISRT_ALL" nameSpace="GSC" parentId="++4Gmmty2ettS01A" table="FT_T_ISRT" timeSeries="CURRENT_AND_FUTURE_ACTIVE">
+      <field desc="Start Date/Time" id="00AEs5wWgMr0u000" name="START_TMS" nameSpace="MHI"/>
+      <option id="MYVJOJZISJHJNCHI" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="SNRHPFSGKNANCTFM" nameSpace="GSC" type="DEFAULT_MATCH_KEY"/>
+      <option id="UZTTMFDKWYQDIAOF" nameSpace="GSC" type="LOOKUP_ONLY" value="false"/>
+      <option id="VCUUNPGTYKPWNBNP" nameSpace="GSC" type="UI_PUB_ONLY" value="false"/>
+    </occurrence>
+    <occurrence desc="Occurence for Issue Rating" id="FZPXRHXNTXEOYUXS" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="ISRT_ALL_HIST" nameSpace="GSC" parentId="JKKBUTVBCVEKEDGU" relationId="005hle4i2etqS04Z" table="FT_T_ISRT" timeSeries="NONE">
+      <field desc="Start Date/Time" id="00AEt7TWgMr0u00C" name="START_TMS" nameSpace="MHI"/>
+      <option id="GVPOMCAIAPSZQFXV" nameSpace="GSC" type="LOOKUP_ONLY" value="false"/>
+      <option id="PJRAQRFIQKGOKNHH" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="RQIEODYQEVZOWBMZ" nameSpace="GSC" type="DEFAULT_MATCH_KEY"/>
+      <option id="RWKCYAOJVPLNIJNI" nameSpace="GSC" type="UI_PUB_ONLY" value="false"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Set Definition" id="++6vC+Jy2euPC010" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="RTNG_ALL_HIST" nameSpace="GSC" parentId="++6vC+Jy2euPC00z" table="FT_T_RTNG" timeSeries="LOGICAL_DELETE">
+      <field desc="Rating Set Description" id="++AEsWKmgMr0u01o" name="RTNG_SET_DESC" nameSpace="MHI"/>
+      <option id="++6vC+Jy2euPC011" nameSpace="GSC" type="UI_PUB_ONLY" value="true"/>
+      <option id="++6vC+Jy2euPC012" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="++6vC+Jy2euPC02K" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+      <option id="row13WUXQOXMYDPR" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="RTNG_MATCH_1"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Qualifier" id="++AFvVRGgMr0u011" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHI_RTQL_SOLTXT_HIST" nameSpace="MHI" parentId="FZPXRHXNTXEOYUXS" table="FT_T_RTQL" timeSeries="NONE">
+      <field desc="Rating Qualifier Text" id="++AFvVRGgMr0u014" name="RTNG_QUAL_TXT" nameSpace="MHI"/>
+      <value id="++AFvVRGgMr0u013" name="RTNG_QUAL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="SOLICITATION STATUS" valueType="CONSTANT"/>
+      <option id="++AFvVRGgMr0u012" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Set Definition" id="++6vC+Jy2euPC00r" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="RTNG_ALL" nameSpace="GSC" parentId="++6vC+Jy2euPC00m" relationId="006vr+mi2euPC000" table="FT_T_RTNG" timeSeries="LOGICAL_DELETE">
+      <field desc="Rating Set Description" id="++AEsWKmgMr0u01x" name="RTNG_SET_DESC" nameSpace="MHI"/>
+      <field desc="Rating Set Name" id="++AEsWKmgMr0u01w" name="RTNG_SET_NME" nameSpace="MHI"/>
+      <option id="++6vC+Jy2euPC00s" nameSpace="GSC" type="UI_PUB_ONLY" value="true"/>
+      <option id="++6vC+Jy2euPC00t" nameSpace="GSC" type="LOOKUP_ONLY" value="true"/>
+      <option id="++7zhoiS2etee000" nameSpace="GSC" type="DEFAULT_MATCH_KEY" value="RTNG_MATCH_1"/>
+      <option id="006vr+mi2euPC002" nameSpace="GSC" type="DEFAULT_ACTION" value="REFERENCE"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Rating Qualifier" id="++AFme6mgMr0u01W" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHI_RTQL_SOLTXT" nameSpace="MHI" parentId="JKKBUTVBCVEKEDGU" table="FT_T_RTQL" timeSeries="LOGICAL_DELETE">
+      <field desc="Rating Qualifier Text" id="++AFme6mgMr0u01a" name="RTNG_QUAL_TXT" nameSpace="MHI"/>
+      <value id="++AFme6mgMr0u01Z" name="RTNG_QUAL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="SOLICITATION STATUS" valueType="CONSTANT"/>
+      <option id="++AFme6mgMr0u01X" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="008gk-rC2es2C00E" groupMapping="0" id="008gk-rC2es2C00F" nameSpace="GSC" occFieldId="008gk-rC2es2C00D"/>
+    <mapping beFieldId="006lD5BC2etqG00L" groupMapping="0" id="006lD5BC2etqG00M" nameSpace="GSC" occFieldId="006lD5BC2etqG00K"/>
+    <mapping beFieldId="006lD5BC2etqG00I" groupMapping="0" id="006lD5BC2etqG00J" nameSpace="GSC" occFieldId="006lD5BC2etqG00H"/>
+    <mapping beFieldId="006lD5BC2etqG00X" groupMapping="0" id="006lD5BC2etqG00Y" nameSpace="GSC" occFieldId="006lD5BC2etqG00W"/>
+    <mapping beFieldId="006lD5BC2etqG00T" groupMapping="0" id="006lD5BC2etqG00V" nameSpace="GSC" occFieldId="006lD5BC2etqG00U"/>
+    <mapping beFieldId="00AGLjO0gMr0u01u" groupMapping="0" id="00AGLjO0gMr0u023" nameSpace="MHI" occFieldId="00AGLjO0gMr0u01q"/>
+    <mapping beFieldId="00AGLjO0gMr0u01-" groupMapping="0" id="00AGLjO0gMr0u01+" nameSpace="MHI" occFieldId="00AGLjO0gMr0u01r"/>
+    <mapping beFieldId="00AGLjO0gMr0u01v" groupMapping="0" id="00AGLjO0gMr0u01w" nameSpace="MHI" occFieldId="00AGLjO0gMr0u01s"/>
+    <mapping beFieldId="00AGLjO0gMr0u020" groupMapping="0" id="00AGLjO0gMr0u022" nameSpace="MHI" occFieldId="00AGLjO0gMr0u01t"/>
+    <mapping beFieldId="FLNDVLCIMFSVQTZC" groupMapping="0" id="XZQKSDPHPGOCMNYR" nameSpace="GSC" occFieldId="AGUFNADPXQLBYNKB"/>
+    <mapping beFieldId="TOYGYLRTPHYJGASP" groupMapping="0" id="EMJSSFMCNWBVJPXE" nameSpace="GSC" occFieldId="LPXJOALSCRHVRFVR"/>
+    <mapping beFieldId="EXJMOLCDAQLKAVYX" groupMapping="0" id="YYWUASPLVSRZLRCC" nameSpace="GSC" occFieldId="MVWHONNDMTJHOOXX"/>
+    <mapping beFieldId="00AEt7TWgMr0u00D" groupMapping="0" id="00AF0TcWgMr0u00I" nameSpace="MHI" occFieldId="00AEt7TWgMr0u00C"/>
+    <mapping beFieldId="++AFvVRGgMr0u015" groupMapping="0" id="++AFvVRGgMr0u016" nameSpace="MHI" occFieldId="++AFvVRGgMr0u014"/>
+    <mapping beFieldId="MVEPNPPBJMGOCRET" groupMapping="0" id="GWZLRCNFHIGHLZBB" nameSpace="GSC" occFieldId="PGAODVIKTKBPFBHO"/>
+    <mapping beFieldId="HTZWHYRSBYWBLQWB" groupMapping="0" id="EBNBDXGKDYXTZAUR" nameSpace="GSC" occFieldId="ZTDRLHXRFGLAHFZP"/>
+    <mapping beFieldId="00AF0G10gMr0u00D" groupMapping="0" id="00AF0G10gMr0u00R" nameSpace="MHI" occFieldId="00AEs5wWgMr0u000"/>
+    <mapping beFieldId="++AFme6mgMr0u01b" groupMapping="0" id="00AFqb+WgMr0u01v" nameSpace="MHI" occFieldId="++AFme6mgMr0u01a"/>
+    <mapping beFieldId="OOLOTMMUYPBXIJBC" groupMapping="0" id="ZRWCNUDVLXWYDBAC" nameSpace="GSC" occFieldId="FBTSSLYPNFLYKDKG"/>
+    <mapping beFieldId="KKOCXNOKEJLKIECU" groupMapping="0" id="GPIIGVAGCCWLBBIP" nameSpace="GSC" occFieldId="YSOYSKVHHVESBZMM"/>
+  </mappings>
+  <naturalKeys>
+    <naturalKey dataGroupId="00AGLjO0gMr0u024" id="00AGLjO0gMr0u029" name="MHIIPDFCommentsNaturalKey" nameSpace="MHI">
+      <part beFieldId="00AGLjO0gMr0u025" id="00AGLjO0gMr0u02A" nameSpace="MHI"/>
+      <part beFieldId="00AGLjO0gMr0u028" id="++AGQyomgMr0u01p" nameSpace="MHI"/>
+    </naturalKey>
+  </naturalKeys>
+</entities>

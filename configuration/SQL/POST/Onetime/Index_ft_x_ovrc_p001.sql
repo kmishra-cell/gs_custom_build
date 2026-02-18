@@ -1,0 +1,1 @@
+CREATE INDEX ft_x_ovrc_p001 ON gc_own.ft_t_ovrc USING btree (OVR_TBL_KEY_TXT,TBL_ID);

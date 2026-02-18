@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customMultiplicity="MULTIPLE_OR_NULL" customSQL="" desc="This field uniquely identifies the source that provided the data." displayCaption="Data Source ID" entityTypeId="++3qwBhS2etxm003" id="008gk-rC2es2C00E" mandatory="0" multiplicity="MULTIPLE_AND_READONLY" name="RltdInstrIDDataSourceID" nameSpace="GSC"/>
+  </beFields>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue" id="++4Gmmty2ettS01A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISSU_01" nameSpace="GSC" table="FT_T_ISSU" timeSeries="NONE">
+      <field desc="Instrument ID" id="++ABu5pGgMr0S01p" name="INSTR_ID" nameSpace="MHI"/>
+      <field desc="Instrument Issuer ID" id="00A9FWN0gMr0S01f" name="INSTR_ISSR_ID" nameSpace="MHI"/>
+      <option id="005uHGoi2etqq000" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="008gk-rC2es2C00E" groupMapping="0" id="008gk-rC2es2C00F" nameSpace="GSC" occFieldId="008gk-rC2es2C00D"/>
+  </mappings>
+</entities>

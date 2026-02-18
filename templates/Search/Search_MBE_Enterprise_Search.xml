@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="Enterprise" createdUser="user1" freezeColumns="" id="AKw6m&gt;nlW1" isDefault="N" isPublic="N" lookupId="Enterprise" pageSize="50" screenType="SYSTEMSRCH" title="MBE_Enterprise_Search">
+  <users>
+    <user id="AKwAm&gt;nlW1" user="" userGroup="" userRole="legaldepartment_MBE"/>
+  </users>
+  <config>{}</config>
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Enterprise Legal Name" fieldName="Enterprise.EnterpriseInformation.EnterpriseLegalName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/thm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Enterprise Short Name" fieldName="Enterprise.EnterpriseInformation.EnterpriseShortName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tim&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Organization ID" fieldName="Enterprise.EnterpriseInformation.OrganizationID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="MBE" filterable="N" fromRange="" id="(/tjm&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width="1144"/>
+  </columns>
+</root>

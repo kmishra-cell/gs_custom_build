@@ -1,0 +1,34 @@
+{
+  "TYPE" : "Workflow",
+  "version" : "1.7.3",
+  "timeZone" : "Europe/London",
+  "title" : "MZ_BoEUpdatesReport_WKEND",
+  "instructions" : [ {
+    "TYPE" : "Execute.Named",
+    "jobName" : "MZ_BoEUpdatesReport_WKEND",
+    "label" : "MZ_BoEUpdatesReport_WKEND"
+  } ],
+  "jobs" : {
+    "MZ_BoEUpdatesReport_WKEND" : {
+      "agentName" : "JSAgent",
+      "withSubagentClusterIdExpr" : false,
+      "executable" : {
+        "TYPE" : "ShellScriptExecutable",
+        "script" : "cd $scripts_home\n./jobutilities execWkf $input_param $eventName $targetApplication\n",
+        "env" : {
+          "scripts_home" : "'/gold/app/jobscheduler/scripts'",
+          "input_param" : "'/gold/app/jobscheduler/JSInputParams/MZ_BoEUpdatesReport_WKEND.json'",
+          "eventName" : "'MZ_BoEUpdatesReport'",
+          "targetApplication" : "'fileloading'"
+        },
+        "v1Compatible" : false
+      },
+      "skipIfNoAdmissionForOrderDay" : false,
+      "parallelism" : 1,
+      "graceTimeout" : 15,
+      "failOnErrWritten" : false,
+      "warnOnErrWritten" : false,
+      "isNotRestartable" : false
+    }
+  }
+}

@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="MutualFund" entitySubType="[]" id="Hk6eF1ftW1" isDefault="Y" isPublic="Y" screenType="SYSTEMFORM" title="F: MHI_MutualFund">
+  <control caption="MutualFund" columns="2" fullQualPath="" hideDetail="N" id="5R7FC1Pje1" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="PAGEVIEW">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Summary" columns="2" fullQualPath="" hideDetail="N" id="5R7GC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Publishing and Update" columns="2" fullQualPath="" hideDetail="N" id="5R7HC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7GC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <buttons>
+          <button caption="Re-Publish" id="5R7LC1Pje1">
+            <property name="EntityId" value="MutualFund.InstrumentDetails.ISSUInstrId"/>
+            <property name="AlwaysVisible" value="true"/>
+            <property name="Event Type" value="GenericEvent"/>
+            <property name="Type" value="event"/>
+            <property name="Event Name" value="MizuhoPublishing"/>
+          </button>
+        </buttons>
+        <control caption="Last Updated" columns="2" fullQualPath="MutualFund.Publishing.UPD1ISSULastUpdated" hideDetail="N" id="5R7IC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7HC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Version" columns="2" fullQualPath="MutualFund.Publishing.UPD1ISSUVersion" hideDetail="N" id="5R7JC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7HC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Published" columns="2" fullQualPath="MutualFund.Publishing.PBATISSULastchangeDate" hideDetail="N" id="5R7KC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7HC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Description" columns="2" fullQualPath="" hideDetail="N" id="5R7RC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7GC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instrument Name" columns="2" fullQualPath="MutualFund.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="5R7SC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7RC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Description" columns="2" fullQualPath="MutualFund.InstrumentDetails.PreferredInstrumentDescription" hideDetail="N" id="5R7TC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7RC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Issue Date" columns="2" fullQualPath="MutualFund.InstrumentDetails.IssueDate" hideDetail="N" id="5R7UC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7RC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Instrument Identifier Type" columns="2" fullQualPath="MutualFund.InstrumentDetails.PreferredIdentifierType" hideDetail="N" id="5R7VC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7RC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Instrument Identifier" columns="2" fullQualPath="MutualFund.InstrumentDetails.PreferredIdentifierValue" hideDetail="N" id="5R7WC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7RC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change User" columns="2" fullQualPath="MutualFund.InstrumentDetails.InstrumentLastChangeUser" hideDetail="N" id="5R7XC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7RC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Details" columns="2" fullQualPath="MutualFund.InstrumentDetails" hideDetail="N" id="5R7YC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7GC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Instrument Type" columns="2" fullQualPath="MutualFund.InstrumentDetails.InstrumentType" hideDetail="N" id="5R7ZC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Denominated Currency" columns="2" fullQualPath="MutualFund.InstrumentDetails.PrincipalCurrency" hideDetail="N" id="5R7aC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Par Value" columns="2" fullQualPath="MutualFund.InstrumentDetails.ParValue" hideDetail="N" id="5R7bC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Par Value Type" columns="2" fullQualPath="MutualFund.InstrumentDetails.ParValueType" hideDetail="N" id="5R7cC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Unit Of Measure" columns="2" fullQualPath="MutualFund.InstrumentDetails.UnitOfMeasure" hideDetail="N" id="5R7dC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Unit Size" columns="2" fullQualPath="MutualFund.InstrumentDetails.UnitSize" hideDetail="N" id="5R7eC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Date" columns="2" fullQualPath="MutualFund.InstrumentDetails.MaturityDate" hideDetail="N" id="5R7fC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument System Status" columns="2" fullQualPath="MutualFund.InstrumentDetails.InstrumentSystemStatus" hideDetail="N" id="5R7gC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="When Issued Indicator" columns="2" fullQualPath="MutualFund.InstrumentDetails.WhenIssuedIndicator" hideDetail="N" id="5R7hC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Active Until" columns="2" fullQualPath="MutualFund.InstrumentDetails.ActiveUntil" hideDetail="N" id="5R7iC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Maturity Date" columns="2" fullQualPath="MutualFund.InstrumentDetails.FinalMaturity" hideDetail="N" id="5R7jC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Series" columns="2" fullQualPath="MutualFund.InstrumentDetails.Series" hideDetail="N" id="5R7kC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Illiquidity Indicator" columns="2" fullQualPath="MutualFund.InstrumentDetails.IlliquidityIndicator" hideDetail="N" id="5R7lC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Security Form" columns="2" fullQualPath="MutualFund.InstrumentDetails.SecurityForm" hideDetail="N" id="5R7mC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Days To Settlement" columns="2" fullQualPath="MutualFund.InstrumentDetails.ISSUDaysToSettlement" hideDetail="N" id="5R7nC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity/Expiration Extension Date" columns="2" fullQualPath="MutualFund.InstrumentDetails.MaturityExpirationExtensionDate" hideDetail="N" id="5R7oC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Activity Status Date/Time" columns="2" fullQualPath="MutualFund.InstrumentDetails.InstrumentActivityStatusDateTime" hideDetail="N" id="5R7pC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Financial Instrument Short Name" columns="2" fullQualPath="MutualFund.InstrumentDetails.FinancialInstrumentShortName" hideDetail="N" id="5R7qC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Default Date/Time" columns="2" fullQualPath="MutualFund.InstrumentDetails.InstrumentDefaultDateTime" hideDetail="N" id="5R7rC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Type" columns="2" fullQualPath="MutualFund.InstrumentDetails.InstrumentMaturityType" hideDetail="N" id="5R7sC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Distribution Currency" columns="0" fullQualPath="MutualFund.InstrumentDetails.DistributionCurrency" hideDetail="N" id="5R7tC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="5R7YC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Distribution Currency Code"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="All Market Listing" columns="2" fullQualPath="MutualFund.AllMarketListing" hideDetail="N" id="5R7uC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="5" parentId="5R7GC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Exchange Name" columns="2" fullQualPath="MutualFund.AllMarketListing.AllMktListExchange.FinancialMarket.MarketDetails.MarketName" hideDetail="N" id="5R7vC1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7uC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="MIC Code" columns="2" fullQualPath="MutualFund.AllMarketListing.AllMktListExchange.FinancialMarket.MarketDetails.MICCode" hideDetail="N" id="5R7wC1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7uC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Primary Trading Market" columns="2" fullQualPath="MutualFund.AllMarketListing.AllMktListPrimaryTradingMarket" hideDetail="N" id="5R7xC1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7uC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Round Lot Size" columns="2" fullQualPath="MutualFund.AllMarketListing.AllMktListRoundLotSize" hideDetail="N" id="5R7yC1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7uC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Trading Currency" columns="2" fullQualPath="MutualFund.AllMarketListing.AllMktListTradingCurrency" hideDetail="N" id="5R7zC1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7uC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Trading Status" columns="2" fullQualPath="MutualFund.AllMarketListing.AllMktListTradingStatus" hideDetail="N" id="5R7$C1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7uC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Composite Ticker" columns="2" fullQualPath="MutualFund.AllMarketListing.AllMktListBBCompositeTicker" hideDetail="N" id="5R7%C1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7uC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="RIC" columns="2" fullQualPath="MutualFund.AllMarketListing.AllMktListRIC" hideDetail="N" id="5R7@C1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R7uC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="SEDOL" columns="2" fullQualPath="MutualFund.AllMarketListing.AllMktListSEDOL" hideDetail="N" id="5R7&amp;amp;C1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R7uC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Actively Traded Indicator" columns="2" fullQualPath="MutualFund.AllMarketListing.AllMktListActivelyTradedIndicator" hideDetail="N" id="5R7*C1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7uC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Exchange Level Summary"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Sector Information" columns="2" fullQualPath="" hideDetail="N" id="5R7-C1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7GC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instrument Type" columns="2" fullQualPath="MutualFund.InstrumentDetails.InstrumentType" hideDetail="N" id="5R7.C1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7-C1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Denominated Currency" columns="2" fullQualPath="MutualFund.InstrumentDetails.PrincipalCurrency" hideDetail="N" id="5R7/C1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7-C1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Currency"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="BB Sub-Security Type" columns="2" fullQualPath="MutualFund.InstrumentClassification.BBSubSectorType" hideDetail="N" id="5R7(C1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7-C1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Class Type" columns="2" fullQualPath="MutualFund.InstrumentDetails.ClassType" hideDetail="N" id="5R7)C1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7-C1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issuer Details" columns="2" fullQualPath="" hideDetail="N" id="5R7~C1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7GC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Issuer Long Name" columns="2" fullQualPath="MutualFund.InstrumentDetails.Issuer.Issuer.IssuerInformation.IssuerName" hideDetail="N" id="5R7?C1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7~C1Pje1" relatedPath="MutualFund.InstrumentDetails.Issuer" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Issuer Identifier" columns="2" fullQualPath="MutualFund.InstrumentDetails.Issuer.Issuer.IssuerInformation.PreferredIssuerIdentifier" hideDetail="N" id="5R7&amp;lt;C1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7~C1Pje1" relatedPath="MutualFund.InstrumentDetails.Issuer" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Issuer Identifier Type" columns="2" fullQualPath="MutualFund.InstrumentDetails.Issuer.Issuer.IssuerInformation.PreferredIssuerIdentifierType" hideDetail="N" id="5R7&amp;gt;C1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7~C1Pje1" relatedPath="MutualFund.InstrumentDetails.Issuer" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Domicile" columns="2" fullQualPath="MutualFund.InstrumentDetails.Issuer.Issuer.ISOGeographicDetails.CountryOfDomicile" hideDetail="N" id="5R70D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7~C1Pje1" relatedPath="MutualFund.InstrumentDetails.Issuer" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issuer Domicile"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exceptions" columns="2" fullQualPath="MutualFund.Exceptions" hideDetail="N" id="5R71D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7GC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Exceptions for Issue"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Description" columns="2" fullQualPath="MutualFund.InstrumentDescription" hideDetail="N" id="5R72D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="5" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Identifiers" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers" hideDetail="N" id="5R73D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="25" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Exchange Name" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.IdentifierMarketLookup.FinancialMarket.MarketDetails.MarketName" hideDetail="N" id="5R74D1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Value" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierValue" hideDetail="N" id="5R75D1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Context" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierIDContext" hideDetail="N" id="5R76D1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Usage" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierInstrumentUsage" hideDetail="N" id="5R77D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Tenor" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierInstrumentTenor" hideDetail="N" id="5R78D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Symbol Status" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierInstrumentSymbolStatus" hideDetail="N" id="5R79D1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Ergonomic Symbol Indicator" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierErgonomicSymbolInd" hideDetail="N" id="5R7AD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Global Unique Indicator" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierGlobalUniqueIndicator" hideDetail="N" id="5R7BD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Listing Symbol Indicator" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierListingSymbolInd" hideDetail="N" id="5R7CD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Multi Sedol Symbol Indicator" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierMultiSedolSymbolInd" hideDetail="N" id="5R7DD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Not Tradable Indicator" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierNotTradableIndicator" hideDetail="N" id="5R7ED1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierOriginalDataProvider" hideDetail="N" id="5R7FD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Preliminary Terms Prospectus Ind" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierlPreliminaryTermsProspectusInd" hideDetail="N" id="5R7GD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Primary Tradable Market Quote Indicator" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierPrimaryTradableMarketQuoteIndicator" hideDetail="N" id="5R7HD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Root Symbol" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierRootSymbol" hideDetail="N" id="5R7ID1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Source Currency Code" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierSourceCurrencyCode" hideDetail="N" id="5R7JD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierStartDateTime" hideDetail="N" id="5R7KD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Target Currency Code" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierTargetCurrencyCode" hideDetail="N" id="5R7LD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trader Symbol Indicator" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierTraderSymbolInd" hideDetail="N" id="5R7MD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Trading Currency" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierTradingCurrency" hideDetail="N" id="5R7ND1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="When Distributed Flag Indicator" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierWhenDistributedFlagIndicator" hideDetail="N" id="5R7OD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="When Issued Indicator" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierWhenIssuedIndicator" hideDetail="N" id="5R7PD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Merge Uniqueness OID" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierMergeUniquenessOID" hideDetail="N" id="5R7QD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="22" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierDataSourceID" hideDetail="N" id="5R7RD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="23" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierDataStatus" hideDetail="N" id="5R7SD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="24" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierEndDateTime" hideDetail="N" id="5R7TD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="25" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierLastChangeDateTime" hideDetail="N" id="5R7UD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="26" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="MutualFund.AllInstrumentIdentifiers.AllIdentifierLastChangeUserID" hideDetail="N" id="5R7VD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="27" pageSize="0" parentId="5R73D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Identifiers"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Fund Features" columns="2" fullQualPath="MutualFund.FundFeatures" hideDetail="N" id="5R7WD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="5" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <control caption="Fund Charges" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges" hideDetail="N" id="5R7XD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Fund Charge Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgType" hideDetail="N" id="5R7YD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Charge Description" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgDescription" hideDetail="N" id="5R7ZD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Charge Currency Code" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgCurrencyCode" hideDetail="N" id="5R7aD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Charge Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgAmount" hideDetail="N" id="5R7bD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Commission Calculation Basis" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgCommissionCalculationBasis" hideDetail="N" id="5R7cD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Charge Maximum Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMaximumAmount" hideDetail="N" id="5R7dD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maximum Charge Freq" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMaximumChargeFreq" hideDetail="N" id="5R7eD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maximum Charge Freq Day" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMaximumChargeFreqDay" hideDetail="N" id="5R7fD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maximum Charge Freq Span" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMaximumChargeFreqSpan" hideDetail="N" id="5R7gD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Charge Maximum Currency Code" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMaximumCurrencyCode" hideDetail="N" id="5R7hD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Charge Maximum Quote Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMaximumQuoteType" hideDetail="N" id="5R7iD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Charge Minimum Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMinimumAmount" hideDetail="N" id="5R7jD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Charge Freq" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMinimumChargeFreq" hideDetail="N" id="5R7kD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Charge Freq Day" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMinimumChargeFreqDay" hideDetail="N" id="5R7lD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Charge Freq Span" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMinimumChargeFreqSpan" hideDetail="N" id="5R7mD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Charge Minimum Currency Code" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMinimumCurrencyCode" hideDetail="N" id="5R7nD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Charge Minimum Quote Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgMinimumQuoteType" hideDetail="N" id="5R7oD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Charge Quote Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgQuoteType" hideDetail="N" id="5R7pD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Charge Freq" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgFreq" hideDetail="N" id="5R7qD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Charge Freq Day" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgFreqDay" hideDetail="N" id="5R7rD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Charge Freq Span" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgFreqSpan" hideDetail="N" id="5R7sD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Start Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgStartDateTime" hideDetail="N" id="5R7tD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="End Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgEndDateTime" hideDetail="N" id="5R7uD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="22" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Source" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgDataSourceID" hideDetail="N" id="5R7vD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="23" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Status" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgDataStatus" hideDetail="N" id="5R7wD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="24" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgLastChangeDateTime" hideDetail="N" id="5R7xD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="25" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change User Id" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgLastChangeUserID" hideDetail="N" id="5R7yD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="26" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Charge Effective Date" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgChargeEffectiveDate" hideDetail="N" id="5R7zD1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="27" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Charge Expiration Date" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgChargeExpirationDate" hideDetail="N" id="5R7$D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="28" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Charge Correction Reason" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgChargeCorrectionReason" hideDetail="N" id="5R7%D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="29" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Charge Applies Indicator" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgChargeAppliesIndicator" hideDetail="N" id="5R7@D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="30" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Charge Amount Reason Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundCharges.AllFundChrgChargeAmountReasonType" hideDetail="N" id="5R7&amp;amp;D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="31" pageSize="0" parentId="5R7XD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria" hideDetail="N" id="5R7*D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Fund Investment Criteria Details" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails" hideDetail="N" id="5R7-D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+          <control caption="Investment Criteria Detail Number" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlInvestmentCriteriaDetailNumber" hideDetail="N" id="5R7.D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Fund Investment Detail Description" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlFundInvestmentDetailDescription" hideDetail="N" id="5R7/D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Fund Share Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlFundShareAmount" hideDetail="N" id="5R7(D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Fund Share Issue Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlFundShareIssueType" hideDetail="N" id="5R7)D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Fund Share Quote Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlFundShareQuoteType" hideDetail="N" id="5R7~D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Fund Share Unit Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlFundShareUnitType" hideDetail="N" id="5R7?D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Investment Currency Code" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlInvestmentCurrencyCode" hideDetail="N" id="5R7&amp;lt;D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Maximum Share Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlMaximumShareAmount" hideDetail="N" id="5R7&amp;gt;D1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Maximum Share Quote Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlMaximumShareQuoteType" hideDetail="N" id="5R70E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Maximum Share Unit Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlMaximumShareUnitType" hideDetail="N" id="5R71E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Minimum Share Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlMinimumShareAmount" hideDetail="N" id="5R72E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Minimum Share Quote Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlMinimumShareQuoteType" hideDetail="N" id="5R73E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Minimum Share Unit Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlMinimumShareUnitType" hideDetail="N" id="5R74E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Target Allocation Percentage" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlTargetAllocationPercentage" hideDetail="N" id="5R75E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Start Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlStartDateTime" hideDetail="N" id="5R76E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="End Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlEndDateTime" hideDetail="N" id="5R77E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Data Source ID" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlDataSourceID" hideDetail="N" id="5R78E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Data Status" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlDataStatus" hideDetail="N" id="5R79E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlLastChangeDateTime" hideDetail="N" id="5R7AE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change User ID" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvestmentCriteriaDetails.FundInvCriDtlLastChangeUserID" hideDetail="N" id="5R7BE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="5R7-D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Asset Allocation Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrAssetAllocationDateTime" hideDetail="N" id="5R7CE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country/Region Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrCountryRegionInvestmentCriteria" hideDetail="N" id="5R7DE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Credit Exposure Rating Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrCreditExposureRatingInvestmentCrit" hideDetail="N" id="5R7EE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Currency Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrCurrencyInvestmentCriteria" hideDetail="N" id="5R7FE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Institution Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrInstitutionInvestmentCriteria" hideDetail="N" id="5R7GE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrInstrumentInvestmentCriteria" hideDetail="N" id="5R7HE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Investment Category Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrInvestmentCategoryInvestmentCriteria" hideDetail="N" id="5R7IE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Investment Criteria Status" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrInvestmentCriteriaStatus" hideDetail="N" id="5R7JE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Investment Criteria Status Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrInvestmentCriteriaStatusDateTime" hideDetail="N" id="5R7KE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Investment Criteria Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrInvestmentCriteriaType" hideDetail="N" id="5R7LE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Investment Group Description" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrInvestmentGroupDescription" hideDetail="N" id="5R7ME1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Investment Group Number" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrInvestmentGroupNumber" hideDetail="N" id="5R7NE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Investment Position Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrInvestmentPositionType" hideDetail="N" id="5R7OE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Issue Type Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrIssueTypeInvestmentCriteria" hideDetail="N" id="5R7PE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Model Flexibility Indicator" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrModelFlexibilityIndicator" hideDetail="N" id="5R7QE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Strategies Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrStrategiesInvestmentCriteria" hideDetail="N" id="5R7RE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Time to Maturity Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrTimetoMaturityInvestmentCriteria" hideDetail="N" id="5R7SE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Sector Investment Criteria" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrSectorInvestmentCriteria" hideDetail="N" id="5R7TE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Start Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrStartDateTime" hideDetail="N" id="5R7UE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="End Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrEndDateTime" hideDetail="N" id="5R7VE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Source ID" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrDataSourceID" hideDetail="N" id="5R7WE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Status" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrDataStatus" hideDetail="N" id="5R7XE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="22" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrLastChangeDateTime" hideDetail="N" id="5R7YE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="23" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change User ID" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentCriteria.FundInvCrLastChangeUserID" hideDetail="N" id="5R7ZE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="24" pageSize="0" parentId="5R7*D1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Limits And Fees" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees" hideDetail="N" id="5R7aE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Exchange Name" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MFMarket.FinancialMarket.MarketDetails.MarketName" hideDetail="N" id="5R7bE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="MIC Code" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MFMarket.FinancialMarket.MarketDetails.MICCode" hideDetail="N" id="5R7cE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Limit And Fee Currency Code" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.LimitAndFeeCurrencyCode" hideDetail="N" id="5R7dE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Limit And Fee Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.LimitAndFeeType" hideDetail="N" id="5R7eE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Front End Load Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.FrontEndLoadAmount" hideDetail="N" id="5R7fE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund 12b-1 Fee Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.Fund12b1FeeAmount" hideDetail="N" id="5R7gE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Creation Unit Size" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.FundCreationUnitSize" hideDetail="N" id="5R7hE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fund Manager Stated Fee" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.FundManagerStatedFee" hideDetail="N" id="5R7iE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Investment" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinimumInvestment" hideDetail="N" id="5R7jE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum IRA Investment" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinimumIRAInvestment" hideDetail="N" id="5R7kE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Subsequent Investment" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinimumSubsequentInvestment" hideDetail="N" id="5R7lE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maximum Deferred Load" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MaximumDeferredLoad" hideDetail="N" id="5R7mE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maximum Redemption Fee" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MaximumRedemptionFee" hideDetail="N" id="5R7nE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.FundLimitsLastChangeDateTime" hideDetail="N" id="5R7oE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change User Id" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.FundLimitsLastChangeUserId" hideDetail="N" id="5R7pE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Source" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.FundLimitsDataSourceId" hideDetail="N" id="5R7qE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Start Date/Time" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.FundLimitsStartDateTime" hideDetail="N" id="5R7rE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Purchase Basis" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.InitialPurchaseBasis" hideDetail="N" id="5R7sE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Max Total Investment Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MaxTotalInvestmentAmount" hideDetail="N" id="5R7tE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maximum Sale Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MaximumSaleAmount" hideDetail="N" id="5R7uE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maximum Sale Basis" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MaximumSaleBasis" hideDetail="N" id="5R7vE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maximum Sale Percent" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MaximumSalePercent" hideDetail="N" id="5R7wE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maximum Sale Quantity" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MaximumSaleQuantity" hideDetail="N" id="5R7xE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="22" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Min Initial IRA Purchase Quantity" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinInitialIRAPurchaseQuantity" hideDetail="N" id="5R7yE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="23" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Min Initial Purchase Quantity" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinInitialPurchaseQuantity" hideDetail="N" id="5R7zE1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="24" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Min Subsequent IRA Purchase Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinSubsequentIRAPurchaseAmount" hideDetail="N" id="5R7$E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="25" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Min Subsequent IRA Purchase Quantity" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinSubsequentIRAPurchaseQuantity" hideDetail="N" id="5R7%E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="26" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Min Subsequent Purchase Quantity" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinSubsequentPurchaseQuantity" hideDetail="N" id="5R7@E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="27" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Sale Amount" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinimumSaleAmount" hideDetail="N" id="5R7&amp;amp;E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="28" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Sale Basis" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinimumSaleBasis" hideDetail="N" id="5R7*E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="29" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Sale Percentage" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinimumSalePercentage" hideDetail="N" id="5R7-E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="30" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Sale Quantity" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinimumSaleQuantity" hideDetail="N" id="5R7.E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="31" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Trade Basis" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinimumTradeBasis" hideDetail="N" id="5R7/E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="32" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Minimum Trade Quantity" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.MinimumTradeQuantity" hideDetail="N" id="5R7(E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="33" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="IRA Initial Purchase Basis" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.IRAInitialPurchaseBasis" hideDetail="N" id="5R7)E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="34" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="IRA Subsequent Purchase Basis" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.IRASubsequentPurchaseBasis" hideDetail="N" id="5R7~E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="35" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Subsequent Purchase Basis" columns="2" fullQualPath="MutualFund.FundFeatures.FundLimitsAndFees.SubsequentPurchaseBasis" hideDetail="N" id="5R7?E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="36" pageSize="0" parentId="5R7aE1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Objective" columns="2" fullQualPath="MutualFund.FundFeatures.FundObjective" hideDetail="N" id="5R7&amp;lt;E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Expense Ratio" columns="2" fullQualPath="MutualFund.FundFeatures.ExpenseRatio" hideDetail="N" id="5R7&amp;gt;E1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Front-End Load" columns="2" fullQualPath="MutualFund.FundFeatures.FrontEndLoad" hideDetail="N" id="5R70F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Asset Class Focus" columns="2" fullQualPath="MutualFund.FundFeatures.FundAssetClassFocus" hideDetail="N" id="5R71F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Industry Focus" columns="2" fullQualPath="MutualFund.FundFeatures.FundIndustryFocus" hideDetail="N" id="5R72F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Leverage" columns="2" fullQualPath="MutualFund.FundFeatures.FundLeverage" hideDetail="N" id="5R73F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Manager" columns="2" fullQualPath="MutualFund.FundFeatures.FundManager" hideDetail="N" id="5R74F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Status For Investor" columns="2" fullQualPath="MutualFund.FundFeatures.FundStatusForInvestor" hideDetail="N" id="5R75F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Open End Fund Indicator" columns="2" fullQualPath="MutualFund.FundFeatures.OpenEndFundIndicator" hideDetail="N" id="5R76F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Underlying Index " columns="2" fullQualPath="MutualFund.FundFeatures.FundUnderlyingIndex" hideDetail="N" id="5R77F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Underlying Index Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundUnderlyingIndexType" hideDetail="N" id="5R78F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Gross Base Value" columns="2" fullQualPath="MutualFund.FundFeatures.GrossBaseValue" hideDetail="N" id="5R79F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Inception Date" columns="2" fullQualPath="MutualFund.FundFeatures.InceptionDate" hideDetail="N" id="5R7AF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Lock-Up Period" columns="2" fullQualPath="MutualFund.FundFeatures.LockUpPeriod" hideDetail="N" id="5R7BF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Open-End Payment Share Type" columns="2" fullQualPath="MutualFund.FundFeatures.OpenEndPaymentShareType" hideDetail="N" id="5R7CF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundType" hideDetail="N" id="5R7DF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Redemption Date" columns="2" fullQualPath="MutualFund.FundFeatures.FundRedemptionDate" hideDetail="N" id="5R7EF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Manager Start Date (MonthYear)" columns="2" fullQualPath="MutualFund.FundFeatures.FundMgrStartDtMonthAndYear" hideDetail="N" id="5R7FF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Structure" columns="2" fullQualPath="MutualFund.FundFeatures.FundStructure" hideDetail="N" id="5R7GF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Swing Pricing Indicator" columns="2" fullQualPath="MutualFund.FundFeatures.SwingPricingIndicator" hideDetail="N" id="5R7HF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="22" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Market Cap Classification" columns="2" fullQualPath="MutualFund.FundFeatures.MarketCapClassification" hideDetail="N" id="5R7IF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="23" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Manager Start Date Text (YYYY)" columns="2" fullQualPath="MutualFund.FundFeatures.FundManagerStartDateText" hideDetail="N" id="5R7JF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="24" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Second Classification Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundSecondClassificationType" hideDetail="N" id="5R7KF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="25" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Investment Strategy" columns="2" fullQualPath="MutualFund.FundFeatures.FundInvestmentStrategy" hideDetail="N" id="5R7LF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="26" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Maturity Focus" columns="2" fullQualPath="MutualFund.FundFeatures.FundMaturityFocus" hideDetail="N" id="5R7MF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="27" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Management Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundManagementType" hideDetail="N" id="5R7NF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="28" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Rating Focus" columns="2" fullQualPath="MutualFund.FundFeatures.FundRatingFocus" hideDetail="N" id="5R7OF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="29" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Domicile Type" columns="2" fullQualPath="MutualFund.FundFeatures.FundIssueDomicileType" hideDetail="N" id="5R7PF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="30" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Management Approach" columns="2" fullQualPath="MutualFund.FundFeatures.FundManagementApproach" hideDetail="N" id="5R7QF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="31" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Physical Commodity Investment Indicator" columns="2" fullQualPath="MutualFund.FundFeatures.PhysicalCommodityInvestmentIndicator" hideDetail="N" id="5R7RF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="32" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Bnchmark Indicator" columns="2" fullQualPath="MutualFund.FundFeatures.FundBnchmarkIndicator" hideDetail="N" id="5R7SF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="33" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Inverse Fund Indicator" columns="2" fullQualPath="MutualFund.FundFeatures.InverseFundIndicator" hideDetail="N" id="5R7TF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="34" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Swaps Use Indicator" columns="2" fullQualPath="MutualFund.FundFeatures.SwapsUseIndicator" hideDetail="N" id="5R7UF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="35" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Manager Year Tenure Quantity" columns="2" fullQualPath="MutualFund.FundFeatures.FundManagerYearTenureQuantity" hideDetail="N" id="5R7VF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="36" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fund Geographic Focus" columns="2" fullQualPath="MutualFund.FundFeatures.FundGeographicFocus" hideDetail="N" id="5R7WF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="37" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Fed Taxable Indicator" columns="2" fullQualPath="MutualFund.FundFeatures.FedTaxableIndicator" hideDetail="N" id="5R7XF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="38" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="State Taxable Indicator" columns="2" fullQualPath="MutualFund.FundFeatures.StateTaxableIndicator" hideDetail="N" id="5R7YF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="39" pageSize="0" parentId="5R7WD1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Equity Features" columns="2" fullQualPath="MutualFund.EquityFeatures" hideDetail="N" id="5R7ZF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Fund Objective" columns="2" fullQualPath="MutualFund.FundObjective" hideDetail="N" id="5R7aF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Fund Statistics" columns="2" fullQualPath="MutualFund.FundStatistics" hideDetail="N" id="5R7bF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="5" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument Comments" columns="2" fullQualPath="MutualFund.InstrumentComments" hideDetail="N" id="5R7cF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="5" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Comment Text" columns="2" fullQualPath="MutualFund.InstrumentComments.InstrumentCommentText" hideDetail="N" id="5R7dF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Status" columns="2" fullQualPath="MutualFund.InstrumentComments.InstrumentCommentStatus" hideDetail="N" id="5R7eF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Reason" columns="2" fullQualPath="MutualFund.InstrumentComments.InstrumentCommentReason" hideDetail="N" id="5R7fF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Line No." columns="2" fullQualPath="MutualFund.InstrumentComments.InstrumentCommentLineNo" hideDetail="N" id="5R7gF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Language" columns="2" fullQualPath="MutualFund.InstrumentComments.InstrumentCommentLanguage" hideDetail="N" id="5R7hF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Effective Date" columns="2" fullQualPath="MutualFund.InstrumentComments.InstrumentCommentEffectiveDate" hideDetail="N" id="5R7iF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Active Until" columns="2" fullQualPath="MutualFund.InstrumentComments.InstrumentCommentActiveUntil" hideDetail="N" id="5R7jF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Data Source" columns="2" fullQualPath="MutualFund.InstrumentComments.InstrumentCommentDataSource" hideDetail="N" id="5R7kF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Last Change Date" columns="2" fullQualPath="MutualFund.InstrumentComments.InstrumentCommentLastChangeDate" hideDetail="N" id="5R7lF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Large Instrument Comment" columns="2" fullQualPath="MutualFund.InstrumentComments.LargeInstrumentComments" hideDetail="N" id="5R7mF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Comment Last Change User" columns="2" fullQualPath="MutualFund.InstrumentComments.InstrumentCommentLastChangeUser" hideDetail="N" id="5R7nF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="5R7cF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issue Comments"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Classifications" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications" hideDetail="N" id="5R7oF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="5" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Classification Value" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.ClassificationValue" hideDetail="N" id="5R7pF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Class Name" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.ClassName" hideDetail="N" id="5R7qF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Set" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllIndustryClassification.IndustryClassification.IndustryClassifications.IndustryClassificationSetID" hideDetail="N" id="5R7rF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Value" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllInstrClsfIdentifier.InstrumentIdentifiers.IdentifiersDetails.IdentifierValue" hideDetail="N" id="5R7sF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Type" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllInstrClsfIdentifier.InstrumentIdentifiers.IdentifiersDetails.IdentifierType" hideDetail="N" id="5R7tF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit ID" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllInstrClsfGeoUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitID" hideDetail="N" id="5R7uF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit Type" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllInstrClsfGeoUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitType" hideDetail="N" id="5R7vF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Purpose" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllClassificationPurpose" hideDetail="N" id="5R7wF1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllClassificationStartDateTime" hideDetail="N" id="5R7xF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllClassificationEndDateTime" hideDetail="N" id="5R7yF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllClassificationLastChangeDateTime" hideDetail="N" id="5R7zF1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllClassificationLastChangeUserID" hideDetail="N" id="5R7$F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllClassificationDataSourceID" hideDetail="N" id="5R7%F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllClassificationDataStatus" hideDetail="N" id="5R7@F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllClassificationOriginalDataProvider" hideDetail="N" id="5R7&amp;amp;F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification Description" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllClassificationIssueClassificationDescription" hideDetail="N" id="5R7*F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Value For Classification Amount" columns="2" fullQualPath="MutualFund.AllInstrumentClassifications.AllClassificationValueForClassificationAmount" hideDetail="N" id="5R7-F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="5R7oF1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Classifications"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Underlying Related Instruments" columns="2" fullQualPath="MutualFund.UnderlyingRelatedInstruments" hideDetail="N" id="5R7.F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Related Instruments"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Instrument Statistics" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics" hideDetail="N" id="5R7/F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="5" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Statistic Definition ID" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatistics.Statistics.StatisticsInformation.StatisticDefinitionID" hideDetail="N" id="5R7(F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Name" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatistics.Statistics.StatisticsInformation.StatisticName" hideDetail="N" id="5R7)F1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Value Type" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatistics.Statistics.StatisticsInformation.StatisticValueType" hideDetail="N" id="5R7~F1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Character Value" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticCharacterValue" hideDetail="N" id="5R7?F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Amount Value" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticAmountValue" hideDetail="N" id="5R7&amp;lt;F1Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Denominated Currency" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticDenominatedCurrency" hideDetail="N" id="5R7&amp;gt;F1Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Date Value" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticDateValue" hideDetail="N" id="fS7001Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic DateTime Value" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticDateTimeValue" hideDetail="N" id="fS7101Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Integer Value" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticIntegerValue" hideDetail="N" id="fS7201Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticOriginalDataProvider" hideDetail="N" id="fS7301Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Redistributor ID" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticDataRedistributorID" hideDetail="N" id="fS7401Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticDataSourceID" hideDetail="N" id="fS7501Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticDataStatus" hideDetail="N" id="fS7601Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticStartDateTime" hideDetail="N" id="fS7701Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticEndDateTime" hideDetail="N" id="fS7801Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticLastChangeDateTime" hideDetail="N" id="fS7901Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="MutualFund.AllInstrumentStatistics.AllStatisticLastChangeUserID" hideDetail="N" id="fS7A01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="5R7/F1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Statistics"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="SOI" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant" hideDetail="N" id="fS7B01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="5" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Instrument Group Name" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentGroup" hideDetail="N" id="fS7C01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Purpose" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantPurpType" hideDetail="N" id="fS7D01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Effective Date" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantEffectiveDate" hideDetail="N" id="fS7E01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Description" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantDescription" hideDetail="N" id="fS7F01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participant Effective Until" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantEffectiveUntil" hideDetail="N" id="fS7G01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Type" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantParticipationType" hideDetail="N" id="fS7H01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Percent" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantParticipationPercent" hideDetail="N" id="fS7I01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Amount" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantParticipationAmount" hideDetail="N" id="fS7J01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Currency" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantParticipationCurrency" hideDetail="N" id="fS7K01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantDataStatus" hideDetail="N" id="fS7L01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source ID" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantDataSourceId" hideDetail="N" id="fS7M01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User ID" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantLastChangeUserId" hideDetail="N" id="fS7N01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="MutualFund.InstrumentAsAParticipant.InstrumentParticipantLastChangeDateTime" hideDetail="N" id="fS7O01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="fS7B01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Issue Group Participants"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Capitalization" columns="2" fullQualPath="MutualFund.InstrumentCapitalization" hideDetail="N" id="fS7P01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="5" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Capital Type" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.CapitalType" hideDetail="N" id="fS7Q01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Effective Date" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.CapitalEffectiveDate" hideDetail="N" id="fS7R01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Market Capitalization" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.MarketCapitalization" hideDetail="N" id="fS7S01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Nominal Amount" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.CapitalNominalAmount" hideDetail="N" id="fS7T01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Free Float Percentage" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.FreeFloatPercentage" hideDetail="N" id="fS7U01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.InstrCapLastChangeUserId" hideDetail="N" id="fS7V01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.InstrCapLastChangeDateTime" hideDetail="N" id="fS7W01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.InstrCapStartDateTime" hideDetail="N" id="fS7X01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.InstrCapDataSourceId" hideDetail="N" id="fS7Y01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Capital Data Input Grade" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.CapitalDataInputGrade" hideDetail="N" id="fS7Z01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Lower Tier 2 Capital Indicator" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.LowerTier2CapitalIndicator" hideDetail="N" id="fS7a01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Upper Tier 2 Capital Indicator" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.UpperTier2CapitalIndicator" hideDetail="N" id="fS7b01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Tier 1 Capital Indicator" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.Tier1CapitalIndicator" hideDetail="N" id="fS7c01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Tier 2 Capital Non Specific Indicator" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.Tier2CapitalNonSpecificIndicator" hideDetail="N" id="fS7d01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Capitalization Data Status" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.InstrCapDataStatus" hideDetail="N" id="fS7e01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Capitalization End Date" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.InstrCapEndDate" hideDetail="N" id="fS7f01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Capitalization Change Reason" columns="2" fullQualPath="MutualFund.InstrumentCapitalization.CapitalizationChangeReason" hideDetail="N" id="fS7g01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="fS7P01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issue Market Capitalization"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Geographical Information" columns="2" fullQualPath="MutualFund.AllGeographicalInformation" hideDetail="N" id="fS7h01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="5" parentId="5R7FC1Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Geographic Unit Name" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicalUnit.GeographicalUnit.GeographicUnitInformation.GeographicUnitName" hideDetail="N" id="fS7i01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit ID" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicalUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitID" hideDetail="N" id="fS7j01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit Type" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicalUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitType" hideDetail="N" id="fS7k01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic Unit Purpose" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicUnitPurpose" hideDetail="N" id="fS7l01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic Unit Description" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicUnitDescription" hideDetail="N" id="fS7m01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Original Data Provider" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicOriginalDataProvider" hideDetail="N" id="fS7n01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Amount" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicParticipationAmount" hideDetail="N" id="fS7o01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Currency" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicParticipationCurrency" hideDetail="N" id="fS7p01Pje1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Participation Percent" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicParticipationPercent" hideDetail="N" id="fS7q01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Land Area Unit of Measure" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicLandAreaUnitofMeasure" hideDetail="N" id="fS7r01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Land Area Amount" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicLandAreaAmount" hideDetail="N" id="fS7s01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Currency Type" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicCurrencyType" hideDetail="N" id="fS7t01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Redistributor ID" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicDataRedistributorID" hideDetail="N" id="fS7u01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicDataSourceID" hideDetail="N" id="fS7v01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Status" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicDataStatus" hideDetail="N" id="fS7w01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Start Date/Time" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicStartDateTime" hideDetail="N" id="fS7x01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicEndDateTime" hideDetail="N" id="fS7y01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicLastChangeDateTime" hideDetail="N" id="fS7z01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User Id" columns="2" fullQualPath="MutualFund.AllGeographicalInformation.AllGeographicLastChangeUserID" hideDetail="N" id="fS7$01Pje1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="fS7h01Pje1" relatedPath="" screenId="Hk6eF1ftW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Issue Geographic Units"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+  </control>
+</root>

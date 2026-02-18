@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="LegalAgreement" createdUser="user1" freezeColumns="" id="FEAj01rhW1" isDefault="N" isPublic="N" lookupId="RepoAndSecLendingAgreements" pageSize="50" screenType="SYSTEMSRCH" title="MHSS_LAGRREPO_Search">
+  <users>
+    <user id="ygx~x&gt;rge1" user="" userGroup="" userRole="data_office_MHSS"/>
+    <user id="ygx&gt;x&gt;rge1" user="" userGroup="" userRole="support"/>
+    <user id="ygx?x&gt;rge1" user="" userGroup="" userRole="readonly_MHSS"/>
+    <user id="ygx&lt;x&gt;rge1" user="" userGroup="" userRole="legaldepartment_MHSS"/>
+  </users>
+  <config>{}</config>
+  <buttons/>
+  <columns>
+    <column caption="Agreement Label" columnName="Agreement Description" fieldName="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementDescription" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tgo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Agreement Type" fieldName="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tho&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Organization ID" fieldName="RepoAndSecLendingAgreements.LegalAgreementDetail.Organization.Enterprise.EnterpriseInformation.OrganizationID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="MHSS" filterable="N" fromRange="" id="(/tio&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="DESC" toRange="" width="200"/>
+    <column caption="Legal Entity" columnName="BB Company ID" fieldName="RepoAndSecLendingAgreements.MHILegalEntityRSL.MHILegalEntityRSL.FinancialInstitution.FinancialInstitutionIdentifiers.BBCompanyID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tjo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="3" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="Agreement Model" columnName="Agreement Purpose" fieldName="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementPurpose" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="LGAGTREPO" filterable="N" fromRange="" id="(/tko&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Agreement Status" fieldName="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tlo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="5" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="AgreementSignatureDate" fieldName="RepoAndSecLendingAgreements.LegalAgreementDetail.LAGRAgreementSignatureDate" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tmo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="GS Agreement Reference" fieldName="RepoAndSecLendingAgreements.MHIGSRefRSL.LAIDLAGRLeglAgrmntID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tno&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="7" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Old Style CSA" fieldName="RepoAndSecLendingAgreements.LegalAgreementDetail.LAANLAGRCSAMHIAnnexStatus" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/too&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="8" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Variation Margin CSA" fieldName="RepoAndSecLendingAgreements.LegalAgreementDetail.LAANLAGRCSAVariationMarginCSA" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tpo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="9" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Initial Margin CSA" fieldName="RepoAndSecLendingAgreements.LegalAgreementDetail.LAANLAGRCSAMHIInitialMarginCSA" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tqo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="10" showRelLink="" sort="" toRange="" width="200"/>
+  </columns>
+</root>

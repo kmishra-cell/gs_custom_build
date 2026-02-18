@@ -1,0 +1,79 @@
+<project name="Engine custom package" default="build" basedir=".">
+	<!-- Specify all paths here, also only specify relative paths -->
+	<property file="build.properties"/>
+	<tstamp>
+		<format property="today" pattern="yyyyMMdd" locale="en,UK"/>
+	</tstamp>
+	<script language="javascript">
+		var pkgNme = project.getProperty("packageName");
+		project.setProperty("packageNameNew", pkgNme.replaceAll("_", " "));
+	</script>
+	<echo>Package Name=${packageNameNew}</echo>
+	<taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask">
+		<classpath>
+			<fileset dir="${current}">
+				<include name="xmltask.jar"/>
+			</fileset>
+		</classpath>
+	</taskdef>
+	<target name="updatePackageDescription">
+		<xmltask source="PackageDescription.xml" dest="PackageDescription.xml" todir="${current}/bin/">
+			<replace path="//PackageDescription/Package/@name" withText="${packageNameNew} Engine"/>
+			<replace path="//PackageDescription/Package/@version" withText="${packageVersion}"/>
+			<replace path="//PackageDescription/Package/Component/text()" withText="${packageNameNew} Engine"/>
+			<replace path="//PackageDescription/Package/Description/text()" withText="${packageNameNew} Engine"/>
+			<replace path="//PackageDescription/Deployment/Prerequisites/Product/Version/@min" withText="${min.version}"/>
+		</xmltask>
+		<echo>Updating Package Description with Package version ${packageVersion}</echo>
+	</target>
+	<!--<property name="dist" location="${current}/dist"/>
+	<property name="base.dir" value="${current}"/>-->
+	<!--<target name="build" depends="init,clean,del">
+         <echo>Apache Ant version is ${engine_root} - You are at ${current} </echo>
+      </target>-->
+	<target name="jar" depends="init,clean">
+		<javac srcdir="${engine_root}" destdir="${current}/bin" classpath="${current}/lib/jbre.common.jar:${current}/lib/jbre.jar:${current}/lib/log4j-1.2-api-2.17.1.jar:${current}/lib/log4j-api-2.17.1.jar:${current}/lib/log4j-core-2.17.1.jar:${current}/lib/log4j-jcl-2.17.1.jar" includeantruntime="false"/>
+		<jar destfile="${current}/bin/${jarName}" basedir="${current}/bin"/>
+	</target>
+	<target name="package" depends="init,clean">
+		<echo>Compiling Java code and Creating .class file</echo>
+		<javac srcdir="${engine_root}" destdir="${current}/bin" classpath="${current}/lib/jbre.common.jar:${current}/lib/jbre.jar:${current}/lib/log4j-1.2-api-2.17.1.jar:${current}/lib/log4j-api-2.17.1.jar:${current}/lib/log4j-core-2.17.1.jar:${current}/lib/log4j-jcl-2.17.1.jar" includeantruntime="false"/>
+		<echo>Creating Jar file</echo>
+		<jar destfile="${current}/bin/javarules/${custom.rule.path}/${custom.rule.jar}" basedir="${current}/bin" includes="**/*.class"/>
+		<echo>Creating tar.gz file</echo>
+		<tar destfile="${current}/bin/EngineJavaRules.tar.gz" compression="gzip">
+			<tarfileset dir="${current}/bin/javarules">
+			</tarfileset>
+		</tar>
+		<echo>Creating package</echo>
+		<zip destfile="${current}/../../packages/${today}/${packageName}_Engines_${packageVersion}.zip">
+			<fileset dir="${current}/bin">
+				<include name="EngineJavaRules.tar.gz"/>
+			</fileset>
+			<fileset dir="${current}/bin">
+				<include name="PackageDescription.xml"/>
+			</fileset>
+		</zip>
+	</target>
+	<target name="init" depends="">
+		<mkdir dir="${current}/bin"/>
+		<echo>Creating Temporary folder for build</echo>
+	</target>
+	<target name="clean">
+		<delete>
+			<fileset dir="${current}/bin">
+				<include name="*.*"/>
+			</fileset>
+		</delete>
+		<echo>Cleaning up temporary files and folders before starting execution</echo>
+	</target>
+	<target name="del">
+		<delete includeEmptyDirs="true">
+			<fileset dir="bin"/>
+		</delete>
+		<echo>Cleaning up temporary files and folders after execution</echo>
+	</target>
+	<target name="build" depends="init,clean,updatePackageDescription,package,del">
+		<echo>Completed Build of Engine Package</echo>
+	</target>
+</project>

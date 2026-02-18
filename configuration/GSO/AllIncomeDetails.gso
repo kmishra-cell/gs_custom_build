@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Comment Reason" entityTypeId="++3qwBhS2etxm003" id="00AGLjO0gMr0u01u" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHICommentReason" nameSpace="MHI"/>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Comment Text" entityTypeId="++3qwBhS2etxm003" id="00AGLjO0gMr0u01-" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHICommentText" nameSpace="MHI"/>
+    <beField class="BETSTAMP" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Created Date/Time" entityTypeId="++3qwBhS2etxm003" id="00AGLjO0gMr0u01v" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHICreatedDatetime" nameSpace="MHI"/>
+    <beField class="BEINT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="Line Number" entityTypeId="++3qwBhS2etxm003" id="00AGLjO0gMr0u020" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="MHILineNumber" nameSpace="MHI">
+      <fieldConfig id="00AGLjO0gMr0u021" nameSpace="MHI" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="" displayCaption="Payment Comment" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="00AGLjO0gMr0u024" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHIIPDFComments" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00AGLjO0gMr0u01u" id="00AGLjO0gMr0u025" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00AGLjO0gMr0u01-" id="00AGLjO0gMr0u026" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="MHI" fieldId="00AGLjO0gMr0u01v" id="00AGLjO0gMr0u027" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="MHI" fieldId="00AGLjO0gMr0u020" id="00AGLjO0gMr0u028" prntReqdInd="0" seq="3"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="All Income Schedule" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++6omlmy2etqG02G" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="AllIncomeSchedules" nameSpace="GSC">
+      <part dataGroupId="00AGLjO0gMr0u024" defNameSpace="MHI" id="++AGUtdmgMr0u006" multiplicity="MULTIPLE_OR_NULL" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation customSQL="" id="00AGLjO0gMr0u01o" name="FT_T_IPDF-To-FT_T_GNCM00" nameSpace="MHI" srcTable="FT_T_IPDF" tgtTable="FT_T_GNCM">
+      <field fromColumn="INC_PAY_DEF_ID" id="00AGLjO0gMr0u01p" nameSpace="MHI" toColumn="CROSS_REF_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue" id="++4Gmmty2ettS01A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISSU_01" nameSpace="GSC" table="FT_T_ISSU" timeSeries="NONE">
+      <field desc="Instrument ID" id="++ABu5pGgMr0S01p" name="INSTR_ID" nameSpace="MHI"/>
+      <field desc="Instrument Issuer ID" id="00A9FWN0gMr0S01f" name="INSTR_ISSR_ID" nameSpace="MHI"/>
+      <option id="005uHGoi2etqq000" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="00AGLjO0gMr0u01m" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHI_GNCM_IPDF" nameSpace="MHI" parentId="YZZRLAVMUQZIUVRQ" relationId="00AGLjO0gMr0u01o" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field desc="Comment Text" id="00AGLjO0gMr0u01r" name="CMNT_TXT" nameSpace="MHI"/>
+      <field desc="Comment Reason Mnemonic" id="00AGLjO0gMr0u01q" name="COMM_REAS_MNEM" nameSpace="MHI"/>
+      <field desc="Created Date/Time" id="00AGLjO0gMr0u01s" name="CREATED_TMS" nameSpace="MHI"/>
+      <field desc="Line Number" id="00AGLjO0gMr0u01t" name="LN_NUM" nameSpace="MHI"/>
+      <value id="++AGUtdmgMr0u00C" name="GNCM_TBL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="IPDF" valueType="CONSTANT"/>
+      <option id="00AGLjO0gMr0u01n" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="00AGLjO0gMr0u01u" groupMapping="0" id="00AGLjO0gMr0u023" nameSpace="MHI" occFieldId="00AGLjO0gMr0u01q"/>
+    <mapping beFieldId="00AGLjO0gMr0u01-" groupMapping="0" id="00AGLjO0gMr0u01+" nameSpace="MHI" occFieldId="00AGLjO0gMr0u01r"/>
+    <mapping beFieldId="00AGLjO0gMr0u01v" groupMapping="0" id="00AGLjO0gMr0u01w" nameSpace="MHI" occFieldId="00AGLjO0gMr0u01s"/>
+    <mapping beFieldId="00AGLjO0gMr0u020" groupMapping="0" id="00AGLjO0gMr0u022" nameSpace="MHI" occFieldId="00AGLjO0gMr0u01t"/>
+  </mappings>
+  <naturalKeys>
+    <naturalKey dataGroupId="00AGLjO0gMr0u024" id="00AGLjO0gMr0u029" name="MHIIPDFCommentsNaturalKey" nameSpace="MHI">
+      <part beFieldId="00AGLjO0gMr0u025" id="00AGLjO0gMr0u02A" nameSpace="MHI"/>
+      <part beFieldId="00AGLjO0gMr0u028" id="++AGQyomgMr0u01p" nameSpace="MHI"/>
+    </naturalKey>
+  </naturalKeys>
+</entities>

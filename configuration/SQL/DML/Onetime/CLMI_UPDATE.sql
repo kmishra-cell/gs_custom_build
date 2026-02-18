@@ -1,0 +1,1 @@
+update ft_T_clmi set trgt_col_nme ='ORG_ID' where clmi_oid ='LAGRCCRF02' and src_col_nme ='ORG_ID' and src_tbl_id ='LAGR';

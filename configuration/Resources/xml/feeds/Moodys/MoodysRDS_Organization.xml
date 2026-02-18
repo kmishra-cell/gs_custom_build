@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vendor-definition>
+	<name>xml</name>
+	<!-- XMLBinaryPreparation uses the BOM to detect the byte order and encoding -->
+	<!-- If no BOM is available in the file UTF-8 is assumed -->
+	<!-- streamPreparation type="com.j2fe.feeds.generic.preparation.XMLBinaryPreparation"/ -->
+	<textPreparation type="com.j2fe.feeds.generic.preparation.MoodysXmlPreparation">
+		<ratingTypeCode>534</ratingTypeCode>
+		<ratingTypeCode>538</ratingTypeCode>
+		<ratingTypeCode>545</ratingTypeCode>
+        <ratingTypeCode>5166704</ratingTypeCode>
+    </textPreparation>
+	<messageSplitter type="com.j2fe.feeds.generic.splitters.XMLXPathSplitter">
+		<dataXPath>Organization_Roots/Organization_Root[(Organization_Ratings/Organization_Rating[Rating_Class_Number &gt; 0 and Duration_Short_Description='LT']
+			[Security_Class_Short_Description='CLM' or 
+			 Security_Class_Short_Description='CRR' or 
+			 Security_Class_Short_Description='CTP' or 
+			 Security_Class_Short_Description='SCD' or 
+			 Security_Class_Short_Description='SI'  or
+			 Security_Class_Short_Description='BCA' or
+			 Security_Class_Short_Description='ADJ'	 ]) 
+			 or 
+			 (Organization_Ratings/Organization_Rating[(Rating_Class_Number =-10200 or Rating_Class_Number=-200) and Duration_Short_Description='LT']
+			 [Security_Class_Short_Description='REG' ])]
+		</dataXPath>
+	</messageSplitter>
+</vendor-definition>

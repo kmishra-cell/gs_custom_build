@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="MiscOperations" entitySubType="[]" id="OxqJm&gt;XDW1" isDefault="N" isPublic="Y" screenType="SYSTEMFORM" title="F: MHI_Operations_Form">
+  <control caption="Asset Publishing" columns="2" fullQualPath="" hideDetail="N" id="&amp;lt;Bu9y&amp;gt;H3e1" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="OxqJm&amp;gt;XDW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+    <buttons>
+      <button caption="Publish" id="&lt;BuAy&gt;H3e1">
+        <property name="Event Type" value="GenericEvent"/>
+        <property name="PublishSoi" value="MiscOperations.Operations.MHI1ParentIssueGroupOID"/>
+        <property name="Event Name" value="AssetsBySoiMarketEvent"/>
+        <property name="MktOid" value="MiscOperations.Operations.MHI1FinancialMarketOid"/>
+        <property name="Type" value="event"/>
+      </button>
+    </buttons>
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Parent Issue Group OID" columns="2" fullQualPath="MiscOperations.Operations.MHI1ParentIssueGroupOID" hideDetail="N" id="&amp;lt;BuGy&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Bu9y&amp;gt;H3e1" relatedPath="" screenId="OxqJm&amp;gt;XDW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Group Of Interest"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Financial Market OID" columns="2" fullQualPath="MiscOperations.Operations.MHI1FinancialMarketOid" hideDetail="N" id="&amp;lt;BuHy&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Bu9y&amp;gt;H3e1" relatedPath="" screenId="OxqJm&amp;gt;XDW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Market"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Party Publishing" columns="2" fullQualPath="" hideDetail="N" id="&amp;lt;BuIy&amp;gt;H3e1" inlineEdit="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="" relatedPath="" screenId="OxqJm&amp;gt;XDW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+    <buttons>
+      <button caption="Publish" id="&lt;BuJy&gt;H3e1">
+        <property name="publishModel" value="ISSRPUB"/>
+        <property name="Event Name" value="PublishUniverseEvent"/>
+        <property name="Type" value="event"/>
+        <property name="Event Type" value="GenericEvent"/>
+      </button>
+    </buttons>
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+  </control>
+  <control caption="Legal Agreement Publishing" columns="2" fullQualPath="" hideDetail="N" id="&amp;lt;BuOy&amp;gt;H3e1" inlineEdit="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="" relatedPath="" screenId="OxqJm&amp;gt;XDW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+    <buttons>
+      <button caption="Publish" id="&lt;BuPy&gt;H3e1">
+        <property name="OrgId" value="MiscOperations.Operations.MHI1OrganizationID"/>
+        <property name="Event Type" value="GenericEvent"/>
+        <property name="Event Name" value="MZ_Event_LegalAgrmntBulkPublish"/>
+        <property name="Type" value="event"/>
+      </button>
+    </buttons>
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Organization ID" columns="2" fullQualPath="MiscOperations.Operations.MHI1OrganizationID" hideDetail="N" id="&amp;lt;BuUy&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;BuOy&amp;gt;H3e1" relatedPath="" screenId="OxqJm&amp;gt;XDW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Organisation"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+  <control caption="Geographic Unit Publishing" columns="2" fullQualPath="" hideDetail="N" id="&amp;lt;BuVy&amp;gt;H3e1" inlineEdit="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="" relatedPath="" screenId="OxqJm&amp;gt;XDW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+    <buttons>
+      <button caption="Publish" id="&lt;BuWy&gt;H3e1">
+        <property name="Event Type" value="GenericEvent"/>
+        <property name="Type" value="event"/>
+        <property name="Event Name" value="MZ_Event_GeoUnitBulkPublish"/>
+      </button>
+    </buttons>
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+  </control>
+  <control caption="Advanced Publishing" columns="2" fullQualPath="" hideDetail="N" id="&amp;lt;Buay&amp;gt;H3e1" inlineEdit="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="" relatedPath="" screenId="OxqJm&amp;gt;XDW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+    <buttons>
+      <button caption="Trigger Jobs" id="&lt;Buby&gt;H3e1">
+        <property name="Type" value="event"/>
+        <property name="JobXML" value="MiscOperations.Operations.MHI1CommentText"/>
+        <property name="Event Name" value="PublishUsingXML"/>
+        <property name="Event Type" value="GenericEvent"/>
+      </button>
+    </buttons>
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Comment Text" columns="2" fullQualPath="MiscOperations.Operations.MHI1CommentText" hideDetail="N" id="&amp;lt;Bugy&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Buay&amp;gt;H3e1" relatedPath="" screenId="OxqJm&amp;gt;XDW1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

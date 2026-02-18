@@ -1,0 +1,23 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "FitchIssuerRatings" ],
+  "title" : "Fitch Issuer Ratings",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Everyday",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "begin" : "08:00:00",
+      "end" : "18:30:00",
+      "repeat" : "01:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

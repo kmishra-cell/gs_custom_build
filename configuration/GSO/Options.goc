@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations cleanUnusedFields="false" nameSpace="MHI">
+  <policies>
+    <policy config="N" dgdpid="++4u-kJy2etzO00d" entityId="++5Xx3ay2etse00Y" id="00AEWQs0gMr0u009" name="MHISetIssueTypeOptions" nameSpace="MHI" type="ALL">
+      <part dgdpid="++4u-kJy2etzO00d" id="00AEWQs0gMr0u00A" index="0" nameSpace="MHI" type="RELOAD_VALID_VALUES" value="SELECT ISS_TYP CODE, ISS_TYP_NME DISPLAY_NAME FROM FT_T_ISTY WHERE iss_typ_clsf_nme ='Options' and END_TMS IS NULL"/>
+    </policy>
+    <policy config="N" dgdpid="++6KoACy2esnO00H" entityId="++5Xx3ay2etse00Y" id="00AER2x0gMr0S00A" name="MHI_ReadOnlyOpt" nameSpace="MHI" type="ALL">
+      <part id="00AER2x0gMr0S00B" index="0" nameSpace="MHI" ruleid="00AEB0T0gMr0S01L" type="POLICY_RULE">
+        <part dgdpid="++6KoACy2esnO00X" id="++AHw-vmgMr2m054" index="0" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00V" id="++AHw-vmgMr2m055" index="1" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00Z" id="++AHw-vmgMr2m056" index="2" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6LMLumhmqYO00X" id="++AHw-vmgMr2m057" index="3" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00A" id="++AHw-vmgMr2m058" index="4" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00E" id="++AHw-vmgMr2m059" index="5" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00C" id="++AHw-vmgMr2m05A" index="6" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00H" id="++AHw-vmgMr2m05B" index="7" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00F" id="++AHw-vmgMr2m05C" index="8" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00L" id="++AHw-vmgMr2m05D" index="9" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00J" id="++AHw-vmgMr2m05E" index="10" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00P" id="++AHw-vmgMr2m05F" index="11" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00N" id="++AHw-vmgMr2m05G" index="12" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00T" id="++AHw-vmgMr2m05H" index="13" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00R" id="++AHw-vmgMr2m05I" index="14" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00Y" id="++AHw-vmgMr2m05J" index="15" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00W" id="++AHw-vmgMr2m05K" index="16" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00a" id="++AHw-vmgMr2m05L" index="17" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00D" id="++AHw-vmgMr2m05M" index="18" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00B" id="++AHw-vmgMr2m05N" index="19" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00I" id="++AHw-vmgMr2m05O" index="20" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00G" id="++AHw-vmgMr2m05P" index="21" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00M" id="++AHw-vmgMr2m05Q" index="22" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00K" id="++AHw-vmgMr2m05R" index="23" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00Q" id="++AHw-vmgMr2m05S" index="24" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00O" id="++AHw-vmgMr2m05T" index="25" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00U" id="++AHw-vmgMr2m05U" index="26" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+        <part dgdpid="++6KoACy2esnO00S" id="++AHw-vmgMr2m05V" index="27" nameSpace="MHI" prntID="00AER2x0gMr0S00B" type="DISABLE" value="true"/>
+      </part>
+    </policy>
+  </policies>
+</configurations>

@@ -1,0 +1,1 @@
+update ft_be_begc set config_val_txt='MHI', last_chg_tms=sysdate()  where config_typ='CLIENT_NAMESPACE' and coalesce(config_val_txt,'NULL')!='MHI';

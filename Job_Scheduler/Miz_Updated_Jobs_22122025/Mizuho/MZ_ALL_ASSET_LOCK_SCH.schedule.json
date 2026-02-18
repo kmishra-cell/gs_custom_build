@@ -1,0 +1,21 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "MZ_ALL_ASSET_LOCK_SCH" ],
+  "title" : "MZ_ALL_ASSET_LOCK_SCH",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "BuisnessDays",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "07:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ {
+    "orderName" : "",
+    "variables" : { },
+    "positions" : { },
+    "tags" : [ ]
+  } ]
+}

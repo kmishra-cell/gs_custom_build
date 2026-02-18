@@ -1,0 +1,10 @@
+{
+  "version" : "1.7.3",
+  "type" : "WORKINGDAYSCALENDAR",
+  "title" : "Cal_Sundays",
+  "includes" : {
+    "weekdays" : [ {
+      "days" : [ 0 ]
+    } ]
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="FinancialInstitution" createdUser="user1" freezeColumns="" id="r89B115GW1" isDefault="N" isPublic="Y" lookupId="FinancialInstitution" pageSize="50" screenType="SYSTEMSRCH" title="MHI_ReferenceEntity_Search">
+  <config>{"ADVANCE_FILTER":[{"Query":"{\"joinOperator\":\"AND\",\"allSubCriterions\":[{\"criterianField\":\"FinancialInstitution.MHIPlatformDeatils.MHIFINRFINSReferenceEntity\",\"operator\":\"EQUALS\",\"caseSensitive\":true,\"value\":\"CLBROKER\"}]}"}]}</config>
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Institution Name" fieldName="FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tEo&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="2157"/>
+  </columns>
+</root>

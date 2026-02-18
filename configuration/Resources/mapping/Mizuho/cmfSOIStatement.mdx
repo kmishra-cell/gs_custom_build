@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="MSF" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="LastChangedTms">2023-06-13 at 01:39:27 BST</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MappingVersion">1.0.0.0</Option>
+    <Option key="MessageTranslatorVersion">8.1.1.1</Option>
+    <Option key="MappingDesignerVersion">8.4.1.10REL</Option>
+  </Options>
+  <Input vendorType="XML">
+    <Options>
+      <Option key="NullIdentifiers"/>
+      <Option key="DateTimeFormat">%Y%M%D%H%I%S</Option>
+      <Option key="DecimalSeparator">.</Option>
+      <Option key="DDLName"/>
+      <Option key="TrimFields">BOTH</Option>
+      <Option key="MessageType"/>
+    </Options>
+    <VendorDef name="Layout">
+      <record desc="" ident="cmfSOIStatements" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatements">
+        <record desc="This can reduce the population of the SOI. It could have the effect of adding multiple securities at once, but in practice this would be rare." ident="cmfSOIStatement" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatement">
+          <record desc="" ident="exchangeId" length="255" mandatory="false" mapable="true" multiple="true" name="exchangeId" type="String">
+            <field decimals="0" desc="" ident="@exchangeIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="exchangeIdScheme" pos="0" readonly="false" type="String"/>
+          </record>
+          <field decimals="0" desc="" ident="sourceSystemId" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="sourceSystemId" pos="0" readonly="false" type="String"/>
+          <record desc="" ident="instrumentIds" mandatory="false" mapable="true" multiple="true" name="instrumentIds">
+            <record desc="" ident="instrumentId" length="255" mandatory="false" mapable="true" multiple="true" name="instrumentId" type="String">
+              <field decimals="0" desc="" ident="@instrumentIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="instrumentIdScheme" pos="0" readonly="false" type="String"/>
+            </record>
+          </record>
+        </record>
+      </record>
+    </VendorDef>
+    <VendorDef name="Layout">
+      <record desc="" ident="cmfSOIStatements" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatements">
+        <record desc="This can reduce the population of the SOI. It could have the effect of adding multiple securities at once, but in practice this would be rare." ident="cmfSOIStatement" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatement">
+          <record desc="" ident="exchangeId" length="255" mandatory="false" mapable="true" multiple="true" name="exchangeId" type="String">
+            <field decimals="0" desc="" ident="@exchangeIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="exchangeIdScheme" pos="0" readonly="false" type="String"/>
+          </record>
+          <field decimals="0" desc="" ident="sourceSystemId" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="sourceSystemId" pos="0" readonly="false" type="String"/>
+          <record desc="" ident="instrumentIds" mandatory="false" mapable="true" multiple="true" name="instrumentIds">
+            <record desc="" ident="instrumentId" length="255" mandatory="false" mapable="true" multiple="true" name="instrumentId" type="String">
+              <field decimals="0" desc="" ident="@instrumentIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="instrumentIdScheme" pos="0" readonly="false" type="String"/>
+            </record>
+          </record>
+        </record>
+      </record>
+    </VendorDef>
+    <VendorDef name="Layout">
+      <record desc="" ident="cmfSOIStatements" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatements">
+        <record desc="This can reduce the population of the SOI. It could have the effect of adding multiple securities at once, but in practice this would be rare." ident="cmfSOIStatement" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatement">
+          <record desc="" ident="exchangeId" length="255" mandatory="false" mapable="true" multiple="true" name="exchangeId" type="String">
+            <field decimals="0" desc="" ident="@exchangeIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="exchangeIdScheme" pos="0" readonly="false" type="String"/>
+          </record>
+          <field decimals="0" desc="" ident="sourceSystemId" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="sourceSystemId" pos="0" readonly="false" type="String"/>
+          <record desc="" ident="instrumentIds" mandatory="false" mapable="true" multiple="true" name="instrumentIds">
+            <record desc="" ident="instrumentId" length="255" mandatory="false" mapable="true" multiple="true" name="instrumentId" type="String">
+              <field decimals="0" desc="" ident="@instrumentIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="instrumentIdScheme" pos="0" readonly="false" type="String"/>
+            </record>
+          </record>
+        </record>
+      </record>
+    </VendorDef>
+    <VendorDef name="Layout">
+      <record desc="" ident="cmfSOIStatements" length="255" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatements" type="String">
+        <record desc="" ident="cmfSOIStatement" length="255" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatement" type="String">
+          <record desc="" ident="exchangeId" length="255" mandatory="false" mapable="true" multiple="true" name="exchangeId" type="String">
+            <field decimals="0" desc="" ident="@exchangeIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="Field_exchangeIdScheme" pos="0" readonly="false" type="String"/>
+          </record>
+          <field decimals="0" desc="" ident="sourceSystemId" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="sourceSystemId" pos="0" readonly="false" type="String"/>
+          <record desc="" ident="instrumentIds" length="255" mandatory="false" mapable="true" multiple="true" name="instrumentIds" type="String">
+            <record desc="" ident="instrumentId" length="255" mandatory="false" mapable="true" multiple="true" name="instrumentId" type="String">
+              <field decimals="0" desc="" ident="@instrumentIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="Field_instrumentIdScheme" pos="0" readonly="false" type="String"/>
+            </record>
+          </record>
+        </record>
+      </record>
+    </VendorDef>
+    <VendorDef name="Layout">
+      <record desc="" ident="cmfSOIStatements" length="255" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatements" type="String">
+        <record desc="" ident="cmfSOIStatement" length="255" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatement" type="String">
+          <field decimals="0" desc="" ident="sourceSystemId" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="sourceSystemId" pos="0" readonly="false" type="String"/>
+          <field decimals="0" desc="" ident="SOIDomain" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SOIDomain" pos="0" readonly="false" type="String"/>
+          <record desc="" ident="instruments" length="255" mandatory="false" mapable="true" multiple="true" name="instruments" type="String">
+            <record desc="" ident="instrument" length="255" mandatory="false" mapable="true" multiple="true" name="instrument" type="String">
+              <record desc="" ident="exchangeID" length="255" mandatory="false" mapable="true" multiple="true" name="exchangeID" type="String">
+                <field decimals="0" desc="" ident="@exchangeIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="Field_exchangeIdScheme" pos="0" readonly="false" type="String"/>
+              </record>
+              <record desc="" ident="instrumentID" length="255" mandatory="false" mapable="true" multiple="true" name="instrumentID" type="String">
+                <field decimals="0" desc="" ident="@instrumentIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="Field_instrumentIdScheme" pos="0" readonly="false" type="String"/>
+              </record>
+            </record>
+          </record>
+        </record>
+      </record>
+    </VendorDef>
+    <VendorDef name="Layout">
+      <record desc="" ident="cmfSOIStatement" length="255" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatement" type="String">
+        <field decimals="0" desc="" ident="sourceSystemId" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="sourceSystemId" pos="0" readonly="false" type="String"/>
+        <field decimals="0" desc="" ident="soiDomain" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="soiDomain" pos="0" readonly="false" type="String"/>
+        <record desc="" ident="instruments" length="255" mandatory="false" mapable="true" multiple="true" name="instruments" type="String">
+          <record desc="" ident="instrument" length="255" mandatory="false" mapable="true" multiple="true" name="instrument" type="String">
+            <record desc="" ident="exchangeID" length="255" mandatory="false" mapable="true" multiple="true" name="exchangeID" type="String">
+              <field decimals="0" desc="" ident="@exchangeIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="Field_exchangeIdScheme" pos="0" readonly="false" type="String"/>
+            </record>
+            <record desc="" ident="instrumentId" length="255" mandatory="false" mapable="true" multiple="true" name="instrumentId" type="String">
+              <field decimals="0" desc="" ident="@instrumentIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="Field_instrumentIdScheme" pos="0" readonly="false" type="String"/>
+            </record>
+          </record>
+        </record>
+      </record>
+    </VendorDef>
+    <Layout>
+      <Override/>
+      <record desc="" ident="cmfSOIStatement" length="255" mandatory="false" mapable="true" multiple="true" name="cmfSOIStatement" type="String">
+        <field decimals="0" desc="" ident="sourceSystemId" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="sourceSystemId" pos="0" readonly="false" type="String"/>
+        <field decimals="0" desc="" ident="soiDomain" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="soiDomain" pos="0" readonly="false" type="String"/>
+        <record desc="" ident="instruments" length="255" mandatory="false" mapable="true" multiple="true" name="instruments" type="String">
+          <record desc="" ident="instrument" length="255" mandatory="false" mapable="true" multiple="true" name="instrument" type="String">
+            <record desc="" ident="exchangeID" length="255" mandatory="false" mapable="true" multiple="true" name="exchangeID" type="String">
+              <field decimals="0" desc="" ident="@exchangeIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="Field_exchangeIdScheme" pos="0" readonly="false" type="String"/>
+            </record>
+            <record desc="" ident="instrumentId" length="255" mandatory="false" mapable="true" multiple="true" name="instrumentId" type="String">
+              <field decimals="0" desc="" ident="@instrumentIdScheme" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="Field_instrumentIdScheme" pos="0" readonly="false" type="String"/>
+            </record>
+          </record>
+        </record>
+      </record>
+    </Layout>
+  </Input>
+  <Output>
+    <Options>
+      <Option key="DefaultEmptyNumericsToZero">FALSE</Option>
+      <Option key="DateTimeOutputFormat">%M-%D-%Y %H:%I:%S %A</Option>
+      <Option key="OutputEncoding">UTF-8</Option>
+    </Options>
+    <MappingFragments/>
+    <OutputDef>
+      <Block displayName="Store Variables">
+        <Execute displayName="ISGR_ISSGRPOID">
+          <expr><![CDATA[return StoreString("ISGR_ISSGRPOID", If(OneHasValue(cmfSOIStatement.soiDomain), Select("", "", "SELECT iss_grp_oid FROM ft_t_isgr where grp_nme = :1 AND end_tms IS NULL", cmfSOIStatement.soiDomain, "", "", "", ""), ""));]]></expr>
+        </Execute>
+      </Block>
+      <ForEach recordType="cmfSOIStatement.instruments.instrument">
+        <where><![CDATA[return OneHasValue(cmfSOIStatement.instruments.instrument.instrumentId);]]></where>
+        <Do>
+          <Node messageformat="GSREF" name="STREET_REF" type="message">
+            <Options>
+              <Option key="DocType">STREET_REF</Option>
+              <Option key="SystemId">fti://repository/dtd/STREET_REF</Option>
+              <Option key="OutputEncoding"/>
+            </Options>
+            <condition><![CDATA[return true;]]></condition>
+            <Node name="USERID" type="attribute">
+              <expr><![CDATA[return "GUEST";]]></expr>
+            </Node>
+            <Node name="TRACE" type="attribute">
+              <expr><![CDATA[return "false";]]></expr>
+            </Node>
+            <Node name="HEADER" type="element">
+              <Node name="CURRENTTIMESTAMP" type="element">
+                <expr><![CDATA[return TimeStamp();]]></expr>
+              </Node>
+              <Node name="DATASOURCE" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "cmfSOI";]]></expr>
+                </Node>
+              </Node>
+              <Node name="LOCALE" type="element">
+                <Node name="NLS" type="element">
+                  <Node name="VALUE" type="attribute">
+                    <expr><![CDATA[return "ENU";]]></expr>
+                  </Node>
+                </Node>
+                <Node name="TIMEZONE" type="element">
+                  <Node name="VALUE" type="attribute">
+                    <expr><![CDATA[return "GMT Standard Time";]]></expr>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="MAIN_ENTITY_TBL_TYP" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "ISSU";]]></expr>
+                </Node>
+              </Node>
+              <Node name="MSGCLASSIFICATION" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "cmfSOI";]]></expr>
+                </Node>
+              </Node>
+              <Node name="USERID" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "cmfSOI";]]></expr>
+                </Node>
+              </Node>
+              <Node name="VENDORRECORDID" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return GetRecordIdentifier();]]></expr>
+                </Node>
+              </Node>
+              <Node name="MAIN_ENTITY_ID" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return cmfSOIStatement.instruments.instrument.instrumentId;]]></expr>
+                </Node>
+              </Node>
+              <Node name="MAIN_ENTITY_ID_CTXT_TYP" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return StrWord(cmfSOIStatement.instruments.instrument.instrumentId.Field_instrumentIdScheme, ":", 2);]]></expr>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Issue" type="segment">
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "REFERENCE";]]></expr>
+              </Node>
+              <Node name="TYPE" type="attribute">
+                <expr><![CDATA[return "Issue";]]></expr>
+              </Node>
+              <Node name="IssueIdentifier" type="segment">
+                <Node name="ACTION" type="attribute">
+                  <expr><![CDATA[return "REFERENCE";]]></expr>
+                </Node>
+                <Node name="TYPE" type="attribute">
+                  <expr><![CDATA[return "IssueIdentifier";]]></expr>
+                </Node>
+                <Node name="ERROR" type="attribute">
+                  <expr><![CDATA[return "N";]]></expr>
+                </Node>
+                <Node name="MATCH" type="attribute">
+                  <expr><![CDATA[if (OneHasValue(cmfSOIStatement.instruments.instrument.exchangeID))
+	return "ISID5_CTXT_ISSID_MKT";
+else
+	return "ISID3_ID_CTXT_ISS_ID";]]></expr>
+                </Node>
+                <Node name="COPY_FROM" type="attribute">
+                  <expr><![CDATA[return "INSTR_ID";]]></expr>
+                </Node>
+                <Node name="COPY_TO" type="attribute">
+                  <expr><![CDATA[return "INSTR_ID";]]></expr>
+                </Node>
+                <Node name="FinancialMarketIdentifier" type="segment">
+                  <condition><![CDATA[if (OneHasValue(cmfSOIStatement.instruments.instrument.exchangeID))
+	return "MKID";
+else
+	return "";]]></condition>
+                  <Node name="ACTION" type="attribute">
+                    <expr><![CDATA[return "REFERENCE";]]></expr>
+                  </Node>
+                  <Node name="TYPE" type="attribute">
+                    <expr><![CDATA[return "FinancialMarketIdentifier";]]></expr>
+                  </Node>
+                  <Node name="COPY_FROM" type="attribute">
+                    <expr><![CDATA[return "MKT_OID";]]></expr>
+                  </Node>
+                  <Node name="COPY_TO" type="attribute">
+                    <expr><![CDATA[return "MKT_OID";]]></expr>
+                  </Node>
+                  <Node name="MATCH" type="attribute">
+                    <expr><![CDATA[return "MKID1_MKT_CTXT_MKTID";]]></expr>
+                  </Node>
+                  <Node name="MKTID" type="element">
+                    <Node name="VALUE" type="attribute">
+                      <expr><![CDATA[return cmfSOIStatement.instruments.instrument.exchangeID;]]></expr>
+                    </Node>
+                  </Node>
+                  <Node name="MKTIDCTXTTYP" type="element">
+                    <Node name="VALUE" type="attribute">
+                      <expr><![CDATA[return StrWord(cmfSOIStatement.instruments.instrument.exchangeID.Field_exchangeIdScheme, ":", 2);]]></expr>
+                    </Node>
+                  </Node>
+                </Node>
+                <Node name="IDCTXTTYP" type="element">
+                  <Node name="VALUE" type="attribute">
+                    <expr><![CDATA[return StrWord(cmfSOIStatement.instruments.instrument.instrumentId.Field_instrumentIdScheme, ":", 2);]]></expr>
+                  </Node>
+                </Node>
+                <Node name="ISSID" type="element">
+                  <Node name="VALUE" type="attribute">
+                    <expr><![CDATA[return cmfSOIStatement.instruments.instrument.instrumentId;]]></expr>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="IssueIdentifier" type="segment">
+                <condition><![CDATA[if (StrWord(cmfSOIStatement.instruments.instrument.instrumentId.Field_instrumentIdScheme, ":", 2) == "BBGLOBAL")
+	return "IssueIdentifierCP";
+else
+	return "";]]></condition>
+                <Node name="ACTION" type="attribute">
+                  <expr><![CDATA[return "REFERENCE";]]></expr>
+                </Node>
+                <Node name="TYPE" type="attribute">
+                  <expr><![CDATA[return "IssueIdentifier";]]></expr>
+                </Node>
+                <Node name="ERROR" type="attribute">
+                  <expr><![CDATA[return "N";]]></expr>
+                </Node>
+                <Node name="MATCH" type="attribute">
+                  <expr><![CDATA[if (OneHasValue(cmfSOIStatement.instruments.instrument.exchangeID))
+	return "ISID5_CTXT_ISSID_MKT";
+else
+	return "ISID3_ID_CTXT_ISS_ID";]]></expr>
+                </Node>
+                <Node name="COPY_FROM" type="attribute">
+                  <expr><![CDATA[return "INSTR_ID";]]></expr>
+                </Node>
+                <Node name="COPY_TO" type="attribute">
+                  <expr><![CDATA[return "INSTR_ID";]]></expr>
+                </Node>
+                <Node name="FinancialMarketIdentifier" type="segment">
+                  <condition><![CDATA[if (OneHasValue(cmfSOIStatement.instruments.instrument.exchangeID))
+	return "MKID";
+else
+	return "";]]></condition>
+                  <Node name="ACTION" type="attribute">
+                    <expr><![CDATA[return "REFERENCE";]]></expr>
+                  </Node>
+                  <Node name="TYPE" type="attribute">
+                    <expr><![CDATA[return "FinancialMarketIdentifier";]]></expr>
+                  </Node>
+                  <Node name="COPY_FROM" type="attribute">
+                    <expr><![CDATA[return "MKT_OID";]]></expr>
+                  </Node>
+                  <Node name="COPY_TO" type="attribute">
+                    <expr><![CDATA[return "MKT_OID";]]></expr>
+                  </Node>
+                  <Node name="MATCH" type="attribute">
+                    <expr><![CDATA[return "MKID1_MKT_CTXT_MKTID";]]></expr>
+                  </Node>
+                  <Node name="MKTID" type="element">
+                    <Node name="VALUE" type="attribute">
+                      <expr><![CDATA[return cmfSOIStatement.instruments.instrument.exchangeID;]]></expr>
+                    </Node>
+                  </Node>
+                  <Node name="MKTIDCTXTTYP" type="element">
+                    <Node name="VALUE" type="attribute">
+                      <expr><![CDATA[return StrWord(cmfSOIStatement.instruments.instrument.exchangeID.Field_exchangeIdScheme, ":", 2);]]></expr>
+                    </Node>
+                  </Node>
+                </Node>
+                <Node name="IDCTXTTYP" type="element">
+                  <Node name="VALUE" type="attribute">
+                    <expr><![CDATA[return "CPGLOBAL";]]></expr>
+                  </Node>
+                </Node>
+                <Node name="ISSID" type="element">
+                  <Node name="VALUE" type="attribute">
+                    <expr><![CDATA[return cmfSOIStatement.instruments.instrument.instrumentId;]]></expr>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="ISSUIssueGroupParticipant" type="segment">
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "UNKNOWN";]]></expr>
+              </Node>
+              <Node name="TYPE" type="attribute">
+                <expr><![CDATA[return "ISSUIssueGroupParticipant";]]></expr>
+              </Node>
+              <Node name="DATASRCID" type="element">
+                <Node name="VALUE" type="attribute"/>
+              </Node>
+              <Node name="PRNTISSGRPOID" type="element">
+                <expr><![CDATA[if (OneHasValue(GetStringByKey("ISGR_ISSGRPOID")))
+	return GetStringByKey("ISGR_ISSGRPOID");
+else
+	return "";]]></expr>
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[if (OneHasValue(GetStringByKey("ISGR_ISSGRPOID")))
+	return GetStringByKey("ISGR_ISSGRPOID");
+else
+	return "";]]></expr>
+                </Node>
+              </Node>
+              <Node name="DATASTATTYP" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "ACTIVE";]]></expr>
+                </Node>
+              </Node>
+              <Node name="PRTPURPTYP" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return "INTEREST";]]></expr>
+                </Node>
+              </Node>
+              <Node name="STARTTMS" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return TimeStamp();]]></expr>
+                </Node>
+                <Node name="INSERT_ONLY" type="attribute">
+                  <expr><![CDATA[return "Y";]]></expr>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="SecurityOfInterest" type="segment">
+              <Node name="ACTION" type="attribute">
+                <expr><![CDATA[return "UNKNOWN";]]></expr>
+              </Node>
+              <Node name="TYPE" type="attribute">
+                <expr><![CDATA[return "SecurityOfInterest";]]></expr>
+              </Node>
+              <Node name="SOINME" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return cmfSOIStatement.soiDomain;]]></expr>
+                </Node>
+              </Node>
+              <Node name="STARTTMS" type="element">
+                <Node name="VALUE" type="attribute">
+                  <expr><![CDATA[return Transform2FTIDate(SubString(TimeStamp(), 1, 10), "MM-DD-YYYY");]]></expr>
+                </Node>
+                <Node name="INSERT_ONLY" type="attribute">
+                  <expr><![CDATA[return "Y";]]></expr>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </Do>
+      </ForEach>
+    </OutputDef>
+  </Output>
+  <Translation/>
+  <Expressions>
+    <Expression enabled="false" ident="KeyStreaming">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="RecordIdentifier">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="GSDMFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="VDSFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+  </Expressions>
+</MappingDef>

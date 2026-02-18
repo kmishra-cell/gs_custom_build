@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ScheduleMaintenanceConfiguration SYSTEM "ScheduleMaintenance.dtd">
+<ScheduleMaintenanceConfiguration>
+	<occurrence table="ft_t_isrt">
+		<option id="ISRT_1">
+			<attribute>RTNG_CDE</attribute>
+			<EffStartDteColumnName>RTNG_EFF_TMS</EffStartDteColumnName>
+			<EffEndDteColumnName>SYS_EFF_END_TMS</EffEndDteColumnName>
+		</option>
+	</occurrence>
+	<occurrence table="ft_t_firt">
+		<option id="FIRT_1">
+			<attribute>RTNG_CDE</attribute>
+			<EffStartDteColumnName>RTNG_EFF_TMS</EffStartDteColumnName>
+			<EffEndDteColumnName>SYS_EFF_END_TMS</EffEndDteColumnName>
+		</option>
+	</occurrence>
+	<occurrence table="ft_t_irrt">
+		<option id="IRRT_1">
+			<attribute>RTNG_CDE</attribute>
+			<EffStartDteColumnName>RTNG_EFF_TMS</EffStartDteColumnName>
+			<EffEndDteColumnName>SYS_EFF_END_TMS</EffEndDteColumnName>
+		</option>
+	</occurrence>
+	<occurrence table="ft_t_rtop">
+		<option id="RTOP_1">
+			<attribute>RTNG_OPINION_STAT_TYP</attribute>
+			<EffStartDteColumnName>RTNG_OPINION_EFF_TMS</EffStartDteColumnName>
+			<EffEndDteColumnName>SYS_EFF_END_TMS</EffEndDteColumnName>
+		</option>
+	</occurrence>
+</ScheduleMaintenanceConfiguration>

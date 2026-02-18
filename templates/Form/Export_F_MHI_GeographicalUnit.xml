@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="GeographicalUnit" entitySubType="[]" id="Fq2wB1rHe1" isDefault="Y" isPublic="Y" screenType="SYSTEMFORM" title="F: MHI_GeographicalUnit">
+  <control caption="GeographicalUnit" columns="2" fullQualPath="" hideDetail="N" id="ji9J21rHe1" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="PAGEVIEW">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="General" columns="2" fullQualPath="" hideDetail="N" id="ji9K21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ji9J21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="General Information" columns="2" fullQualPath="" hideDetail="N" id="ji9L21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ji9K21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Parent Geographic Unit ID" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitID" hideDetail="N" id="ji9M21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Parent Geographic Unit Type" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitType" hideDetail="N" id="ji9N21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Parent Geographic Unit Count" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitCount" hideDetail="N" id="ji9O21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Geographic Unit Name" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GeographicUnitName" hideDetail="N" id="ji9P21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Geographic Unit Description" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GeographicUnitDescription" hideDetail="N" id="ji9Q21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="CSD Permitted Ind" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.CSDPermittedInd" hideDetail="N" id="ji9R21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Currency" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.PreferredCurrency" hideDetail="N" id="ji9S21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Stop Payment Indicator" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.StopPaymentIndicator" hideDetail="N" id="ji9T21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Geographic Unit NLS Code" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GeographicUnitNLSCode" hideDetail="N" id="ji9U21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="City Code" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.CityCode" hideDetail="N" id="ji9V21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="City Code Type" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.CityCodeType" hideDetail="N" id="ji9W21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="State/Province Code" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.StateOrProvinceCode" hideDetail="N" id="ji9X21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Postal Code" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.PostalCode" hideDetail="N" id="ji9Y21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="County Code" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.CountyCode" hideDetail="N" id="ji9Z21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="County Code Type" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.CountyCodeType" hideDetail="N" id="ji9a21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Code" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.CountryCode" hideDetail="N" id="ji9b21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country-Subdivision Code" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.CountrySubdivisionCode" hideDetail="N" id="ji9c21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Geographic Continent Code" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GeographicContinentCode" hideDetail="N" id="ji9d21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="ji9L21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Related Geographic Unit" columns="2" fullQualPath="" hideDetail="N" id="ji9e21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ji9K21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Geographic Unit Name" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GeographicUnitName" hideDetail="N" id="ji9f21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ji9e21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Parent Geographic Unit Type" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitType" hideDetail="N" id="ji9g21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ji9e21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Parent Geographic Unit ID" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitID" hideDetail="N" id="ji9h21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ji9e21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Validity &amp;amp; source" columns="2" fullQualPath="" hideDetail="N" id="ji9i21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ji9K21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Geographic Unit Effective Date" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GeographicUnitStartTime" hideDetail="N" id="ji9j21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ji9i21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Geographic Unit Effective Until" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GeographicUnitEndTime" hideDetail="N" id="ji9k21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ji9i21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Source ID" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GeographicUnitDataSourceID" hideDetail="N" id="ji9l21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ji9i21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Status" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GeographicUnitDataStatus" hideDetail="N" id="ji9m21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ji9i21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Identifier" columns="2" fullQualPath="GeographicalUnit.Identifier" hideDetail="N" id="ji9n21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="15" parentId="ji9J21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Organization ID" columns="2" fullQualPath="GeographicalUnit.Identifier.IdentifierOfEnterpriseInGeoUnit.Enterprise.EnterpriseInformation.OrganizationID" hideDetail="N" id="ji9o21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ji9n21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic Unit ID" columns="2" fullQualPath="GeographicalUnit.Identifier.GeographicUnitIdentifier" hideDetail="N" id="ji9p21rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ji9n21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic Unit ID Context" columns="2" fullQualPath="GeographicalUnit.Identifier.GeographicUnitIDContext" hideDetail="N" id="ji9q21rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ji9n21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifier Subdivision ID" columns="2" fullQualPath="GeographicalUnit.Identifier.IdentifierSubdivisionID" hideDetail="N" id="ji9r21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ji9n21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="SUBD Geographic Unit Organization ID" columns="2" fullQualPath="GeographicalUnit.Identifier.SUBDGeographicUnitOrganizationID" hideDetail="N" id="ji9s21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ji9n21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic ID Effective Date" columns="2" fullQualPath="GeographicalUnit.Identifier.GeographicIdentifierEffectiveDate" hideDetail="N" id="ji9t21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ji9n21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geographic ID Effective Until" columns="2" fullQualPath="GeographicalUnit.Identifier.GeographicIdentifierEndTime" hideDetail="N" id="ji9u21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ji9n21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"CAPTION_OVERRIDE":[{"LABEL":"Identifiers"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Geographic Unit Group Participants" columns="2" fullQualPath="" hideDetail="N" id="ji9v21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ji9J21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+      <control caption="Group Name" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GroupingOfGeographicalUnit.GeographicUnitGroup.Group.GroupName" hideDetail="N" id="ji9w21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ji9v21rHe1" relatedPath="GeographicalUnit.GeographicUnitInformation.GroupingOfGeographicalUnit" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Group Purpose" columns="2" fullQualPath="GeographicalUnit.GeographicUnitInformation.GroupingOfGeographicalUnit.GeographicUnitGroup.Group.GroupPurpose" hideDetail="N" id="ji9x21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ji9v21rHe1" relatedPath="GeographicalUnit.GeographicUnitInformation.GroupingOfGeographicalUnit" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Relationship" columns="2" fullQualPath="GeographicalUnit.Relationship" hideDetail="N" id="ji9y21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="10" parentId="ji9J21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Geographic Unit Name" columns="2" fullQualPath="GeographicalUnit.Relationship.RelatedGeographicUnit.GeographicalUnit.GeographicUnitInformation.GeographicUnitName" hideDetail="N" id="ji9z21rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ji9y21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit ID" columns="2" fullQualPath="GeographicalUnit.Relationship.RelatedGeographicUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitID" hideDetail="N" id="ji9$21rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ji9y21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Parent Geographic Unit Type" columns="2" fullQualPath="GeographicalUnit.Relationship.RelatedGeographicUnit.GeographicalUnit.GeographicUnitInformation.ParentGeographicUnitType" hideDetail="N" id="ji9%21rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ji9y21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geo Unit Relationship Type" columns="2" fullQualPath="GeographicalUnit.Relationship.GeographicUnitRelType" hideDetail="N" id="ji9@21rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ji9y21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geo Unit Relationship Description" columns="2" fullQualPath="GeographicalUnit.Relationship.GeographicUnitRelDescription" hideDetail="N" id="ji9&amp;amp;21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ji9y21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geo Unit Relationship Participation Currency" columns="2" fullQualPath="GeographicalUnit.Relationship.GeoUnitRelationshipParticipationCurrency" hideDetail="N" id="ji9*21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ji9y21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geo Unit Relationship Participation Amount" columns="2" fullQualPath="GeographicalUnit.Relationship.GeoUnitRelationshipParticipationAmount" hideDetail="N" id="ji9-21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ji9y21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geo Unit Relationship Participation Percent" columns="2" fullQualPath="GeographicalUnit.Relationship.GeoUnitRelationshipParticipationPercent" hideDetail="N" id="ji9.21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="ji9y21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geo Unit Relationship Effective Date" columns="2" fullQualPath="GeographicalUnit.Relationship.GeographicRelationEffectiveDate" hideDetail="N" id="ji9/21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="ji9y21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Geo Unit Relationship Effective Until" columns="2" fullQualPath="GeographicalUnit.Relationship.GeographicRelationEndTime" hideDetail="N" id="ji9(21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="ji9y21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Statistics" columns="2" fullQualPath="GeographicalUnit.Statistics" hideDetail="N" id="ji9)21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="10" parentId="ji9J21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Statistic Name" columns="2" fullQualPath="GeographicalUnit.Statistics.GeoStatistics.Statistics.StatisticsInformation.StatisticName" hideDetail="N" id="ji9~21rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ji9)21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Definition ID" columns="2" fullQualPath="GeographicalUnit.Statistics.GeoStatistics.Statistics.StatisticsInformation.StatisticDefinitionID" hideDetail="N" id="ji9?21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ji9)21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Denominated Currency" columns="2" fullQualPath="GeographicalUnit.Statistics.GeographicDenominatedCurrency" hideDetail="N" id="ji9&amp;lt;21rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ji9)21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Character Value" columns="2" fullQualPath="GeographicalUnit.Statistics.GeographicStatisticCharacterValue" hideDetail="N" id="ji9&amp;gt;21rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ji9)21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Integer Value" columns="2" fullQualPath="GeographicalUnit.Statistics.GeographicStatisticIntegerValue" hideDetail="N" id="ji9031rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ji9)21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Amount Value" columns="2" fullQualPath="GeographicalUnit.Statistics.StatisticAmountValue" hideDetail="N" id="ji9131rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ji9)21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Date Value" columns="2" fullQualPath="GeographicalUnit.Statistics.GeographicStatisticDateValue" hideDetail="N" id="ji9231rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="ji9)21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Date/Time Value" columns="2" fullQualPath="GeographicalUnit.Statistics.GeographicStatisticDateTimeValue" hideDetail="N" id="ji9331rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="ji9)21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Effective Date" columns="2" fullQualPath="GeographicalUnit.Statistics.GeographicStatisticsEffectiveDate" hideDetail="N" id="ji9431rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="ji9)21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Statistic Effective Until" columns="2" fullQualPath="GeographicalUnit.Statistics.GeographicStatisticsEndTime" hideDetail="N" id="ji9531rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="ji9)21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Calendar" columns="2" fullQualPath="GeographicalUnit.Calendar" hideDetail="N" id="ji9631rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="25" parentId="ji9J21rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Calendar ID" columns="2" fullQualPath="GeographicalUnit.Calendar.CalendarForGeographicalUnit.CalendarDefinition.Calendar.CalendarID" hideDetail="N" id="ji9731rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="ji9631rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Purpose" columns="2" fullQualPath="GeographicalUnit.Calendar.CalendarPurpose" hideDetail="N" id="ji9831rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="ji9631rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Participant Description" columns="2" fullQualPath="GeographicalUnit.Calendar.CalendarParticipantDescription" hideDetail="N" id="ji9931rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="ji9631rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Affected Process" columns="2" fullQualPath="GeographicalUnit.Calendar.CalendarAffectedProcess" hideDetail="N" id="ji9A31rHe1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="ji9631rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Effective Date" columns="2" fullQualPath="GeographicalUnit.Calendar.CalendarStartTime" hideDetail="N" id="ji9B31rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="ji9631rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calendar Effective Until" columns="2" fullQualPath="GeographicalUnit.Calendar.CalendarEndTime" hideDetail="N" id="ji9C31rHe1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="ji9631rHe1" relatedPath="" screenId="Fq2wB1rHe1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

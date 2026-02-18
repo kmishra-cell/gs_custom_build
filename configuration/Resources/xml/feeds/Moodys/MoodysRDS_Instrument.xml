@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vendor-definition>
+  <name>xml</name>
+  <textPreparation type="com.j2fe.feeds.generic.preparation.MoodysXmlPreparation"/>
+  <messageSplitter type="com.j2fe.feeds.generic.splitters.XMLPathSplitter">
+    <!--  <headerXPath>/data/header</headerXPath>
+    <dataXPath>/data/*[name()!='header']</dataXPath> -->
+    <dataPath>Instrument_Roots/Instrument_Root</dataPath>
+  </messageSplitter>
+</vendor-definition>

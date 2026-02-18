@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <beFields>
+    <beField class="BETEXT" customDesc="" customDomainSQL="" customSQL="" desc="" displayCaption="GS Reference ID" entityTypeId="BGLAGR0000000001" id="00AIe3sWgMr0u02N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LAIDLAGRGSReference" nameSpace="MHI"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" desc="" displayCaption="MHIFullGSReference" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="00AIe3sWgMr0u02Q" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHIFullGSReference" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00AIe3sWgMr0u02N" id="00AIe3sWgMr0u02R" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="0072cJEi2etZa001" ignoreDeleteChildren="false" multiplicity="SINGLE" name="FullLegalAgreement- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="00AIe3sWgMr0u02Q" defNameSpace="MHI" id="00AIe3sWgMr0u02P" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="00AEAU0WgMr0u001" name="FT_T_LAGR-To-FT_T_ENTR01" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AEAU0WgMr0u002" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AEAU0WgMr0u00A" name="FT_T_LAGR-To-FT_T_ENTR02" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AEAU0WgMr0u00B" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AEAU0WgMr0u00J" name="FT_T_LAGR-To-FT_T_ENTR03" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AEAU0WgMr0u00K" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="" id="00AIYvB0gMr0u001" name="FT_T_LAGR-To-FT_T_ENTR04" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AIYvB0gMr0u002" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00A9FWN0gMr0S00A" name="FT_T_LAGR-To-FT_T_LAGR00" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_LAGR">
+      <field fromColumn="LAGR_OID" id="00A9FWN0gMr0S00B" nameSpace="MHI" toColumn="PRNT_LAGR_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurence for Legal Agreement" id="LRWPCMQTJYAFDNFR" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="LAGR_01" nameSpace="GSC" table="FT_T_LAGR" timeSeries="NONE">
+      <field id="00AEAU0WgMr0u003" nameSpace="MHI" relationId="00AEAU0WgMr0u001"/>
+      <field id="00AEAU0WgMr0u00C" nameSpace="MHI" relationId="00AEAU0WgMr0u00A"/>
+      <field id="00AEAU0WgMr0u00L" nameSpace="MHI" relationId="00AEAU0WgMr0u00J"/>
+      <field id="00AIYvB0gMr0u003" nameSpace="MHI" relationId="00AIYvB0gMr0u001"/>
+      <field id="00A9FWN0gMr0S00C" nameSpace="MHI" relationId="00A9FWN0gMr0S00A"/>
+      <field desc="Agreement Approval Date" id="00A7gfV0gMr0S003" name="AGRMNT_APRVL_DTE" nameSpace="MHI"/>
+      <field desc="Events of Default Currency" id="00AB8P90gMr0S1BI" name="EV_DFLT_CURR_CDE" nameSpace="MHI"/>
+      <field desc="Legal Jurisdiction Name" id="00A8n2X0gMr0S00J" name="LEG_JURIS_NME" nameSpace="MHI"/>
+      <field desc="Organization ID" id="00AFd0lWgMr2m00U" name="ORG_ID" nameSpace="MHI"/>
+      <field desc="Parent Legal Agreement OID" id="00A8mbHWgMr0S3zP" name="PRNT_LAGR_OID" nameSpace="MHI"/>
+      <option id="CSSCHQNVJSWCPSNA" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="DEJGNACJVFMWBJXT" nameSpace="GSC" type="DEFAULT_MATCH_KEY"/>
+      <option id="PLTTHJWGXIMEVONM" nameSpace="GSC" type="UI_PUB_ONLY" value="false"/>
+      <option id="RTIKESNMWGJCTQJK" nameSpace="GSC" type="LOOKUP_ONLY" value="false"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Legal Agreement Identifier" id="00AIe3sWgMr0u02K" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="LAID_LAGR_FULL_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_LAID" timeSeries="LOGICAL_DELETE">
+      <field desc="Legal Agreement Identifier" id="00AIe3sWgMr0u02M" name="LEGAL_AGRMNT_ID" nameSpace="MHI"/>
+      <option id="00AIe3sWgMr0u02L" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="00AIe3sWgMr0u02N" groupMapping="0" id="00AIe3sWgMr0u02O" nameSpace="MHI" occFieldId="00AIe3sWgMr0u02M"/>
+  </mappings>
+</entities>

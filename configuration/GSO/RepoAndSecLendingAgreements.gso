@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <beFields>
+    <beField class="BETSTAMP" displayCaption="Last Published" entityTypeId="BGLAGR0000000001" id="++A7gIxmgMr0S00F" mandatory="0" multiplicity="SINGLE_OR_NULL" name="PBATLAGRLastPublished" nameSpace="MHI"/>
+    <beField class="BEDEC" displayCaption="Version" entityTypeId="BGLAGR0000000001" id="++A7gIxmgMr0S00N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="UPD1LAGRVersion" nameSpace="MHI">
+      <fieldConfig id="++A7gIxmgMr0S00O" nameSpace="MHI" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+    <beField class="BETSTAMP" displayCaption="Last Updated" entityTypeId="BGLAGR0000000001" id="++A7gIxmgMr0S00Q" mandatory="0" multiplicity="SINGLE_OR_NULL" name="UPD1LAGRLastUpdated" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Mizuho Acts as Agent" entityTypeId="BGLAGR0000000001" id="++A8vjAmgMr0S007" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FLARLAGRMizuhoActsasAgent" nameSpace="MHI">
+      <fieldConfig id="00A9P2y0gMr0S000" nameSpace="MHI" type="CLEAR_DOMAIN_CACHE" value="N"/>
+      <fieldConfig id="00A9P2y0gMr0S001" nameSpace="MHI" type="TEXT_DISPLAY" value="CHECKBOX"/>
+      <fieldConfig id="00ABdMTWgMr0S003" nameSpace="MHI" type="UNCHECKED_VALUE" value="N"/>
+      <fieldConfig id="00ABdMTWgMr0S004" nameSpace="MHI" type="CHECKED_VALUE" value="Y"/>
+    </beField>
+    <beField class="BETEXT" displayCaption="Mizuho Acts as Principal" entityTypeId="BGLAGR0000000001" id="++A8vjAmgMr0S00C" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FLARLAGRMizuhoActsasPrincipal" nameSpace="MHI">
+      <fieldConfig id="00A9P2y0gMr0S002" nameSpace="MHI" type="CLEAR_DOMAIN_CACHE" value="N"/>
+      <fieldConfig id="00A9P2y0gMr0S003" nameSpace="MHI" type="TEXT_DISPLAY" value="CHECKBOX"/>
+      <fieldConfig id="00ABdMTWgMr0S005" nameSpace="MHI" type="UNCHECKED_VALUE" value="N"/>
+      <fieldConfig id="00ABdMTWgMr0S006" nameSpace="MHI" type="CHECKED_VALUE" value="Y"/>
+    </beField>
+    <beField class="BETEXT" displayCaption="GS Agreement Reference" entityTypeId="BGLAGR0000000001" id="00A8n2X0gMr0S00R" mandatory="0" multiplicity="SINGLE_OR_NULL" name="LAIDLAGRLeglAgrmntID" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Counterparty Role" entityTypeId="BGLAGR0000000001" id="++A7gIxmgMr0S014" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FLARLAGRCounterpartyRole" nameSpace="MHI">
+      <domainValue beFieldId="++A7gIxmgMr0S014" domainValueName="Client" domainValueTxt="Client" id="++A8lSWmgMr0S00i" nameSpace="MHI"/>
+      <domainValue beFieldId="++A7gIxmgMr0S014" domainValueName="Executing Broker" domainValueTxt="Executing Broker" id="++A8lSWmgMr0S00j" nameSpace="MHI"/>
+      <domainValue beFieldId="++A7gIxmgMr0S014" domainValueName="Party looking to access clearing" domainValueTxt="Party looking to access clearing" id="++A8lSWmgMr0S00k" nameSpace="MHI"/>
+      <domainValue beFieldId="++A7gIxmgMr0S014" domainValueName="Dealer facilitating access to clearing" domainValueTxt="Dealer facilitating access to clearing" id="++A8lSWmgMr0S00l" nameSpace="MHI"/>
+      <domainValue beFieldId="++A7gIxmgMr0S014" domainValueName="Beneficiary" domainValueTxt="Beneficiary" id="++A8lSWmgMr0S00m" nameSpace="MHI"/>
+      <domainValue beFieldId="++A7gIxmgMr0S014" domainValueName="Guarantor" domainValueTxt="Guarantor" id="++A8lSWmgMr0S00n" nameSpace="MHI"/>
+    </beField>
+    <beField class="BETEXT" displayCaption="Mizuho Role" entityTypeId="BGLAGR0000000001" id="++A7gIxmgMr0S011" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FLARLAGRMizuhoRole" nameSpace="MHI">
+      <domainValue beFieldId="++A7gIxmgMr0S011" domainValueName="Client" domainValueTxt="Client" id="++A8lSWmgMr0S00W" nameSpace="MHI"/>
+      <domainValue beFieldId="++A7gIxmgMr0S011" domainValueName="Executing Broker" domainValueTxt="Executing Broker" id="++A8lSWmgMr0S00a" nameSpace="MHI"/>
+      <domainValue beFieldId="++A7gIxmgMr0S011" domainValueName="Party looking to access clearing" domainValueTxt="Party looking to access clearing" id="++A8lSWmgMr0S00b" nameSpace="MHI"/>
+      <domainValue beFieldId="++A7gIxmgMr0S011" domainValueName="Dealer facilitating access to clearing" domainValueTxt="Dealer facilitating access to clearing" id="++A8lSWmgMr0S00c" nameSpace="MHI"/>
+      <domainValue beFieldId="++A7gIxmgMr0S011" domainValueName="Beneficiary" domainValueTxt="Beneficiary" id="++A8lSWmgMr0S00d" nameSpace="MHI"/>
+      <domainValue beFieldId="++A7gIxmgMr0S011" domainValueName="Guarantor" domainValueTxt="Guarantor" id="++A8lSWmgMr0S00e" nameSpace="MHI"/>
+    </beField>
+    <beField class="BETEXT" customDesc="" customDomainSQL="select inst_mnem as code, inst_nme as DISPLAY_NAME, org_id from ( select fins.inst_mnem, case when fins_id = '7733469' then 'MHI' when fins_id = '20736588' then 'MHSS' when fins_id = '215236' then  'MBE' when fins_id = '216294' then  'MHBK'  end org_id, inst_nme from ft_t_fiid fiid, fT_t_fins fins where fins.inst_mnem = fiid.inst_mnem and fiid.end_tms is null and fins_id_ctxt_typ = 'BBCMPYID' and fins_id in ( '7733469',  '20736588', '215236','216294') ) a" customSQL="" desc="" displayCaption="Mizuho Institution Name" entityTypeId="BGLAGR0000000001" id="++AG2CXGgMr2m01c" mandatory="0" multiplicity="SINGLE_AND_READONLY" name="MHIFLARLAGRInstMnemonic" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Department" entityTypeId="BGLAGR0000000001" id="00A7gfV0gMr0S00O" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GNCMLAGRDepartment" nameSpace="MHI">
+      <fieldConfig id="++A9-oUGgMr0S003" nameSpace="MHI" type="CLEAR_DOMAIN_CACHE" value="N"/>
+    </beField>
+    <beField class="BETEXT" displayCaption="Department" entityTypeId="BGLAGR0000000001" id="00A7gqJ0gMr0S00X" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GNCMLAGRTermDepartment" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="SELECT DISTINCT&#10;    e.empl_oid AS code,&#10;    emp_first_nme || ' ' || emp_last_nme AS display_name&#10;FROM&#10;    ft_t_empl e&#10;JOIN&#10;    ft_t_ausr a ON e.empl_oid = a.empl_oid&#10;JOIN&#10;    ft_t_aurp p ON a.ausr_oid = p.ausr_oid&#10;JOIN&#10;    ft_t_srle s ON p.srle_oid = s.srle_oid&#10;WHERE&#10;    sec_role_nme IN (&#10;        'SWDL-MHI-GoldenSource-FrontOffice',&#10;        'SWDL-MHI-GoldenSource-CreditOffice',&#10;        'SWDL-MHI-GoldenSource-CreditOfficeMngmt'&#10;    )&#10;    AND emp_nme NOT IN ('vdi_equ', 'vdi_fix')&#10;    AND (emp_first_nme || ' ' || emp_last_nme) IS NOT null" displayCaption="Instructed By" entityTypeId="BGLAGR0000000001" id="00A7gqJ0gMr0S00N" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CCRFLAGRTermInstructedBy" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="SELECT DISTINCT&#10;    e.empl_oid AS code,&#10;    emp_first_nme || ' ' || emp_last_nme AS display_name&#10;FROM&#10;    ft_t_empl e&#10;JOIN&#10;    ft_t_ausr a ON e.empl_oid = a.empl_oid&#10;JOIN&#10;    ft_t_aurp p ON a.ausr_oid = p.ausr_oid&#10;JOIN&#10;    ft_t_srle s ON p.srle_oid = s.srle_oid&#10;WHERE&#10;    sec_role_nme IN (&#10;        'SWDL-MHI-GoldenSource-FrontOffice',&#10;        'SWDL-MHI-GoldenSource-CreditOffice',&#10;        'SWDL-MHI-GoldenSource-CreditOfficeMngmt'&#10;    )&#10;    AND emp_nme NOT IN ('vdi_equ', 'vdi_fix')&#10;    AND (emp_first_nme || ' ' || emp_last_nme) IS NOT null" displayCaption="Instructed By" entityTypeId="BGLAGR0000000001" id="00A7gfV0gMr0S00C" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CCRFLAGRInstructedBy" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="select empl_oid as CODE ,emp_first_nme || ' ' ||emp_last_nme as display_name from ft_t_empl where empl_oid in &#10;   (select empl_oid from ft_t_ausr where ausr_oid in (select ausr_oid from ft_t_aurp where srle_oid in &#10;   (select srle_oid from ft_t_srle where sec_role_nme = 'APP_GoldenSource_Legal'))) and emp_nme != 'vdi_leg' order by 1" displayCaption="Legal Dept Person" entityTypeId="BGLAGR0000000001" id="00A7gqJ0gMr0S00G" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CCRFLAGRLegalDeptPerson" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="select empl_oid as CODE ,emp_first_nme || ' ' ||emp_last_nme as display_name from ft_t_empl where empl_oid in &#10;   (select empl_oid from ft_t_ausr where ausr_oid in (select ausr_oid from ft_t_aurp where srle_oid in &#10;   (select srle_oid from ft_t_srle where sec_role_nme = 'APP_GoldenSource_Legal'))) and emp_nme != 'vdi_leg' order by 1" displayCaption="Legal Dept Person" entityTypeId="BGLAGR0000000001" id="00A7gqJ0gMr0S00e" mandatory="0" multiplicity="SINGLE_OR_NULL" name="CCRFLAGRTermLegalDeptPerson" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="SELECT &#10;    intrnl_dmn_val_nme AS DISPLAY_NAME,&#10;    CASE intrnl_dmn_val_txt&#10;        WHEN 'Frankfurt' THEN 'Frankfurt'&#10;        WHEN 'London' THEN 'London'&#10;        WHEN 'Tokyo' THEN 'Tokyo'&#10;        WHEN 'Singapore' THEN 'Singapore'&#10;        WHEN 'Amsterdam' THEN 'Amsterdam'&#10;        ELSE NULL&#10;    END AS CODE&#10;FROM &#10;    ft_T_idmv&#10;WHERE &#10;    fld_id = '00162457'&#10;    AND intrnl_dmn_val_txt IN ('Frankfurt', 'London', 'Tokyo', 'Singapore', 'Amsterdam')&#10;ORDER BY &#10;    1 asc" displayCaption="Branch Name" entityTypeId="BGLAGR0000000001" id="00A7gqJ0gMr0S1Ay" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LACVFLARBranchName" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="SELECT &#10;    intrnl_dmn_val_txt AS code,&#10;    intrnl_dmn_val_nme AS display_name&#10;FROM &#10;    ft_t_idmv&#10;WHERE &#10;    fld_id = 'LACV0003'&#10;ORDER BY &#10;    code" displayCaption="Customer Product Name" entityTypeId="BGLAGR0000000001" id="00A7gqJ0gMr0S1A-" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LACVFLARCustomerProductName" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Counterparty Branch Name" entityTypeId="BGLAGR0000000001" id="00A7hle0gMr0S00M" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LACVFLARCounterpartyBranchName" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="SELECT &#10;    intrnl_dmn_val_txt AS code,&#10;    intrnl_dmn_val_nme AS display_name&#10;FROM &#10;    ft_t_idmv&#10;WHERE &#10;    fld_id = 'LACV0003'&#10;ORDER BY &#10;    code" displayCaption="Counterparty Customer Product Name" entityTypeId="BGLAGR0000000001" id="00A7hle0gMr0S00O" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LACVFLARCounterpartyCustomerProductName" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="select intrnl_dmn_val_nme as DISPLAY_NAME,intrnl_dmn_val_txt as CODE from ft_T_idmv where fld_id='01841414' and qual_val_txt='R'" displayCaption="Annex Type" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S00o" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAANLAGRMHIAnnexType" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Threshold Description/Comment" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S010" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FLARLAGRSpecificComment" nameSpace="MHI"/>
+    <beField class="BEDEC" displayCaption="Amount" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S00z" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FLARLAGRThresholdAccelAmount" nameSpace="MHI">
+      <fieldConfig id="00A9FWN0gMr0S00-" nameSpace="MHI" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+    <beField class="BETEXT" customDomainSQL="SELECT * &#10;FROM (&#10;    SELECT DISTINCT &#10;        FT_T_IDMV.INTRNL_DMN_VAL_TXT || ' - ' || FT_T_IDMV.INTRNL_DMN_VAL_NME AS DISPLAY_NAME, &#10;        FT_T_IDMV.INTRNL_DMN_VAL_TXT as CODE&#10;    FROM FT_T_IDMV&#10;    JOIN FT_T_ISID &#10;        ON FT_T_IDMV.INTRNL_DMN_VAL_TXT = FT_T_ISID.ISS_ID&#10;    WHERE FT_T_ISID.ID_CTXT_TYP = 'ISO CURR'&#10;      AND FT_T_IDMV.FLD_DATA_CL_ID = 'CURRENCY'&#10;      AND (&#10;            FT_T_IDMV.DATA_STAT_TYP NOT IN ('OBSOLETE', 'DELETED') &#10;            OR FT_T_IDMV.DATA_STAT_TYP IS NULL&#10;          )&#10;    ORDER BY DISPLAY_NAME&#10;) AS currency_data&#10;UNION&#10;SELECT '==U - Unknown' AS TEXT, '==U' AS INTRNL_DMN_VAL_TXT" displayCaption="Currency" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S00x" mandatory="0" multiplicity="SINGLE_OR_NULL" name="FLARLAGRThresholdCurrCde" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Cross Product Default" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S01G" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GNCMLAGRCrossProductDefault" nameSpace="MHI">
+      <domainValue beFieldId="00A9FWN0gMr0S01G" domainValueName="Yes" domainValueTxt="Yes" id="00AFfnE0gMr2m00v" nameSpace="MHI"/>
+      <domainValue beFieldId="00A9FWN0gMr0S01G" domainValueName="No" domainValueTxt="No" id="00AFfnE0gMr2m00w" nameSpace="MHI"/>
+    </beField>
+    <beField class="BETEXT" displayCaption="Set Off Provision" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S01P" mandatory="0" multiplicity="SINGLE_OR_NULL" name="GNCMLAGRSetOffProvision" nameSpace="MHI">
+      <domainValue beFieldId="00A9FWN0gMr0S01P" domainValueName="Yes" domainValueTxt="Yes" id="00AFfnE0gMr2m00x" nameSpace="MHI"/>
+      <domainValue beFieldId="00A9FWN0gMr0S01P" domainValueName="No" domainValueTxt="No" id="00AFfnE0gMr2m00y" nameSpace="MHI"/>
+    </beField>
+    <beField class="BETSTAMP" displayCaption="Amendment Date" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S02Y" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1LAGRSDAmendmentDate" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Document Link" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S02S" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1LAGRSDDocumentLink" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL="select intrnl_dmn_val_nme as DISPLAY_NAME,intrnl_dmn_val_txt AS CODE from ft_T_idmv where fld_id = '00173418' &#10;and intrnl_dmn_val_nme in ('Signed','Outstanding') order by 1 desc" displayCaption="Document Status" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S02a" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1LAGRSDDocumentStatus" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Instruction Date" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S02W" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1LAGRSDInstructionDate" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Description" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S02U" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1LAGRSDDescriptionComments" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Start Date/Time" entityTypeId="BGLAGR0000000001" id="00A9wB90gMr0S002" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1LAGRSDStartDateTime" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="End Date/Time" entityTypeId="BGLAGR0000000001" id="00A9wB90gMr0S00B" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1LAGRSDEndDateTime" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Last Change Date/Time" entityTypeId="BGLAGR0000000001" id="00A9wB90gMr0S00D" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1LAGRSDLastChangeDateTime" nameSpace="MHI"/>
+    <beField class="BEDEC" displayCaption="Threshold Override Amount" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S02+" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="FLARLAGRThresholdOverrideAmount" nameSpace="MHI">
+      <fieldConfig id="00A9FWN0gMr0S030" nameSpace="MHI" type="ALLOW_NEGATIVE" value="N"/>
+    </beField>
+    <beField class="BETSTAMP" displayCaption="Start Date/Time" entityTypeId="BGLAGR0000000001" id="00A9Kps0gMr0S01q" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="FLARLAGRTHSHStartDateTime" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="End Date/Time" entityTypeId="BGLAGR0000000001" id="00A9Kps0gMr0S01s" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="FLARLAGRTHSHEndDateTime" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Last Change User ID" entityTypeId="BGLAGR0000000001" id="00A9Kps0gMr0S01+" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="FLARLAGRTHSHLastChangeUserID" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Data Status" entityTypeId="BGLAGR0000000001" id="00A9Kps0gMr0S01u" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="FLARLAGRTHSHDataStatus" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Data Source" entityTypeId="BGLAGR0000000001" id="00A9Kps0gMr0S01w" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="FLARLAGRTHSHDataSourceID" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Last Change Date/Time" entityTypeId="BGLAGR0000000001" id="00A9Kps0gMr0S01z" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="FLARLAGRTHSHLastChangeDateTime" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Description/Comments" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S01x" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1FLARDescriptionComments" nameSpace="MHI"/>
+    <beField class="BETEXT" displayCaption="Document Name" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S01v" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1FLARDocumentName" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Instruction Date" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S01z" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1FLARInstructionDate" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Last Change Date/Time" entityTypeId="BGLAGR0000000001" id="00ABYnr0gMr0S008" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1FLARLastChangeDateTime" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Sign Date" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S021" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1FLARSignDate" nameSpace="MHI"/>
+    <beField class="BETSTAMP" displayCaption="Start Date/Time" entityTypeId="BGLAGR0000000001" id="00ABYnr0gMr0S006" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="LAV1FLARStartDateTime" nameSpace="MHI"/>
+    <beField class="BETEXT" customDomainSQL=" select inst_nme as DISPLAY_NAME, FT_T_FINS.INST_MNEM  as CODE from FT_T_FINS, FT_T_FINR  &#10; where FT_T_FINS.INST_MNEM = FT_T_FINR.INST_MNEM&#10;and FT_T_FINR.FINSRL_TYP = 'CUSTDIAN'&#10;and FT_T_FINS.INST_MNEM in (select inst_mnem from FT_T_CUST where sysdate() BETWEEN FT_T_CUST.start_tms AND COALESCE(FT_T_CUST.end_tms,sysdate()+ interval '1 Day')and FT_T_CUST.cst_stat_typ in('CUCLINIT','PENDCLOS','REVICOMP','ADHOREVI','ACTIVE' ,'OPEN'))&#10;and FT_T_FINR.END_TMS is null&#10;and FT_T_FINS.END_TMS is null&#10;order by inst_nme asc" displayCaption="Triparty Provider ID" entityTypeId="BGLAGR0000000001" id="00A9FWN0gMr0S01b" mandatory="0" multiplicity="MULTIPLE_OR_NULL" name="FLARLAGRTripartyProviderID" nameSpace="MHI"/>
+  </beFields>
+  <dataGroups>
+    <dataGroup customInd="0" displayCaption="PublishIngRSL" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="00A8vgt0gMr0S003" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PublishIngRSL" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="++A7gIxmgMr0S00F" id="++A8vjAmgMr0S000" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="++A7gIxmgMr0S00N" id="++A8vjAmgMr0S001" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="MHI" fieldId="++A7gIxmgMr0S00Q" id="++A8vjAmgMr0S002" prntReqdInd="0" seq="2"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHISummaryRSL" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="++A8vjAmgMr0S00G" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHISummaryRSL" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="++A8vjAmgMr0S007" id="++A8vjAmgMr0S00H" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="++A8vjAmgMr0S00C" id="++A8vjAmgMr0S00I" prntReqdInd="0" seq="1"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHIGSRefRSL" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="++A8vjAmgMr0S00K" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHIGSRefRSL" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00A8n2X0gMr0S00R" id="++A8vjAmgMr0S00L" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHILegalEntityRSL" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="++A8vsYmgMr0S00G" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHILegalEntityRSL" nameSpace="MHI">
+      <part beRelationId="++A8vsYmgMr0S00K" defNameSpace="MHI" id="++A8vsYmgMr0S00X" prntReqdInd="0" seq="0"/>
+      <part beRelationId="00A9PnaWgMr0S00O" defNameSpace="MHI" id="00A9PnaWgMr0S00U" prntReqdInd="0" seq="1"/>
+      <part beRelationId="00AFUkqWgMr2m00R" defNameSpace="MHI" id="00AFUkqWgMr2m00X" prntReqdInd="0" seq="2"/>
+      <part beRelationId="00AFUkqWgMr2m00Z" defNameSpace="MHI" id="00AFUkqWgMr2m00f" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="MHI" fieldId="++A7gIxmgMr0S014" id="++A8vsYmgMr0S00H" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="MHI" fieldId="++A7gIxmgMr0S011" id="++A8vsYmgMr0S00I" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="MHI" fieldId="++AG2CXGgMr2m01c" id="++AG2CXGgMr2m01g" prntReqdInd="0" seq="6"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHIRSLComments" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="++A8wNnmgMr0S001" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHIRSLComments" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00A7gfV0gMr0S00O" id="++A8wNnmgMr0S002" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00A7gqJ0gMr0S00X" id="++A8wNnmgMr0S003" prntReqdInd="0" seq="1"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHIRSLInstructAndTerm" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="++A8wNnmgMr0S005" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHIRSLInstructAndTerm" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00A7gqJ0gMr0S00N" id="++A8wNnmgMr0S006" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00A7gfV0gMr0S00C" id="++A8wNnmgMr0S007" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="MHI" fieldId="00A7gqJ0gMr0S00G" id="++A8wNnmgMr0S008" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="MHI" fieldId="00A7gqJ0gMr0S00e" id="++A8wNnmgMr0S009" prntReqdInd="0" seq="3"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHIRSLCoverage" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="++A8wNnmgMr0S00C" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHIRSLCoverage" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00A7gqJ0gMr0S1Ay" id="++A8wNnmgMr0S00D" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00A7gqJ0gMr0S1A-" id="++A8wNnmgMr0S00E" prntReqdInd="0" seq="1"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHIRSLCounterpartyCoverage" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="++A8wNnmgMr0S00G" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHIRSLCounterpartyCoverage" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00A7hle0gMr0S00M" id="++A8wNnmgMr0S00H" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00A7hle0gMr0S00O" id="++A8wNnmgMr0S00I" prntReqdInd="0" seq="1"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHIAnnexesAndInclusions" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="00A9FWN0gMr0S00q" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHIAnnexesAndInclusions" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S00o" id="00A9FWN0gMr0S00s" prntReqdInd="0" seq="0"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHIRSLThreshold" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="00A9FWN0gMr0S013" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHIRSLThreshold" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S010" id="00A9FWN0gMr0S014" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S00z" id="00A9FWN0gMr0S015" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S00x" id="00A9FWN0gMr0S016" prntReqdInd="0" seq="2"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHITerminationClauses" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="00A9FWN0gMr0S01S" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="MHITerminationClauses" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S01G" id="00A9FWN0gMr0S01T" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S01P" id="00A9FWN0gMr0S01U" prntReqdInd="0" seq="1"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHISupportingDocumentation" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="00A9FWN0gMr0S02d" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHISupportingDocumentation" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S02Y" id="00A9FWN0gMr0S02e" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S02S" id="00A9FWN0gMr0S02f" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S02a" id="00A9FWN0gMr0S02g" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S02W" id="00A9FWN0gMr0S02h" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S02U" id="00A9FWN0gMr0S02i" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="MHI" fieldId="00A9wB90gMr0S002" id="00A9wB90gMr0S004" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="MHI" fieldId="00A9wB90gMr0S00B" id="00A9wB90gMr0S00G" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="MHI" fieldId="00A9wB90gMr0S00D" id="00A9wB90gMr0S00H" prntReqdInd="0" seq="7"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHIPrincipalsCovered" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="00A9FWN0gMr0S02p" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHIPrincipalsCovered" nameSpace="MHI">
+      <part beRelationId="00A9FWN0gMr0S02r" defNameSpace="MHI" id="00A9FWN0gMr0S02z" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S02+" id="00A9FWN0gMr0S032" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="MHI" fieldId="00A9Kps0gMr0S01q" id="00A9Kps0gMr0S021" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="MHI" fieldId="00A9Kps0gMr0S01s" id="00A9Kps0gMr0S022" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="MHI" fieldId="00A9Kps0gMr0S01+" id="00A9Kps0gMr0S023" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="MHI" fieldId="00A9Kps0gMr0S01u" id="00A9Kps0gMr0S024" prntReqdInd="0" seq="5"/>
+      <part defNameSpace="MHI" fieldId="00A9Kps0gMr0S01w" id="00A9Kps0gMr0S025" prntReqdInd="0" seq="6"/>
+      <part defNameSpace="MHI" fieldId="00A9Kps0gMr0S01z" id="00A9Kps0gMr0S026" prntReqdInd="0" seq="7"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHITripartyDocInfo" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="++AC3R7GgMr0S01-" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHITripartyDocInfo" nameSpace="MHI">
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S01x" id="++AC3R7GgMr0S01+" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S01v" id="++AC3R7GgMr0S020" prntReqdInd="0" seq="1"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S01z" id="++AC3R7GgMr0S021" prntReqdInd="0" seq="2"/>
+      <part defNameSpace="MHI" fieldId="00ABYnr0gMr0S008" id="++AC3R7GgMr0S022" prntReqdInd="0" seq="3"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S021" id="++AC3R7GgMr0S023" prntReqdInd="0" seq="4"/>
+      <part defNameSpace="MHI" fieldId="00ABYnr0gMr0S006" id="++AC3R7GgMr0S024" prntReqdInd="0" seq="5"/>
+    </dataGroup>
+    <dataGroup customInd="0" displayCaption="MHITParty" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="++AA4bZGgMr0S00B" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="MHITParty" nameSpace="MHI">
+      <part dataGroupId="++AC3R7GgMr0S01-" defNameSpace="MHI" id="++AC3R7GgMr0S01z" multiplicity="MULTIPLE_OR_NULL" prntReqdInd="0" seq="0"/>
+      <part defNameSpace="MHI" fieldId="00A9FWN0gMr0S01b" id="++AA4bZGgMr0S00C" prntReqdInd="0" seq="1"/>
+    </dataGroup>
+    <dataGroup customInd="0" entityTypeId="BGLAGR0000000001" frequencyInd="0" id="++A8vWpGgMr0S001" ignoreDeleteChildren="false" multiplicity="SINGLE" name="RepoAndSecLendingAgreements- Root DataGroup" nameSpace="MHI">
+      <part dataGroupId="00A8vgt0gMr0S003" defNameSpace="MHI" id="00A8vgt0gMr0S004" prntReqdInd="0" seq="0"/>
+      <part dataGroupId="++A8vjAmgMr0S00G" defNameSpace="MHI" id="++A8vjAmgMr0S00F" prntReqdInd="0" seq="1"/>
+      <part dataGroupId="++A8vjAmgMr0S00K" defNameSpace="MHI" id="++A8vjAmgMr0S00J" prntReqdInd="0" seq="2"/>
+      <part dataGroupId="++A8vsYmgMr0S00G" defNameSpace="MHI" id="++A8vsYmgMr0S00F" prntReqdInd="0" seq="3"/>
+      <part dataGroupId="++A8wNnmgMr0S001" defNameSpace="MHI" id="++A8wNnmgMr0S000" prntReqdInd="0" seq="4"/>
+      <part dataGroupId="++A8wNnmgMr0S005" defNameSpace="MHI" id="++A8wNnmgMr0S004" prntReqdInd="0" seq="5"/>
+      <part dataGroupId="++A8wNnmgMr0S00C" defNameSpace="MHI" id="++A8wNnmgMr0S00B" prntReqdInd="0" seq="6"/>
+      <part dataGroupId="++A8wNnmgMr0S00G" defNameSpace="MHI" id="++A8wNnmgMr0S00F" prntReqdInd="0" seq="7"/>
+      <part dataGroupId="00A9FWN0gMr0S00q" defNameSpace="MHI" id="00A9FWN0gMr0S00r" prntReqdInd="0" seq="8"/>
+      <part dataGroupId="00A9FWN0gMr0S013" defNameSpace="MHI" id="00A9FWN0gMr0S012" prntReqdInd="0" seq="9"/>
+      <part dataGroupId="00A9FWN0gMr0S01S" defNameSpace="MHI" id="00A9FWN0gMr0S01R" prntReqdInd="0" seq="10"/>
+      <part dataGroupId="00A9FWN0gMr0S02d" defNameSpace="MHI" id="00A9FWN0gMr0S02c" prntReqdInd="0" seq="11"/>
+      <part dataGroupId="00A9FWN0gMr0S02p" defNameSpace="MHI" id="00A9FWN0gMr0S02q" prntReqdInd="0" seq="12"/>
+      <part dataGroupId="++AA4bZGgMr0S00B" defNameSpace="MHI" id="++AA4bZGgMr0S00A" prntReqdInd="0" seq="13"/>
+    </dataGroup>
+  </dataGroups>
+  <relations>
+    <relation id="00AEAU0WgMr0u001" name="FT_T_LAGR-To-FT_T_ENTR01" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AEAU0WgMr0u002" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AEAU0WgMr0u00A" name="FT_T_LAGR-To-FT_T_ENTR02" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AEAU0WgMr0u00B" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AEAU0WgMr0u00J" name="FT_T_LAGR-To-FT_T_ENTR03" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AEAU0WgMr0u00K" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AIYvB0gMr0u001" name="FT_T_LAGR-To-FT_T_ENTR04" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="00AIYvB0gMr0u002" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AKSikmgMr0S00A" name="FT_T_LAGR-To-FT_T_ENTR05" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_ENTR">
+      <field fromColumn="ORG_ID" id="++AKSikmgMr0S00B" nameSpace="MHI" toColumn="ORG_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00A9FWN0gMr0S00A" name="FT_T_LAGR-To-FT_T_LAGR00" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_LAGR">
+      <field fromColumn="LAGR_OID" id="00A9FWN0gMr0S00B" nameSpace="MHI" toColumn="PRNT_LAGR_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AJJf0GgMr2m001" name="FT_T_LAGR-To-FT_T_LAGR01" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_LAGR">
+      <field fromColumn="PRNT_LAGR_OID" id="++AJJf0GgMr2m002" nameSpace="MHI" toColumn="LAGR_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="(#TO_TABLE#.pub_audit_id || #TO_TABLE#.pub_sq_num) =  (&#10;select pub_audit_id || pub_sq_num from (&#10;select pub_audit_id , p.pub_sq_num , row_number() OVER (partition by pub_cross_reF_id order by last_chg_tms desc) AS rownum&#10;from fT_T_pbat p where p.pub_cross_ref_id = #TO_TABLE#.pub_cross_ref_id) a where rownum=1&#10;)" id="++A7gIxmgMr0S00C" name="MHI_FT_T_LAGR-To-FT_T_PBAT00" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_PBAT">
+      <field fromColumn="LAGR_OID" id="++A7gIxmgMr0S00D" nameSpace="MHI" toColumn="PUB_CROSS_REF_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation customSQL="#TO_TABLE#.upd1_oid =  (&#10;select upd1_oid  from (&#10;select u.upd1_oid , rank() over (partition by xref_tbl_row_oid order by u.version  desc ) rn&#10;from fT_T_upd1 u where u.xref_tbl_row_oid = #TO_TABLE#.xref_tbl_row_oid ) a where rn=1&#10;)" id="++A7gIxmgMr0S00J" name="MH_FT_T_LAGR-To-FT_T_UPD1" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_UPD1">
+      <field fromColumn="CROSS_REF_ID" id="++A8HAXmgMr0S028" nameSpace="MHI" toColumn="XREF_TBL_ROW_OID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++A8-wgGgMr0S0RR" name="FT_T_FLAR-To-FT_T_FINS04" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="++A8-wgGgMr0S0RS" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00A9PnaWgMr0S00P" name="FT_T_FLAR-To-FT_T_FINS07" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="00A9PnaWgMr0S00Q" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00ACoppWgMr0S001" name="FT_T_FLAR-To-FT_T_FINS12" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="00ACoppWgMr0S002" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AFUkqWgMr2m00A" name="FT_T_FLAR-To-FT_T_FINS13" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="00AFUkqWgMr2m00B" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AFUkqWgMr2m00H" name="FT_T_FLAR-To-FT_T_FINS14" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="00AFUkqWgMr2m00I" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AFUkqWgMr2m00S" name="FT_T_FLAR-To-FT_T_FINS15" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="00AFUkqWgMr2m00T" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AFUkqWgMr2m00a" name="FT_T_FLAR-To-FT_T_FINS16" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="00AFUkqWgMr2m00b" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AFUkqWgMr2m00j" name="FT_T_FLAR-To-FT_T_FINS17" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="00AFUkqWgMr2m00k" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00AFUkqWgMr2m00q" name="FT_T_FLAR-To-FT_T_FINS18" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="00AFUkqWgMr2m00r" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++A7gIxmgMr0S00o" name="FT_T_FLAR-To-FT_T_FINS00" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="++A7gIxmgMr0S00p" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++A8vsYmgMr0S00L" name="FT_T_FLAR-To-FT_T_FINS03" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="++A8vsYmgMr0S00M" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="++AA8oBGgMr0S00N" name="FT_T_FLAR-To-FT_T_FINS08" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="++AA8oBGgMr0S00O" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00A7gfV0gMr0S00G" name="FT_T_LAGR-To-FT_T_GNCM00" nameSpace="MHI" srcTable="FT_T_LAGR" tgtTable="FT_T_GNCM">
+      <field fromColumn="LAGR_OID" id="++ABu5pGgMr0S02L" nameSpace="MHI" toColumn="CROSS_REF_ID" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+    <relation id="00A9FWN0gMr0S02s" name="FT_T_FLAR-To-FT_T_FINS06" nameSpace="MHI" srcTable="FT_T_FLAR" tgtTable="FT_T_FINS">
+      <field fromColumn="INST_MNEM" id="00A9FWN0gMr0S02t" nameSpace="MHI" toColumn="INST_MNEM" type="RELATION_FIELD" valueType="COLUMN"/>
+    </relation>
+  </relations>
+  <occurrences>
+    <occurrence desc="Occurence for Legal Agreement" id="LRWPCMQTJYAFDNFR" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="LAGR_01" nameSpace="GSC" table="FT_T_LAGR" timeSeries="NONE">
+      <field id="00AEAU0WgMr0u003" nameSpace="MHI" relationId="00AEAU0WgMr0u001"/>
+      <field id="00AEAU0WgMr0u00C" nameSpace="MHI" relationId="00AEAU0WgMr0u00A"/>
+      <field id="00AEAU0WgMr0u00L" nameSpace="MHI" relationId="00AEAU0WgMr0u00J"/>
+      <field id="00AIYvB0gMr0u003" nameSpace="MHI" relationId="00AIYvB0gMr0u001"/>
+      <field id="++AKSikmgMr0S00C" nameSpace="MHI" relationId="++AKSikmgMr0S00A"/>
+      <field id="00A9FWN0gMr0S00C" nameSpace="MHI" relationId="00A9FWN0gMr0S00A"/>
+      <field id="++AJJf0GgMr2m003" nameSpace="MHI" relationId="++AJJf0GgMr2m001"/>
+      <field desc="Agreement Approval Date" id="00A7gfV0gMr0S003" name="AGRMNT_APRVL_DTE" nameSpace="MHI"/>
+      <field desc="Events of Default Currency" id="00AB8P90gMr0S1BI" name="EV_DFLT_CURR_CDE" nameSpace="MHI"/>
+      <field desc="Legal Jurisdiction Name" id="00A8n2X0gMr0S00J" name="LEG_JURIS_NME" nameSpace="MHI"/>
+      <field desc="Organization ID" id="00AFd0lWgMr2m00U" name="ORG_ID" nameSpace="MHI"/>
+      <field desc="Parent Legal Agreement OID" id="00A8mbHWgMr0S3zP" name="PRNT_LAGR_OID" nameSpace="MHI"/>
+      <option id="CSSCHQNVJSWCPSNA" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+      <option id="DEJGNACJVFMWBJXT" nameSpace="GSC" type="DEFAULT_MATCH_KEY"/>
+      <option id="PLTTHJWGXIMEVONM" nameSpace="GSC" type="UI_PUB_ONLY" value="false"/>
+      <option id="RTIKESNMWGJCTQJK" nameSpace="GSC" type="LOOKUP_ONLY" value="false"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Publishing Audit" id="++A7gIxmgMr0S00A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="PBAT_LAGR_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" relationId="++A7gIxmgMr0S00C" table="FT_T_PBAT" timeSeries="LOGICAL_DELETE">
+      <field desc="Last Change Date/Time" id="++A7gIxmgMr0S00E" name="LAST_CHG_TMS" nameSpace="MHI"/>
+      <option id="++A7gIxmgMr0S00B" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Entity Update Timestamp" id="++A7gIxmgMr0S00H" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="UPD1_LAGR_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" relationId="++A7gIxmgMr0S00J" table="FT_T_UPD1" timeSeries="LOGICAL_DELETE">
+      <field desc="Last Update Timestanp" id="++A7gIxmgMr0S00M" name="UPDATED_TMSMP" nameSpace="MHI"/>
+      <field desc="Entity Version Number" id="++A7gIxmgMr0S00L" name="VERSION" nameSpace="MHI"/>
+      <option id="++A7gIxmgMr0S00I" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Agreement Role" id="++A7gIxmgMr0S00y" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FLAR_LAGR_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_FLAR" timeSeries="LOGICAL_DELETE">
+      <field id="++A8-wgGgMr0S0RT" nameSpace="MHI" relationId="++A8-wgGgMr0S0RR"/>
+      <field id="00A9PnaWgMr0S00R" nameSpace="MHI" relationId="00A9PnaWgMr0S00P"/>
+      <field id="00ACoppWgMr0S003" nameSpace="MHI" relationId="00ACoppWgMr0S001"/>
+      <field id="00AFUkqWgMr2m00C" nameSpace="MHI" relationId="00AFUkqWgMr2m00A"/>
+      <field id="00AFUkqWgMr2m00J" nameSpace="MHI" relationId="00AFUkqWgMr2m00H"/>
+      <field id="00AFUkqWgMr2m00U" nameSpace="MHI" relationId="00AFUkqWgMr2m00S"/>
+      <field id="00AFUkqWgMr2m00c" nameSpace="MHI" relationId="00AFUkqWgMr2m00a"/>
+      <field id="00AFUkqWgMr2m00l" nameSpace="MHI" relationId="00AFUkqWgMr2m00j"/>
+      <field id="00AFUkqWgMr2m00s" nameSpace="MHI" relationId="00AFUkqWgMr2m00q"/>
+      <field desc="Agency Transactions Apply Ind" id="++A8vjAmgMr0S004" name="AGNCY_TRAN_APPLIES_IND" nameSpace="MHI"/>
+      <field desc="Auto Termination Event Applies Ind" id="00AB8P90gMr0S1BO" name="AUTO_TERMIN_EV_APPLS_IND" nameSpace="MHI"/>
+      <field desc="Credit Event Upon Merger Applies Ind" id="00AB8P90gMr0S1De" name="CEM_APPLIES_IND" nameSpace="MHI"/>
+      <field desc="Dflt Specific Trans Comment" id="00A9FWN0gMr0S00w" name="DFLT_STRN_CMNT_TXT" nameSpace="MHI"/>
+      <field desc="Events of Dflt Ate Applies Indicator" id="00AB8P90gMr0S1BR" name="ED_ATE_APPLS_IND" nameSpace="MHI"/>
+      <field desc="Financial Institution OID" id="++ACahQmgMr0S002" name="INST_MNEM" nameSpace="MHI"/>
+      <field desc="Principal Transaction Applies Indicator" id="++A8vjAmgMr0S005" name="PRNCPL_TRAN_APPLIES_IND" nameSpace="MHI"/>
+      <field desc="Role Description" id="++A7gIxmgMr0S010" name="RL_DESC" nameSpace="MHI"/>
+      <field desc="Threshold Acceleration Amount" id="00A9FWN0gMr0S00v" name="THSHLD_ACCEL_CAMT" nameSpace="MHI"/>
+      <field desc="Threshold Composition Type" id="++AAPXrGgMr0S01j" name="THSHLD_COMP_TYP" nameSpace="MHI"/>
+      <field desc="Threshold Percentage" id="++AAPXrGgMr0S01f" name="THSHLD_CPCT" nameSpace="MHI"/>
+      <field desc="Threshold Currency" id="00A9FWN0gMr0S00u" name="THSHLD_CURR_CDE" nameSpace="MHI"/>
+      <field desc="Threshold Operator" id="++AAPXrGgMr0S01m" name="THSHLD_OPER_TYP" nameSpace="MHI"/>
+      <value id="++A7gIxmgMr0S00+" name="DATA_STAT_TYP" nameSpace="MHI" type="DEFAULT_FIELD" value="ACTIVE" valueType="CONSTANT"/>
+      <value id="++A7gIxmgMr0S00-" name="RL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="MIZUHO" valueType="CONSTANT"/>
+      <option id="++A7gIxmgMr0S00z" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Legal Agreement Identifier" id="00A8n2X0gMr0S00O" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="LAID_LAGR_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_LAID" timeSeries="LOGICAL_DELETE">
+      <field desc="Legal Agreement Identifier" id="00A8n2X0gMr0S00Q" name="LEGAL_AGRMNT_ID" nameSpace="MHI"/>
+      <option id="00A8n2X0gMr0S00P" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Agreement Role" id="++A7gIxmgMr0S00h" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="FLAR_LAGR_CPTY_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_FLAR" timeSeries="LOGICAL_DELETE">
+      <field id="++A7gIxmgMr0S00q" nameSpace="MHI" relationId="++A7gIxmgMr0S00o"/>
+      <field id="++A8vsYmgMr0S00N" nameSpace="MHI" relationId="++A8vsYmgMr0S00L"/>
+      <field id="++AA8oBGgMr0S00P" nameSpace="MHI" relationId="++AA8oBGgMr0S00N"/>
+      <field desc="Auto Termination Event Applies Ind" id="00AB8P90gMr0S1D8" name="AUTO_TERMIN_EV_APPLS_IND" nameSpace="MHI"/>
+      <field desc="Credit Event Upon Merger Applies Ind" id="00AB8P90gMr0S1Dh" name="CEM_APPLIES_IND" nameSpace="MHI"/>
+      <field desc="Events of Dflt Ate Applies Indicator" id="00AB8P90gMr0S1DB" name="ED_ATE_APPLS_IND" nameSpace="MHI"/>
+      <field desc="Role Description" id="++A7gIxmgMr0S013" name="RL_DESC" nameSpace="MHI"/>
+      <field desc="Threshold Acceleration Amount" id="++AAPXrGgMr0S01z" name="THSHLD_ACCEL_CAMT" nameSpace="MHI"/>
+      <field desc="Threshold Composition Type" id="++AAPXrGgMr0S025" name="THSHLD_COMP_TYP" nameSpace="MHI"/>
+      <field desc="Threshold Percentage" id="++AAPXrGgMr0S021" name="THSHLD_CPCT" nameSpace="MHI"/>
+      <field desc="Threshold Currency" id="++AAPXrGgMr0S01w" name="THSHLD_CURR_CDE" nameSpace="MHI"/>
+      <field desc="Threshold Operator" id="++AAPXrGgMr0S028" name="THSHLD_OPER_TYP" nameSpace="MHI"/>
+      <value id="++A7gIxmgMr0S00k" name="DATA_STAT_TYP" nameSpace="MHI" type="DEFAULT_FIELD" value="ACTIVE" valueType="CONSTANT"/>
+      <value id="++A7gIxmgMr0S00j" name="RL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="CPTY" valueType="CONSTANT"/>
+      <option id="++A7gIxmgMr0S00i" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="00A7gfV0gMr0S00E" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_LAGR_INTRDEPT_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" relationId="00A7gfV0gMr0S00G" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field desc="Comment Text" id="00A7gfV0gMr0S00N" name="CMNT_TXT" nameSpace="MHI"/>
+      <value id="00A7gfV0gMr0S00M" name="COMM_REAS_MNEM" nameSpace="MHI" type="FILTER_FIELD" value="INTRDEPT" valueType="CONSTANT"/>
+      <value id="00A7gfV0gMr0S00L" name="CREATED_TMS" nameSpace="MHI" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <value id="++AC7dxmgMr0S02N" name="GNCM_TBL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="LAGR" valueType="CONSTANT"/>
+      <value id="++AC7dxmgMr0S02O" name="LN_NUM" nameSpace="MHI" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <option id="00A7gfV0gMr0S00F" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="00A7gqJ0gMr0S00P" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_LAGR_TERMDEPT_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" relationId="00A7gfV0gMr0S00G" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field desc="Comment Text" id="00A7gqJ0gMr0S00W" name="CMNT_TXT" nameSpace="MHI"/>
+      <value id="00A7gqJ0gMr0S00V" name="COMM_REAS_MNEM" nameSpace="MHI" type="FILTER_FIELD" value="TERMDEPT" valueType="CONSTANT"/>
+      <value id="00A7gqJ0gMr0S00U" name="CREATED_TMS" nameSpace="MHI" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <value id="++AC7dxmgMr0S02M" name="GNCM_TBL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="LAGR" valueType="CONSTANT"/>
+      <value id="++AC7dxmgMr0S02L" name="LN_NUM" nameSpace="MHI" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <option id="00A7gqJ0gMr0S00Q" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Central Cross Reference" id="00A7gfV0gMr0S008" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="CCRF_LAGR_INSTRUCT_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_CCRF" timeSeries="LOGICAL_DELETE">
+      <field desc="Employee OID" id="00A7gfV0gMr0S00B" name="EMPL_OID" nameSpace="MHI"/>
+      <value id="00A7gfV0gMr0S00A" name="CROSS_REF_PURP_TYP" nameSpace="MHI" type="FILTER_FIELD" value="INSTRUCT" valueType="CONSTANT"/>
+      <value id="00A7gqJ0gMr0S1Ab" name="START_TMS" nameSpace="MHI" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <option id="00A7gfV0gMr0S009" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Central Cross Reference" id="00A7gqJ0gMr0S00B" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="CCRF_LAGR_INTRLGAL_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_CCRF" timeSeries="LOGICAL_DELETE">
+      <field desc="Employee OID" id="00A7gqJ0gMr0S00F" name="EMPL_OID" nameSpace="MHI"/>
+      <value id="00A7gqJ0gMr0S00D" name="CROSS_REF_PURP_TYP" nameSpace="MHI" type="FILTER_FIELD" value="INTRLGAL" valueType="CONSTANT"/>
+      <value id="00A7gqJ0gMr0S00E" name="START_TMS" nameSpace="MHI" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <option id="00A7gqJ0gMr0S00C" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Central Cross Reference" id="00A7gqJ0gMr0S00I" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="CCRF_LAGR_TERMINTN_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_CCRF" timeSeries="LOGICAL_DELETE">
+      <field desc="Employee OID" id="00A7gqJ0gMr0S00M" name="EMPL_OID" nameSpace="MHI"/>
+      <value id="00A7gqJ0gMr0S00K" name="CROSS_REF_PURP_TYP" nameSpace="MHI" type="FILTER_FIELD" value="TERMINTN" valueType="CONSTANT"/>
+      <value id="00A7gqJ0gMr0S00L" name="START_TMS" nameSpace="MHI" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <option id="00A7gqJ0gMr0S00J" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Central Cross Reference" id="00A7gqJ0gMr0S00Z" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="CCRF_LAGR_TERMLGAL_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_CCRF" timeSeries="LOGICAL_DELETE">
+      <field desc="Employee OID" id="00A7gqJ0gMr0S00d" name="EMPL_OID" nameSpace="MHI"/>
+      <value id="00A7gqJ0gMr0S00b" name="CROSS_REF_PURP_TYP" nameSpace="MHI" type="FILTER_FIELD" value="TERMLGAL" valueType="CONSTANT"/>
+      <value id="00A7gqJ0gMr0S00c" name="START_TMS" nameSpace="MHI" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <option id="00A7gqJ0gMr0S00a" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Legal Agreement Coverage" id="00A7gqJ0gMr0S1Ao" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="LACV_FLAR_INSCOPE_MHI" nameSpace="MHI" parentId="++A7gIxmgMr0S00y" table="FT_T_LACV" timeSeries="LOGICAL_DELETE">
+      <field desc="Customer Product Name" id="00A7gqJ0gMr0S1A+" name="CUST_PROD_NME" nameSpace="MHI"/>
+      <field desc="Branch Name" id="00A7gqJ0gMr0S1Ax" name="DLR_BR_NME" nameSpace="MHI"/>
+      <value id="00A7gqJ0gMr0S1Aq" name="CVG_PURP_TYP" nameSpace="MHI" type="FILTER_FIELD" value="INSCOPE" valueType="CONSTANT"/>
+      <value id="00A7gqJ0gMr0S1As" name="START_TMS" nameSpace="MHI" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <option id="00A7gqJ0gMr0S1Ap" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Legal Agreement Coverage" id="00A7hle0gMr0S00G" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="LACV_FLAR_CPTY_INSCOPE_MHI" nameSpace="MHI" parentId="++A7gIxmgMr0S00h" table="FT_T_LACV" timeSeries="LOGICAL_DELETE">
+      <field desc="Customer Product Name" id="00A7hle0gMr0S00K" name="CUST_PROD_NME" nameSpace="MHI"/>
+      <field desc="Branch Name" id="00A7hle0gMr0S00L" name="DLR_BR_NME" nameSpace="MHI"/>
+      <value id="00A7hle0gMr0S00I" name="CVG_PURP_TYP" nameSpace="MHI" type="FILTER_FIELD" value="INSCOPE" valueType="CONSTANT"/>
+      <value id="00A7hle0gMr0S00J" name="START_TMS" nameSpace="MHI" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <option id="00A7hle0gMr0S00H" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Legal Agreement Annexure" id="00A9FWN0gMr0S00k" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="LAAN_LAGR_REPO_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_LAAN" timeSeries="LOGICAL_DELETE">
+      <field desc="Annex Type" id="00A9FWN0gMr0S00n" name="ANNEX_TYP" nameSpace="MHI"/>
+      <value id="00A9FWN0gMr0S00m" name="ANNEX_MODL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="REPO" valueType="CONSTANT"/>
+      <option id="00A9FWN0gMr0S00l" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="00A9FWN0gMr0S018" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_LAGR_CRSPTYDF_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" relationId="00A7gfV0gMr0S00G" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field desc="Comment Text" id="00A9FWN0gMr0S01F" name="CMNT_TXT" nameSpace="MHI"/>
+      <value id="00A9FWN0gMr0S01A" name="COMM_REAS_MNEM" nameSpace="MHI" type="FILTER_FIELD" value="CRSPTYDF" valueType="CONSTANT"/>
+      <value id="00A9FWN0gMr0S01E" name="CREATED_TMS" nameSpace="MHI" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <value id="++AC7dxmgMr0S01s" name="GNCM_TBL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="LAGR" valueType="CONSTANT"/>
+      <value id="++AC7dxmgMr0S01r" name="LN_NUM" nameSpace="MHI" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <option id="00A9FWN0gMr0S019" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for General Table Comment" id="00A9FWN0gMr0S01I" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="GNCM_LAGR_SETOFFPR_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" relationId="00A7gfV0gMr0S00G" table="FT_T_GNCM" timeSeries="LOGICAL_DELETE">
+      <field desc="Comment Text" id="00A9FWN0gMr0S01O" name="CMNT_TXT" nameSpace="MHI"/>
+      <value id="00A9FWN0gMr0S01K" name="COMM_REAS_MNEM" nameSpace="MHI" type="FILTER_FIELD" value="SETOFFPR" valueType="CONSTANT"/>
+      <value id="00A9FWN0gMr0S01N" name="CREATED_TMS" nameSpace="MHI" type="DEFAULT_FIELD" value="CURRENT_DATE" valueType="CONTEXT_VALUE"/>
+      <value id="++AC7dxmgMr0S01w" name="GNCM_TBL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="LAGR" valueType="CONSTANT"/>
+      <value id="++AC7dxmgMr0S01x" name="LN_NUM" nameSpace="MHI" type="FILTER_FIELD" value="1" valueType="CONSTANT"/>
+      <option id="00A9FWN0gMr0S01J" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for FT_T_LAV1" id="00A9FWN0gMr0S02I" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="LAV1_LAGR_SD_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_LAV1" timeSeries="LOGICAL_DELETE">
+      <field desc="Agreement Status" id="00A9FWN0gMr0S02Q" name="AGRMNT_STAT_TYP" nameSpace="MHI"/>
+      <field desc="Amendment Description" id="00A9FWN0gMr0S02O" name="AMEND_DESC" nameSpace="MHI"/>
+      <field desc="Document Link" id="00A9FWN0gMr0S02M" name="DOC_LINK" nameSpace="MHI"/>
+      <field desc="End Date/Time" id="00A9wB90gMr0S008" name="END_TMS" nameSpace="MHI"/>
+      <field desc="Instruction Date" id="00A9FWN0gMr0S02N" name="INSTRUC_RELEASE_TMS" nameSpace="MHI"/>
+      <field desc="Last Change Date/Time" id="00A9wB90gMr0S009" name="LAST_CHG_TMS" nameSpace="MHI"/>
+      <field desc="Last Change User ID" id="00A9wB90gMr0S00A" name="LAST_CHG_USR_ID" nameSpace="MHI"/>
+      <field desc="Start Date/Time" id="00A9wB90gMr0S001" name="START_TMS" nameSpace="MHI"/>
+      <field desc="Version No" id="00AB8P90gMr0S1EF" name="VERSION_NO" nameSpace="MHI"/>
+      <field desc="Amendment Date" id="00A9FWN0gMr0S02P" name="VER_AMEND_DTE" nameSpace="MHI"/>
+      <option id="00A9FWN0gMr0S02J" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Agreement Role" id="00A9FWN0gMr0S02k" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="FLAR_LAGR_PRINCOVD_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_FLAR" timeSeries="LOGICAL_DELETE">
+      <field id="00A9FWN0gMr0S02u" nameSpace="MHI" relationId="00A9FWN0gMr0S02s"/>
+      <field desc="Data Source ID" id="00A9Kps0gMr0S01n" name="DATA_SRC_ID" nameSpace="MHI"/>
+      <field desc="Data Status" id="00A9Kps0gMr0S01o" name="DATA_STAT_TYP" nameSpace="MHI"/>
+      <field desc="End Date/Time" id="00A9Kps0gMr0S01m" name="END_TMS" nameSpace="MHI"/>
+      <field desc="Last Change Date/Time" id="00A9Kps0gMr0S01p" name="LAST_CHG_TMS" nameSpace="MHI"/>
+      <field desc="Last Change User ID" id="00A9Kps0gMr0S01y" name="LAST_CHG_USR_ID" nameSpace="MHI"/>
+      <field desc="Start Date/Time" id="00A9Kps0gMr0S01l" name="START_TMS" nameSpace="MHI"/>
+      <field desc="Threshold Acceleration Amount" id="00A9FWN0gMr0S02-" name="THSHLD_ACCEL_CAMT" nameSpace="MHI"/>
+      <value id="00A9FWN0gMr0S02m" name="RL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="PRINCOVD" valueType="CONSTANT"/>
+      <option id="00A9FWN0gMr0S02l" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for Financial Institution/Agreement Role" id="00A9FWN0gMr0S01W" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="FLAR_LAGR_TRI_MHI" nameSpace="MHI" parentId="LRWPCMQTJYAFDNFR" table="FT_T_FLAR" timeSeries="LOGICAL_DELETE">
+      <field desc="Financial Institution OID" id="++AA4bZGgMr0S008" name="INST_MNEM" nameSpace="MHI"/>
+      <value id="00A9FWN0gMr0S01Y" name="RL_TYP" nameSpace="MHI" type="FILTER_FIELD" value="TRI" valueType="CONSTANT"/>
+      <option id="00A9FWN0gMr0S01X" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+    <occurrence desc="Occurrence for FT_T_LAV1" id="00A9FWN0gMr0S01p" ignoreDeleteChildren="false" multiplicity="MULTIPLE_OR_NULL" name="LAV1_FLAR_LAGR_TRI_MHI" nameSpace="MHI" parentId="00A9FWN0gMr0S01W" table="FT_T_LAV1" timeSeries="LOGICAL_DELETE">
+      <field desc="Amendment Description" id="00A9FWN0gMr0S01s" name="AMEND_DESC" nameSpace="MHI"/>
+      <field desc="Document Link" id="00A9FWN0gMr0S01r" name="DOC_LINK" nameSpace="MHI"/>
+      <field desc="Instruction Date" id="00A9FWN0gMr0S01t" name="INSTRUC_RELEASE_TMS" nameSpace="MHI"/>
+      <field desc="Last Change Date/Time" id="00ABYnr0gMr0S005" name="LAST_CHG_TMS" nameSpace="MHI"/>
+      <field desc="Sign Date" id="00A9FWN0gMr0S01u" name="SIGN_DTE" nameSpace="MHI"/>
+      <field desc="Start Date/Time" id="00ABYnr0gMr0S004" name="START_TMS" nameSpace="MHI"/>
+      <option id="00A9FWN0gMr0S01q" nameSpace="MHI" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+  <mappings>
+    <mapping beFieldId="++A7gIxmgMr0S00F" groupMapping="0" id="++A7gIxmgMr0S00G" nameSpace="MHI" occFieldId="++A7gIxmgMr0S00E"/>
+    <mapping beFieldId="++A7gIxmgMr0S00N" groupMapping="0" id="++A7gIxmgMr0S00P" nameSpace="MHI" occFieldId="++A7gIxmgMr0S00L"/>
+    <mapping beFieldId="++A7gIxmgMr0S00Q" groupMapping="0" id="++A7gIxmgMr0S00R" nameSpace="MHI" occFieldId="++A7gIxmgMr0S00M"/>
+    <mapping beFieldId="++A8vjAmgMr0S007" groupMapping="0" id="00A9P2y0gMr0S006" nameSpace="MHI" occFieldId="++A8vjAmgMr0S004"/>
+    <mapping beFieldId="++A8vjAmgMr0S00C" groupMapping="0" id="++A8vjAmgMr0S00E" nameSpace="MHI" occFieldId="++A8vjAmgMr0S005"/>
+    <mapping beFieldId="00A8n2X0gMr0S00R" groupMapping="0" id="00A8n2X0gMr0S00S" nameSpace="MHI" occFieldId="00A8n2X0gMr0S00Q"/>
+    <mapping beRelationId="++A8vsYmgMr0S00K" groupMapping="0" id="++A8vsYmgMr0S00O" nameSpace="MHI" occFieldId="++A8vsYmgMr0S00N"/>
+    <mapping beRelationId="00A9PnaWgMr0S00O" groupMapping="0" id="00A9PnaWgMr0S00S" nameSpace="MHI" occFieldId="00A9PnaWgMr0S00R"/>
+    <mapping beRelationId="00AFUkqWgMr2m00R" groupMapping="0" id="00AFUkqWgMr2m00V" nameSpace="MHI" occFieldId="00AFUkqWgMr2m00U"/>
+    <mapping beRelationId="00AFUkqWgMr2m00Z" groupMapping="0" id="00AFUkqWgMr2m00d" nameSpace="MHI" occFieldId="00AFUkqWgMr2m00c"/>
+    <mapping beFieldId="++A7gIxmgMr0S014" groupMapping="0" id="++A7gIxmgMr0S015" nameSpace="MHI" occFieldId="++A7gIxmgMr0S013"/>
+    <mapping beFieldId="++A7gIxmgMr0S011" groupMapping="0" id="++A7gIxmgMr0S012" nameSpace="MHI" occFieldId="++A7gIxmgMr0S010"/>
+    <mapping beFieldId="++AG2CXGgMr2m01c" groupMapping="0" id="++AG2CXGgMr2m01d" nameSpace="MHI" occFieldId="++ACahQmgMr0S002"/>
+    <mapping beFieldId="00A7gfV0gMr0S00O" groupMapping="0" id="00A7gfV0gMr0S00P" nameSpace="MHI" occFieldId="00A7gfV0gMr0S00N"/>
+    <mapping beFieldId="00A7gqJ0gMr0S00X" groupMapping="0" id="00A7gqJ0gMr0S00Y" nameSpace="MHI" occFieldId="00A7gqJ0gMr0S00W"/>
+    <mapping beFieldId="00A7gqJ0gMr0S00N" groupMapping="0" id="00A7gqJ0gMr0S00O" nameSpace="MHI" occFieldId="00A7gqJ0gMr0S00M"/>
+    <mapping beFieldId="00A7gfV0gMr0S00C" groupMapping="0" id="00A7gfV0gMr0S00D" nameSpace="MHI" occFieldId="00A7gfV0gMr0S00B"/>
+    <mapping beFieldId="00A7gqJ0gMr0S00G" groupMapping="0" id="00A7gqJ0gMr0S00H" nameSpace="MHI" occFieldId="00A7gqJ0gMr0S00F"/>
+    <mapping beFieldId="00A7gqJ0gMr0S00e" groupMapping="0" id="00A7gqJ0gMr0S00f" nameSpace="MHI" occFieldId="00A7gqJ0gMr0S00d"/>
+    <mapping beFieldId="00A7gqJ0gMr0S1Ay" groupMapping="0" id="00A7gqJ0gMr0S1Az" nameSpace="MHI" occFieldId="00A7gqJ0gMr0S1Ax"/>
+    <mapping beFieldId="00A7gqJ0gMr0S1A-" groupMapping="0" id="00A7gqJ0gMr0S1B0" nameSpace="MHI" occFieldId="00A7gqJ0gMr0S1A+"/>
+    <mapping beFieldId="00A7hle0gMr0S00M" groupMapping="0" id="00A7hle0gMr0S00N" nameSpace="MHI" occFieldId="00A7hle0gMr0S00L"/>
+    <mapping beFieldId="00A7hle0gMr0S00O" groupMapping="0" id="00A7hle0gMr0S00P" nameSpace="MHI" occFieldId="00A7hle0gMr0S00K"/>
+    <mapping beFieldId="00A9FWN0gMr0S00o" groupMapping="0" id="00A9FWN0gMr0S00p" nameSpace="MHI" occFieldId="00A9FWN0gMr0S00n"/>
+    <mapping beFieldId="00A9FWN0gMr0S010" groupMapping="0" id="00A9FWN0gMr0S011" nameSpace="MHI" occFieldId="00A9FWN0gMr0S00w"/>
+    <mapping beFieldId="00A9FWN0gMr0S00z" groupMapping="0" id="00A9FWN0gMr0S00+" nameSpace="MHI" occFieldId="00A9FWN0gMr0S00v"/>
+    <mapping beFieldId="00A9FWN0gMr0S00x" groupMapping="0" id="00A9FWN0gMr0S00y" nameSpace="MHI" occFieldId="00A9FWN0gMr0S00u"/>
+    <mapping beFieldId="00A9FWN0gMr0S01G" groupMapping="0" id="00A9FWN0gMr0S01H" nameSpace="MHI" occFieldId="00A9FWN0gMr0S01F"/>
+    <mapping beFieldId="00A9FWN0gMr0S01P" groupMapping="0" id="00A9FWN0gMr0S01Q" nameSpace="MHI" occFieldId="00A9FWN0gMr0S01O"/>
+    <mapping beFieldId="00A9FWN0gMr0S02Y" groupMapping="0" id="00A9FWN0gMr0S02Z" nameSpace="MHI" occFieldId="00A9FWN0gMr0S02P"/>
+    <mapping beFieldId="00A9FWN0gMr0S02S" groupMapping="0" id="00A9FWN0gMr0S02T" nameSpace="MHI" occFieldId="00A9FWN0gMr0S02M"/>
+    <mapping beFieldId="00A9FWN0gMr0S02a" groupMapping="0" id="00A9FWN0gMr0S02b" nameSpace="MHI" occFieldId="00A9FWN0gMr0S02Q"/>
+    <mapping beFieldId="00A9FWN0gMr0S02W" groupMapping="0" id="00A9FWN0gMr0S02X" nameSpace="MHI" occFieldId="00A9FWN0gMr0S02N"/>
+    <mapping beFieldId="00A9FWN0gMr0S02U" groupMapping="0" id="00A9FWN0gMr0S02V" nameSpace="MHI" occFieldId="00A9FWN0gMr0S02O"/>
+    <mapping beFieldId="00A9wB90gMr0S002" groupMapping="0" id="00A9wB90gMr0S003" nameSpace="MHI" occFieldId="00A9wB90gMr0S001"/>
+    <mapping beFieldId="00A9wB90gMr0S00B" groupMapping="0" id="00A9wB90gMr0S00C" nameSpace="MHI" occFieldId="00A9wB90gMr0S008"/>
+    <mapping beFieldId="00A9wB90gMr0S00D" groupMapping="0" id="00A9wB90gMr0S00E" nameSpace="MHI" occFieldId="00A9wB90gMr0S009"/>
+    <mapping beRelationId="00A9FWN0gMr0S02r" groupMapping="0" id="00A9FWN0gMr0S02v" nameSpace="MHI" occFieldId="00A9FWN0gMr0S02u"/>
+    <mapping beFieldId="00A9FWN0gMr0S02+" groupMapping="0" id="00A9FWN0gMr0S031" nameSpace="MHI" occFieldId="00A9FWN0gMr0S02-"/>
+    <mapping beFieldId="00A9Kps0gMr0S01q" groupMapping="0" id="00A9Kps0gMr0S01r" nameSpace="MHI" occFieldId="00A9Kps0gMr0S01l"/>
+    <mapping beFieldId="00A9Kps0gMr0S01s" groupMapping="0" id="00A9Kps0gMr0S01t" nameSpace="MHI" occFieldId="00A9Kps0gMr0S01m"/>
+    <mapping beFieldId="00A9Kps0gMr0S01+" groupMapping="0" id="00A9Kps0gMr0S020" nameSpace="MHI" occFieldId="00A9Kps0gMr0S01y"/>
+    <mapping beFieldId="00A9Kps0gMr0S01u" groupMapping="0" id="00A9Kps0gMr0S01v" nameSpace="MHI" occFieldId="00A9Kps0gMr0S01o"/>
+    <mapping beFieldId="00A9Kps0gMr0S01w" groupMapping="0" id="00A9Kps0gMr0S01x" nameSpace="MHI" occFieldId="00A9Kps0gMr0S01n"/>
+    <mapping beFieldId="00A9Kps0gMr0S01z" groupMapping="0" id="00A9Kps0gMr0S01-" nameSpace="MHI" occFieldId="00A9Kps0gMr0S01p"/>
+    <mapping beFieldId="00A9FWN0gMr0S01x" groupMapping="0" id="++AC3R7GgMr0S01y" nameSpace="MHI" occFieldId="00A9FWN0gMr0S01s"/>
+    <mapping beFieldId="00A9FWN0gMr0S01v" groupMapping="0" id="++AC3R7GgMr0S01x" nameSpace="MHI" occFieldId="00A9FWN0gMr0S01r"/>
+    <mapping beFieldId="00A9FWN0gMr0S01z" groupMapping="0" id="++AC3R7GgMr0S01w" nameSpace="MHI" occFieldId="00A9FWN0gMr0S01t"/>
+    <mapping beFieldId="00ABYnr0gMr0S008" groupMapping="0" id="++AC3R7GgMr0S01v" nameSpace="MHI" occFieldId="00ABYnr0gMr0S005"/>
+    <mapping beFieldId="00A9FWN0gMr0S021" groupMapping="0" id="++AC3R7GgMr0S01u" nameSpace="MHI" occFieldId="00A9FWN0gMr0S01u"/>
+    <mapping beFieldId="00ABYnr0gMr0S006" groupMapping="0" id="++AC3R7GgMr0S01t" nameSpace="MHI" occFieldId="00ABYnr0gMr0S004"/>
+    <mapping beFieldId="00A9FWN0gMr0S01b" groupMapping="0" id="++AA4bZGgMr0S009" nameSpace="MHI" occFieldId="++AA4bZGgMr0S008"/>
+  </mappings>
+  <businessEntities>
+    <businessEntity cachedisableInd="N" completenessType="" dataGroupId="++A8vWpGgMr0S001" defaultInd="0" displayCaption="RepoAndSecLendingAgreements" entityTypeId="BGLAGR0000000001" id="++A8vWpGgMr0S000" mavenVersion="138.0" name="RepoAndSecLendingAgreements" nameSpace="MHI" prntEntityId="0072cJEi2etZa000" ruleVersion="97.0" version="218.0">
+      <configurations>
+        <configuration id="++A8vWpGgMr0S002" ignoreDeleteChildren="false" nameSpace="MHI" option="HIDDEN" prntID="=000000000003212"/>
+        <configuration id="++A8vWpGgMr0S003" ignoreDeleteChildren="false" nameSpace="MHI" option="MULTIPLICITY_REQUIRE" prntID="=000000000001969">
+          <part disParentConfig="0" groupPartId="++AG2CXGgMr2m01g" id="00AG3vd0gMr2m01B" nameSpace="MHI"/>
+          <part disParentConfig="0" groupPartId="00A9PnaWgMr0S00U" id="++AC7dxmgMr0S05I" nameSpace="MHI"/>
+          <part disParentConfig="0" groupPartId="00AEAU0WgMr0u008" id="00AFUkqWgMr2m006" nameSpace="MHI"/>
+          <part disParentConfig="0" groupPartId="00AEAU0WgMr0u00H" id="00AFUkqWgMr2m007" nameSpace="MHI"/>
+          <part disParentConfig="0" groupPartId="00AEAU0WgMr0u00Q" id="00AFUkqWgMr2m008" nameSpace="MHI"/>
+          <part disParentConfig="0" groupPartId="00AFUkqWgMr2m00X" id="00AFUkqWgMr2m00Y" nameSpace="MHI"/>
+          <part disParentConfig="0" groupPartId="00AFUkqWgMr2m00f" id="00AFUkqWgMr2m00g" nameSpace="MHI"/>
+        </configuration>
+        <configuration id="++A8vWpGgMr0S004" ignoreDeleteChildren="false" nameSpace="MHI" option="KEEPIN_SYNC" prntID="=000000000001652"/>
+        <configuration id="++A8vWpGgMr0S005" ignoreDeleteChildren="false" nameSpace="MHI" option="WEIGHTAGE" prntID="=000000000001386"/>
+        <configuration id="++A8vWpGgMr0S006" ignoreDeleteChildren="false" nameSpace="MHI" option="LABEL" prntID="=000000000002959"/>
+        <configuration data="false" id="++A8vWpGgMr0S007" ignoreDeleteChildren="false" nameSpace="MHI" option="DOMAIN" prntID="=000000000003372"/>
+        <configuration data="COMPLETE" id="++A8vWpGgMr0S008" ignoreDeleteChildren="false" nameSpace="MHI" option="BEDEINITIONFSTATUS" prntID="=000000000004297"/>
+        <configuration id="++A8vWpGgMr0S009" ignoreDeleteChildren="false" nameSpace="MHI" option="CDEFIELD" prntID="=000000000001111"/>
+      </configurations>
+    </businessEntity>
+  </businessEntities>
+  <entityRelations>
+    <entityRelation entityId="++A8vWpGgMr0S000" id="++A8vsYmgMr0S00K" lookupField="005kiLnC2etqS026" multiplicity="SINGLE_OR_NULL" name="MHILegalEntityRSL" nameSpace="MHI" rltdEntityId="++4HwLjy2etpy007" templateName="%iAU71P)W1">
+      <part forPublishing="0" forUI="1" id="++A8vsYmgMr0S00U" nameSpace="MHI" partId="++4eFFHy2etv4017"/>
+      <part forPublishing="0" forUI="1" id="++A8vsYmgMr0S00Q" nameSpace="MHI" partId="++A8HAXmgMr0S03u"/>
+      <part forPublishing="0" forUI="1" id="++A8vsYmgMr0S00T" nameSpace="MHI" partId="++A8HAXmgMr0S03v"/>
+      <part forPublishing="0" forUI="1" id="++A8vsYmgMr0S00P" nameSpace="MHI" partId="++A8HAXmgMr0S03w"/>
+      <part forPublishing="0" forUI="1" id="++A8vsYmgMr0S00V" nameSpace="MHI" partId="++A8HAXmgMr0S04P"/>
+      <part forPublishing="0" forUI="1" id="++A8vsYmgMr0S00R" nameSpace="MHI" partId="++A8HAXmgMr0S04f"/>
+      <part forPublishing="0" forUI="1" id="++A8vsYmgMr0S00W" nameSpace="MHI" partId="005kiLnC2etqS026"/>
+      <part forPublishing="0" forUI="1" id="00AG3vd0gMr2m00L" nameSpace="MHI" partId="00AG3vd0gMr2m00D"/>
+    </entityRelation>
+    <entityRelation entityId="++A8vWpGgMr0S000" id="00A9PnaWgMr0S00O" lookupField="++4eFFHy2etv4017" multiplicity="SINGLE_OR_NULL" name="MHIFinsNameForRole" nameSpace="MHI" rltdEntityId="++4HwLjy2etpy007" templateName="MHI_Institution_Search">
+      <part forPublishing="0" forUI="1" id="00A9PnaWgMr0S00T" nameSpace="MHI" partId="++4eFFHy2etv4017"/>
+    </entityRelation>
+    <entityRelation entityId="++A8vWpGgMr0S000" id="00AFUkqWgMr2m00R" lookupField="++4eFFHy2etv4017" multiplicity="SINGLE_OR_NULL" name="MBEFinsNameForRole" nameSpace="MHI" rltdEntityId="++4HwLjy2etpy007" templateName="LE9j215*W1">
+      <part forPublishing="0" forUI="1" id="00AFUkqWgMr2m00W" nameSpace="MHI" partId="++4eFFHy2etv4017"/>
+    </entityRelation>
+    <entityRelation desc="CUSTOM:Relation Participant" entityId="++A8vWpGgMr0S000" id="00AFUkqWgMr2m00Z" lookupField="++4eFFHy2etv4017" multiplicity="SINGLE_OR_NULL" name="MHSSFinsNameForRole" nameSpace="MHI" rltdEntityId="++4HwLjy2etpy007" templateName="LE9x215*W1">
+      <part forPublishing="0" forUI="1" id="00AFUkqWgMr2m00e" nameSpace="MHI" partId="++4eFFHy2etv4017"/>
+    </entityRelation>
+    <entityRelation entityId="++A8vWpGgMr0S000" id="00A9FWN0gMr0S02r" lookupField="005kiLnC2etqS026" multiplicity="MULTIPLE_OR_NULL" name="MHIPrincipalsCovered" nameSpace="MHI" rltdEntityId="++4HwLjy2etpy007" templateName="Qhpcy&gt;THW1">
+      <part forPublishing="0" forUI="1" id="00A9FWN0gMr0S02x" nameSpace="MHI" partId="++4eFFHy2etv4017"/>
+      <part forPublishing="0" forUI="1" id="00A9FWN0gMr0S02y" nameSpace="MHI" partId="005kiLnC2etqS026"/>
+      <part forPublishing="0" forUI="1" id="00AGw0S0gMr2m023" nameSpace="MHI" partId="00AG3vd0gMr2m00D"/>
+    </entityRelation>
+  </entityRelations>
+</entities>

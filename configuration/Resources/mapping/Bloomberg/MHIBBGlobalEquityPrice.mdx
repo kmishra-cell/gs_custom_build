@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MappingDef type="MSF" version="1.0">
+  <Options>
+    <Option key="MappingComment"/>
+    <Option key="LastChangedTms">2023-06-29 at 03:33:21 BST</Option>
+    <Option key="MappingAuthor"/>
+    <Option key="MappingVersion">8.99.60.0</Option>
+    <Option key="MessageTranslatorVersion">8.1.2.1</Option>
+    <Option key="MappingDesignerVersion">8.4.1.32REL</Option>
+  </Options>
+  <Input vendorType="BB">
+    <Options>
+      <Option key="KeyEndPos">0</Option>
+      <Option key="KeyBeginPos">0</Option>
+      <Option key="IsSingleCharDataDelimiter">TRUE</Option>
+      <Option key="InputDataDelimiter">|</Option>
+      <Option key="QuotationMark"/>
+      <Option key="EndDataDelimiter">END-OF-DATA</Option>
+      <Option key="DateTimeFormat">YYYYMMDD HHMMSS</Option>
+      <Option key="NullIdentifiers">&lt;null&gt;;N.A.;N.S.;N.D.;N.A;</Option>
+      <Option key="CommentMarker">#</Option>
+      <Option key="EscapeCharacter"/>
+      <Option key="DecimalSeparator">.</Option>
+      <Option key="SkipInputLines">0</Option>
+      <Option key="DDLName"/>
+      <Option key="BeginDataDelimiter">START-OF-DATA</Option>
+      <Option key="MessageType"/>
+      <Option key="TrimFields">BOTH</Option>
+    </Options>
+    <VendorDef name="MSFDatastructure">
+      <field decimals="0" desc="Undefined field placeholder 1" excludedNullIdentifiers="" ident="SECURITIES" length="255" mandatory="false" mapable="false" match="false" multiple="false" name="SECURITIES" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Return Code" excludedNullIdentifiers="" ident="ERROR CODE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ERRORCODE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Undefined field placeholder 2" excludedNullIdentifiers="" ident="NUM FLDS" length="255" mandatory="false" mapable="false" match="false" multiple="false" name="NUMFLDS" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Ticker" excludedNullIdentifiers="" ident="TICKER" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="TICKER" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Exchange Code" excludedNullIdentifiers="" ident="EXCH_CODE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EXCH_CODE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Sedol1 Number" excludedNullIdentifiers="" ident="ID_SEDOL1" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_SEDOL1" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Wertpapier Number" excludedNullIdentifiers="" ident="ID_WERTPAPIER" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_WERTPAPIER" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="ISIN Number" excludedNullIdentifiers="" ident="ID_ISIN" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_ISIN" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Dutch Number" excludedNullIdentifiers="" ident="ID_DUTCH" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_DUTCH" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Valoren Number" excludedNullIdentifiers="" ident="ID_VALOREN" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_VALOREN" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="French Number" excludedNullIdentifiers="" ident="ID_FRENCH" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_FRENCH" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Belgium Number" excludedNullIdentifiers="" ident="ID_BELGIUM" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_BELGIUM" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Company ID" excludedNullIdentifiers="" ident="ID_BB_COMPANY" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_BB_COMPANY" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Security ID" excludedNullIdentifiers="" ident="ID_BB_SECURITY" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_BB_SECURITY" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Cusip Number" excludedNullIdentifiers="" ident="ID_CUSIP" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_CUSIP" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Common Number" excludedNullIdentifiers="" ident="ID_COMMON" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_COMMON" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="High 52 Week" excludedNullIdentifiers="" ident="HIGH_52WEEK" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="HIGH_52WEEK" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Low 52 Week" excludedNullIdentifiers="" ident="LOW_52WEEK" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="LOW_52WEEK" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="High 52 Week Date" excludedNullIdentifiers="" ident="HIGH_DT_52WEEK" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="HIGH_DT_52WEEK" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Low 52 Week Date" excludedNullIdentifiers="" ident="LOW_DT_52WEEK" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="LOW_DT_52WEEK" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Price Bid" excludedNullIdentifiers="" ident="PX_BID" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_BID" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Price Mid" excludedNullIdentifiers="" ident="PX_MID" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_MID" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Price Ask" excludedNullIdentifiers="" ident="PX_ASK" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_ASK" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Price Open" excludedNullIdentifiers="" ident="PX_OPEN" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_OPEN" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Price High" excludedNullIdentifiers="" ident="PX_HIGH" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_HIGH" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Price Low" excludedNullIdentifiers="" ident="PX_LOW" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_LOW" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Price Last" excludedNullIdentifiers="" ident="PX_LAST" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_LAST" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Price Fixing" excludedNullIdentifiers="" ident="PX_FIXING" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_FIXING" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Price Volume" excludedNullIdentifiers="" ident="PX_VOLUME" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_VOLUME" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Pricing Source" excludedNullIdentifiers="" ident="PRICING_SOURCE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PRICING_SOURCE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Last Update" excludedNullIdentifiers="" ident="LAST_UPDATE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="LAST_UPDATE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Equity Beta" excludedNullIdentifiers="" ident="EQY_BETA" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EQY_BETA" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Current Market Capitalization" excludedNullIdentifiers="" ident="CUR_MKT_CAP" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="CUR_MKT_CAP" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Current Shares Outstanding" excludedNullIdentifiers="" ident="EQY_SH_OUT" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EQY_SH_OUT" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Currency" excludedNullIdentifiers="" ident="CRNCY" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="CRNCY" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Local ID" excludedNullIdentifiers="" ident="ID_LOCAL" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_LOCAL" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="The no. of shares represented by the quote or bid/ask price" excludedNullIdentifiers="" ident="PX_QUOTE_LOT_SIZE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_QUOTE_LOT_SIZE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Date the security last traded in the time zone of its exchange" excludedNullIdentifiers="" ident="LAST_UPDATE_DT_EXCH_TZ" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="LAST_UPDATE_DT_EXCH_TZ" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Primary Exchange" excludedNullIdentifiers="" ident="EQY_PRIM_EXCH" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EQY_PRIM_EXCH" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Equity Primary Exchange (short)" excludedNullIdentifiers="" ident="EQY_PRIM_EXCH_SHRT" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EQY_PRIM_EXCH_SHRT" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Security Type" excludedNullIdentifiers="" ident="SECURITY_TYP" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SECURITY_TYP" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Name" excludedNullIdentifiers="" ident="NAME" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="NAME" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Equity Primary Security Flag" excludedNullIdentifiers="" ident="ID_BB_PRIM_SECURITY_FLAG" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_BB_PRIM_SECURITY_FLAG" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Primary Security Composite Exchange" excludedNullIdentifiers="" ident="EQY_PRIM_SECURITY_COMP_EXCH" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EQY_PRIM_SECURITY_COMP_EXCH" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Market Status" excludedNullIdentifiers="" ident="MARKET_STATUS" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="MARKET_STATUS" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Number of shares that are available to the public" excludedNullIdentifiers="" ident="EQY_FLOAT" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EQY_FLOAT" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="The most recently announced gross dividend" excludedNullIdentifiers="" ident="EQY_DVD_YLD_IND" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EQY_DVD_YLD_IND" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Dividend 12 Month Yld - Gross" excludedNullIdentifiers="" ident="EQY_DVD_YLD_12M" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EQY_DVD_YLD_12M" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Dividend 12 Month Yld - Net" excludedNullIdentifiers="" ident="EQY_DVD_YLD_12M_NET" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EQY_DVD_YLD_12M_NET" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Unique Bloomberg Identifier" excludedNullIdentifiers="" ident="ID_BB_UNIQUE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_BB_UNIQUE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Market Sector Description" excludedNullIdentifiers="" ident="MARKET_SECTOR_DES" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="MARKET_SECTOR_DES" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Country of Issue (ISO)" excludedNullIdentifiers="" ident="CNTRY_ISSUE_ISO" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="CNTRY_ISSUE_ISO" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Min. no. of shares of stock that can be purchased without incurring a larger fees" excludedNullIdentifiers="" ident="PX_ROUND_LOT_SIZE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_ROUND_LOT_SIZE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Composite Exchange Code" excludedNullIdentifiers="" ident="COMPOSITE_EXCH_CODE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="COMPOSITE_EXCH_CODE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="NASDAQ Official Closing Price" excludedNullIdentifiers="" ident="PX_NASDAQ_CLOSE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_NASDAQ_CLOSE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Current Shares Outstanding Real" excludedNullIdentifiers="" ident="EQY_SH_OUT_REAL" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EQY_SH_OUT_REAL" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="The Country of Incorporation" excludedNullIdentifiers="" ident="CNTRY_OF_INCORPORATION" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="CNTRY_OF_INCORPORATION" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="The Country of Domicile" excludedNullIdentifiers="" ident="CNTRY_OF_DOMICILE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="CNTRY_OF_DOMICILE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Market Cap (Listed Shares)" excludedNullIdentifiers="" ident="MKT_CAP_LISTED" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="MKT_CAP_LISTED" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Trade Lot Size" excludedNullIdentifiers="" ident="PX_TRADE_LOT_SIZE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="PX_TRADE_LOT_SIZE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Stock Exchange Daily Official List No" excludedNullIdentifiers="" ident="ID_SEDOL2" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_SEDOL2" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="The ISO country code to which SEDOL1 is associated" excludedNullIdentifiers="" ident="SEDOL1_COUNTRY_ISO" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SEDOL1_COUNTRY_ISO" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="The ISO country code to which SEDOL2 is associated" excludedNullIdentifiers="" ident="SEDOL2_COUNTRY_ISO" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SEDOL2_COUNTRY_ISO" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="ISO MIC of the Bloomberg assigned primary exchange" excludedNullIdentifiers="" ident="ID_MIC_PRIM_EXCH" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_MIC_PRIM_EXCH" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="ISO MIC of the local exchange on which this instrument is traded for equities" excludedNullIdentifiers="" ident="ID_MIC_LOCAL_EXCH" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_MIC_LOCAL_EXCH" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Field returns the ticker and exchange code of the security" excludedNullIdentifiers="" ident="TICKER_AND_EXCH_CODE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="TICKER_AND_EXCH_CODE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Raw security symbol as disseminated on the local exchange feed. This symbol may or may not match the Bloomberg symbol" excludedNullIdentifiers="" ident="ID_EXCH_SYMBOL" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_EXCH_SYMBOL" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Security Node Id" excludedNullIdentifiers="" ident="ID_BB_CONNECT" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_BB_CONNECT" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Exchange Market Group" excludedNullIdentifiers="" ident="EXCH_MKT_GRP" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="EXCH_MKT_GRP" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Static Group Name" excludedNullIdentifiers="" ident="GROUP_NAME_STATIC" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="GROUP_NAME_STATIC" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Security ID Number With Source" excludedNullIdentifiers="" ident="ID_BB_SEC_NUM_SRC" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_BB_SEC_NUM_SRC" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Settle Date" excludedNullIdentifiers="" ident="SETTLE_DT" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SETTLE_DT" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Bloomberg Global Identifier" excludedNullIdentifiers="" ident="ID_BB_GLOBAL" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_BB_GLOBAL" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Unique global identifier for the composite assigned by Bloomberg for Equity securities. The unique global identifier is commonly known as the BBGID (BloombBerg Global IDentifier)." excludedNullIdentifiers="" ident="COMPOSITE_ID_BB_GLOBAL" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="COMPOSITE_ID_BB_GLOBAL" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Bloomberg Security ID Number Description" excludedNullIdentifiers="" ident="ID_BB_SEC_NUM_DES" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="ID_BB_SEC_NUM_DES" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Feed Source B-Pipe" excludedNullIdentifiers="" ident="FEED_SOURCE" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="FEED_SOURCE" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Trading System Identifier" excludedNullIdentifiers="" ident="TRADING_SYSTEM_IDENTIFIER" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="TRADING_SYSTEM_IDENTIFIER" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="Trading System Identifier Description" excludedNullIdentifiers="" ident="TRADING_SYSTEM_IDENTIFIER_DES" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="TRADING_SYSTEM_IDENTIFIER_DES" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="SSE SEHK Connect Assc Financial Instr Global ID" excludedNullIdentifiers="" ident="SSE_SEHK_CONN_ASSC_ID_BB_GBL" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SSE_SEHK_CONN_ASSC_ID_BB_GBL" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="SSE SEHK Connect Assc Comp Financial Instr Glbl ID" excludedNullIdentifiers="" ident="SSE_SEHK_CONN_COMP_ID_BB_GBL" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SSE_SEHK_CONN_COMP_ID_BB_GBL" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="SZSE SEHK Connect Associated FIGI" excludedNullIdentifiers="" ident="SZSE_SEHK_CONN_ASSC_FIGI" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SZSE_SEHK_CONN_ASSC_FIGI" pos="0" readonly="false" type="String"/>
+      <field decimals="0" desc="SZSE SEHK Connect Associated Composite FIGI" excludedNullIdentifiers="" ident="SZSE_SEHK_CONN_ASSC_COMP_FIGI" length="255" mandatory="false" mapable="true" match="false" multiple="false" name="SZSE_SEHK_CONN_ASSC_COMP_FIGI" pos="0" readonly="false" type="String"/>
+    </VendorDef>
+    <Layout>
+      <Override/>
+      <record ref="MSFDatastructure"/>
+    </Layout>
+  </Input>
+  <Output>
+    <Options>
+      <Option key="DefaultEmptyNumericsToZero">FALSE</Option>
+      <Option key="XmlEncoding">ISO-8859-1</Option>
+      <Option key="DateTimeOutputFormat">%Y-%M-%D-%H:%I:%S</Option>
+      <Option key="SendNullMacro">SET_TO_NULL</Option>
+      <Option key="OutputEncoding">UTF-8</Option>
+    </Options>
+    <MappingFragments/>
+    <OutputDef>
+      <Node displayName="reference ISIN and MKT_OID" messageformat="GSREF" name="STREET_REF" type="message">
+        <Options>
+          <Option key="xsd">./../STREET_REF.gsref.xsd</Option>
+          <Option key="DocType">STREET_REF</Option>
+          <Option key="SystemId">fti://repository/dtd/STREET_REF</Option>
+          <Option key="OutputEncoding"/>
+        </Options>
+        <Node name="TRACE" type="attribute">
+          <expr><![CDATA[return "false";]]></expr>
+        </Node>
+        <Node name="USERID" type="attribute">
+          <expr><![CDATA[return "GUEST";]]></expr>
+        </Node>
+        <Node name="HEADER" type="element">
+          <Node name="CNTRYCDE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (!StrContainsOneOf(CNTRY_OF_DOMICILE, "SNAT", "MULT", "MISC", "CHNL", "MIX"))
+	if (OneHasValue(Translate(Config_Options, true, "BBGUNT", CNTRY_OF_DOMICILE)))
+		return Translate(Config_Options, true, "BBGUNT", CNTRY_OF_DOMICILE);
+	else
+		return CNTRY_OF_DOMICILE;
+else
+	return "";]]></expr>
+            </Node>
+          </Node>
+          <Node name="CURRENTTIMESTAMP" type="element">
+            <expr><![CDATA[return TimeStamp();]]></expr>
+          </Node>
+          <Node name="DATASOURCE" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "BB";]]></expr>
+            </Node>
+          </Node>
+          <Node name="LOCALE" type="element">
+            <Node name="NLS" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "ENU";]]></expr>
+              </Node>
+            </Node>
+            <Node name="TIMEZONE" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "GMT Standard Time";]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_ID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return ID_ISIN;]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_ID_CTXT_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ISIN";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[if (OneHasValue(SECURITY_TYP))
+	return TranslateEIST2ISTY("BB", "", "", SECURITY_TYP);
+else
+	return "MISC";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_NME" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return NAME;]]></expr>
+            </Node>
+          </Node>
+          <Node name="MAIN_ENTITY_TBL_TYP" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ISSU";]]></expr>
+            </Node>
+          </Node>
+          <Node name="MSGCLASSIFICATION" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "BBEQTYPRC";]]></expr>
+            </Node>
+          </Node>
+          <Node name="USERID" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "BBEQTYPRC";]]></expr>
+            </Node>
+          </Node>
+        </Node>
+        <Node name="Issue" type="segment">
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "REFERENCE";]]></expr>
+          </Node>
+          <Node name="MATCH" type="attribute"/>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "Issue";]]></expr>
+          </Node>
+          <Node name="COPY_FROM" type="attribute"/>
+          <Node name="ERROR" type="attribute">
+            <expr><![CDATA[return "N";]]></expr>
+          </Node>
+          <Node name="ACCESSAUTHTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "PUBLIC";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ISSACTVYSTATTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="PREFISSDESC" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="PREFISSNME" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return StrRightCut(NAME, 40);]]></expr>
+            </Node>
+          </Node>
+          <Node name="INSTRID" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSACTVYSTATTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+          <Node name="ISSTYP" type="element">
+            <Node name="VALUE" type="attribute"/>
+          </Node>
+        </Node>
+        <Node displayName="ISIN" name="IssueIdentifier" type="segment">
+          <condition><![CDATA[if (OneHasValue(ID_ISIN))
+	return "IssueIdentifier";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "REFERENCE";]]></expr>
+          </Node>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "IssueIdentifier";]]></expr>
+          </Node>
+          <Node name="MATCH" type="attribute">
+            <expr><![CDATA[return "ISID7_INSTR_CTX_MKT_USG";]]></expr>
+          </Node>
+          <Node name="DATASRCID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "BB";]]></expr>
+            </Node>
+          </Node>
+          <Node name="DATASTATTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ACTIVE";]]></expr>
+            </Node>
+          </Node>
+          <Node name="IDCTXTTYP" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return "ISIN";]]></expr>
+            </Node>
+          </Node>
+          <Node name="ISSID" type="element">
+            <Node name="DEFAULT" type="attribute"/>
+            <Node name="ERR_LVL" type="attribute"/>
+            <Node name="INSERT_ONLY" type="attribute"/>
+            <Node name="STRIP_FAILED_DOMAIN" type="attribute"/>
+            <Node name="TRANSLATE" type="attribute"/>
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return ID_ISIN;]]></expr>
+            </Node>
+          </Node>
+        </Node>
+        <Node displayName="CUR_MKT_CAP" name="EquityStatistics" type="segment">
+          <comment><![CDATA[GT - 22903 ; TWO EQST segments are merged into one
+GT 63150]]></comment>
+          <condition><![CDATA[if (AllHaveValue(ID_ISIN,EQY_PRIM_EXCH,EQY_PRIM_EXCH_SHRT,CUR_MKT_CAP))
+	return "EquityStatistics";
+else
+	return "";]]></condition>
+          <Node name="ACTION" type="attribute">
+            <expr><![CDATA[return "UNKNOWN";]]></expr>
+          </Node>
+          <Node name="MATCH" type="attribute">
+            <expr><![CDATA[return "EQST_MATCH_1";]]></expr>
+          </Node>
+          <Node name="TSOPTION" type="attribute">
+            <expr><![CDATA[return "N";]]></expr>
+          </Node>
+          <Node name="TYPE" type="attribute">
+            <expr><![CDATA[return "EquityStatistics";]]></expr>
+          </Node>
+          <Node name="FinancialMarketIdentifier" type="segment">
+            <condition><![CDATA[if (OneHasValue(EQY_PRIM_EXCH_SHRT))
+	return "FinancialMarketIdentifier";
+else
+	return "";]]></condition>
+            <Node name="ACTION" type="attribute">
+              <expr><![CDATA[return "REFERENCE";]]></expr>
+            </Node>
+            <Node name="COPY_TO" type="attribute">
+              <expr><![CDATA[return "MKT_OID";]]></expr>
+            </Node>
+            <Node name="MATCH" type="attribute">
+              <expr><![CDATA[return "MKID1_MKT_CTXT_MKTID";]]></expr>
+            </Node>
+            <Node name="NESTED_ERR_LVL" type="attribute">
+              <expr><![CDATA[return "ERROR";]]></expr>
+            </Node>
+            <Node name="NESTED_ERR_TXT" type="attribute">
+              <expr><![CDATA[return Strcat("3|CONCTNS|NESTED|MKTIDCTXTTYP|BBEXCH|MKTID|",
+		Strcat(EQY_PRIM_EXCH_SHRT, "|DATASRCID|BLOOMBERG"));]]></expr>
+            </Node>
+            <Node name="TYPE" type="attribute">
+              <expr><![CDATA[return "FinancialMarketIdentifier";]]></expr>
+            </Node>
+            <Node name="MKTID" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[if (Strcmp(EQY_PRIM_EXCH, "Taiwan") && Strcmp(EQY_PRIM_EXCH_SHRT, "TT"))
+	return "TTTW";
+else if (Strcmp(EQY_PRIM_EXCH, "Moldova") && Strcmp(EQY_PRIM_EXCH_SHRT, "MB"))
+	return "MBDV";
+else
+	return EQY_PRIM_EXCH_SHRT;]]></expr>
+              </Node>
+            </Node>
+            <Node name="MKTIDCTXTTYP" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return "BBEXCH";]]></expr>
+              </Node>
+            </Node>
+            <Node name="MKTNME" type="element">
+              <Node name="VALUE" type="attribute">
+                <expr><![CDATA[return EQY_PRIM_EXCH;]]></expr>
+              </Node>
+            </Node>
+          </Node>
+          <Node name="MKTCPTLZNCQTY" type="element">
+            <Node name="VALUE" type="attribute">
+              <expr><![CDATA[return CUR_MKT_CAP;]]></expr>
+            </Node>
+          </Node>
+        </Node>
+      </Node>
+    </OutputDef>
+  </Output>
+  <Translation>
+    <table name="RELATIVE_INDEX">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>MERVAL</col>
+          <col>AR-ARGENTINA MERVAL INDEX</col>
+        </row>
+        <row>
+          <col>SZASHR</col>
+          <col>CH-CHINA SE SHENZHEN A</col>
+        </row>
+        <row>
+          <col>MIB30</col>
+          <col>IM-MILAN MIB30 INDEX</col>
+        </row>
+        <row>
+          <col>SENSEX</col>
+          <col>IN-MUMBAI SENSEX 30 INDEX</col>
+        </row>
+        <row>
+          <col>JOSMGNPR</col>
+          <col>JR-Jordan Stock Market General</col>
+        </row>
+        <row>
+          <col>LUXXX</col>
+          <col>LX-LUXEMBOURG LuxX INDEX</col>
+        </row>
+        <row>
+          <col>MEXBOL</col>
+          <col>MM-MEXICO BOLSA INDEX</col>
+        </row>
+        <row>
+          <col>NZSE40</col>
+          <col>NZ-NZSX TOP 40 INDEX</col>
+        </row>
+        <row>
+          <col>JALSH</col>
+          <col>SJ-FTSE/JSE AFRICA ALL SHR</col>
+        </row>
+        <row>
+          <col>IPSA</col>
+          <col>CI-CHILE  STOCK MKT SELECT</col>
+        </row>
+        <row>
+          <col>FTASE</col>
+          <col>GA-FTSE/ASE 20 INDEX</col>
+        </row>
+        <row>
+          <col>ISEQ</col>
+          <col>ID-IRISH OVERALL INDEX</col>
+        </row>
+        <row>
+          <col>KLCI</col>
+          <col>MK-KUALA LUMPUR COMP INDEX</col>
+        </row>
+        <row>
+          <col>SASEIDX</col>
+          <col>AB-Saudi Arabia Monetary Agenc</col>
+        </row>
+        <row>
+          <col>ATX</col>
+          <col>AV-AUSTRIAN TRADED ATX INDX</col>
+        </row>
+        <row>
+          <col>SHASHR</col>
+          <col>CH-CHINA SE SHANGHAI A</col>
+        </row>
+        <row>
+          <col>TPX</col>
+          <col>JP-TOPIX INDEX (TOKYO)</col>
+        </row>
+        <row>
+          <col>AEX</col>
+          <col>NA-AMSTERDAM EXCHANGES INDX</col>
+        </row>
+        <row>
+          <col>OMANOMVL</col>
+          <col>OM-Oman Stock Exchange Index</col>
+        </row>
+        <row>
+          <col>BSE</col>
+          <col>BH-BERMUDA STOCK EXCHANGE</col>
+        </row>
+        <row>
+          <col>HSI</col>
+          <col>HK-HANG SENG INDEX</col>
+        </row>
+        <row>
+          <col>TWSE</col>
+          <col>TT-TAIWAN: WEIGHTED INDEX</col>
+        </row>
+        <row>
+          <col>SMI</col>
+          <col>VX-SWISS MARKET INDEX</col>
+        </row>
+        <row>
+          <col>BHSEASI</col>
+          <col>BI-Bahrain All Share Index</col>
+        </row>
+        <row>
+          <col>BEL20</col>
+          <col>BB-BEL20 INDEX</col>
+        </row>
+        <row>
+          <col>BHSEIDX</col>
+          <col>BI-BSE Composite</col>
+        </row>
+        <row>
+          <col>IBOV</col>
+          <col>BZ-BRAZIL BOVESPA STOCK IDX</col>
+        </row>
+        <row>
+          <col>PX50</col>
+          <col>CP-PRAGUE STOCK EXCH PX 50</col>
+        </row>
+        <row>
+          <col>HEXP</col>
+          <col>FH-HEX PORTFOLIO INDEX</col>
+        </row>
+        <row>
+          <col>BUX</col>
+          <col>HB-BUDAPEST STOCK EXCH INDX</col>
+        </row>
+        <row>
+          <col>TA-100</col>
+          <col>IT-TEL AVIV 100 INDEX</col>
+        </row>
+        <row>
+          <col>BLOOIDX</col>
+          <col>LB-BLOM Stock BSI</col>
+        </row>
+        <row>
+          <col>ISBVL</col>
+          <col>PE-PERU LIMA SELECTIVE INDX</col>
+        </row>
+        <row>
+          <col>PSI20</col>
+          <col>PL-PORTUGAL PSI-20 INDEX</col>
+        </row>
+        <row>
+          <col>WIG20</col>
+          <col>PW-WSE WIG 20 INDEX</col>
+        </row>
+        <row>
+          <col>OMX</col>
+          <col>SS-OMX (STOCKHOLM) INDEX</col>
+        </row>
+        <row>
+          <col>AS51</col>
+          <col>AU-S&amp;P/ASX 200 INDEX</col>
+        </row>
+        <row>
+          <col>ICEXI</col>
+          <col>IR-ICEX MAIN</col>
+        </row>
+        <row>
+          <col>KOSPI</col>
+          <col>KS-KOREA COMPOSITE INDEX</col>
+        </row>
+        <row>
+          <col>STI</col>
+          <col>SP-STI INDEX</col>
+        </row>
+        <row>
+          <col>SZBSHR</col>
+          <col>CH-CHINA SE SHENZHEN B</col>
+        </row>
+        <row>
+          <col>DAX</col>
+          <col>GR-DAX INDEX</col>
+        </row>
+        <row>
+          <col>KWSEIDX</col>
+          <col>KK-Kuwait Stock Exchange Index</col>
+        </row>
+        <row>
+          <col>ENMPR</col>
+          <col>NM-NEMAX ALL-SHARE PRICE IX</col>
+        </row>
+        <row>
+          <col>IBEX</col>
+          <col>SM-IBEX 35 INDEX</col>
+        </row>
+        <row>
+          <col>SET</col>
+          <col>TB-THAI STOCK EXCHG OF THAI</col>
+        </row>
+        <row>
+          <col>SPX</col>
+          <col>US-S&amp;P 500 INDEX</col>
+        </row>
+        <row>
+          <col>IGBC</col>
+          <col>CB-IGBC GENERAL INDEX</col>
+        </row>
+        <row>
+          <col>NECI</col>
+          <col>ES-NASDAQ EUROPE COMPOS IX</col>
+        </row>
+        <row>
+          <col>HERMES</col>
+          <col>EY-EGYPT HERMES INDEX</col>
+        </row>
+        <row>
+          <col>KSE</col>
+          <col>PA-Pakistan Karachi Stock Exch</col>
+        </row>
+        <row>
+          <col>TUSISE</col>
+          <col>TU-Tunisia Bourse des Valeurs</col>
+        </row>
+        <row>
+          <col>IBVC</col>
+          <col>VC-VENEZUELA STOCK MKT INDX</col>
+        </row>
+        <row>
+          <col>SHBSHR</col>
+          <col>CH-CHINA SE SHANGHAI B</col>
+        </row>
+        <row>
+          <col>SPTSX</col>
+          <col>CN-S&amp;P/TSX COMPOSITE INDEX</col>
+        </row>
+        <row>
+          <col>KFX</col>
+          <col>DC-KFX COPENHAGEN SHARE IDX</col>
+        </row>
+        <row>
+          <col>UKX</col>
+          <col>LN-FTSE 100 INDEX</col>
+        </row>
+        <row>
+          <col>MCSINDEX</col>
+          <col>MC-Morocco Casablanca Stock Ex</col>
+        </row>
+        <row>
+          <col>OBX</col>
+          <col>NO-OBX STOCK INDEX</col>
+        </row>
+        <row>
+          <col>PCOMP</col>
+          <col>PM-PHILIPPINES COMPOSITE IX</col>
+        </row>
+        <row>
+          <col>DOHAIDX</col>
+          <col>QD-Qatar Doha Securities Marke</col>
+        </row>
+        <row>
+          <col>RTSI$</col>
+          <col>RU-RUSSIAN RTS INDEX $</col>
+        </row>
+        <row>
+          <col>XU100</col>
+          <col>TI-ISE NATIONAL 100 INDEX</col>
+        </row>
+        <row>
+          <col>UAEXGENL</col>
+          <col>UH-NBAD Indices General Sector</col>
+        </row>
+        <row>
+          <col>CAC</col>
+          <col>FP-CAC 40 INDEX</col>
+        </row>
+        <row>
+          <col>JCI</col>
+          <col>IJ-JAKARTA COMPOSITE INDEX</col>
+        </row>
+      </data>
+    </table>
+    <table name="BBCOUNTRY">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>BL</col>
+          <col>BO</col>
+        </row>
+        <row>
+          <col>BI</col>
+          <col>BZ</col>
+        </row>
+      </data>
+    </table>
+    <table name="SPAN_TYPE">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>Semi-Anl</col>
+          <col>A</col>
+        </row>
+        <row>
+          <col>Suspend</col>
+          <col>UN</col>
+        </row>
+        <row>
+          <col>3x a yr</col>
+          <col>A</col>
+        </row>
+        <row>
+          <col>Annual</col>
+          <col>A</col>
+        </row>
+        <row>
+          <col>Quarter</col>
+          <col>A</col>
+        </row>
+        <row>
+          <col>Bi-Mthly</col>
+          <col>A</col>
+        </row>
+        <row>
+          <col>Irreg</col>
+          <col>I</col>
+        </row>
+        <row>
+          <col>Monthly</col>
+          <col>A</col>
+        </row>
+        <row>
+          <col>Daily</col>
+          <col>D</col>
+        </row>
+      </data>
+    </table>
+    <table name="SPAN_FREQ">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>Semi-Anl</col>
+          <col>2</col>
+        </row>
+        <row>
+          <col>3x a yr</col>
+          <col>3</col>
+        </row>
+        <row>
+          <col>Annual</col>
+          <col>1</col>
+        </row>
+        <row>
+          <col>Quarter</col>
+          <col>4</col>
+        </row>
+        <row>
+          <col>Bi-Mthly</col>
+          <col>6</col>
+        </row>
+        <row>
+          <col>Monthly</col>
+          <col>12</col>
+        </row>
+        <row>
+          <col>Daily</col>
+          <col>1</col>
+        </row>
+      </data>
+    </table>
+    <table name="BB_EQY_REGION">
+      <Options>
+        <Option key="description"/>
+      </Options>
+      <header>
+        <col name="Source"/>
+        <col name="Destination"/>
+      </header>
+      <data>
+        <row>
+          <col>CN</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>IR</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KZ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>LT</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MX</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>U2</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>BA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CO</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>CY</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>EC</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>GA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IS</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>JM</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>LK</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>LU</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MO</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>MY</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>NI</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>OM</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>QA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>RO</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>SI</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>TC</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>TW</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>UG</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>AR</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>BB</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>CF</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CZ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>FR</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>GB</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IT</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KR</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>LB</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>LV</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MZ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PH</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>TN</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>EN</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BM</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>BW</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>DK</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>EE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>FI</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>JE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>JO</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>NA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PS</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>SA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>SK</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>US</col>
+          <col>NAMR</col>
+        </row>
+        <row>
+          <col>AT</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BD</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>BN</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>CH</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CR</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>FJ</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>HR</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IL</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>JP</col>
+          <col>ASIA1</col>
+        </row>
+        <row>
+          <col>MH</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>NL</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PT</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>TZ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>AU</col>
+          <col>ASIA1</col>
+        </row>
+        <row>
+          <col>BE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BO</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>BY</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CI</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CS</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>EG</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IM</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PA</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>PK</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>UA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>VE</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>ZA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>AL</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BZ</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>ID</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>IN</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>MT</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PL</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>SN</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>TH</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>TR</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BG</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>CA</col>
+          <col>NAMR</col>
+        </row>
+        <row>
+          <col>CK</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>DE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>ES</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>GG</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>HK</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>HU</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KW</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MA</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MU</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>NO</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>RU</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>SE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>VG</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>ZM</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>ZW</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>AN</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>BH</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BR</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>CL</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>GH</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>GR</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KN</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>NP</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>NZ</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>SZ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>TT</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>AE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>BS</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>EU</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>GI</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>IQ</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KE</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>KY</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>LI</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>MW</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>NG</col>
+          <col>EURO</col>
+        </row>
+        <row>
+          <col>PE</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>PY</col>
+          <col>LAMR</col>
+        </row>
+        <row>
+          <col>SG</col>
+          <col>ASIA2</col>
+        </row>
+        <row>
+          <col>UY</col>
+          <col>LAMR</col>
+        </row>
+      </data>
+    </table>
+    <table uri="./../Connection_Version.ttl">
+      <import name="Connection_Version"/>
+    </table>
+    <table uri="./../Config_Options.ttl">
+      <import name="Config_Options"/>
+    </table>
+    <table uri="BloombergETT.ttl">
+      <import name="BloombergETT"/>
+    </table>
+  </Translation>
+  <Expressions>
+    <Expression enabled="true" ident="KeyStreaming">
+      <expr><![CDATA[if (OneHasValue(ID_ISIN))
+	return ID_ISIN;
+else
+	return "";]]></expr>
+    </Expression>
+    <Expression enabled="true" ident="RecordIdentifier">
+      <expr><![CDATA[if (AllHaveValue(TICKER, EQY_PRIM_EXCH_SHRT, MARKET_SECTOR_DES))
+	return Strcat(
+			TICKER,
+			Strcat(";",
+					Strcat(EQY_PRIM_EXCH_SHRT,
+							Strcat(";",
+									Strcat(MARKET_SECTOR_DES,
+											Strcat(";",
+													Strcat(ERRORCODE,
+															Strcat(";", "OUT"))))))));
+else if (AllHaveValue(SECURITIES, EQY_PRIM_EXCH_SHRT, MARKET_SECTOR_DES))
+	return Strcat(
+			SECURITIES,
+			Strcat(";",
+					Strcat(EQY_PRIM_EXCH_SHRT,
+							Strcat(";",
+									Strcat(MARKET_SECTOR_DES,
+											Strcat(";",
+													Strcat(ERRORCODE,
+															Strcat(";", "OUT"))))))));
+else
+	return Strcat(SECURITIES,
+			Strcat(";", Strcat(ERRORCODE, Strcat(";", "OUT"))));]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="GSDMFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+    <Expression enabled="false" ident="VDSFiltering">
+      <expr><![CDATA[return "";]]></expr>
+    </Expression>
+  </Expressions>
+</MappingDef>

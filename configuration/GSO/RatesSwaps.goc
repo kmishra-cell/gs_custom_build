@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations cleanUnusedFields="false" nameSpace="MHI">
+  <policies>
+    <policy config="N" dgdpid="++4u-kJy2etzO00d" entityId="007dwWxi2euPC00r" id="00AEt7TWgMr0u00l" name="MHISetInstrTypesForRatesForwards" nameSpace="MHI" type="ALL">
+      <part dgdpid="++4u-kJy2etzO00d" id="00AEt7TWgMr0u00m" index="0" nameSpace="MHI" type="RELOAD_VALID_VALUES" value="SELECT ISS_TYP CODE, ISS_TYP_NME DISPLAY_NAME FROM FT_T_ISTY WHERE iss_typ_clsf_nme ='RatesSwaps' and END_TMS IS NULL"/>
+    </policy>
+  </policies>
+</configurations>

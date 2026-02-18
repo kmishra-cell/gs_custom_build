@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="RatesSwaps" entitySubType="[]" id="7Q8i01uaO2" isDefault="Y" isPublic="Y" screenType="SYSTEMFORM" title="F: MHI_RatesSwapsForm">
+  <control caption="RatesSwaps" columns="3" fullQualPath="" hideDetail="N" id="&amp;lt;Bun%&amp;gt;H3e1" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="PAGEVIEW">
+    <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Summary" columns="2" fullQualPath="" hideDetail="N" id="&amp;lt;Buo%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Bun%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Issuance" columns="3" fullQualPath="" hideDetail="N" id="&amp;lt;Bup%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Bun%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Issuance Information" columns="3" fullQualPath="" hideDetail="N" id="&amp;lt;Buq%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Bup%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instrument Name" columns="2" fullQualPath="RatesSwaps.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="&amp;lt;Bur%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Description" columns="2" fullQualPath="RatesSwaps.InstrumentDetails.PreferredInstrumentDescription" hideDetail="N" id="&amp;lt;Bus%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument Type" columns="2" fullQualPath="RatesSwaps.InstrumentDetails.InstrumentType" hideDetail="N" id="&amp;lt;But%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Instrument System Status" columns="2" fullQualPath="RatesSwaps.InstrumentDetails.InstrumentSystemStatus" hideDetail="N" id="&amp;lt;Buu%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Denominated Currency" columns="2" fullQualPath="RatesSwaps.InstrumentDetails.PrincipalCurrency" hideDetail="N" id="&amp;lt;Buv%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Issue Date" columns="2" fullQualPath="RatesSwaps.InstrumentDetails.IssueDate" hideDetail="N" id="&amp;lt;Buw%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Date" columns="2" fullQualPath="RatesSwaps.InstrumentDetails.MaturityDate" hideDetail="N" id="&amp;lt;Bux%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Issuance" columns="2" fullQualPath="RatesSwaps.InstrumentGeographicalInformation.CountryOfIssuance" hideDetail="N" id="&amp;lt;Buy%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Notional Exchange Type" columns="2" fullQualPath="RatesSwaps.SwapCharacteristics.SwapNotionalExchangeType" hideDetail="N" id="&amp;lt;Buz%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Deliverable Indicator" columns="2" fullQualPath="RatesSwaps.InstrumentDetails.DeliverableIndicator" hideDetail="N" id="&amp;lt;Bu$%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Settlement Currency" columns="2" fullQualPath="RatesSwaps.InstrumentDetails.DistributionCurrency" hideDetail="N" id="&amp;lt;Bu%%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="&amp;lt;Buq%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Identifiers" columns="3" fullQualPath="" hideDetail="N" id="&amp;lt;Bu@%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Bup%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Unique Swap ID" columns="2" fullQualPath="RatesSwaps.Identifiers.InstrumentLevelIdentifiers.UniqueSwapID" hideDetail="N" id="&amp;lt;Bu&amp;amp;%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Bu@%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Unique Swap ID Issuer" columns="2" fullQualPath="RatesSwaps.Identifiers.InstrumentLevelIdentifiers.UniqueSwapIDIssuer" hideDetail="N" id="&amp;lt;Bu*%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Bu@%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Client Swap ID" columns="2" fullQualPath="RatesSwaps.Identifiers.InstrumentLevelIdentifiers.ClientSwapID" hideDetail="N" id="&amp;lt;Bu-%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;Bu@%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Inhouse Identifier" columns="2" fullQualPath="RatesSwaps.Identifiers.InstrumentLevelIdentifiers.InhouseIdentifier" hideDetail="N" id="&amp;lt;Bu.%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="&amp;lt;Bu@%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Pricing Source ID" columns="2" fullQualPath="RatesSwaps.Identifiers.InstrumentLevelIdentifiers.PriceSourceID" hideDetail="N" id="&amp;lt;Bu/%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="&amp;lt;Bu@%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Clear Deal ID" columns="2" fullQualPath="RatesSwaps.Identifiers.InstrumentLevelIdentifiers.ClearDealID" hideDetail="N" id="&amp;lt;Bu(%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="&amp;lt;Bu@%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Classification" columns="3" fullQualPath="" hideDetail="N" id="&amp;lt;Bu)%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;Bup%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Internal Asset Class Definition" columns="2" fullQualPath="RatesSwaps.InstrumentClassification.IntAssetClsDef" hideDetail="N" id="&amp;lt;Bu~%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Bu)%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Internal Security Type" columns="2" fullQualPath="RatesSwaps.InstrumentClassification.IntSecTyp" hideDetail="N" id="&amp;lt;Bu?%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Bu)%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Internal Sub Security Type" columns="2" fullQualPath="RatesSwaps.InstrumentClassification.IntSubSecTyp" hideDetail="N" id="&amp;lt;Bu&amp;lt;%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;Bu)%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Leg 1 Details" columns="3" fullQualPath="" hideDetail="N" id="&amp;lt;Bu&amp;gt;%&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;Bun%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Leg Details" columns="3" fullQualPath="" hideDetail="N" id="CDu0m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="&amp;lt;Bu&amp;gt;%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Leg Type" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1Type" hideDetail="N" id="CDu1m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu0m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1Description" hideDetail="N" id="CDu2m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu0m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Inhouse Identifier" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1InhouseID" hideDetail="N" id="CDu3m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu0m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Effective Date" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PeriodStartDate" hideDetail="N" id="CDu4m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu0m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Date" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PeriodEndDate" hideDetail="N" id="CDu5m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDu0m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Swap Notional Value" columns="2" fullQualPath="RatesSwaps.Leg1Details.SwapNotionalValue" hideDetail="N" id="CDu6m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDu0m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Swap Notional Currency" columns="2" fullQualPath="RatesSwaps.Leg1Details.SwapNotionalCurrency" hideDetail="N" id="CDu7m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDu0m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Payment Currency" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PayCurrCde" hideDetail="N" id="CDu8m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDu0m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Payer and Receiver Details" columns="3" fullQualPath="" hideDetail="N" id="CDu9m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="&amp;lt;Bu&amp;gt;%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Payer" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1Payer.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="CDuAm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu9m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Payer Type" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1Payer.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="CDuBm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu9m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Payer LEI" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1Payer.FinancialInstitution.FinancialInstitutionIdentifiers.FinancialLegalEntityIdentifier" hideDetail="N" id="CDuCm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu9m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Receiver" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1Receiver.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="CDuDm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu9m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Receiver Type" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1Receiver.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="CDuEm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDu9m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Receiver LEI" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1Receiver.FinancialInstitution.FinancialInstitutionIdentifiers.FinancialLegalEntityIdentifier" hideDetail="N" id="CDuFm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDu9m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Leg Payment Details" columns="3" fullQualPath="" hideDetail="N" id="CDuGm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="&amp;lt;Bu&amp;gt;%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="TABSHEET">
+        <control caption="Calculation Details" columns="3" fullQualPath="" hideDetail="N" id="CDuHm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuGm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+          <control caption="Calculation Start Date" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CalcStartDate" hideDetail="N" id="CDuIm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuHm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation End Date" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CalcEndDate" hideDetail="N" id="CDuJm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuHm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation Tenor" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CalcTenor" hideDetail="N" id="CDuKm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuHm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CalcTenorPeriod" hideDetail="N" id="CDuLm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuHm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Roll Convention" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CalcPeriodRoll" hideDetail="N" id="CDuMm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuHm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation Business Day Convention" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CalcBusDayConv" hideDetail="N" id="CDuNm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuHm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Day Count Method" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1DayCountUsed" hideDetail="N" id="CDuOm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuHm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Compounding Method" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CompMethod" hideDetail="N" id="CDuPm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDuHm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation Business Calendar" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CalcCalId.CalendarDefinition.Calendar.CalendarName" hideDetail="N" id="CDuQm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="CDuHm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation Business Center" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CalcCalId.CalendarDefinition.BusinessCenter.BusinessCenterGeoUnit" hideDetail="N" id="CDuRm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="CDuHm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Payment Details" columns="3" fullQualPath="" hideDetail="N" id="CDuSm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuGm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+          <control caption="Payment Tenor" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PaymentTenor" hideDetail="N" id="CDuTm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuSm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PaymentTenorPeriod" hideDetail="N" id="CDuUm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuSm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Business Day Convention" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PaymentBusDayConv" hideDetail="N" id="CDuVm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuSm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Pay Relative To" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PayRelativeTo" hideDetail="N" id="CDuWm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuSm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Lag Tenor" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PaymentLagTenor" hideDetail="N" id="CDuXm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuSm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Lag Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PaymentLagTenorPeriod" hideDetail="N" id="CDuYm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuSm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Business Calendar" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PaymentCalId.CalendarDefinition.Calendar.CalendarName" hideDetail="N" id="CDuZm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuSm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Business Center" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1PaymentCalId.CalendarDefinition.BusinessCenter.BusinessCenterGeoUnit" hideDetail="N" id="CDuam&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDuSm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rate Details" columns="3" fullQualPath="" hideDetail="N" id="CDubm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuGm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+          <control caption="Dated Date" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1DatedDate" hideDetail="N" id="CDucm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="First Payment Date" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1FirstPaymentDate" hideDetail="N" id="CDudm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Coupon Date" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1LastCouponDate" hideDetail="N" id="CDuem&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Coupon Rate" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CouponRate" hideDetail="N" id="CDufm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Coupon Rate Type" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CouponRateType" hideDetail="N" id="CDugm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Coupon Rate Effective Date" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1CouponRateEffDate" hideDetail="N" id="CDuhm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Next Coupon Reset Date" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1NxtCpnResetDate" hideDetail="N" id="CDuim&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Precision" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1RatePrecision" hideDetail="N" id="CDujm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Rounding Direction" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1RateRoundingDir" hideDetail="N" id="CDukm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Float Rate Spread" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1FloatRateSpread" hideDetail="N" id="CDulm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Reference Index Name" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1RefIndexName" hideDetail="N" id="CDumm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Reference Index Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1RefIndexTenorPeriod" hideDetail="N" id="CDunm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Initial Fixing Date" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1InitialFixingDate" hideDetail="N" id="CDuom&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Fixing Date Offset" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1FixingDateOffset" hideDetail="N" id="CDupm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Reset Tenor" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1RateResetTenor" hideDetail="N" id="CDuqm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Reset Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1RateResetTenorPeriod" hideDetail="N" id="CDurm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Reset Business Day Convention" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1RateResetBusDayConv" hideDetail="N" id="CDusm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Reset Relative To" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1ResetRelativeTo" hideDetail="N" id="CDutm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Fixing Tenor" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1RateFixingTenor" hideDetail="N" id="CDuum&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Fixing Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1RateFixingTenorPeriod" hideDetail="N" id="CDuvm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Reset Business Calendar" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1ResetCalId.CalendarDefinition.Calendar.CalendarName" hideDetail="N" id="CDuwm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Reset Business Center" columns="2" fullQualPath="RatesSwaps.Leg1Details.Leg1ResetCalId.CalendarDefinition.BusinessCenter.BusinessCenterGeoUnit" hideDetail="N" id="CDuxm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="CDubm&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Leg 1 Description" columns="3" fullQualPath="RatesSwaps.Leg1Description" hideDetail="N" id="CDuym&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="5" parentId="&amp;lt;Bu&amp;gt;%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Leg Name" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionName" hideDetail="N" id="CDuzm&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionText" hideDetail="N" id="CDu$m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Source Of Leg Description" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionSource" hideDetail="N" id="CDu%m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Usage" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionUsage" hideDetail="N" id="CDu@m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Language" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionLanguage" hideDetail="N" id="CDu&amp;amp;m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Effective Date" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionEffectiveDate" hideDetail="N" id="CDu*m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Active Until" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionActiveUntil" hideDetail="N" id="CDu-m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Data Source" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionDataSource" hideDetail="N" id="CDu.m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Data Status" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionDataStatus" hideDetail="N" id="CDu/m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Last Change Date" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionLastChangeDate" hideDetail="N" id="CDu(m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Last Change User" columns="2" fullQualPath="RatesSwaps.Leg1Description.Leg1DescriptionLastChangeUser" hideDetail="N" id="CDu)m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="CDuym&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Leg 2 Details" columns="3" fullQualPath="" hideDetail="N" id="CDu~m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="&amp;lt;Bun%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Leg Details" columns="3" fullQualPath="" hideDetail="N" id="CDu?m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu~m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Leg Type" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2Type" hideDetail="N" id="CDu&amp;lt;m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu?m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2Description" hideDetail="N" id="CDu&amp;gt;m&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu?m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Inhouse Identifier" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2InhouseID" hideDetail="N" id="CDu0n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu?m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Effective Date" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PeriodStartDate" hideDetail="N" id="CDu1n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu?m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Maturity Date" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PeriodEndDate" hideDetail="N" id="CDu2n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDu?m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Swap Notional Value" columns="2" fullQualPath="RatesSwaps.Leg2Details.SwapFinalNotionalValue" hideDetail="N" id="CDu3n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDu?m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Swap Notional Currency" columns="2" fullQualPath="RatesSwaps.Leg2Details.SwapFinalNotionalCurrency" hideDetail="N" id="CDu4n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDu?m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Payment Currency" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PayCurrCde" hideDetail="N" id="CDu5n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDu?m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Payer and Receiver Details" columns="3" fullQualPath="" hideDetail="N" id="CDu6n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu~m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Payer" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2Payer.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="CDu7n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu6n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Payer Type" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2Payer.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="CDu8n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu6n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Payer LEI" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2Payer.FinancialInstitution.FinancialInstitutionIdentifiers.FinancialLegalEntityIdentifier" hideDetail="N" id="CDu9n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu6n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Receiver" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2Receiver.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="CDuAn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu6n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Receiver Type" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2Receiver.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="CDuBn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDu6n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Receiver LEI" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2Receiver.FinancialInstitution.FinancialInstitutionIdentifiers.FinancialLegalEntityIdentifier" hideDetail="N" id="CDuCn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDu6n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Leg Payment Details" columns="3" fullQualPath="" hideDetail="N" id="CDuDn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu~m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="TABSHEET">
+        <control caption="Calculation Details" columns="3" fullQualPath="" hideDetail="N" id="CDuEn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuDn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+          <control caption="Calculation Start Date" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CalcStartDate" hideDetail="N" id="CDuFn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuEn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation End Date" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CalcEndDate" hideDetail="N" id="CDuGn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuEn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation Tenor" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CalcTenor" hideDetail="N" id="CDuHn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuEn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CalcTenorPeriod" hideDetail="N" id="CDuIn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuEn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Roll Convention" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CalcPeriodRoll" hideDetail="N" id="CDuJn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuEn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation Business Day Convention" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CalcBusDayConv" hideDetail="N" id="CDuKn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuEn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Day Count Method" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2DayCountUsed" hideDetail="N" id="CDuLn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuEn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Compounding Method" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CompMethod" hideDetail="N" id="CDuMn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDuEn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation Business Calendar" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CalcCalId.CalendarDefinition.Calendar.CalendarName" hideDetail="N" id="CDuNn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="CDuEn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Calculation Business Center" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CalcCalId.CalendarDefinition.BusinessCenter.BusinessCenterGeoUnit" hideDetail="N" id="CDuOn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="CDuEn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Payment Details" columns="3" fullQualPath="" hideDetail="N" id="CDuPn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuDn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+          <control caption="Payment Tenor" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PaymentTenor" hideDetail="N" id="CDuQn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuPn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PaymentTenorPeriod" hideDetail="N" id="CDuRn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuPn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Business Day Convention" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PaymentBusDayConv" hideDetail="N" id="CDuSn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuPn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Pay Relative To" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PayRelativeTo" hideDetail="N" id="CDuTn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuPn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Lag Tenor" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PaymentLagTenor" hideDetail="N" id="CDuUn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuPn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Lag Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PaymentLagTenorPeriod" hideDetail="N" id="CDuVn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuPn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Business Calendar" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PaymentCalId.CalendarDefinition.Calendar.CalendarName" hideDetail="N" id="CDuWn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuPn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Business Center" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2PaymentCalId.CalendarDefinition.BusinessCenter.BusinessCenterGeoUnit" hideDetail="N" id="CDuXn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDuPn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Rate Details" columns="3" fullQualPath="" hideDetail="N" id="CDuYn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuDn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+          <control caption="Dated Date" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2DatedDate" hideDetail="N" id="CDuZn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="First Payment Date" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2FirstPaymentDate" hideDetail="N" id="CDuan&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Coupon Date" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2LastCouponDate" hideDetail="N" id="CDubn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Coupon Rate" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CouponRate" hideDetail="N" id="CDucn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Coupon Rate Type" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CouponRateType" hideDetail="N" id="CDudn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Coupon Rate Effective Date" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2CouponRateEffDate" hideDetail="N" id="CDuen&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Next Coupon Reset Date" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2NxtCpnResetDate" hideDetail="N" id="CDufn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Precision" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2RatePrecision" hideDetail="N" id="CDugn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Rounding Direction" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2RateRoundingDir" hideDetail="N" id="CDuhn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Float Rate Spread" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2FloatRateSpread" hideDetail="N" id="CDuin&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Reference Index Name" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2RefIndexName" hideDetail="N" id="CDujn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Reference Index Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2RefIndexTenorPeriod" hideDetail="N" id="CDukn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Initial Fixing Date" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2InitialFixingDate" hideDetail="N" id="CDuln&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Fixing Date Offset" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2FixingDateOffset" hideDetail="N" id="CDumn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Reset Tenor" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2RateResetTenor" hideDetail="N" id="CDunn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Reset Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2RateResetTenorPeriod" hideDetail="N" id="CDuon&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Reset Business Day Convention" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2RateResetBusDayConv" hideDetail="N" id="CDupn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Reset Relative To" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2ResetRelativeTo" hideDetail="N" id="CDuqn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Fixing Tenor" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2RateFixingTenor" hideDetail="N" id="CDurn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="18" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Fixing Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2RateFixingTenorPeriod" hideDetail="N" id="CDusn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="19" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Reset Business Calendar" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2ResetCalId.CalendarDefinition.Calendar.CalendarName" hideDetail="N" id="CDutn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="20" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Rate Reset Business Center" columns="2" fullQualPath="RatesSwaps.Leg2Details.Leg2ResetCalId.CalendarDefinition.BusinessCenter.BusinessCenterGeoUnit" hideDetail="N" id="CDuun&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="21" pageSize="0" parentId="CDuYn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Leg 2 Description" columns="3" fullQualPath="RatesSwaps.Leg2Description" hideDetail="N" id="CDuvn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="5" parentId="CDu~m&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Leg Name" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionName" hideDetail="N" id="CDuwn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionText" hideDetail="N" id="CDuxn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Source Of Leg Description" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionSource" hideDetail="N" id="CDuyn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Usage" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionUsage" hideDetail="N" id="CDuzn&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Language" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionLanguage" hideDetail="N" id="CDu$n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Effective Date" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionEffectiveDate" hideDetail="N" id="CDu%n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Active Until" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionActiveUntil" hideDetail="N" id="CDu@n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Data Source" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionDataSource" hideDetail="N" id="CDu&amp;amp;n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Data Status" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionDataStatus" hideDetail="N" id="CDu*n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Last Change Date" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionLastChangeDate" hideDetail="N" id="CDu-n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Leg Description Last Change User" columns="2" fullQualPath="RatesSwaps.Leg2Description.Leg2DescriptionLastChangeUser" hideDetail="N" id="CDu.n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="CDuvn&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Stub Details" columns="2" fullQualPath="" hideDetail="N" id="CDu/n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="&amp;lt;Bun%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Leg 1 Initial Stub" columns="3" fullQualPath="RatesSwaps.Leg1InitialStub" hideDetail="N" id="CDu(n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu/n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Initial Stub Start Date" columns="2" fullQualPath="RatesSwaps.Leg1InitialStub.Leg1InitialStubStartDate" hideDetail="N" id="CDu)n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu(n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub End Date" columns="2" fullQualPath="RatesSwaps.Leg1InitialStub.Leg1InitialStubEndDate" hideDetail="N" id="CDu~n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu(n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Period Long Indicator" columns="2" fullQualPath="RatesSwaps.Leg1InitialStub.Leg1InitialStubLongInd" hideDetail="N" id="CDu?n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu(n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Index Name" columns="2" fullQualPath="RatesSwaps.Leg1InitialStub.Leg1InitialStubIndexName" hideDetail="N" id="CDu&amp;lt;n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu(n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Index Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg1InitialStub.Leg1InitialStubIndexTenorPeriod" hideDetail="N" id="CDu&amp;gt;n&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDu(n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Fixed Rate" columns="2" fullQualPath="RatesSwaps.Leg1InitialStub.Leg1InitialStubFixedRate" hideDetail="N" id="CDu0o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDu(n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Leg 1 Final Stub" columns="3" fullQualPath="RatesSwaps.Leg1FinalStub" hideDetail="N" id="CDu1o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu/n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Final Stub Start Date" columns="2" fullQualPath="RatesSwaps.Leg1FinalStub.Leg1FinalStubStartDate" hideDetail="N" id="CDu2o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu1o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub End Date" columns="2" fullQualPath="RatesSwaps.Leg1FinalStub.Leg1FinalStubEndDate" hideDetail="N" id="CDu3o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu1o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Period Long Indicator" columns="2" fullQualPath="RatesSwaps.Leg1FinalStub.Leg1FinalStubLongInd" hideDetail="N" id="CDu4o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu1o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Index Name" columns="2" fullQualPath="RatesSwaps.Leg1FinalStub.Leg1FinalStubIndexName" hideDetail="N" id="CDu5o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu1o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Index Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg1FinalStub.Leg1FinalStubIndexTenorPeriod" hideDetail="N" id="CDu6o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDu1o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Fixed Rate" columns="2" fullQualPath="RatesSwaps.Leg1FinalStub.Leg1FinalStubFixedRate" hideDetail="N" id="CDu7o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDu1o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Leg 2 Initial Stub" columns="3" fullQualPath="RatesSwaps.Leg2InitialStub" hideDetail="N" id="CDu8o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu/n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Initial Stub Start Date" columns="2" fullQualPath="RatesSwaps.Leg2InitialStub.Leg2InitialStubStartDate" hideDetail="N" id="CDu9o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu8o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub End Date" columns="2" fullQualPath="RatesSwaps.Leg2InitialStub.Leg2InitialStubEndDate" hideDetail="N" id="CDuAo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu8o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Period Long Indicator" columns="2" fullQualPath="RatesSwaps.Leg2InitialStub.Leg2InitialStubLongInd" hideDetail="N" id="CDuBo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu8o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Index Name" columns="2" fullQualPath="RatesSwaps.Leg2InitialStub.Leg2InitialStubIndexName" hideDetail="N" id="CDuCo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu8o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Index Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg2InitialStub.Leg2InitialStubIndexTenorPeriod" hideDetail="N" id="CDuDo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDu8o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Initial Stub Fixed Rate" columns="2" fullQualPath="RatesSwaps.Leg2InitialStub.Leg2InitialStubFixedRate" hideDetail="N" id="CDuEo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDu8o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Leg 2 Final Stub" columns="3" fullQualPath="RatesSwaps.Leg2FinalStub" hideDetail="N" id="CDuFo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu/n&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+        <control caption="Final Stub Start Date" columns="2" fullQualPath="RatesSwaps.Leg2FinalStub.Leg2FinalStubStartDate" hideDetail="N" id="CDuGo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuFo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub End Date" columns="2" fullQualPath="RatesSwaps.Leg2FinalStub.Leg2FinalStubEndDate" hideDetail="N" id="CDuHo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuFo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Period Long Indicator" columns="2" fullQualPath="RatesSwaps.Leg2FinalStub.Leg2FinalStubLongInd" hideDetail="N" id="CDuIo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuFo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Index Name" columns="2" fullQualPath="RatesSwaps.Leg2FinalStub.Leg2FinalStubIndexName" hideDetail="N" id="CDuJo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuFo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Index Tenor Period" columns="2" fullQualPath="RatesSwaps.Leg2FinalStub.Leg2FinalStubIndexTenorPeriod" hideDetail="N" id="CDuKo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuFo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Final Stub Fixed Rate" columns="2" fullQualPath="RatesSwaps.Leg2FinalStub.Leg2FinalStubFixedRate" hideDetail="N" id="CDuLo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuFo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Notional Step Schedule" columns="3" fullQualPath="" hideDetail="N" id="CDuMo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="&amp;lt;Bun%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Leg 1 Notional Step Schedule" columns="3" fullQualPath="RatesSwaps.Leg1NotionalStepSch" hideDetail="N" id="CDuNo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="10" parentId="CDuMo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Start Date" columns="2" fullQualPath="RatesSwaps.Leg1NotionalStepSch.Leg1NotionalStepStartDate" hideDetail="N" id="CDuOo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuNo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="End Date" columns="2" fullQualPath="RatesSwaps.Leg1NotionalStepSch.Leg1NotionalStepEndDate" hideDetail="N" id="CDuPo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuNo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Notional Step Rate Type" columns="2" fullQualPath="RatesSwaps.Leg1NotionalStepSch.Leg1NotionalStepRateType" hideDetail="N" id="CDuQo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuNo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Notional Step Rate" columns="2" fullQualPath="RatesSwaps.Leg1NotionalStepSch.Leg1NotionalStepRate" hideDetail="N" id="CDuRo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuNo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Notional Step Amount" columns="2" fullQualPath="RatesSwaps.Leg1NotionalStepSch.Leg1NotionalStepAmount" hideDetail="N" id="CDuSo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuNo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Leg 2 Notional Step Schedule" columns="3" fullQualPath="RatesSwaps.Leg2NotionalStepSch" hideDetail="N" id="CDuTo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="10" parentId="CDuMo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Start Date" columns="2" fullQualPath="RatesSwaps.Leg2NotionalStepSch.Leg2NotionalStepStartDate" hideDetail="N" id="CDuUo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuTo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="End Date" columns="2" fullQualPath="RatesSwaps.Leg2NotionalStepSch.Leg2NotionalStepEndDate" hideDetail="N" id="CDuVo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuTo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Notional Step Rate Type" columns="2" fullQualPath="RatesSwaps.Leg2NotionalStepSch.Leg2NotionalStepRateType" hideDetail="N" id="CDuWo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuTo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Notional Step Rate" columns="2" fullQualPath="RatesSwaps.Leg2NotionalStepSch.Leg2NotionalStepRate" hideDetail="N" id="CDuXo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuTo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Notional Step Amount" columns="2" fullQualPath="RatesSwaps.Leg2NotionalStepSch.Leg2NotionalStepAmount" hideDetail="N" id="CDuYo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuTo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Swap Maturity Event" columns="3" fullQualPath="" hideDetail="N" id="CDuZo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="&amp;lt;Bun%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Event Details" columns="3" fullQualPath="" hideDetail="N" id="CDuao&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuZo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Event Type" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventType" hideDetail="N" id="CDubo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Mandatory/Optional Indicator" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventMandOptInd" hideDetail="N" id="CDuco&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Exercise Type" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventExerciseType" hideDetail="N" id="CDudo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Event Date Relative To" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventDateRelativeTo" hideDetail="N" id="CDueo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Event Period Multiplier" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventPeriodMultiplier" hideDetail="N" id="CDufo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Event Period" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventPeriod" hideDetail="N" id="CDugo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Event Day Type" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventDayType" hideDetail="N" id="CDuho&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Business Day Convention" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventBusDayConv" hideDetail="N" id="CDuio&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Exercise Fee Type" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventExerciseFeeType" hideDetail="N" id="CDujo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Exercise Fee Amount" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventExerciseFeeAmt" hideDetail="N" id="CDuko&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Exercise Fee Rate" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventExerciseFeeRate" hideDetail="N" id="CDulo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Cash Settlement Date" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventCashSettDate" hideDetail="N" id="CDumo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="CDuao&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Exercise Schedule" columns="3" fullQualPath="" hideDetail="N" id="CDuno&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuZo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Exercise Date" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapMatEventDate" hideDetail="N" id="CDuoo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuno&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Exercise Period Start Date" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapExerciseSchedule.SwapExercisePeriodStartDate" hideDetail="N" id="CDupo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuno&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Exercise Period End Date" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapExerciseSchedule.SwapExercisePeriodEndDate" hideDetail="N" id="CDuqo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuno&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Exercise Date Relative To" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapExerciseSchedule.SwapExerciseDateRelativeTo" hideDetail="N" id="CDuro&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuno&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Exercise Period Multiplier" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapExerciseSchedule.SwapExercisePeriodMultiplier" hideDetail="N" id="CDuso&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDuno&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Exercise Period" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapExerciseSchedule.SwapExercisePeriod" hideDetail="N" id="CDuto&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDuno&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Exercise Day Type" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapExerciseSchedule.SwapExerciseDayType" hideDetail="N" id="CDuuo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDuno&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Bermudan Exercise Dates" columns="3" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapExerciseSchedule.SwapBermudanExerciseDates" hideDetail="N" id="CDuvo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuZo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Exercise Date" columns="2" fullQualPath="RatesSwaps.SwapMaturityEvent.SwapExerciseSchedule.SwapBermudanExerciseDates.SwapBermudanExerDate" hideDetail="N" id="CDuwo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuvo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Initial Payment Details" columns="3" fullQualPath="RatesSwaps.InitialPaymentDetails" hideDetail="N" id="CDuxo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="&amp;lt;Bun%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="RECORD">
+      <control caption="Initial Payment Date" columns="2" fullQualPath="RatesSwaps.InitialPaymentDetails.InitialPaymentDate" hideDetail="N" id="CDuyo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDuxo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Initial Payment Payer" columns="2" fullQualPath="RatesSwaps.InitialPaymentDetails.InitialPaymentPayer" hideDetail="N" id="CDuzo&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDuxo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Initial Payment Currency" columns="2" fullQualPath="RatesSwaps.InitialPaymentDetails.InitialPaymentCurrency" hideDetail="N" id="CDu$o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDuxo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Initial Payment Amount" columns="2" fullQualPath="RatesSwaps.InitialPaymentDetails.InitialPaymentAmount" hideDetail="N" id="CDu%o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDuxo&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Settlement Details" columns="3" fullQualPath="" hideDetail="N" id="CDu@o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="&amp;lt;Bun%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+      <control caption="Settlement Method Type" columns="2" fullQualPath="RatesSwaps.SwapCharacteristics.SettlementMethodType" hideDetail="N" id="CDu&amp;amp;o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Cleared Indicator" columns="2" fullQualPath="RatesSwaps.SwapCharacteristics.SwapClearedInd" hideDetail="N" id="CDu*o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="CCP MIC" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.CCPMICCode" hideDetail="N" id="CDu-o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Swap Payment Type" columns="2" fullQualPath="RatesSwaps.SwapCharacteristics.SwapPaymentType" hideDetail="N" id="CDu.o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calculation Agent" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.CalculationAgent.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="CDu/o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calculation Agent Type" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.CalculationAgent.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="CDu(o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calculation Agent ID" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.CalculationAgent.FinancialInstitution.FinancialInstitutionIdentifiers.InhouseIdentifier" hideDetail="N" id="CDu)o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calculation Agent Business Calendar" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.CalculationAgent.FinancialInstitution.CalcAgentBusinessCalendar.CalcAgentBusCalId" hideDetail="N" id="CDu~o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Calculation Agent Business Center" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.CalculationAgent.FinancialInstitution.CalcAgentBusinessCalendar.CalcAgentBusCenter" hideDetail="N" id="CDu?o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Clearing House" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.ClearingHouse.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="CDu&amp;lt;o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Clearing House Type" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.ClearingHouse.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="CDu&amp;gt;o&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Clearing House ID" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.ClearingHouse.FinancialInstitution.FinancialInstitutionIdentifiers.InhouseIdentifier" hideDetail="N" id="CDu0p&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Clearing Broker" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.ClearingBroker.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="CDu1p&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Clearing Broker Type" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.ClearingBroker.FinancialInstitution.FinancialInstitutionDetails.InstitutionType" hideDetail="N" id="CDu2p&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Clearing Broker ID" columns="2" fullQualPath="RatesSwaps.SwapSettlementDetails.ClearingBroker.FinancialInstitution.FinancialInstitutionIdentifiers.InhouseIdentifier" hideDetail="N" id="CDu3p&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="CDu@o&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Instrument Documents" columns="3" fullQualPath="RatesSwaps.InstrumentDocuments" hideDetail="N" id="CDu4p&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="10" parentId="&amp;lt;Bun%&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Issue Document Description" columns="2" fullQualPath="RatesSwaps.InstrumentDocuments.IssueDocumentDescription" hideDetail="N" id="CDu5p&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu4p&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Issue Document Purpose" columns="2" fullQualPath="RatesSwaps.InstrumentDocuments.IssueDocumentPurpose" hideDetail="N" id="CDu6p&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu4p&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Document History" columns="2" fullQualPath="RatesSwaps.InstrumentDocuments.DocumentHistory" hideDetail="N" id="CDu7p&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu4p&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Document Image ID" columns="2" fullQualPath="RatesSwaps.InstrumentDocuments.DocumentHistory.DocumentImageID" hideDetail="N" id="CDu8p&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="CDu7p&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Internal ID" columns="2" fullQualPath="RatesSwaps.InstrumentDocuments.DocumentHistory.DocumentInternalID" hideDetail="N" id="CDu9p&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="CDu7p&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document NLS Code" columns="2" fullQualPath="RatesSwaps.InstrumentDocuments.DocumentHistory.DocumentNLSCode" hideDetail="N" id="CDuAp&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="CDu7p&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Comment" columns="2" fullQualPath="RatesSwaps.InstrumentDocuments.DocumentHistory.DocumentComment" hideDetail="N" id="CDuBp&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="CDu7p&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Status" columns="2" fullQualPath="RatesSwaps.InstrumentDocuments.DocumentHistory.DocumentStatus" hideDetail="N" id="CDuCp&amp;gt;H3e1" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="CDu7p&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Status Date/Time" columns="2" fullQualPath="RatesSwaps.InstrumentDocuments.DocumentHistory.DocumentStatusDateTime" hideDetail="N" id="CDuDp&amp;gt;H3e1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="CDu7p&amp;gt;H3e1" relatedPath="" screenId="7Q8i01uaO2" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"TEMPLATE_FLD_PRPT_CONFIG":[{"IS_RELATION_EDITABLE":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

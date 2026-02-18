@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="ClearingAgreementsAndGuarantees" entitySubType="[]" id="USp1m&gt;1LO1" isDefault="N" isPublic="N" screenType="SYSTEMFORM" title="F: MHI_ClearingAgreementsGuarantees_Form">
+  <users>
+    <user id="3/CnE1H3e1" user="" userGroup="" userRole="creditdepartment"/>
+    <user id="3/CpE1H3e1" user="" userGroup="" userRole="readonly"/>
+    <user id="3/CoE1H3e1" user="" userGroup="" userRole="task_supervisor"/>
+    <user id="3/CqE1H3e1" user="" userGroup="" userRole="data_office"/>
+    <user id="3/CuE1H3e1" user="" userGroup="" userRole="support"/>
+    <user id="3/CrE1H3e1" user="" userGroup="" userRole="tradesupport"/>
+    <user id="3/CsE1H3e1" user="" userGroup="" userRole="legaldepartment"/>
+    <user id="3/CtE1H3e1" user="" userGroup="" userRole="creditmanagement"/>
+  </users>
+  <control caption="Clearing Agreement and Guarantees" columns="2" fullQualPath="" hideDetail="N" id="Z19101Dve1" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="PAGEVIEW">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Legal Agreement" columns="2" fullQualPath="" hideDetail="N" id="Z19201Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19101Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Publishing" columns="2" fullQualPath="" hideDetail="N" id="Z19301Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <buttons>
+          <button caption="Re-Publish" id="Z19701Dve1">
+            <property name="AlwaysVisible" value="true"/>
+            <property name="Event Type" value="GenericEvent"/>
+            <property name="LegalAgrCrossRefId" value="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRCrossReferenceID"/>
+            <property name="Type" value="event"/>
+            <property name="Event Name" value="MZ_WF_PublishingLegalAgreement"/>
+          </button>
+        </buttons>
+        <control caption="Last Published" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.Publishing.PBATLAGRLastPublished" hideDetail="N" id="Z19401Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19301Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Updated" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.Publishing.UPD1LAGRLastUpdated" hideDetail="N" id="Z19501Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19301Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Version" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.Publishing.UPD1LAGRVersion" hideDetail="N" id="Z19601Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19301Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Summary" columns="2" fullQualPath="" hideDetail="N" id="Z19D01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Agreement Description" columns="0" fullQualPath="ClearingAgreementsAndGuarantees.DerivativeAgreement.DerivativeAgreementRelation.ISDAMasterAgreementsAndCSAAgreement.LegalAgreementDetail.LAGRAgreementDescription" hideDetail="N" id="Z19E01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19D01Dve1" relatedPath="ClearingAgreementsAndGuarantees.DerivativeAgreement.DerivativeAgreementRelation" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Open ISDA Agreement Details"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}]}</config>
+        </control>
+        <control caption="Agreement Description" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementDescription" hideDetail="N" id="Z19F01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19D01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"CAPTION_OVERRIDE":[{"LABEL":"Agreement Label"}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Agreement Type" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementType" hideDetail="N" id="Z19G01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19D01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Clearing Agreements and Guarantees Type"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Organization ID" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.MHIOrganization.Enterprise.EnterpriseInformation.OrganizationID" hideDetail="N" id="Z19H01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Z19D01Dve1" relatedPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.MHIOrganization" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Organization"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Agreement Comment" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.AgreementComment" hideDetail="N" id="Z19I01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Z19D01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Notes (Legal use only)"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Agreement Purpose" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementPurpose" hideDetail="N" id="Z19J01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Z19D01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Document Effective Date" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRDocumentEffectiveDate" hideDetail="N" id="Z19K01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Z19D01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Legal Jurisdiction Name" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRLegalJurisdictionName" hideDetail="N" id="Z19L01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Z19D01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Governing Law"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="GS Agreement Reference" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIAgreementReference.LAIDLAGRLeglAgrmntID" hideDetail="N" id="Z19M01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="Z19D01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Mizuho Institution Name" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.MHIFLARLAGRInstMnemonic" hideDetail="N" id="Z19N01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="Z19D01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Legal Entity" columns="2" fullQualPath="" hideDetail="N" id="Z19O01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="BB Company ID" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity.FinancialInstitution.FinancialInstitutionIdentifiers.BBCompanyID" hideDetail="N" id="Z19P01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19O01Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Institution Name" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="Z19Q01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19O01Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="GICS Sector" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity.FinancialInstitution.FinancialInstitutionClassification.FICLFINSGicsSector" hideDetail="N" id="Z19R01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19O01Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Country Of Incorporation" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity.FinancialInstitution.MHIGeographicalInformation.FIGUFINSCountryofIncorporation" hideDetail="N" id="Z19S01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Z19O01Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Fitch Rating" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity.FinancialInstitution.MHIFMSPRating.FIRTFINSFitchRTNG" hideDetail="N" id="Z19T01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Z19O01Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="S&amp;amp;P Rating" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity.FinancialInstitution.MHIFMSPRating.FIRTFINSSPRTNG" hideDetail="N" id="Z19U01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Z19O01Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Moody&amp;apos;s Rating" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity.FinancialInstitution.MHIFMSPRating.FIRTFINSMoodysRTNG" hideDetail="N" id="Z19V01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Z19O01Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="ClientRef ID" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity.FinancialInstitution.FinancialInstitutionDetails.IRIDISSRClientRefID" hideDetail="N" id="Z19W01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Z19O01Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHILegalEntity.LegalEntity" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Role" columns="2" fullQualPath="" hideDetail="N" id="Z19X01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Mizuho Role" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.FLARLAGRMizuhoRole" hideDetail="N" id="Z19Y01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19X01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Counterparty Role" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHILegalEntity.FLARLAGRCounterpartyRole" hideDetail="N" id="Z19Z01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19X01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Status" columns="2" fullQualPath="" hideDetail="N" id="Z19a01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Agreement Status" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementStatus" hideDetail="N" id="Z19b01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19a01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="AgreementSignatureDate" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementSignatureDate" hideDetail="N" id="Z19c01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19a01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Date of Agreement"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="AgreemenApprovaDate" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LAGRAgreementApprovalDate" hideDetail="N" id="Z19d01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19a01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Date of Mizuho Credit Approval"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instruction" columns="2" fullQualPath="" hideDetail="N" id="Z19e01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instructed By" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIInstrucAndTerm.CCRFLAGRInstructedBy" hideDetail="N" id="Z19f01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19e01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Legal Dept Person" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIInstrucAndTerm.CCRFLAGRLegalDeptPerson" hideDetail="N" id="Z19g01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19e01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Department" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIComments.GNCMLAGRDepartment" hideDetail="N" id="Z19h01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19e01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Agreement Negotiation Instruction Date" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.AgreementNegotiationInstructionDate" hideDetail="N" id="Z19i01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Z19e01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Termination" columns="2" fullQualPath="" hideDetail="N" id="Z19j01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Instructed By" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIInstrucAndTerm.CCRFLAGRTermInstructedBy" hideDetail="N" id="Z19k01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19j01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Legal Dept Person" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIInstrucAndTerm.CCRFLAGRTermLegalDeptPerson" hideDetail="N" id="Z19l01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19j01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Department" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIComments.GNCMLAGRTermDepartment" hideDetail="N" id="Z19m01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19j01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Agreement Termination Date" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.AgreementTerminationDate" hideDetail="N" id="Z19n01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Z19j01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Enforcement" columns="2" fullQualPath="" hideDetail="N" id="Z19o01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Legal Opinion Indicator" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.LegalAgreementDetail.LegalOpinionIndicator" hideDetail="N" id="Z19p01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19o01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Enforceability in Jurisdiction (legal opinion)"}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="MHICoverage" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHICoverage" hideDetail="N" id="Z19q01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="10" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Branch Name" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHICoverage.LACVFLARBranchName" hideDetail="N" id="Z19r01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19q01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Location"}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Customer Product Name" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHICoverage.LACVFLARCustomerProductName" hideDetail="N" id="Z19s01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19q01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Product"}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Mizuho Branches"}],"DETAIL_CHART_CONFIG":[],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+      </control>
+      <control caption="MHICounterpartyCoverage" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHICounterpartyCoverage" hideDetail="N" id="Z19t01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="10" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Counterparty Branch Name" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHICounterpartyCoverage.LACVFLARCounterpartyBranchName" hideDetail="N" id="Z19u01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19t01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Location"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Counterparty Customer Product Name" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHICounterpartyCoverage.LACVFLARCounterpartyCustomerProductName" hideDetail="N" id="Z19v01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19t01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Product"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Counterparty Branches"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Versioning" columns="2" fullQualPath="" hideDetail="N" id="Z19w01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="Z19201Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="TABSHEET">
+        <control caption="MHIVersionDetail" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIVersionDetail" hideDetail="N" id="Z19x01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="10" parentId="Z19w01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+          <control caption="Version No" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIVersionDetail.LAV1LAGRVersionNo" hideDetail="N" id="Z19y01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19x01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Amendment Description" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIVersionDetail.LAV1LAGRAmendDesc" hideDetail="N" id="Z19z01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19x01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Version Amend Date" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIVersionDetail.LAV1LAGRVerAmendDte" hideDetail="N" id="Z19$01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19x01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Document Link" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIVersionDetail.LAV1DocLink" hideDetail="N" id="Z19%01Dve1" inlineEdit="N" isColumnInTable="N" labelName="Validity" lazyInd="N" orderNum="3" pageSize="0" parentId="Z19x01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Agreement Version History"}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Addendums" columns="2" fullQualPath="" hideDetail="N" id="Z19@01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19101Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Platforms" columns="2" fullQualPath="" hideDetail="N" id="Z19&amp;amp;01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19@01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+        <control caption="Platforms" columns="2" fullQualPath="" hideDetail="N" id="Z19*01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19&amp;amp;01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+          <control caption="Institution Name" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFDetails.MHIOpenPFDetails.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="Z19-01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19*01Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHIPFDetails.MHIOpenPFDetails" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Platform Name"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Instruction Comments" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFDetails.FLARLAGRPFInstructionComments" hideDetail="N" id="Z19.01Dve1" inlineEdit="N" isColumnInTable="N" labelName="Validity" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19*01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Start Date/Time" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFDetails.FLARLAGRPFStartDateTime" hideDetail="N" id="Z19/01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19*01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="End Date/Time" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFDetails.FLARLAGRPFEndDateTime" hideDetail="N" id="Z19(01Dve1" inlineEdit="N" isColumnInTable="N" labelName="Data Source" lazyInd="N" orderNum="3" pageSize="0" parentId="Z19*01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Data Status" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFDetails.FLARLAGRPFDataStatus" hideDetail="N" id="Z19)01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Z19*01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Data Source" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFDetails.FLARLAGRPFDataSource" hideDetail="N" id="Z19~01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Z19*01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change Date/Time" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFDetails.FLARLAGRPFLastChangeDateTime" hideDetail="N" id="Z19?01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Z19*01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change User ID" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFDetails.FLARLAGRPFLastChangeUserID" hideDetail="N" id="Z19&amp;lt;01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Z19*01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Institution Name" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFDetails.MHIPlatformRefEntituy.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="Z19&amp;gt;01Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="Z19*01Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHIPFDetails.MHIPlatformRefEntituy" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Reference Entity"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Margin Information" columns="2" fullQualPath="" hideDetail="N" id="Z19011Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19&amp;amp;01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="TABSHEET">
+          <control caption="Initial Margin" columns="2" fullQualPath="" hideDetail="N" id="Z19111Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Base Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIMarginInfo.LAAPFLARBaseCurrency" hideDetail="N" id="Z19211Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19111Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Margin Type" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIMarginInfo.GNCMLAAPFLARMarginType" hideDetail="N" id="Z19311Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19111Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="MHIPFEligibleCurrencies" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFEligibleCurrencies" hideDetail="N" id="Z19411Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="10" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+            <control caption="Valuation Percentage" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFEligibleCurrencies.LACDLAAPPFValuationPercentage" hideDetail="N" id="Z19511Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19411Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Haircut Percentage" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFEligibleCurrencies.LACDLAAPPFHaircutPercentage" hideDetail="N" id="Z19611Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19411Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Eligible Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFEligibleCurrencies.LACDLAAPPFEligibleCurrency" hideDetail="N" id="Z19711Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19411Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Eligible Currencies"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Frequency" columns="2" fullQualPath="" hideDetail="N" id="Z19811Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Frequency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFThresholds.LAATLAAPPFFrequency" hideDetail="N" id="Z19911Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19811Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Thresholds-MTA-Mizuho" columns="2" fullQualPath="" hideDetail="N" id="Z19A11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Minimum Transfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFThresholds.LAATLAAPPFMinimumTransferAmount" hideDetail="N" id="Z19B11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19A11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Thresholds-MTA-CounterParty" columns="2" fullQualPath="" hideDetail="N" id="Z19C11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Minimum Transfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFThresholds.LAATLAAPPFMinimumTransferAmount" hideDetail="N" id="Z19D11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19C11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Threshold-Mizuho" columns="2" fullQualPath="" hideDetail="N" id="Z19E11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Threshold Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFThresholds.LAATLAAPPFThresholdCurrency" hideDetail="N" id="Z19F11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19E11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Threshold Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFThresholds.LAATLAAPPFThresholdAmount" hideDetail="N" id="Z19G11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19E11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Threshold-Counterparty" columns="2" fullQualPath="" hideDetail="N" id="Z19H11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Threshold Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFThresholds.LAATLAAPPFThresholdCurrency" hideDetail="N" id="Z19I11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19H11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Threshold Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFThresholds.LAATLAAPPFThresholdAmount" hideDetail="N" id="Z19J11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19H11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="IA" columns="2" fullQualPath="" hideDetail="N" id="Z19K11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Minimum Transfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFThresholds.LAATLAAPPFMinimumTransferAmount" hideDetail="N" id="Z19L11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19K11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Other Information" columns="2" fullQualPath="" hideDetail="N" id="Z19M11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Description/Comments" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIIAComments.GNCMLAAPDescriptionComments" hideDetail="N" id="Z19N11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19M11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Variation Margin" columns="2" fullQualPath="" hideDetail="N" id="Z19O11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Base Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVariationMargin.LAAPFLARVMBaseCurrency" hideDetail="N" id="Z19P11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19O11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Margin Type" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVariationMargin.GNCMLAAPVMMarginType" hideDetail="N" id="Z19Q11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19O11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="MHIPFVMEligibleCurrencies" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMEligibleCurrencies" hideDetail="N" id="Z19R11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="10" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+            <control caption="Valuation Percentage" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMEligibleCurrencies.LACDLAAPVMValuationPercentage" hideDetail="N" id="Z19S11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19R11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="FX Haircut Percentage" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMEligibleCurrencies.LACDLAAPVMFXHaircutPercentage" hideDetail="N" id="Z19T11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19R11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Haircut Percentage"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+            </control>
+            <control caption="Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMEligibleCurrencies.LACDLAAPVMCurrency" hideDetail="N" id="Z19U11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19R11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Eligible Currency"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+            </control>
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Eligible Currencies"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Frequency" columns="2" fullQualPath="" hideDetail="N" id="Z19V11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="LAATLAAPVMFrequency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMThresholds.LAATLAAPVMFrequency" hideDetail="N" id="Z19W11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19V11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"CAPTION_OVERRIDE":[{"LABEL":"Frequency"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Thresholds-MTA-Mizuho" columns="2" fullQualPath="" hideDetail="N" id="Z19X11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Minimum Transfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMThresholds.LAATLAAPVMMinimumTransferAmount" hideDetail="N" id="Z19Y11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19X11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Thresholds-MTA-Counterparty" columns="2" fullQualPath="" hideDetail="N" id="Z19Z11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Minimum Transfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMThresholds.LAATLAAPVMMinimumTransferAmount" hideDetail="N" id="Z19a11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19Z11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Thresholds-Mizuho" columns="2" fullQualPath="" hideDetail="N" id="Z19b11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Threshold Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMThresholds.LAATLAAPVMThresholdCurrency" hideDetail="N" id="Z19c11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19b11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Threshold Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMThresholds.LAATLAAPVMThresholdAmount" hideDetail="N" id="Z19d11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19b11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Thresholds-Counterparty" columns="2" fullQualPath="" hideDetail="N" id="Z19e11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Threshold Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMThresholds.LAATLAAPVMThresholdCurrency" hideDetail="N" id="Z19f11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19e11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Threshold Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMThresholds.LAATLAAPVMThresholdAmount" hideDetail="N" id="Z19g11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19e11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="IA" columns="2" fullQualPath="" hideDetail="N" id="Z19h11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Minimum Transfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMThresholds.LAATLAAPVMMinimumTransferAmount" hideDetail="N" id="Z19i11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19h11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Other Information" columns="2" fullQualPath="" hideDetail="N" id="Z19j11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="17" pageSize="0" parentId="Z19011Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Description Comments" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIPFVMIAComments.GNCMLAAPVMDescriptionComments" hideDetail="N" id="Z19k11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19j11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Guaranteed Parties" columns="2" fullQualPath="" hideDetail="N" id="Z19l11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19@01Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+        <control caption="Guaranteed Parties" columns="2" fullQualPath="" hideDetail="N" id="Z19m11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19l11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+          <control caption="Institution Name" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGUParty.MHIOpenGUPartyDetails.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="Z19n11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19m11Dve1" relatedPath="ClearingAgreementsAndGuarantees.MHIGUParty.MHIOpenGUPartyDetails" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Instruction Comments" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGUParty.FLARLAGRGPSupplTermCondTxt" hideDetail="N" id="Z19o11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19m11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Data Source" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGUParty.FLARLAGRGPDataSource" hideDetail="N" id="Z19p11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19m11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Data Status" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGUParty.FLARLAGRGPDataStatus" hideDetail="N" id="Z19q11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Z19m11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Start Date/Time" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGUParty.FLARLAGRGPStartDateTime" hideDetail="N" id="Z19r11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Z19m11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="End Date/Time" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGUParty.FLARLAGRGPEndDateTime" hideDetail="N" id="Z19s11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Z19m11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change Date/Time" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGUParty.FLARLAGRGPLastChangeDateTime" hideDetail="N" id="Z19t11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Z19m11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Last Change User ID" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGUParty.FLARLAGRGPLastChangeUserID" hideDetail="N" id="Z19u11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Z19m11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Margin Information" columns="2" fullQualPath="" hideDetail="N" id="Z19v11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19l11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="TABSHEET">
+          <control caption="Initial Margin" columns="2" fullQualPath="" hideDetail="N" id="Z19w11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Base Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPMarginInfo.LAAPFLARLAGRGPBaseCurrency" hideDetail="N" id="Z19x11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19w11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Margin Type" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPMarginInfo.LAAPFLARGPMarginType" hideDetail="N" id="Z19y11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19w11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="MHIGPIMEligibleCurrencies" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMEligibleCurrencies" hideDetail="N" id="Z19z11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="10" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+            <control caption="Valuation Percentage" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMEligibleCurrencies.LACDLAAPGPValuationPercentage" hideDetail="N" id="Z19$11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19z11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Haircut Percentage" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMEligibleCurrencies.LACDLAAPGPHaircutPercentage" hideDetail="N" id="Z19%11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19z11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Eligible Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMEligibleCurrencies.LACDLAAPPGPEligibleCurrency" hideDetail="N" id="Z19@11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19z11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Eligible Currencies"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Payment Frequency" columns="2" fullQualPath="" hideDetail="N" id="Z19&amp;amp;11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Frequency Span" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMTresholds.LAATLAAPGPFrequencySpan" hideDetail="N" id="Z19*11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19&amp;amp;11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"CAPTION_OVERRIDE":[{"LABEL":"Frequency"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Thresholds-MTA-Mizuho" columns="2" fullQualPath="" hideDetail="N" id="Z19-11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="MinimumTransfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMTresholds.LAATLAAPGPMinimumTransferAmount" hideDetail="N" id="Z19.11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19-11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Thresholds-MTA-Counterparty" columns="2" fullQualPath="" hideDetail="N" id="Z19/11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="MinimumTransfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMTresholds.LAATLAAPGPMinimumTransferAmount" hideDetail="N" id="Z19(11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19/11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Threshold-Mizuho" columns="2" fullQualPath="" hideDetail="N" id="Z19)11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Threshold Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMTresholds.LAATLAAPGPThresholdCurrency" hideDetail="N" id="Z19~11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19)11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Threshold Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMTresholds.LAATLAAPGPThresholdAmount" hideDetail="N" id="Z19?11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19)11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Threshold-Counterparty" columns="2" fullQualPath="" hideDetail="N" id="Z19&amp;lt;11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Threshold Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMTresholds.LAATLAAPGPThresholdCurrency" hideDetail="N" id="Z19&amp;gt;11Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19&amp;lt;11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Threshold Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMTresholds.LAATLAAPGPThresholdAmount" hideDetail="N" id="Z19021Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19&amp;lt;11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="IA" columns="2" fullQualPath="" hideDetail="N" id="Z19121Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="MinimumTransfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIMTresholds.LAATLAAPGPMinimumTransferAmount" hideDetail="N" id="Z19221Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19121Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"CAPTION_OVERRIDE":[{"LABEL":"Independent Amount"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="IA Direction" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIAComments.GNCMLAATGPIADirection" hideDetail="N" id="Z19321Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19121Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"CAPTION_OVERRIDE":[{"LABEL":"IA (posting) direction"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Other Information" columns="2" fullQualPath="" hideDetail="N" id="Z19421Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Description/Comments" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPIAComments.GNCMLAAPGPDescriptionComments" hideDetail="N" id="Z19521Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19421Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Variation Margin" columns="2" fullQualPath="" hideDetail="N" id="Z19621Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Base Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVMVariationMargin.LAAPFLARLAGRGPVMBaseCurrency" hideDetail="N" id="Z19721Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19621Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Margin Type" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVMVariationMargin.GNCMLAAPGPVMMarginType" hideDetail="N" id="Z19821Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19621Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="MHIGPVMEligibleCurrencies" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVMEligibleCurrencies" hideDetail="N" id="Z19921Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="10" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+            <control caption="Valuation Percentage" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVMEligibleCurrencies.LACDLAAPGPVMValuationPercentage" hideDetail="N" id="Z19A21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19921Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Haircut Percentage" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVMEligibleCurrencies.LACDLAAPGPVMHaircutPercentage" hideDetail="N" id="Z19B21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19921Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Eligible Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVMEligibleCurrencies.LACDLAAPPGPVMEligibleCurrency" hideDetail="N" id="Z19C21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Z19921Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Eligible Currencies"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Thresholds-MTA-Mizuho" columns="2" fullQualPath="" hideDetail="N" id="Z19D21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="MinimumTransfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVariationMarginThresholds.LAATLAAPGPVMMinimumTransferAmount" hideDetail="N" id="Z19E21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19D21Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Thresholds-MTA-Counterparty" columns="2" fullQualPath="" hideDetail="N" id="Z19F21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="MinimumTransfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVariationMarginThresholds.LAATLAAPGPVMMinimumTransferAmount" hideDetail="N" id="Z19G21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19F21Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Threshold-Mizuho" columns="2" fullQualPath="" hideDetail="N" id="Z19H21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Threshold Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVariationMarginThresholds.LAATLAAPGPVMThresholdCurrency" hideDetail="N" id="Z19I21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19H21Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Threshold Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVariationMarginThresholds.LAATLAAPGPVMThresholdAmount" hideDetail="N" id="Z19J21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19H21Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Threshold-Counterparty" columns="2" fullQualPath="" hideDetail="N" id="Z19K21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Threshold Currency" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVariationMarginThresholds.LAATLAAPGPVMThresholdCurrency" hideDetail="N" id="Z19L21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19K21Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <control caption="Threshold Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVariationMarginThresholds.LAATLAAPGPVMThresholdAmount" hideDetail="N" id="Z19M21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Z19K21Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="IA" columns="2" fullQualPath="" hideDetail="N" id="Z19N21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="MinimumTransfer Amount" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVariationMarginThresholds.LAATLAAPGPVMMinimumTransferAmount" hideDetail="N" id="Z19O21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19N21Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Other Information" columns="2" fullQualPath="" hideDetail="N" id="Z19P21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="Z19v11Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+            <control caption="Description/Comments" columns="2" fullQualPath="ClearingAgreementsAndGuarantees.MHIGPVMOtherInfo.GNCMLAAPGPVMDescriptionComments" hideDetail="N" id="Z19Q21Dve1" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Z19P21Dve1" relatedPath="" screenId="USp1m&amp;gt;1LO1" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+              <config>{"DETAIL_CHART_CONFIG":[]}</config>
+            </control>
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

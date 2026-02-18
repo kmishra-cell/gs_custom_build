@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root createdUser="user1" entityName="Issuer" entitySubType="[]" id="?K3JE15gO7" isDefault="Y" isPublic="Y" screenType="SYSTEMFORM" title="F: MHI_IssuerDetails">
+  <control caption="Issuer Information" columns="2" fullQualPath="" hideDetail="N" id="GxrNm&amp;gt;MT01" inlineEdit="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="PAGEVIEW">
+    <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    <control caption="Summary" columns="2" fullQualPath="" hideDetail="N" id="GxrOm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+      <control caption="Publishing and Update" columns="2" fullQualPath="" hideDetail="N" id="GxrPm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="GxrOm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <buttons>
+          <button caption="Re-Publish" id="GxrTm&gt;MT01">
+            <property name="Type" value="event"/>
+            <property name="AlwaysVisible" value="true"/>
+            <property name="Event Name" value="MizuhoPublishingISSR"/>
+            <property name="Event Type" value="GenericEvent"/>
+            <property name="ModelID" value="ISSRPUB"/>
+            <property name="EntityId" value="Issuer.Publishing.ISSRInstrumentIssuerId"/>
+          </button>
+        </buttons>
+        <control caption="Last Published" columns="2" fullQualPath="Issuer.Publishing.PBATISSRLastchangeDate" hideDetail="N" id="GxrQm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="GxrPm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Updated" columns="2" fullQualPath="Issuer.Publishing.UPD1ISSRLastUpdated" hideDetail="N" id="GxrRm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="GxrPm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Version" columns="2" fullQualPath="Issuer.Publishing.UPD1ISSRVersion" hideDetail="N" id="GxrSm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="GxrPm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Related Entities" columns="2" fullQualPath="" hideDetail="N" id="Gxram&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="GxrOm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+        <control caption="Related Financial Institution" columns="2" fullQualPath="" hideDetail="N" id="Gxrbm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Gxram&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+          <control caption="Institution Name" columns="2" fullQualPath="Issuer.IssuerInformation.FinancialInstitution.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="Gxrcm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Gxrbm&amp;gt;MT01" relatedPath="Issuer.IssuerInformation.FinancialInstitution" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Financial Institution"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="List Of Instruments" columns="2" fullQualPath="Issuer.ListOfInstruments" hideDetail="N" id="Gxrdm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="5" parentId="Gxram&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+          <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Related Issues"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="General Information" columns="2" fullQualPath="" hideDetail="N" id="Gxrem&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="GxrOm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LAYOUT">
+        <control caption="Issuer Information" columns="2" fullQualPath="" hideDetail="N" id="Gxrfm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Gxrem&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+          <control caption="Issuer Long Name" columns="2" fullQualPath="Issuer.IssuerInformation.IssuerName" hideDetail="N" id="Gxrgm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issuer Name"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Type" columns="2" fullQualPath="Issuer.IssuerInformation.IssuerType" hideDetail="N" id="Gxrhm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issuer Type"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Issuer Description" columns="2" fullQualPath="Issuer.IssuerInformation.PrefIssuerDescription" hideDetail="N" id="Gxrim&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Company Number" columns="2" fullQualPath="Issuer.IssuerInformation.CompanyNumber" hideDetail="N" id="Gxrjm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Company Match ID"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Preferred Issuer Identifier Type" columns="2" fullQualPath="Issuer.IssuerInformation.PreferredIssuerIdentifierType" hideDetail="N" id="Gxrkm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Preferred ID Context"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Preferred Issuer Identifier" columns="2" fullQualPath="Issuer.IssuerInformation.PreferredIssuerIdentifier" hideDetail="N" id="Gxrlm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Fiscal Year End" columns="2" fullQualPath="Issuer.IssuerInformation.FiscalYearEnd" hideDetail="N" id="Gxrmm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Fiscal Year End (MMDD)"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Multiple Shares Indicator" columns="2" fullQualPath="Issuer.IssuerInformation.MultipleSharesIndicator" hideDetail="N" id="Gxrnm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Govt Agency Filing Indicator" columns="2" fullQualPath="Issuer.IssuerInformation.GovtAgencyFilingIndicator" hideDetail="N" id="Gxrom&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="SEC Form 15 Compliant" columns="2" fullQualPath="Issuer.IssuerInformation.SECForm15Compliant" hideDetail="N" id="Gxrpm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"SEC Form 15 Ind"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="EUSD Government Qualifier" columns="2" fullQualPath="Issuer.IssuerInformation.EUSDGovernmentQualifier" hideDetail="N" id="Gxrqm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"EUSD Government Indicator"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Short Code" columns="2" fullQualPath="Issuer.IssuerInformation.IssuerShortCode" hideDetail="N" id="Gxrrm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"CAPTION_OVERRIDE":[{"LABEL":"Issuer Alpha Search"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Funding Source" columns="2" fullQualPath="Issuer.IssuerInformation.FundingSource" hideDetail="N" id="Gxrsm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <control caption="Supranational Organization Indicator" columns="2" fullQualPath="Issuer.IssuerInformation.SupranationalOrganizationIndicator" hideDetail="N" id="Gxrtm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="Gxrfm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+            <config>{"DETAIL_CHART_CONFIG":[]}</config>
+          </control>
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Active Until" columns="2" fullQualPath="" hideDetail="N" id="Gxrum&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="GxrOm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Start Date/Time" columns="2" fullQualPath="Issuer.IssuerInformation.ISSRStartDateTime" hideDetail="N" id="Gxrvm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Gxrum&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Active Until" columns="2" fullQualPath="Issuer.IssuerInformation.ActiveUntil" hideDetail="N" id="Gxrwm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Gxrum&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Data Source" columns="2" fullQualPath="" hideDetail="N" id="Gxrxm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="GxrOm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Data Stat Type" columns="2" fullQualPath="Issuer.IssuerInformation.ISSRDataStatTyp" hideDetail="N" id="Gxrym&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Gxrxm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Data Source ID" columns="2" fullQualPath="Issuer.IssuerInformation.ISSRDataSourceID" hideDetail="N" id="Gxrzm&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Gxrxm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Changed" columns="2" fullQualPath="" hideDetail="N" id="Gxr$m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="GxrOm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="SECTION">
+        <control caption="Last Change Date/Time" columns="2" fullQualPath="Issuer.IssuerInformation.LastChangeDateTime" hideDetail="N" id="Gxr%m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Gxr$m&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Last Change User ID" columns="2" fullQualPath="Issuer.IssuerInformation.LastChangeUserID" hideDetail="N" id="Gxr@m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Gxr$m&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Identifiers" columns="2" fullQualPath="Issuer.AllIssuerIdentifiers" hideDetail="N" id="Gxr&amp;amp;m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Identifiers"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Address Details" columns="2" fullQualPath="Issuer.AddressDetails" hideDetail="N" id="Gxr*m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Issuer Description" columns="2" fullQualPath="Issuer.IssuerDescription" hideDetail="N" id="Gxr-m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="NLS Names" columns="2" fullQualPath="Issuer.NLSNames" hideDetail="N" id="Gxr.m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="All Geographical Information" columns="2" fullQualPath="Issuer.AllIssuerGeographicalInformation" hideDetail="N" id="Gxr/m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Geographic Units"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="All Classifications" columns="2" fullQualPath="Issuer.AllIssuerClassifications" hideDetail="N" id="Gxr(m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="6" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Classifications"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Issuer As a Participant" columns="2" fullQualPath="Issuer.IssuerAsAParticipant" hideDetail="N" id="Gxr)m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="7" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <control caption="Group Name" columns="2" fullQualPath="Issuer.IssuerAsAParticipant.IssuerGroupName" hideDetail="N" id="Gxr~m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Gxr)m&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Group Purpose" columns="2" fullQualPath="Issuer.IssuerAsAParticipant.IssuerGroupPurpose" hideDetail="N" id="Gxr?m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Gxr)m&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change Date/Time" columns="2" fullQualPath="Issuer.IssuerAsAParticipant.IRGPISSRLastChangeDateTime" hideDetail="N" id="Gxr&amp;lt;m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Gxr)m&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Change User" columns="2" fullQualPath="Issuer.IssuerAsAParticipant.IRGPISSRLastChangeUser" hideDetail="N" id="Gxr&amp;gt;m&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Gxr)m&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="End Date/Time" columns="0" fullQualPath="Issuer.IssuerAsAParticipant.IRGPISSREndDateTime" hideDetail="N" id="Gxr0n&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Gxr)m&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <control caption="Start Date/Time" columns="0" fullQualPath="Issuer.IssuerAsAParticipant.IRGPISSRStartDateTime" hideDetail="N" id="Gxr1n&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Gxr)m&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD"/>
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Issuer Group Participants"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="All Statistics" columns="2" fullQualPath="Issuer.AllIssuerStatistics" hideDetail="N" id="Gxr2n&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="8" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[],"CAPTION_OVERRIDE":[{"LABEL":"Statistics"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}]}</config>
+    </control>
+    <control caption="Issuer Action Information" columns="2" fullQualPath="Issuer.IssuerActionInformation" hideDetail="N" id="Gxr3n&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="9" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Comments" columns="2" fullQualPath="Issuer.IssuerComments" hideDetail="N" id="Gxr4n&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="10" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Benchmark Role" columns="2" fullQualPath="Issuer.BenchmarkRole" hideDetail="N" id="Gxr5n&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="11" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Credit Driver Details" columns="2" fullQualPath="Issuer.CreditDriverDetails" hideDetail="N" id="Gxr6n&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="5" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <config>{"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+    <control caption="Portfolio" columns="2" fullQualPath="Issuer.MHI_Portfolio" hideDetail="N" id="Gxr7n&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="20" parentId="GxrNm&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="Y" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+      <buttons>
+        <button caption="Re-Calc" id="GxrTn&gt;MT01">
+          <property name="Type" value="event"/>
+          <property name="Event Type" value="GenericEvent"/>
+          <property name="Event Name" value="RecalcEvent"/>
+          <property name="Issuer" value="Issuer.MHIRelatedEntities.RelatedIssue.Base.InstrumentDetails.ISSUInstrumentIssuerID"/>
+        </button>
+      </buttons>
+      <control caption="Portfolio OID" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioOID" hideDetail="N" id="Gxr8n&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Subordinated" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioSubordinatedToShow" hideDetail="N" id="Gxr9n&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Secured" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioSecuredToShow" hideDetail="N" id="GxrAn&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Group" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioGroup" hideDetail="N" id="GxrBn&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Series" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioSeries" hideDetail="N" id="GxrCn&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="4" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="FCY" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioFCY" hideDetail="N" id="GxrDn&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="5" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Institution Name" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioFRIPtoFINS.FinancialInstitution.FinancialInstitutionDetails.FinancialInstitutionName" hideDetail="N" id="GxrEn&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="6" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Garaunteed"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Instrument Name" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioRISStoISSU.Base.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="GxrFn&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="7" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"CAPTION_OVERRIDE":[{"LABEL":"Credit Linked"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Unique" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioUNIQUE" hideDetail="N" id="GxrGn&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="8" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Re-Calc Required" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioReCalcRequiredToShow" hideDetail="N" id="GxrHn&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="9" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Difference" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrRatingDifferenceToShow" hideDetail="N" id="GxrIn&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="10" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Rating Difference Mapped" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioRatingDifference" hideDetail="N" id="GxrJn&amp;gt;MT01" inlineEdit="N" isColumnInTable="Y" labelName="" lazyInd="N" orderNum="11" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Collateral Type" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioCollateralType" hideDetail="N" id="GxrKn&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="12" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Re-calc Required Mapped" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioRecalcRequired" hideDetail="N" id="GxrLn&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="13" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Last Re-calc Date" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioLastRecalcDate" hideDetail="N" id="GxrMn&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="14" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Derivation Rule" columns="2" fullQualPath="Issuer.MHI_Portfolio.MHIissrPortfolioDerivationRule" hideDetail="N" id="GxrNn&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="15" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <control caption="Assets" columns="2" fullQualPath="Issuer.MHI_Portfolio.Assets" hideDetail="N" id="GxrOn&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="16" pageSize="0" parentId="Gxr7n&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="LIST">
+        <control caption="Instrument Name" columns="2" fullQualPath="Issuer.MHI_Portfolio.Assets.MHIissrAssetInformationISGPtoISSU.Base.InstrumentDetails.PreferredInstrumentName" hideDetail="N" id="GxrPn&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="0" pageSize="0" parentId="GxrOn&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Asset Name"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"COLLAPSIBLE_BEFORE_LABEL":[{"COLLAPSIBLE_BEFORE_LABEL":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="INSTR_ID" columns="2" fullQualPath="Issuer.MHI_Portfolio.Assets.MHIissrAssetInformationISGPtoISSU.Base.InstrumentDetails.ISSUInstrId" hideDetail="N" id="GxrQn&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="1" pageSize="0" parentId="GxrOn&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Asset OID"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Instrument Identifier Type" columns="2" fullQualPath="Issuer.MHI_Portfolio.Assets.MHIissrAssetInformationISGPtoISSU.Base.InstrumentDetails.PreferredIdentifierType" hideDetail="N" id="GxrRn&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="2" pageSize="0" parentId="GxrOn&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Identifier Type"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <control caption="Preferred Instrument Identifier" columns="2" fullQualPath="Issuer.MHI_Portfolio.Assets.MHIissrAssetInformationISGPtoISSU.Base.InstrumentDetails.PreferredIdentifierValue" hideDetail="N" id="GxrSn&amp;gt;MT01" inlineEdit="N" isColumnInTable="N" labelName="" lazyInd="N" orderNum="3" pageSize="0" parentId="GxrOn&amp;gt;MT01" relatedPath="" screenId="?K3JE15gO7" show="Y" showAsTable="N" showDetailOnTop="N" showOneBelowAnother="N" type="FIELD">
+          <config>{"CAPTION_OVERRIDE":[{"LABEL":"Identifier Value"}],"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+        </control>
+        <config>{"DETAIL_CHART_CONFIG":[]}</config>
+      </control>
+      <config>{"COLLAPSIBLE_SEPARATOR":[{"COLLAPSIBLE_SEPARATOR":false}],"DETAIL_CHART_CONFIG":[]}</config>
+    </control>
+  </control>
+</root>

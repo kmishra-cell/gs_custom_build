@@ -1,0 +1,16 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "MHSA_ListingReport" ],
+  "title" : "MHSA_ListingReport",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "BuisnessDays",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "13:30:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ ]
+}

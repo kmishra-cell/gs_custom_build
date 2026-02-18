@@ -1,0 +1,19 @@
+{
+  "version" : "1.7.3",
+  "workflowNames" : [ "MoodysOrganizationRatings" ],
+  "title" : "MoodysOrganizationRatings",
+  "submitOrderToControllerWhenPlanned" : true,
+  "planOrderAutomatically" : true,
+  "calendars" : [ {
+    "calendarName" : "Cal_Mon-Sat",
+    "timeZone" : "Europe/London",
+    "periods" : [ {
+      "singleStart" : "04:00:00",
+      "whenHoliday" : "SUPPRESS"
+    }, {
+      "singleStart" : "13:00:00",
+      "whenHoliday" : "SUPPRESS"
+    } ]
+  } ],
+  "orderParameterisations" : [ ]
+}

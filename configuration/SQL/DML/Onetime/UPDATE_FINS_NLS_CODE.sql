@@ -1,0 +1,1 @@
+update ft_T_fins  set nls_cde ='ENGLISH', last_chg_usr_id ='GU-339' where nls_cde is null and end_tms is null;

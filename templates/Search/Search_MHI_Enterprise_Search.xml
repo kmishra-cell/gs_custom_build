@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="Enterprise" createdUser="user1" freezeColumns="" id="AKw1m&gt;nlW1" isDefault="N" isPublic="N" lookupId="Enterprise" pageSize="50" screenType="SYSTEMSRCH" title="MHI_Enterprise_Search">
+  <users>
+    <user id="5f5oE11ie1" user="" userGroup="" userRole="tradesupport"/>
+    <user id="5f5qE11ie1" user="" userGroup="" userRole="creditmanagement"/>
+    <user id="5f5pE11ie1" user="" userGroup="" userRole="legaldepartment"/>
+    <user id="5f5mE11ie1" user="" userGroup="" userRole="readonly"/>
+    <user id="5f5lE11ie1" user="" userGroup="" userRole="data_office"/>
+    <user id="5f5nE11ie1" user="" userGroup="" userRole="task_supervisor"/>
+    <user id="5f5rE11ie1" user="" userGroup="" userRole="support"/>
+    <user id="5f5kE11ie1" user="" userGroup="" userRole="creditdepartment"/>
+  </users>
+  <config>{}</config>
+  <buttons/>
+  <columns>
+    <column caption="" columnName="Enterprise Legal Name" fieldName="Enterprise.EnterpriseInformation.EnterpriseLegalName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t0n&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Enterprise Short Name" fieldName="Enterprise.EnterpriseInformation.EnterpriseShortName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/t1n&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width="200"/>
+    <column caption="" columnName="Organization ID" fieldName="Enterprise.EnterpriseInformation.OrganizationID" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="MBE,MHI" filterable="N" fromRange="" id="(/t2n&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="2" showRelLink="" sort="" toRange="" width="1144"/>
+  </columns>
+</root>

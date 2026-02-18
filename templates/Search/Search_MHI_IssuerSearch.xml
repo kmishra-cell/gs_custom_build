@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root baseLookup="Issuer" createdUser="user1" freezeColumns="" id="o6ulo&gt;P)W1" isDefault="Y" isPublic="Y" lookupId="Issuer" pageSize="50" screenType="SYSTEMSRCH" title="MHI_IssuerSearch">
+  <buttons/>
+  <columns>
+    <column caption="Issuer Type" columnName="Type" fieldName="Issuer.IssuerInformation.IssuerType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tLn&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="0" showRelLink="" sort="" toRange="" width="150"/>
+    <column caption="Issuer Name" columnName="Issuer Long Name" fieldName="Issuer.IssuerInformation.IssuerName" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tMn&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="1" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Issuer Description" fieldName="Issuer.IssuerInformation.PrefIssuerDescription" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tNn&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="BEGINS_WITH" orderNum="3" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Issuer Identifier Type" fieldName="Issuer.AllIssuerIdentifiers.AllIssuerIdentifierType" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tPn&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="4" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="" columnName="Issuer Identifier" fieldName="Issuer.AllIssuerIdentifiers.AllIssuerIdentifierValue" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tQn&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="EQUALS" orderNum="5" showRelLink="" sort="" toRange="" width=""/>
+    <column caption="AsOf" columnName="Start Date/Time" fieldName="Issuer.IssuerInformation.ISSRStartDateTime" filterFromNum="" filterFromTms="" filterToNum="" filterToTms="" filterValue="" filterable="Y" fromRange="" id="(/tSn&amp;gt;H3e1" isRange="N" mobileTemplate="" operator="" orderNum="6" showRelLink="" sort="" toRange="" width=""/>
+  </columns>
+</root>

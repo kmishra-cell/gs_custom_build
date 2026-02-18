@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entities cleanUnusedFields="false" nameSpace="MHI">
+  <dataGroups>
+    <dataGroup customInd="0" entityTypeId="++3qwBhS2etxm003" frequencyInd="0" id="++5YmLQS2etse03x" ignoreDeleteChildren="false" multiplicity="SINGLE" name="Warrants- Root DataGroup" nameSpace="GSC">
+      <part dataGroupId="004JftOi2etwa023" defNameSpace="MHI" id="++AJniOmgMr0S005" multiplicity="SINGLE_OR_NULL" prntReqdInd="0" seq="8"/>
+    </dataGroup>
+  </dataGroups>
+  <occurrences>
+    <occurrence desc="Occurrence for Issue" id="++4Gmmty2ettS01A" ignoreDeleteChildren="false" multiplicity="SINGLE_OR_NULL" name="ISSU_01" nameSpace="GSC" table="FT_T_ISSU" timeSeries="NONE">
+      <field desc="Instrument ID" id="++ABu5pGgMr0S01p" name="INSTR_ID" nameSpace="MHI"/>
+      <field desc="Instrument Issuer ID" id="00A9FWN0gMr0S01f" name="INSTR_ISSR_ID" nameSpace="MHI"/>
+      <option id="005uHGoi2etqq000" nameSpace="GSC" type="DEFAULT_ACTION" value="UNKNOWN"/>
+    </occurrence>
+  </occurrences>
+</entities>
