@@ -1,3 +1,4 @@
+--Test Code
 --{$$-STATEMENT-$$}
 CREATE OR REPLACE VIEW ft_v_mhi1 (mhi1_oid, prnt_iss_grp_oid, mkt_oid, org_id) AS
 SELECT 'x' AS mhi1_oid, 
